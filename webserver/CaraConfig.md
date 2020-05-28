@@ -1,68 +1,109 @@
-# Membuat User Baru
+# Rangkuman Konfigurasi webserver di ubuntu :heavy_check_mark:
+> Disusun oleh Hardiyanto
 
-adduser musa
-usermod -aG sudo musa
 
-# Copy SSH Key
+### Keterangan
+$  -->  Sebagai user biasa <br> 
+\#  -->  Sebagai super user / root
 
-su - musa
-mkdir ~/.ssh
-chmod 700 ~/.ssh
-nano ~/.ssh/authorized_keys
-chmod 600 ~/.ssh/authorized_keys
+#### Membuat User Baru
+```
+$ adduser hard
+```
+```
+$ usermod -aG sudo musa
+```
+#### Copy SSH Key
+```
+$ su - musa
+```
+```
+# mkdir ~/.ssh
+```
+```
+# chmod 700 ~/.ssh
+```
+```
+# nano ~/.ssh/authorized_keys
+```
+```
+# chmod 600 ~/.ssh/authorized_keys
+```
+```
+# exit
+```
+#### Login Automatis ssh
+```
+$ ssh-copy-id -i .ssh/key-demo user@ip 
+```
 
-exit
+#### Config SSH Server
+Keterangan port : <br>
+Ports 0-1023 = system or well-known ports. <br>
+Ports 1024-49151 = user or registered ports. <br>
+Ports 49152-65535 = dynamic / private ports. <br>
 
-# ssh-copy-id -i .ssh/key-demo user@ip 
-
-# Config SSH Server
-
-# Ports 0-1023 = system or well-known ports.
-# Ports 1024-49151 = user or registered ports.
-# Ports 49152-65535 = dynamic / private ports
-
-vim /etc/ssh/sshd_config
-
+Untuk Konfigurasi ikuti cara berikut :
+```
+$ vim /etc/ssh/sshd_config
+```
+Rubah seperti ini
+```
 Port 50000
 PermitRootLogin no
 PubkeyAuthentication yes
 PasswordAuthentication no
-
-systemctl restart ssh
-systemctl status ssh
-
-# Set Timezone
-
-timedatectl set-timezone Asia/Jakarta
+```
+keluar dari text editor
+```
+# systemctl restart ssh
+```
+```
+# systemctl status ssh
+```
+#### Set Timezone
+```
+$ timedatectl set-timezone Asia/Jakarta
 date
+````
+#### Update System
+```
+# apt update
+```
+```
+# apt upgrade -y
+```
+```
+# reboot
+```
+#### Transfer File
+```
+$ scp crud.zip server:~/
+```
+#### Install Apache
+```
+# apt install apache2 -y
+```
+#### Membuat Virtual Host
+```
+$ mkdir /var/www/hard.com
+```
+```
+$ vim /var/www/hard.com/index.html
+```
+```
+$ cd /etc/apache2/sites-available
+```
+```
+# vi hard.com.conf
+```
 
-# Update System
-
-apt update
-apt upgrade -y
-reboot
-
-# Transfer File
-
-scp crud.zip server:~/
-
-# Install Apache
-
-apt install apache2 -y
-
-# Membuat Virtual Host
-
-mkdir /var/www/defnex.com
-nano /var/www/defnex.com/index.html
-
-cd /etc/apache2/sites-available
-nano defnex.com.conf
-
+```
 <VirtualHost *:80>
-    ServerName defnex.com
-    ServerAlias www.defnex.com
-    DocumentRoot /var/www/defnex.com
-    <Directory /var/www/defnex.com>
+    ServerName hard.com
+    ServerAlias www.hard.com
+    DocumentRoot /var/www/hard.com
+    <Directory /var/www/hard.com>
         Options Indexes FollowSymLinks MultiViews
         AllowOverride All
         Require all granted
@@ -70,113 +111,186 @@ nano defnex.com.conf
     ErrorLog /var/log/apache2/defnex.com_error.log
     CustomLog /var/log/apache2/defnex.com_access.log combined
 </VirtualHost>
+```
+```
+# a2ensite hard.com.conf
+```
+```
+# a2enmod rewrite
+```
+```
+# systemctl restart apache2
+```
+```
+# systemctl status apache2
+```
 
-a2ensite defnex.com.conf
-a2enmod rewrite
-systemctl restart apache2
-systemctl status apache2
+#### Install PHP 7.4
 
-# Install PHP 7.4
+```
+# apt show php
+```
+https://launchpad.net/~ondrej/+archive/ubuntu/php
 
-# Defaul PHP 7.2
-
-apt show php
-
-# https://launchpad.net/~ondrej/+archive/ubuntu/php
-
-apt install software-properties-common -y
-add-apt-repository ppa:ondrej/php
-
-apt install libapache2-mod-php7.4 php7.4 php7.4-common php7.4-mysql php7.4-curl php7.4-gd php-imagick php7.4-cli php7.4-mbstring php7.4-zip php7.4-bcmath -y
-
-php -v
-php -m
-apt search php7.4
-
-nano /var/www/defnex.com/info.php
-
+```
+# apt install software-properties-common -y
+```
+```
+# add-apt-repository ppa:ondrej/php
+```
+```
+# apt install libapache2-mod-php7.4 php7.4 php7.4-common php7.4-mysql php7.4-curl php7.4-gd php-imagick php7.4-cli php7.4-mbstring php7.4-zip php7.4-bcmath -y
+```
+```
+$ php -v
+```
+```
+$ php -m
+```
+```
+# apt search php7.4
+```
+```
+# vi /var/www/hard.com/info.php
+```
+```
 <?php phpinfo(); ?>
+```
 
-nano /etc/php/7.4/apache2/php.ini
-
+```
+# vi /etc/php/7.4/apache2/php.ini
+```
+```
 upload_max_filesize = 10M
 post_max_size = 10M
+```
+```
+# systemctl restart apache2
+```
+#### Install composer
 
-systemctl restart apache2
+```
+# apt install curl php7.4-cli php7.4-mbstring git unzip -y
+```
+```
+$ curl –sS https://getcomposer.org/installer | php
+```
+```
+# mv composer.phar /usr/local/bin/composer
+```
+#### Install MariaDB 10.4
+Default MariaDB 10.1
+```
+# apt show mariadb-server
+```
+https://downloads.mariadb.org/mariadb/repositories/
+```
+# apt-key adv --fetch-keys 'https://mariadb.org/mariadb_release_signing_key.asc'
+```
+```
+# add-apt-repository 'deb [arch=amd64,arm64,ppc64el] http://sgp1.mirrors.digitalocean.com/mariadb/repo/10.4/ubuntu bionic main'
+```
+```
+# apt install mariadb-server -y
+```
+```
+# systemctl status mariadb
+```
+```
+# mysql_secure_installation
+```
+```
+# mysql -u root -p
+```
 
-# Install composer
+```
+mysql> CREATE DATABASE toko;
+```
+```
+mysql> CREATE USER 'musa'@'localhost' IDENTIFIED BY 'rahasia';
+```
+```
+mysql> GRANT ALL PRIVILEGES ON toko.* TO 'musa'@'localhost';
+```
+```
+mysql> FLUSH PRIVILEGES;
+```
+```
+mysql> exit
+```
 
-apt install curl php7.4-cli php7.4-mbstring git unzip -y
-curl –sS https://getcomposer.org/installer | php
-mv composer.phar /usr/local/bin/composer
+```
+$ cd /home/hard
+```
+```
+$ unzip crud.zip
+```
+```
+# mysql -u musa -p toko < crud/toko.sql
+```
+```
+$ cp -v crud/* /var/www/hard.com/
+```
+```
+$ cd /var/www
+```
+```
+# rm hard.com/index.html
+```
+```
+# chown -R hard:www-data hard.com
+```
+```
+# chmod -R 775 hard.com
+```
+```
+# ls -l 
+```
 
-# Install MariaDB 10.4
-
-# Default MariaDB 10.1
-
-apt show mariadb-server
-
-# https://downloads.mariadb.org/mariadb/repositories/
-
-apt-key adv --fetch-keys 'https://mariadb.org/mariadb_release_signing_key.asc'
-add-apt-repository 'deb [arch=amd64,arm64,ppc64el] http://sgp1.mirrors.digitalocean.com/mariadb/repo/10.4/ubuntu bionic main'
-
-apt install mariadb-server -y
-
-systemctl status mariadb
-
-mysql_secure_installation
-
-mysql -u root -p
-
-CREATE DATABASE toko;
-CREATE USER 'musa'@'localhost' IDENTIFIED BY 'rahasia';
-GRANT ALL PRIVILEGES ON toko.* TO 'musa'@'localhost';
-FLUSH PRIVILEGES;
-exit
-
-
-cd /home/musa
-unzip crud.zip
-
-mysql -u musa -p toko < crud/toko.sql
-
-cp -v crud/* /var/www/defnex.com/
-cd /var/www
-rm defnex.com/index.html
-chown -R musa:www-data defnex.com
-chmod -R 775 defnex.com
-ls -l
-
-# Install SSL Let's Encrypt untuk Apache
-
-# https://certbot.eff.org/all-instructions
-
-add-apt-repository ppa:certbot/certbot
-apt install certbot python3-certbot-apache -y
-
-certbot --apache -d defnex.com -d www.defnex.com
-
-# Install Nginx dan PHP-FPM
-
-systemctl stop apache2
-systemctl disable apache2
-systemctl status apache2
-
-apt install nginx -y
-apt install php7.4-fpm php7.4 php7.4-common php7.4-mysql php7.4-curl php7.4-gd php-imagick php7.4-cli php7.4-mbstring php7.4-zip php7.4-bcmath -y
-
-systemctl status php7.4-fpm
-
-nano /etc/php/7.4/fpm/pool.d/www.conf
-
-cd /etc/nginx/conf.d
-nano defnex.com.conf
-
+#### Install SSL Let's Encrypt untuk Apache
+ https://certbot.eff.org/all-instructions
+```
+# add-apt-repository ppa:certbot/certbot
+```
+```
+# apt install certbot python3-certbot-apache -y
+```
+```
+$ certbot --apache -d hard.com -d www.hard.com
+```
+#### Install Nginx dan PHP-FPM
+```
+# systemctl stop apache2
+```
+```
+# systemctl disable apache2
+```
+```
+# systemctl status apache2
+```
+```
+# apt install nginx -y
+```
+```
+# apt install php7.4-fpm php7.4 php7.4-common php7.4-mysql php7.4-curl php7.4-gd php-imagick php7.4-cli php7.4-mbstring php7.4-zip php7.4-bcmath -y
+```
+```
+# systemctl status php7.4-fpm
+```
+```
+# vi /etc/php/7.4/fpm/pool.d/www.conf
+```
+```
+# cd /etc/nginx/conf.d
+```
+```
+# nano hard.com.conf
+```
+```
 server {
     listen 80;
-    server_name defnex.com www.defnex.com;
-    root /var/www/defnex.com;
+    server_name hard.com www.hard.com;
+    root /var/www/hard.com;
     index index.php index.html index.htm;
 
     location / {
@@ -192,92 +306,144 @@ server {
       fastcgi_param SCRIPT_FILENAME $realpath_root$fastcgi_script_name; 
     }
 
-    access_log /var/log/nginx/defnex.com_access.log;
-    error_log /var/log/nginx/defnex.com_error.log;
+    access_log /var/log/nginx/hard.com_access.log;
+    error_log /var/log/nginx/hard.com_error.log;
 }
-
-nginx -t
-systemctl restart nginx
-systemctl status nginx
-
-nano /etc/php/7.4/fpm/php.ini
-
+```
+```
+# nginx -t
+```
+```
+# systemctl restart nginx
+```
+```
+# systemctl status nginx
+```
+```
+# vi /etc/php/7.4/fpm/php.ini
+```
+```
 upload_max_filesize = 10M
 post_max_size = 10M
+```
+#### Install SSL Let's Encrypt untuk Nginx
+```
+# apt install certbot python3-certbot-nginx -y
+```
+```
+# certbot --nginx -d hard.com -d www.hard.com
+```
+#### Firewall iptables
 
-# Install SSL Let's Encrypt untuk Nginx
+* cloud firewall
+* ufw
+* firewalld
+* iptables
 
-apt install certbot python3-certbot-nginx -y
-
-certbot --nginx -d defnex.com -d www.defnex.com
-
-# Firewall iptables
-
-# cloud firewall
-# ufw
-# firewalld
-# iptables
-
-
-apt install iptables-persistent -y
-
-iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
-iptables -A INPUT -p icmp -j ACCEPT
-iptables -A INPUT -p tcp --dport 50000 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
-iptables -A INPUT -p tcp --dport 80 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
-iptables -A INPUT -p tcp --dport 443 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
-iptables -P INPUT DROP
-
-netfilter-persistent save
-netfilter-persistent reload
-
-iptables -L
-
-# iptables -P INPUT ACCEPT
-# iptables -F
+```
+# apt install iptables-persistent -y
+```
+```
+# iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
+```
+```
+# iptables -A INPUT -p icmp -j ACCEPT
+```
+```
+# iptables -A INPUT -p tcp --dport 50000 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
+```
+```
+# iptables -A INPUT -p tcp --dport 80 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
+```
+```
+# iptables -A INPUT -p tcp --dport 443 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
+```
+```
+# iptables -P INPUT DROP
+```
+```
+# netfilter-persistent save
+```
+```
+# netfilter-persistent reload
+```
+```
 # iptables -L
+```
+```
+# iptables -P INPUT ACCEPT
+```
+```
+# iptables -F
+```
+```
+# iptables -L
+```
+#### Backup
+```
+# cd
+```
+```
+# mkdir -p backup/hard.com/www
+```
+```
+# mkdir backup/hard.com/db
+```
 
-# Backup
-
-cd
-mkdir -p backup/defnex.com/www
-mkdir backup/defnex.com/db
-
-
-nano mysqldump-toko.cnf
-
+```
+# vi mysqldump-toko.cnf
+```
+```
 [mysqldump]
-user=musa
+user=hard
 password=rahasia
-
-nano backup.sh
-
+```
+```
+$ vi backup.sh
+```
+```
 #!/bin/bash
 
 rsync -av /var/www/defnex.com/ /root/backup/defnex.com/www --delete
 mysqldump --defaults-extra-file=/root/mysqldump-toko.cnf toko | gzip > /root/backup/defnex.com/db/toko-$(date +%d%m%Y).sql.gz
+```
+```
+# chmod u+x backup.sh
+```
+```
+# ./backup.sh
+```
+```
+$ ls -l backup/hard.com/www
+```
+```
+$ ls -l backup/hard.com/db
+```
+```
+$ rm backup/hard.com/www/*
+```
+```
+$ rm backup/hard.com/db/*
+```
 
-
-chmod u+x backup.sh
-./backup.sh
-
-ls -l backup/defnex.com/www
-ls -l backup/defnex.com/db
-
-rm backup/defnex.com/www/*
-rm backup/defnex.com/db/*
-
-
-crontab -e
-
+```
+$ crontab -e
+```
+```
 15 10 * * * /bin/bash /root/backup.sh
+```
+```
+# systemctl restart cron
+```
+ Format https://crontab.guru
+```
+$ ls -l backup/hard.com/www
+```
+```
+$ ls -l backup/hard.com/db
+```
 
 
-systemctl restart cron
 
-
-# Format https://crontab.guru
-
-ls -l backup/defnex.com/www
-ls -l backup/defnex.com/db
-
+# Terimakasih
+Silahkan sesuaikan tidak harus sama persis :blush:

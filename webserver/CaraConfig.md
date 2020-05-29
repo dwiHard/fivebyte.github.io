@@ -3,8 +3,25 @@
 
 ## Daftar Isi
 * [Membuat User Baru](#membuat-user-baru)
+* [SSH Configure](#ssh-configure)
+    * [Copy SSH key](#copy-ssh-key)
+    * [Login  SSH Automatis](#login-automatis-ssh)
+    * [Config SSH Server](#config-ssh-server)
+* [Set Timezone](#set-timezone)
+* [Update System](#update-system)
+* [Transfer File](#transfer-file)
+* [Install Apache](#install-apache)
+    * [Membuat Virtual Host](#membuat-virtual-host)
+* [Install PHP 7.4](#install-php-74)
+* [Install composer](#install-composer)
+* [Install MariaDB 10.4](#install-mariadb-104)
+* [Install SSL Let's Encrypt untuk Apache](#install-ssl-lets-encrypt-untuk-apache)
+* [Install Nginx dan PHP-FPM](#install-nginx-dan-php-fpm)
+* [Install SSL Let's Encrypt untuk Nginx](#install-ssl-lets-encrypt-untuk-nginx)
+* [Firewall iptables](#firewall-iptables)
+* [Backup](#backup)
 
-### Keterangan
+***Keterangan***<br>
 $  -->  Sebagai user biasa <br> 
 \#  -->  Sebagai super user / root
 
@@ -15,6 +32,8 @@ $ adduser hard
 ```
 $ usermod -aG sudo musa
 ```
+
+## SSH Configure
 #### Copy SSH Key
 ```
 $ su - musa
@@ -63,12 +82,12 @@ keluar dari text editor
 ```
 # systemctl status ssh
 ```
-#### Set Timezone
+## Set Timezone
 ```
 $ timedatectl set-timezone Asia/Jakarta
 date
 ````
-#### Update System
+## Update System
 ```
 # apt update
 ```
@@ -78,11 +97,11 @@ date
 ```
 # reboot
 ```
-#### Transfer File
+## Transfer File
 ```
 $ scp crud.zip server:~/
 ```
-#### Install Apache
+## Install Apache
 ```
 # apt install apache2 -y
 ```
@@ -127,7 +146,7 @@ $ cd /etc/apache2/sites-available
 # systemctl status apache2
 ```
 
-#### Install PHP 7.4
+## Install PHP 7.4
 
 ```
 # apt show php
@@ -169,7 +188,7 @@ post_max_size = 10M
 ```
 # systemctl restart apache2
 ```
-#### Install composer
+## Install composer
 
 ```
 # apt install curl php7.4-cli php7.4-mbstring git unzip -y
@@ -180,7 +199,7 @@ $ curl –sS https://getcomposer.org/installer | php
 ```
 # mv composer.phar /usr/local/bin/composer
 ```
-#### Install MariaDB 10.4
+## Install MariaDB 10.4
 Default MariaDB 10.1
 ```
 # apt show mariadb-server
@@ -209,7 +228,7 @@ https://downloads.mariadb.org/mariadb/repositories/
 mysql> CREATE DATABASE toko;
 ```
 ```
-mysql> CREATE USER 'musa'@'localhost' IDENTIFIED BY 'rahasia';
+mysql> CREATE USER 'hard'@'localhost' IDENTIFIED BY 'rahasia';
 ```
 ```
 mysql> GRANT ALL PRIVILEGES ON toko.* TO 'musa'@'localhost';
@@ -249,7 +268,7 @@ $ cd /var/www
 # ls -l 
 ```
 
-#### Install SSL Let's Encrypt untuk Apache
+## Install SSL Let's Encrypt untuk Apache
  https://certbot.eff.org/all-instructions
 ```
 # add-apt-repository ppa:certbot/certbot
@@ -260,7 +279,7 @@ $ cd /var/www
 ```
 $ certbot --apache -d hard.com -d www.hard.com
 ```
-#### Install Nginx dan PHP-FPM
+## Install Nginx dan PHP-FPM
 ```
 # systemctl stop apache2
 ```
@@ -328,14 +347,14 @@ server {
 upload_max_filesize = 10M
 post_max_size = 10M
 ```
-#### Install SSL Let's Encrypt untuk Nginx
+## Install SSL Let's Encrypt untuk Nginx
 ```
 # apt install certbot python3-certbot-nginx -y
 ```
 ```
 # certbot --nginx -d hard.com -d www.hard.com
 ```
-#### Firewall iptables
+## Firewall iptables
 
 * cloud firewall
 * ufw
@@ -381,7 +400,7 @@ post_max_size = 10M
 ```
 # iptables -L
 ```
-#### Backup
+## Backup
 ```
 # cd
 ```

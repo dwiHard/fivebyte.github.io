@@ -30,13 +30,13 @@ $  -->  Sebagai user biasa <br>
 $ adduser hard
 ```
 ```
-$ usermod -aG sudo musa
+$ usermod -aG sudo hard
 ```
 
 ## SSH Configure
 #### Copy SSH Key
 ```
-$ su - musa
+$ su - hard
 ```
 ```
 # mkdir ~/.ssh
@@ -129,8 +129,8 @@ $ cd /etc/apache2/sites-available
         AllowOverride All
         Require all granted
     </Directory>
-    ErrorLog /var/log/apache2/defnex.com_error.log
-    CustomLog /var/log/apache2/defnex.com_access.log combined
+    ErrorLog /var/log/apache2/hard.com_error.log
+    CustomLog /var/log/apache2/hard.com_access.log combined
 </VirtualHost>
 ```
 ```

@@ -1,6 +1,8 @@
 # Rangkuman Konfigurasi webserver di ubuntu :heavy_check_mark:
 > Disusun oleh Hardiyanto
 
+## Daftar Isi
+* [Membuat User Baru](#membuat-user-baru)
 
 ### Keterangan
 $  -->  Sebagai user biasa <br> 

@@ -7,4 +7,4 @@ Sederhana sih aku buat ini karna saya gak bisa mengingat apalagi mengingat tenta
 - [x] apache2
 - [x] vim
 - [x] basic command linux 
-<br>Saya merangkumnya dan Menjadikan satu di sini agar memudahkan kita untuk bahan belajar dan dijadikan referensi :kissing_heart: :smile:
+<br>Saya merangkumnya dan Menjadikan satu di sini agar memudahkan kita untuk bahan belajar dan dijadikan referensi 

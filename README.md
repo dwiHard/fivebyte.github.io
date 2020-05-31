@@ -2,7 +2,7 @@
 
 > Dibuat oleh Hardiyanto 
 
-Saya ambil dari berbagai situs di internet yang berhubungan dengan:
+Sederhana sih aku buat ini karna saya gak bisa mengingat apalagi mengingat tentang masa lalu wow :scream: :joy: .Saya ambil  dan copy paste lagi dari berbagai situs di internet ya kali aku bisa hapal semua :stuck_out_tongue_winking_eye:. dalam catatan saya yang diambil berhubungan dengan:
 - [x] mysql-server
 - [x] apache2
 - [x] vim

@@ -199,6 +199,14 @@ $ curl –sS https://getcomposer.org/installer | php
 ```
 # mv composer.phar /usr/local/bin/composer
 ```
+Di Ubuntu 18.04 bisa juga langsung :
+```
+$ sudo apt update
+```
+```
+$ sudo apt install composer
+```
+
 ## Install MariaDB 10.4
 Default MariaDB 10.1
 ```

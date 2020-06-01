@@ -1,7 +1,9 @@
 # Docker di ubuntu 18.04
+> di susun oleh Hardiyanto
 ### Daftar Isi
-* Install docker
-* Memeriksa status docker
+* [Install docker](#install-docker-di-ubuntu-1804)
+* [Memeriksa status docker](#memerikasa-status-docker)
+* [Image docker untuk mirror Android](#image-docker-untuk-mirror-android)
 
 #### Install Docker di ubuntu 18.04
 ```
@@ -28,7 +30,7 @@ $ sudo apt install docker-ce
  $ sudo systemctl status docker
 ```
 
-##### Image docker untuk mirror Android
+#### Image docker untuk mirror Android
 
 Untuk lebih lengkapnya bisa cek disini :<br>
 https://hub.docker.com/r/pierlo1/scrcpy<br>
@@ -42,3 +44,5 @@ docker run --rm -i -t --privileged \
     -e DISPLAY=$DISPLAY \
     pierlo1/scrcpy:amd
 ```
+
+### Sekian dan Terima Kasih

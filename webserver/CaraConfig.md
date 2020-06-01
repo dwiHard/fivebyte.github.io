@@ -54,8 +54,13 @@ $ su - hard
 # exit
 ```
 #### Login Automatis ssh
+Pastikan Anda sudah membuat ssh keygen jika belum ketikan :
 ```
-$ ssh-copy-id -i .ssh/key-demo user@ip 
+$ ssh-keygen
+```
+Jika sudah langsung ketikkan :
+```
+$ ssh-copy-id user@ip 
 ```
 
 #### Config SSH Server

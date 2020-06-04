@@ -1,4 +1,5 @@
 # Install MySQL server di Ubuntu 18.04
+> Disusun Oleh Hardiyanto
 
 ### Daftar Isi
 * [Install MySQL](#install-mysql)
@@ -8,7 +9,8 @@
 * [Start the mysql shell](#start-the-mysql-shell)
 * [Set the root password](#set-the-root-password)
 * [Buat User Baru](#buat-user-baru)
-
+<br>
+<br>
 
 
 #### Install MySQL 

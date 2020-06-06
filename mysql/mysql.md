@@ -1,4 +1,4 @@
-# Install MySQL server di Ubuntu 18.04
+# MySQL server di Ubuntu 18.04
 > Disusun Oleh Hardiyanto
 
 ### Daftar Isi
@@ -9,6 +9,7 @@
 * [Start the mysql shell](#start-the-mysql-shell)
 * [Set the root password](#set-the-root-password)
 * [Buat User Baru](#buat-user-baru)
+* [Re-install MySQL Server](#re-install-mysql-server)
 <br>
 <br>
 
@@ -70,6 +71,19 @@ mysql> FLUSH PRIVILEGES;
 ```
 mysql> CREATE USER 'hard'@'localhost' IDENTIFIED BY 'password';
 ```
+
+#### Re-install MySQL Server
+Berikut langkahnya : <br>
+
+``` 
+$ sudo apt-get purge mysql-server mysql-common mysql-client 
+```
+``` 
+$ sudo apt-get install mysql-client mysql-server mysql-common
+````
+
+
+
 Lalu, beri pengguna baru Anda hak istimewa yang sesuai. Misalnya, Anda bisa memberikan hak pengguna untuk semua tabel dalam database, serta kekuatan untuk menambah, mengubah, dan menghapus hak pengguna, dengan perintah ini:
 ```
 mysql> GRANT ALL PRIVILEGES ON *.* TO 'hard'@'localhost' WITH GRANT OPTION;

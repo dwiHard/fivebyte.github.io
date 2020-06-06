@@ -148,5 +148,6 @@ $ sudo vi /etc/hosts
 IP kamu       hard.com
 ```
 
-#### [Kembali](https://github.com/dwiHard/LinuxAdministration/blob/master/apache2/Apache2.md#daftar-isi)
+#### [Kembali Menu Apache](https://github.com/dwiHard/LinuxAdministration/blob/master/apache2/Apache2.md#daftar-isi) 
+#### [Beranda](https://github.com/dwiHard/LinuxAdministration#linux-administration---)
 

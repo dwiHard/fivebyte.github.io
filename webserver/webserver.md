@@ -481,3 +481,5 @@ $ ls -l backup/hard.com/db
 
 # Terimakasih
 Silahkan sesuaikan tidak harus sama persis :blush:
+
+### [Beranda](#https://github.com/dwiHard/LinuxAdministration#linux-administration---)

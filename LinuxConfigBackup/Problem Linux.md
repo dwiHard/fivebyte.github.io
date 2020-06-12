@@ -1,3 +1,10 @@
+# Masalah di Linux
+> Disusun oleh Hardiyanto
+
+### Daftar Isi
+* [Linux Mengalami hang](#linux-mengalami-hang)
+* [Keyboard Tidak Terdeteksi test on Xubuntu 18.04](#keyboard-tidak-terdeteksi-test-on-xubuntu-1804)
+
 #### Linux mengalami hang
 Jalankan tekan bersamaan:
 ```

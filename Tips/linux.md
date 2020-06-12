@@ -1,8 +1,8 @@
 # Tips dan Triks Linux 
-> di susun oleh Hardiyanto
+> Disusun oleh Hardiyanto
 
 ### Daftar isi
-* [Disable webcam] (#disable-webcam)
+* [Disable webcam](#disable-webcam)
 * [Optimalkan SSD](#optimalkan-ssd)
 	* [Aktikan TRIM dan kurangi WRITE](#aktifkan-trim-dan-kurangi-write)
 	* [Add noatime to fstab](#add-noatime-to-fstab)
@@ -104,7 +104,7 @@ sudo systemctl reboot
 ```
 
 
-# Install Virtualbox di kali linux
+#### Install Virtualbox di kali linux
 ```
 wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
 ```

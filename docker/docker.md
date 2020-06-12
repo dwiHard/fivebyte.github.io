@@ -1,5 +1,5 @@
-# Docker di ubuntu 18.04
-> di susun oleh Hardiyanto
+# Docker di Linux
+> Disusun oleh Hardiyanto
 ### Daftar Isi
 * [Install docker](#install-docker-di-ubuntu-1804)
 * [Memeriksa status docker](#memerikasa-status-docker)

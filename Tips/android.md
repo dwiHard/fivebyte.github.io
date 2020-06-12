@@ -2,15 +2,14 @@
 > di susun oleh Hardiyanto
 
 ### Daftar isi
-* [Cara Connect Android ke Laptop dengan WI-FI atau USB] (#cara-connect-android-ke-laptop-dengan-wi-fi-atau-usb)
-	* [Device Root] (#jika-device-kondisi-root)
-	* [Device Non-Root] (#jika-device-kondisi-non-root)
-
+* [Cara Connect Android ke Laptop dengan WI-FI atau USB](#cara-connect-android-ke-laptop-dengan-wi-fi-atau-usb)
+	* [Device Root](#jika-device-kondisi-root)
+	* [Device Non-Root](#jika-device-kondisi-non-root)
 * [Cara Mirror Smartphone ke laptop](#cara-mirror-smartphone-ke-laptop)
 
 
 # Cara Connect Android ke Laptop dengan WI-FI atau USB
-####jika device kondisi root<br>
+#### jika device kondisi root<br>
 Masuk ke terminal :
 ```
 su

@@ -1,4 +1,4 @@
-# Disable webcam di kali linux 
+# Tips dan Triks Linux 
 > di susun oleh Hardiyanto
 
 ### Daftar isi

@@ -3,10 +3,19 @@
 
 
 ### Daftar Isi
+* [Install PHP](#install-php)
 * [Membuat 2 virtual host](#change-2-host-virtualhost-apache2)
 * [Membuat CA cloudflare](#configure-cloudflare-origin-ca-apache)
 * [Membuat ssl](#configure-apache2-dengan-ssl)
 
+
+## Install PHP
+```
+$ sudo su
+```
+```
+# apt install libapache2-mod-php7.4 php7.4 php7.4-common php7.4-mysql php7.4-curl php7.4-gd php-imagick php7.4-cli php7.4-mbstring php7.4-zip php7.4-bcmath -y
+```
 ## Change 2 host virtualhost apache2
 Buat Folder
 ```

@@ -4,7 +4,7 @@
 
 ### Daftar Isi
 * [Apache2 eror](#apache2-eror-di-ubuntu-1804)
-* [Configure Apache2 untuk codeigniter](https://github.com/dwiHard/LinuxAdministration/blob/master/apache2/ApacheForCodeigniter.md#configurasi-apache2-untuk-codeigniter)
+* [Configure Apache2 untuk codeigniter](https://gitlab.com/dwiHard/LinuxAdministration/blob/master/apache2/ApacheForCodeigniter.md#configurasi-apache2-untuk-codeigniter)
 <br>
 </br>
 

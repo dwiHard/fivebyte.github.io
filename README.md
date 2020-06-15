@@ -1,7 +1,7 @@
 # Linux Administration ![Website shields.io](https://img.shields.io/badge/ubuntu-v.18.04-orange) [![Website shields.io](https://img.shields.io/badge/vim-v--8.0-brightgreen)](http://shields.io/) [![Website monip.org](https://img.shields.io/badge/mysql-v--14.14-lightgrey)](http://monip.org/)
 
 ### Selamat Datang di Gitlab saya  :kissing_heart:
-Gitlab yang dibangun dan dikembangkan oleh ***Dwi Hardiyanto***. Sebagian besar rangkuman gitlab ini berisi catatan hasil berekplorasi dalam menggunakan sistem operasi ***GNU/Linux***, ***Android*** & ***Linux***.
+Gitlab yang dibangun dan dikembangkan oleh ***Hardiyanto***. Sebagian besar rangkuman gitlab ini berisi catatan yang berhubungan dengan Teknologi komputer. Seperti, Sistem Operasi GNU/Linux, jaringan komputer, bahasa pemograman, basis data dan konfigurasi tools serta hal-hal lain yang masih berkaitan dengan komputer yang saya rangkum dari hasil berekplorasi dalam menggunakan sistem operasi ***GNU/Linux***, ***Android*** & ***Linux***.
 
 
 
@@ -16,4 +16,6 @@ Gitlab yang dibangun dan dikembangkan oleh ***Dwi Hardiyanto***. Sebagian besar 
 - [x] [Basic command linux](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/Tips/BasicLinux.md#rangkuman-basic-command-linux) 
 
 
-<br>Saya merangkumnya dan Menjadikan satu di sini agar memudahkan kita untuk bahan belajar dan dijadikan referensi 
+<br>Dengan segala kerendahan hati, saya mengucapkan selamat membaca catatan-catatan kecil yang saya buat digitlab ini.<br>
+Akhir kata, saya mengucapkan terima kasih.<br><br>
+Always Newbie, ***Hardiyanto***

@@ -9,10 +9,11 @@
 	* [Kurangi penggunaan swap](#kurangi-penggunaan-swap)
 	* [Jalankan fstrim secara berkala](#jalankan-fstrim-secara-berkala)
 	* [Kurangi penggunaan swap](#kurangi-penggunaan-swap)
+* [Repository Kali Linux](#repository-kali-Linux)
+* [Date fix kali linux](#date-fix-kali-linux)
 * [Install Virtualbox di kali linux](#install-virtualbox-di-kali-linux)
 * [Error virtualbox](#error-virtualbox)
 	* [Kernel driver not installed (rc=-1908)](#kernel-driver-not installed-rc1908)
-* [Repository Kali Linux](#repository-kali-Linux)
 * [cek linux header](#cek-linux-header)
 
 
@@ -104,6 +105,42 @@ sudo systemctl reboot
 ```
 
 
+#### Repository Kali Linux
+
+cek ```/etc/apt/sources.list```
+
+```
+deb http://http.kali.org/kali kali-rolling main non-free contrib
+```
+```
+sudo apt update
+```
+info lebih lengkap cek link dibawah ini
+
+https://www.kali.org/docs/general-use/kali-linux-sources-list-repositories/
+
+#### Date fix kali linux
+```
+sudo apt-get install ntpdate
+```
+```
+sudo systemctl restart ntp
+```
+```
+systemctl status ntp
+```
+```
+timedatectl list-timezones | grep Asia
+```
+```
+timedatectl set-timezone Asia/Jakarta
+```
+```
+timedatectl set-ntp true
+```
+
+Jika Muncul pesan ```Failed to set ntp: NTP not supported``` maka jalankan
+
 #### Install Virtualbox di kali linux
 ```
 wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
@@ -136,20 +173,6 @@ sudo apt install --reinstall linux-headers-$(uname -r) virtualbox-dkms dkms
 ```
 sudo modprobe vboxdrv
 ```
-
-#### Repository Kali Linux
-
-cek ```/etc/apt/sources.list```
-
-```
-deb http://http.kali.org/kali kali-rolling main non-free contrib
-```
-```
-sudo apt update
-```
-info lebih lengkap cek link dibawah ini
-
-https://www.kali.org/docs/general-use/kali-linux-sources-list-repositories/
 
 
 

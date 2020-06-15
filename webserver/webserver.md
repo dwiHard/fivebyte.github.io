@@ -20,6 +20,10 @@
 * [Install SSL Let's Encrypt untuk Nginx](#install-ssl-lets-encrypt-untuk-nginx)
 * [Firewall iptables](#firewall-iptables)
 * [Backup](#backup)
+* [Problem Server](#problem-server)
+    * [Troubleshooting: Too Many Redirects](#troubleshooting-too-many-redirects)
+    1. [Cek Using cURL for Redirect Loops](#cek-using-curl-for-redirect-loops)
+    2. [Redirects in the .htaccess File](#redirects-in-the-htaccess-file)
 
 ***Keterangan***<br>
 $  -->  Sebagai user biasa <br> 
@@ -477,9 +481,67 @@ $ ls -l backup/hard.com/www
 $ ls -l backup/hard.com/db
 ```
 
+#### Problem Server
+#### Troubleshooting: Too Many Redirects
 
+#### Cek Using cURL for Redirect Loops
+```
+vi redirects.sh
+```
+```
+#!/bin/bash
+echo
+for domain in $@; do
+echo --------------------
+echo $domain
+echo --------------------
+curl -sILk $domain | egrep 'HTTP|Loc' | sed 's/Loc/ -> Loc/g'
+echo
+done
+```
+```
+chmod +x redirects.sh
+```
+
+#### Redirects in the .htaccess File
+
+1. Force HTTPS
+```
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+```
+2. Force HTTPS: When Behind a Load Balancer or Proxy (CloudFlare/Incapsula/Sucuri/etc.)
+```
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-Proto} =http
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+```
+3. Force non-www
+```
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www\. [NC] RewriteRule (.*) http://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+```
+4. Force www
+```
+RewriteEngine On
+RewriteCond %{HTTP_HOST} !^www\. [NC] RewriteRule (.*) http://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+```
+5. For Codeigniter
+```
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1 [L]
+</IfModule>
+```
+
+
+pilih dan sesuaikan dengan kebutuhan<br>
 
 # Terimakasih
 Silahkan sesuaikan tidak harus sama persis :blush:
 
-### [Beranda](#https://github.com/dwiHard/LinuxAdministration#linux-administration---)

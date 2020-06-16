@@ -2,21 +2,141 @@
 > Disusun oleh Hardiyanto
 
 ### Daftar isi
-* [Disable webcam](#disable-webcam)
+* [Linux Commands](#linux-commands)
+    * [Cek Linux header](#cek-linux-header)
+    * [Menampilkan semua service yang berjalan / tidak](#menampilkan-semua-service-yang-berjalan-tidak)
+    * [Cek Harddisk partitions](#cek-hard-disk-partitions)
+    * [Cara Memeriksa Available Network Interfaces, Associated IP Addresses, MAC Addresses, and Interface Speed on Linux](#cara-memeriksa-available-network-interfaces-associated-ip-addresses-mac-addresses-and-interface-speed-on-inux)
+* [Konfigurasi Linux](#konfigurasi-linux)
+    * [Disable webcam](#disable-webcam)
+    * [Format FlashDisk Lewat Terminal](#format-flashdisk-lewat-terminal)
+    * [Remove snap dari ubuntu 18.04](#remove-snap-dari-ubuntu-1804)
+* [Konfigurasi Bahasa Pemograman di Linux](#configurasi-bahasa-pemograman-di-linux)
+    * [Configure Java](#configure-java-version)
 * [Optimalkan SSD](#optimalkan-ssd)
 	* [Aktikan TRIM dan kurangi WRITE](#aktifkan-trim-dan-kurangi-write)
 	* [Add noatime to fstab](#add-noatime-to-fstab)
 	* [Kurangi penggunaan swap](#kurangi-penggunaan-swap)
 	* [Jalankan fstrim secara berkala](#jalankan-fstrim-secara-berkala)
 	* [Kurangi penggunaan swap](#kurangi-penggunaan-swap)
-* [Repository Kali Linux](#repository-kali-Linux)
-* [Date fix kali linux](#date-fix-kali-linux)
-* [Install Virtualbox di kali linux](#install-virtualbox-di-kali-linux)
-* [Error virtualbox](#error-virtualbox)
+* [Problem di Linux](#problem-di-linux) 
+    * [Linux Mengalami hang](#linux-mengalami-hang)
+    * [Keyboard Tidak Terdeteksi test on Xubuntu 18.04](#keyboard-tidak-terdeteksi-test-on-xubuntu-1804)
+* [Problem Kali Linux](#problem-kali-linux)
+    * [Repository Kali Linux](#repository-kali-Linux)
+    * [Date fix kali linux](#date-fix-kali-linux)
+    * [Install Virtualbox di kali linux](#install-virtualbox-di-kali-linux)
+    * [Error virtualbox](#error-virtualbox)
 	* [Kernel driver not installed (rc=-1908)](#kernel-driver-not installed-rc1908)
-* [cek linux header](#cek-linux-header)
+* [Kumpulan Konfigurasi](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/LinuxConfigBackup/MyConfig.md#kumpulan-configuration)
 
 
+### Linux Commands
+
+#### cek linux header
+```
+apt-cache search linux-headers
+```
+
+#### Menampilkan semua service yang berjalan / tidak
+Menampilkan menggunakan ```service```
+```
+$ sudo service --status-all
+```
+
+Menampilkan  manggunakan ```systemctl```
+```
+$ sudo systemctl list-unit-files
+```
+```
+$ sudo systemctl list-units --type service
+```
+
+Menampilkan menggunakan ```netstat```
+```
+$ sudo netstat -pnltu
+```
+Cara Lain Menggunakan tools :<br><br>
+***systemd-cgtop***<br>
+```
+$ sudo systemd-cgtop
+```
+***chkservice***
+```
+$ sudo chkservice
+```
+
+#### Cek Harddisk partitions
+
+
+***fdisk***<br>
+Fdisk adalah perintah yang paling umum digunakan untuk memeriksa partisi pada disk. Perintah fdisk dapat menampilkan partisi dan detail seperti tipe sistem file. Namun itu tidak melaporkan ukuran setiap partisi.
+```
+$ sudo fdisk -l
+```
+
+***parted***<br>
+Parted adalah utilitas baris perintah lain untuk membuat daftar partisi dan memodifikasinya jika diperlukan.
+Berikut adalah contoh yang mencantumkan detail partisi.
+```
+$ sudo parted -l
+```
+
+***df***<br>
+Df bukan utilitas partisi, tetapi mencetak rincian tentang hanya sistem file yang dipasang. Daftar yang dihasilkan oleh df bahkan mencakup sistem file yang bukan partisi disk nyata.
+```
+$ df -h
+```
+Ingin menampilkan hanya sistem file yang dimulai dengan / dev
+```
+$ df -h | grep ^/dev
+```
+Untuk menampilkan partisi disk nyata bersama dengan tipe partisi, gunakan df seperti ini
+```
+$ df -h --output=source,fstype,size,used,avail,pcent,target -x tmpfs -x devtmpfs
+```
+***lsblk***<br>
+Daftar semua blok penyimpanan, yang mencakup partisi disk dan drive optik. Rincian termasuk ukuran total partisi / blok dan titik pemasangan jika ada.
+Tidak melaporkan ruang disk yang digunakan / kosong pada partisi.
+```
+$ lsblk
+```
+***blkid***<br>
+Mencetak atribut perangkat blok (partisi dan media penyimpanan) seperti tipe uuid dan sistem file. Tidak melaporkan ruang di partisi.
+```
+$ sudo blkid
+```
+
+#### Cara Memeriksa Available Network Interfaces, Associated IP Addresses, MAC Addresses, and Interface Speed on Linux
+***IP command***<br>
+```
+# ip a
+```
+***ethtool Command***<br>
+```
+# ethtool eth0
+```
+Memeriksa Antarmuka Jaringan yang Tersedia di Linux Menggunakan Perintah IP
+```
+$ ip a |awk '/state UP/{print $2}'
+```
+Memeriksa Alamat IP Antarmuka Jaringan di Linux Menggunakan Perintah IP
+```
+$ ip -o a show | cut -d ' ' -f 2,7
+```
+or
+```
+$ ip a |grep -i inet | awk '{print $7, $2}'
+```
+Memeriksa Alamat MAC Kartu Antarmuka Jaringan di Linux Menggunakan Perintah IP
+```
+$ ip link show dev eth0 |awk '/link/{print $2}'
+```
+Memeriksa Kecepatan Port Antarmuka Jaringan di Linux Menggunakan Perintah ethtool
+```
+$ ethtool eth0 | grep "Speed:"
+```
+### Konfigurasi Linux
 
 #### Disable webcam.
 cek list webcam
@@ -31,7 +151,52 @@ vi /etc/modprobe.d/blacklist-libnfc.conf
 blacklist uvcvideo
 ```
 
-#### Optimalkan SSD
+#### Format FlashDisk Lewat Terminal
+***Format FlashDisk Lewat Terminal***<br>
+Cek dahulu letak flashdisk ada di device boot  mana :
+```
+$ sudo fdisk -l
+```
+Sebelum format unmount dulu semisal letak flashdisk saya di ```/dev/sdc1```:
+```
+$ sudo umount /dev/sdc1
+```
+Lalu format
+```
+$ sudo mkfs.vfat /dev/sdc1
+```
+
+#### Remove snap dari ubuntu 18.04
+
+Jalankan :
+```
+ $ rm -rf ~/snap
+```
+```
+$ sudo rm -rf /var/cache/snapd
+```
+```
+$ sudo apt purge snapd
+```
+```
+$ sudo apt-get update
+```
+
+jika ingin mengembalikan software yang diintall di snap menggunakan apt :
+```
+$ sudo apt-get install gnome-calculator gnome-characters gnome-logs gnome-system-monitor
+```
+
+
+### Configurasi Bahasa Pemograman di Linux
+
+##### Configure java version
+```
+$ sudo update-alternatives --config javac
+```
+
+
+### Optimalkan SSD
 
 #### Aktikan TRIM dan kurangi WRITE
 TRIM memastikan bahwa ketika sistem operasi ingin menulis di sektor yang sama, data lama akan dihapus sepenuhnya tanpa sampah. Ini berjalan pada minimal kernel linux 3.8 atau lebih baru, dan menggunakan ext4 atau filesystem yang mendukung TRIM lainnya.
@@ -104,6 +269,23 @@ vm.vfs_cache_pressure=50
 sudo systemctl reboot
 ```
 
+### Problem di Linux
+
+#### Linux mengalami hang
+Jalankan tekan bersamaan:
+```
+Ctrl+shift+alt+prntsrc+R+E+I+S+U+B
+```
+
+#### Keyboard Tidak Terdeteksi test on Xubuntu 18.04
+
+Jalankan:
+```
+$ sudo apt install xserver-xorg-input-all
+```
+
+
+### Problem Kali Linux
 
 #### Repository Kali Linux
 
@@ -135,11 +317,7 @@ timedatectl list-timezones | grep Asia
 ```
 timedatectl set-timezone Asia/Jakarta
 ```
-```
-timedatectl set-ntp true
-```
 
-Jika Muncul pesan ```Failed to set ntp: NTP not supported``` maka jalankan
 
 #### Install Virtualbox di kali linux
 ```
@@ -175,9 +353,4 @@ sudo modprobe vboxdrv
 ```
 
 
-
-#### cek linux header
-```
-apt-cache search linux-headers
-```
 

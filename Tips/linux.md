@@ -5,7 +5,7 @@
 * [Linux Commands](#linux-commands)
     * [Cek Linux header](#cek-linux-header)
     * [Menampilkan semua service yang berjalan / tidak](#menampilkan-semua-service-yang-berjalan-tidak)
-    * [Cek Harddisk partitions](#cek-hard-disk-partitions)
+    * [Cek Harddisk partitions](#cek-harddisk-partitions)
     * [Cara Memeriksa Available Network Interfaces, Associated IP Addresses, MAC Addresses, and Interface Speed on Linux](#cara-memeriksa-available-network-interfaces-associated-ip-addresses-mac-addresses-and-interface-speed-on-inux)
 * [Konfigurasi Linux](#konfigurasi-linux)
     * [Disable webcam](#disable-webcam)

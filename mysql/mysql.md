@@ -3,13 +3,22 @@
 
 ### Daftar Isi
 * [Install MySQL](#install-mysql)
-* [Izinkan Remote akses](#izinkan-remote-akses)
-* [Launch at reboot](#launch-at-reboot)
-* [Configure interfaces](#configure-interfaces)
-* [Start the mysql shell](#start-the-mysql-shell)
-* [Set the root password](#set-the-root-password)
-* [Buat User Baru](#buat-user-baru)
-* [Re-install MySQL Server](#re-install-mysql-server)
+    * [Izinkan Remote akses](#izinkan-remote-akses)
+    * [Launch at reboot](#launch-at-reboot)
+    * [Configure interfaces](#configure-interfaces)
+    * [Start the mysql shell](#start-the-mysql-shell)
+* [Uninstall MySQL](#uninstall-mysql)
+    * [Re-install MySQL Server](#re-install-mysql-server)
+* [Configure MySQL](#configure-mysql)
+    * [Set the root password](#set-the-root-password)
+    * [Buat User Baru](#buat-user-baru)
+    * [Hak Akses user](#hak-aksesuser)
+    * [Cabut Hak Akses](#cabut-hak-akses)
+    * [Option Hak Akses](#option-hak-akses)
+    * [Melihat Detail User](#melihat-detail-user)
+    * [Hapus User](#hapus-user)
+    * [Reload](#reload)
+    
 <br>
 <br>
 
@@ -58,6 +67,20 @@ bind-address		= 0.0.0.0 ( All ip addresses. )
 $ mysql -u root -p
 ```
 
+### Uninstall MySQL
+
+#### Re-install MySQL Server
+Berikut langkahnya : <br>
+
+``` 
+$ sudo apt-get purge mysql-server mysql-common mysql-client 
+```
+``` 
+$ sudo apt-get install mysql-client mysql-server mysql-common
+````
+
+### Configure MySQL
+
 ##### Set the root password
 ```
 mysql> ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
@@ -72,20 +95,49 @@ mysql> FLUSH PRIVILEGES;
 mysql> CREATE USER 'hard'@'localhost' IDENTIFIED BY 'password';
 ```
 
-#### Re-install MySQL Server
-Berikut langkahnya : <br>
 
-``` 
-$ sudo apt-get purge mysql-server mysql-common mysql-client 
+##### Hak Akses user
+
 ```
-``` 
-$ sudo apt-get install mysql-client mysql-server mysql-common
-````
-
-
-
-Lalu, beri pengguna baru Anda hak istimewa yang sesuai. Misalnya, Anda bisa memberikan hak pengguna untuk semua tabel dalam database, serta kekuatan untuk menambah, mengubah, dan menghapus hak pengguna, dengan perintah ini:
-```
-mysql> GRANT ALL PRIVILEGES ON *.* TO 'hard'@'localhost' WITH GRANT OPTION;
+mysql> GRANT ALL PRIVILEGES ON NAMA_DATABASE . NAMA_TABEL  TO 'hard'@'localhost' WITH GRANT OPTION;
 ```
 
+##### Cabut Hak Akses
+```
+REVOKE  ALL PRIVILEGES ON NAMA_DATABASE . NAMA_TABEL FROM 'coba'@'localhost';
+```
+
+##### Option Hak Akses
+
+```ALL PRIVILEGES```- seperti yang kita lihat sebelumnya, ini akan memungkinkan pengguna MySQL akses penuh ke database yang ditunjuk (atau jika tidak ada database yang dipilih, akses global di seluruh sistem).<br>
+```CREATE```- memungkinkan mereka untuk membuat tabel atau database baru.<br>
+```DROP``` - memungkinkan mereka untuk menghapus tabel atau database.<br>
+```DELETE``` - memungkinkan mereka untuk menghapus baris dari tabel.<br>
+```INSERT``` - memungkinkan mereka untuk memasukkan baris ke dalam tabel.<br>
+```SELECT``` - memungkinkan mereka untuk menggunakan perintah SELECT untuk membaca database.<br>
+```UPDATE``` - memungkinkan mereka untuk memperbarui baris tabel.<br>
+```GRANT OPTION``` - memungkinkan mereka untuk memberikan atau menghapus hak pengguna lain.<br>
+
+#### Melihat Detail User
+```
+select * from mysql.user;
+```
+```
+select host, user, password from mysql.user;
+```
+```
+desc mysql.user;
+```
+
+#### Hapus User
+```
+drop user coba@localhost;
+```
+
+#### Reload
+```
+FLUSH PRIVILEGES;
+```
+
+
+### Terima Kasih

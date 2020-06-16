@@ -6,13 +6,12 @@ Gitlab yang dibangun dan dikembangkan oleh ***Hardiyanto***. Sebagian besar rang
 
 
 ### Daftar Isi
-- [x] [MYSql-Server](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/mysql/mysql.md)
-- [x] [apache2](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/apache2/Apache2.md)
+- [x] [MYSQL-Server](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/mysql/mysql.md)
+- [x] [Apache2](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/apache2/Apache2.md)
 - [x] [Docker](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/docker/docker.md#docker-di-linux)
 - [x] [Web Server](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/webserver/webserver.md#rangkuman-konfigurasi-webserver-di-ubuntu-heavy_check_mark)
 - [x] [vim](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/vim/vim.md#rangkuman-vim)
-- [x] [Konfigurasi](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/LinuxConfigBackup/Config.md#konfigurasi-di-linux)
-- [x] [Tips dan Trik](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/Tips/Tips.md#tips-dan-triks-sederhana)
+- [x] [Tips dan Trik (Linux,Android, dan Git)](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/Tips/Tips.md#tips-dan-triks-sederhana)
 - [x] [Basic command linux](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/Tips/BasicLinux.md#rangkuman-basic-command-linux) 
 
 

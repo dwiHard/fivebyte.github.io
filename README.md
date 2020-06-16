@@ -13,6 +13,7 @@ Gitlab yang dibangun dan dikembangkan oleh ***Hardiyanto***. Sebagian besar rang
 - [x] [vim](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/vim/vim.md#rangkuman-vim)
 - [x] [Tips dan Trik (Linux,Android, dan Git)](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/Tips/Tips.md#tips-dan-triks-sederhana)
 - [x] [Basic command linux](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/Tips/BasicLinux.md#rangkuman-basic-command-linux) 
+- [x] [Kumpulan Konfigurasi dan Script](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/LinuxConfigBackup/MyConfig.md#kumpulan-configuration)
 
 
 <br>Dengan segala kerendahan hati, saya mengucapkan selamat membaca catatan-catatan kecil yang saya buat digitlab ini.<br>

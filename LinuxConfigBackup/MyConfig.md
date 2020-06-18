@@ -8,6 +8,7 @@
     * [Config vim](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/vim/.vimrc)
 * [Script]()
     * [Redirect](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/LinuxConfigBackup/redirects.sh)
+    * [File Server + MySQL Backup](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/mysql/file+mysql-backup.bash)
     * [Mysql Backup](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/mysql/mysql-backup.sh)
     * [Info MAC](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/LinuxConfigBackup/mac-addresses.sh)
     * [Info NIC](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/LinuxConfigBackup/nic-info.sh)

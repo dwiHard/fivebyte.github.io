@@ -27,7 +27,9 @@
     * [Date fix kali linux](#date-fix-kali-linux)
     * [Install Virtualbox di kali linux](#install-virtualbox-di-kali-linux)
     * [Error virtualbox](#error-virtualbox)
+    * [Install Telegram desktop](#install-telegram-desktop)
 	* [Kernel driver not installed (rc=-1908)](#kernel-driver-not installed-rc1908)
+    * [Remove GNUStep](#remove-gnustep)
 * [Kumpulan Konfigurasi](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/LinuxConfigBackup/MyConfig.md#kumpulan-configuration)
 
 
@@ -342,6 +344,26 @@ https://www.kali.org/docs/virtualization/install-virtualbox-kali-host/
 
 #### Error virtualbox
 #### Kernel driver not installed (rc=-1908)
+
+
+#### Install Telegram desktop
+```
+$ sudo apt-get install telegram-desktop
+```
+
+#### Remove GNUStep
+Problem :
+```
+The following packages have unmet dependencies:
+ gnustep-base-runtime : Depends: gnustep-base-common (= 1.27.0-3) but 1.26.0-7 is to be installed
+ libgnustep-base1.27 : Depends: gnustep-base-common (= 1.27.0-3) but 1.26.0-7 is to be installed
+E: Broken packages
+```
+Perbaikan :
+```
+$ sudo apt-get remove gnustep-base-common
+```
+
 ```
 sudo apt update
 ```

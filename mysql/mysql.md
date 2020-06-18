@@ -18,6 +18,10 @@
     * [Melihat Detail User](#melihat-detail-user)
     * [Hapus User](#hapus-user)
     * [Reload](#reload)
+* [Basic MySQL](#basic-mysql)
+    * [Buat Tabel](#buat-tabel)
+    * [Untuk Melihat Struktur Tabel](#untuk-meliha-struktur-tabel)
+    * [Hapus Tabel](#hapus-tabel)
     
 <br>
 <br>
@@ -139,5 +143,24 @@ drop user coba@localhost;
 FLUSH PRIVILEGES;
 ```
 
+### Basic MySQL
 
+#### Buat Tabel
+```
+CREATE TABLE `data` (
+	`id_dataSpasial` INT(11) NOT NULL AUTO_INCREMENT,
+	`batas_wilayah` VARCHAR(20),
+	`data_kejadian` VARCHAR(20),
+	PRIMARY KEY (`id_data`)
+);
+```
+#### Untuk Melihat Struktur Tabel
+```
+DESC NamaTabel;
+```
+
+#### Hapus Tabel
+```
+DROP TABLE namaTabel;
+```
 ### Terima Kasih

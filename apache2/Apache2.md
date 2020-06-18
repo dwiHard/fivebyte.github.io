@@ -4,6 +4,19 @@
 
 ### Daftar Isi
 
+* [Linux PHP Security](#linux-php-security)
+	* [Cek PHP Module](#cek-php-module)
+	* [Batasi Kebocoran Informasi PHP](#batasi-kebocoran-informasi-php)
+	* [Catat Semua Kesalahan PHP](#catat-semua-kesalahan-php)
+	* [Mengunggah File](#mengunggah-file)
+	* [Nonaktifkan Eksekusi Kode Jarak Jauh](#nonaktifkan-eksekusi-kode-jarak-jauh)
+	* [Aktifkan SQL Safe Mode](#aktifkan-sql-safe-mode)
+	* [Control POST Size](#control-post-size)
+	* [Resource Control / DoS Control](#resource-control-dos-control)
+	* [Instal Suhosin Advanced Protection System untuk PHP](#instalsuhosin-advanced-protection-system-untuk-php)
+	* [Menonaktifkan Fungsi PHP Berbahaya](#menonaktifkan-fungsi-php-berbahaya)
+	* [PHP Fastcgi / CGI – cgi.force_redirect Directive](#php-fastcgi-cgi-cgiforceredirect-directive)
+	* [PHP User and Group ID](#php-user-and-group-id)
 * [Configure Apache2 untuk codeigniter](#configurasi-apache2-untuk-codeigniter)
     * [Install PHP](#install-php)
     * [Membuat 2 virtual host](#change-2-host-virtualhost-apache2)
@@ -13,6 +26,163 @@
     * [Apache2 eror](#apache2-eror-di-ubuntu-1804)
 <br>
 </br>
+
+### Linux PHP Security
+
+#### Cek PHP Module 
+```
+$ php -m
+```
+Saya menyarankan Anda menggunakan PHP dengan modul yang dikurangi untuk kinerja dan keamanan.
+
+```
+# rm /etc/php.d/sqlite3.ini
+```
+Atau
+```
+# mv /etc/php.d/sqlite3.ini /etc/php.d/sqlite3.disable
+```
+Jika ingin compile dan reinstall 
+```
+./configure --with-libdir=lib64 --with-gd --with-mysql --prefix=/usr --exec-prefix=/usr \
+--bindir=/usr/bin --sbindir=/usr/sbin --sysconfdir=/etc --datadir=/usr/share \
+--includedir=/usr/include --libexecdir=/usr/libexec --localstatedir=/var \
+--sharedstatedir=/usr/com --mandir=/usr/share/man --infodir=/usr/share/info \
+--cache-file=../config.cache --with-config-file-path=/etc \
+--with-config-file-scan-dir=/etc/php.d  --enable-fastcgi \
+--enable-force-cgi-redirect
+```
+lihat <br>
+https://www.php.net/manual/en/install.unix.php
+
+
+#### Batasi Kebocoran Informasi PHP
+
+Edit dan jalankan :
+pastikan ```expose_php=Off``` Jika belum cari di :<br>
+```
+vi /etc/php/7.3/apache2/php.ini
+```
+
+#### Catat Semua Kesalahan PHP
+
+Jangan memaparkan pesan kesalahan PHP ke semua pengunjung situs. Edit :
+```
+vi /etc/php/7.3/apache2/php.ini
+```
+```
+display_errors=Off
+```
+Pastikan Anda mencatat semua kesalahan php ke file log:
+```
+log_errors=On
+error_log=/var/log/httpd/php_scripts_error.log
+```
+
+#### Mengunggah File
+
+Edit :
+```
+vi /etc/php/7.3/apache2/php.ini
+```
+disable alasan keamanan
+```
+file_uploads=Off
+```
+Jika Menbutuhkan file upload beri batasan 
+```
+file_uploads=On
+```
+```
+upload_max_filesize=1M
+```
+
+#### Nonaktifkan Eksekusi Kode Jarak Jauh
+
+Nonaktifkan permintaan file sebagai fopen panggilan dengan yang berikut ini :
+```
+vi /etc/php/7.3/apache2/php.ini
+```
+```
+allow_url_fopen=Off
+```
+Saya juga merekomendasikan untuk menonaktifkan allow_url_include untuk alasan keamanan:
+```
+allow_url_include=Off
+```
+#### Aktifkan SQL Safe Mode
+
+Jika ingin mengakftikan :
+```
+vi /etc/php/7.3/apache2/php.ini
+```
+```
+sql.safe_mode=On
+```
+Jika Anda mengatur sql.safe_mode, Anda perlu mengatur yang berikut ini juga:
+```
+mysqli.default_host = "192.168.1.252"
+mysqli.default_port = "3306"
+mysqli.default_user = "userNameHere"
+mysqli.default_pw = "PasswordHere"
+```
+Jika dinyalakan, mysql_connect () dan mysql_pconnect () mengabaikan argumen apa pun yang diberikan kepada mereka. Harap dicatat bahwa Anda mungkin harus membuat beberapa perubahan pada kode Anda. Aplikasi pihak ketiga dan sumber terbuka seperti WordPress, dan lainnya mungkin tidak berfungsi sama sekali ketika sql.safe_mode diaktifkan. Saya juga menyarankan Anda mematikan magic_quotes_gpc untuk semua instalasi php 5.3.x karena penyaringannya tidak efektif dan tidak terlalu kuat.
+mysql_escape_string () dan fungsi penyaringan kustom memiliki tujuan yang lebih baik.
+
+```
+magic_quotes_gpc=Off
+```
+
+#### Control POST Size
+
+Metode permintaan HTTP POST digunakan ketika klien (browser atau pengguna) perlu mengirim data ke server web Apache sebagai bagian dari permintaan, seperti ketika mengunggah file atau mengirimkan formulir yang sudah diisi.Penyerang dapat mencoba mengirim permintaan POST yang terlalu besar untuk memakan sumber daya sistem Anda. Anda dapat membatasi permintaan POST ukuran maksimum yang akan diproses PHP.
+```
+vi /etc/php/7.3/apache2/php.ini
+```
+```
+post_max_size=1K
+```
+1K menetapkan ukuran maksimal data posting yang diizinkan oleh aplikasi php. Pengaturan ini juga memengaruhi unggahan file. Untuk mengunggah file besar, nilai ini harus lebih besar dari upload_max_filesize. Saya juga menyarankan agar Anda membatasi metode yang tersedia menggunakan server web Apache. Edit, httpd.conf :
+```
+<directory /var/www/html>
+    <limitExcept GET POST>
+        Order allow,deny
+    </limitExcept>
+## Add rest of the config goes here... ##
+</directory>
+```
+
+#### Resource Control / DoS Control
+
+Anda dapat mengatur waktu eksekusi maksimum dari setiap skrip php, dalam detik. Opsi rekomendasi lainnya adalah mengatur jumlah waktu maksimum setiap skrip dapat menghabiskan data permintaan parsing, dan jumlah maksimum memori yang dapat digunakan skrip.
+```
+max_execution_time =  30
+max_input_time = 30
+memory_limit = 40M
+```
+
+#### Instal Suhosin Advanced Protection System untuk PHP
+
+Suhosin adalah sistem perlindungan canggih untuk instalasi PHP. Itu dirancang untuk melindungi server dan pengguna dari kekurangan yang dikenal dan tidak dikenal dalam aplikasi PHP dan inti PHP.
+
+
+#### Menonaktifkan Fungsi PHP Berbahaya
+
+PHP memiliki banyak fungsi yang dapat digunakan untuk memecahkan server Anda jika tidak digunakan dengan benar.
+```
+disable_functions =exec,passthru,shell_exec,system,proc_open,popen,curl_exec,curl_multi_exec,parse_ini_file,show_source
+```
+
+##### PHP Fastcgi / CGI – cgi.force_redirect Directive
+
+PHP bekerja dengan FastCGI. Fascgi mengurangi jejak memori server web Anda, tetapi masih memberi Anda kecepatan dan kekuatan seluruh bahasa PHP. Arahan konfigurasi cgi.force_redirect mencegah siapa pun untuk memanggil PHP secara langsung dengan URL seperti http://www.cyberciti.biz/cgi-bin/php/hackerdir/backdoor.php. Aktifkan cgi.force_redirect untuk alasan keamanan.
+```
+cgi.force_redirect=On
+```
+
+#### PHP User and Group ID
+
+mod_fastcgi adalah cgi-module untuk server web Apache. Itu dapat terhubung ke server FASTCGI eksternal. Anda harus memastikan php dijalankan sebagai pengguna non-root. Jika PHP dieksekusi sebagai root atau UID di bawah 100, ia dapat mengakses dan / atau memanipulasi file sistem.
 
 ### Configure Apache2 untuk codeigniter
 

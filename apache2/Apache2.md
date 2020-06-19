@@ -23,7 +23,8 @@
     * [Membuat CA cloudflare](#configure-cloudflare-origin-ca-apache)
     * [Membuat ssl](#configure-apache2-dengan-ssl)
 * [Problem Apache2](#problem-apache2)
-    * [Apache2 eror](#apache2-eror-di-ubuntu-1804)
+    * [Apache2 error](#apache2-eror-di-ubuntu-1804)
+    * [Apache2 error module mpm_event](#apache2-error-module-mpmevent)
 <br>
 </br>
 
@@ -379,6 +380,34 @@ $ sudo service apache2 start
 ```
 ```
 $ sudo service apache2 status
+```
+
+#### Apache2 error module mpm_event
+
+```
+Considering conflict mpm_event for mpm_prefork:
+ERROR: Module mpm_event is enabled - cannot proceed due to conflicts. It needs to be disabled first!
+Considering conflict mpm_worker for mpm_prefork:
+ERROR: Could not enable dependency mpm_prefork for php7.3, aborting
+```
+
+fix :
+
+```
+sudo a2dismod mpm_event
+```
+```
+sudo a2enmod mpm_prefork
+```
+```
+sudo systemctl restart apache2
+```
+```
+php -v
+```
+samakan dengan versi phpnya
+```
+sudo a2enmod php7.3
 ```
 
 ### Terima Kasih

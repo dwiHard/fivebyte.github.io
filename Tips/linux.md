@@ -25,6 +25,7 @@
 * [Problem Kali Linux](#problem-kali-linux)
     * [Repository Kali Linux](#repository-kali-Linux)
     * [Date fix kali linux](#date-fix-kali-linux)
+    * [Install wine kali linux](#install-wine-kali-linux)
     * [Install Virtualbox di kali linux](#install-virtualbox-di-kali-linux)
     * [Error virtualbox](#error-virtualbox)
     * [Install Telegram desktop](#install-telegram-desktop)
@@ -318,6 +319,48 @@ timedatectl list-timezones | grep Asia
 ```
 ```
 timedatectl set-timezone Asia/Jakarta
+```
+
+
+#### Install wine kali linux
+```
+sudo dpkg --add-architecture i386
+```
+```
+sudo apt-get update
+```
+```
+sudo apt-get install wine32
+```
+```
+WINEPREFIX=~/.wine/office2007 WINEARCH=win32 winecfg
+```
+```
+sudo apt install winbind cabextract
+```
+```
+wget  https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks
+```
+```
+chmod +x winetricks
+```
+```
+sudo cp winetricks /usr/local/bin/
+```
+
+```
+sudo apt install zenity
+```
+```
+WINEPREFIX=~/.wine/office2007 WINEARCH=win32 winetricks 
+```
+cek apakah msxml6 sudah terinstall atau belum
+```
+WINEPREFIX=~/.wine/office2007 WINEARCH=win32 winetricks msxml6
+```
+untuk instal office 
+```
+WINEPREFIX=~/.wine/office2007 WINEARCH=win32 wine ./Microsoft-Office-Professional-2007.exe 
 ```
 
 

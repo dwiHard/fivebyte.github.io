@@ -8,6 +8,7 @@ Gitlab yang dibangun dan dikembangkan oleh ***Hardiyanto***. Sebagian besar rang
 ### Daftar Isi
 - [x] [MYSQL-Server](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/mysql/mysql.md)
 - [x] [Apache2](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/apache2/Apache2.md)
+- [x] [Python](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/python/python.md)
 - [x] [Docker](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/docker/docker.md#docker-di-linux)
 - [x] [Web Server](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/webserver/webserver.md#rangkuman-konfigurasi-webserver-di-ubuntu-heavy_check_mark)
 - [x] [vim](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/vim/vim.md#rangkuman-vim)

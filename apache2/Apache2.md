@@ -17,7 +17,7 @@
 	* [Menonaktifkan Fungsi PHP Berbahaya](#menonaktifkan-fungsi-php-berbahaya)
 	* [PHP Fastcgi / CGI – cgi.force_redirect Directive](#php-fastcgi-cgi-cgiforceredirect-directive)
 	* [PHP User and Group ID](#php-user-and-group-id)
-* [Configure Apache2 untuk codeigniter](#configurasi-apache2-untuk-codeigniter)
+* [Configure Apache2 untuk codeigniter](#configure-apache2-untuk-codeigniter)
     * [Install PHP](#install-php)
     * [Membuat 2 virtual host](#change-2-host-virtualhost-apache2)
     * [Membuat CA cloudflare](#configure-cloudflare-origin-ca-apache)

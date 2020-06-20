@@ -4,9 +4,10 @@
 ### Daftar isi
 * [Linux Commands](#linux-commands)
     * [Cek Linux header](#cek-linux-header)
+    * [Connect Wifi with Commands](#connect-wifi-with-commands)
     * [Menampilkan semua service yang berjalan / tidak](#menampilkan-semua-service-yang-berjalan-tidak)
     * [Cek Harddisk partitions](#cek-harddisk-partitions)
-    * [Cara Memeriksa Available Network Interfaces, Associated IP Addresses, MAC Addresses, and Interface Speed on Linux](#cara-memeriksa-available-network-interfaces-associated-ip-addresses-mac-addresses-and-interface-speed-on-inux)
+    * [Cara Memeriksa Available Network Interfaces, Associated IP Addresses, MAC Addresses, and Interface Speed on Linux](#cara-memeriksa-available-network-interfaces-associated-ip-addresses-mac-addresses-and-interface-speed-on-linux)
 * [Konfigurasi Linux](#konfigurasi-linux)
     * [Disable webcam](#disable-webcam)
     * [Format FlashDisk Lewat Terminal](#format-flashdisk-lewat-terminal)
@@ -14,7 +15,7 @@
 * [Konfigurasi Bahasa Pemograman di Linux](#configurasi-bahasa-pemograman-di-linux)
     * [Configure Java](#configure-java-version)
 * [Optimalkan SSD](#optimalkan-ssd)
-	* [Aktikan TRIM dan kurangi WRITE](#aktifkan-trim-dan-kurangi-write)
+	* [Aktikan TRIM dan kurangi WRITE](#aktikan-trim-dan-kurangi-write)
 	* [Add noatime to fstab](#add-noatime-to-fstab)
 	* [Kurangi penggunaan swap](#kurangi-penggunaan-swap)
 	* [Jalankan fstrim secara berkala](#jalankan-fstrim-secara-berkala)
@@ -23,12 +24,12 @@
     * [Linux Mengalami hang](#linux-mengalami-hang)
     * [Keyboard Tidak Terdeteksi test on Xubuntu 18.04](#keyboard-tidak-terdeteksi-test-on-xubuntu-1804)
 * [Problem Kali Linux](#problem-kali-linux)
-    * [Repository Kali Linux](#repository-kali-Linux)
+    * [Repository Kali Linux](#repository-kali-linux)
     * [Date fix kali linux](#date-fix-kali-linux)
     * [Install wine kali linux](#install-wine-kali-linux)
+    * [Install Telegram desktop](#install-telegram-desktop)
     * [Install Virtualbox di kali linux](#install-virtualbox-di-kali-linux)
     * [Error virtualbox](#error-virtualbox)
-    * [Install Telegram desktop](#install-telegram-desktop)
 	* [Kernel driver not installed (rc=-1908)](#kernel-driver-not installed-rc1908)
     * [Remove GNUStep](#remove-gnustep)
 * [Kumpulan Konfigurasi](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/LinuxConfigBackup/MyConfig.md#kumpulan-configuration)
@@ -41,6 +42,16 @@
 apt-cache search linux-headers
 ```
 
+#### Connect Wifi with Commands
+```
+$ nmcli device wifi rescan
+```
+```
+$ nmcli device wifi list
+```
+```
+$ nmcli device connect NamaSSID password DISINI PASSWORD
+```
 #### Menampilkan semua service yang berjalan / tidak
 Menampilkan menggunakan ```service```
 ```
@@ -306,13 +317,7 @@ https://www.kali.org/docs/general-use/kali-linux-sources-list-repositories/
 
 #### Date fix kali linux
 ```
-sudo apt-get install ntpdate
-```
-```
-sudo systemctl restart ntp
-```
-```
-systemctl status ntp
+timedatectl
 ```
 ```
 timedatectl list-timezones | grep Asia
@@ -387,6 +392,15 @@ https://www.kali.org/docs/virtualization/install-virtualbox-kali-host/
 
 #### Error virtualbox
 #### Kernel driver not installed (rc=-1908)
+```
+sudo apt update
+```
+```
+sudo apt install --reinstall linux-headers-$(uname -r) virtualbox-dkms dkms
+```
+```
+sudo modprobe vboxdrv
+```
 
 
 #### Install Telegram desktop
@@ -405,16 +419,6 @@ E: Broken packages
 Perbaikan :
 ```
 $ sudo apt-get remove gnustep-base-common
-```
-
-```
-sudo apt update
-```
-```
-sudo apt install --reinstall linux-headers-$(uname -r) virtualbox-dkms dkms
-```
-```
-sudo modprobe vboxdrv
 ```
 
 

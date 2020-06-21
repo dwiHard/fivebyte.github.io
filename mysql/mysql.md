@@ -18,6 +18,7 @@
     * [Melihat Detail User](#melihat-detail-user)
     * [Hapus User](#hapus-user)
     * [Reload](#reload)
+    * [Reset the MySQL/MariaDB Root Password](#reset-the-mysql-mariadb-root-password)
 * [Basic MySQL](#basic-mysql)
     * [Buat Tabel](#buat-tabel)
     * [Untuk Melihat Struktur Tabel](#untuk-meliha-struktur-tabel)
@@ -141,6 +142,18 @@ drop user coba@localhost;
 #### Reload
 ```
 FLUSH PRIVILEGES;
+```
+
+#### Reset the MySQL/MariaDB Root Password
+
+Untuk set root :
+```
+$ sudo mysqladmin --user=root password "pokokmen"
+```
+
+Untuk reset password :
+```
+$ sudo mysqladmin --user=root --password=oldpassword password "newpassword"
 ```
 
 ### Basic MySQL

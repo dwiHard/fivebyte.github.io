@@ -18,7 +18,7 @@
     * [Melihat Detail User](#melihat-detail-user)
     * [Hapus User](#hapus-user)
     * [Reload](#reload)
-    * [Reset the MySQL/MariaDB Root Password](#reset-the-mysql-mariadb-root-password)
+    * [Reset the MySQL/MariaDB Root Password](#reset-the-mysqlmariadb-root-password)
 * [Basic MySQL](#basic-mysql)
     * [Buat Tabel](#buat-tabel)
     * [Untuk Melihat Struktur Tabel](#untuk-meliha-struktur-tabel)
@@ -148,7 +148,7 @@ FLUSH PRIVILEGES;
 
 Untuk set root :
 ```
-$ sudo mysqladmin --user=root password "pokokmen"
+$ sudo mysqladmin --user=root password "newpassword"
 ```
 
 Untuk reset password :

@@ -29,6 +29,8 @@ set clipboard=unnamedplus " share clipboard
 set hidden " you can change buffers without saving
 set mouse=a " use mouse everywhere
 set noerrorbells " don't make noise
+set cursorline   " highlight current line
+set cursorcolumn  " highlight current column
 set wildmenu " turn on command line completion wild style
 set wildignore=*.dll,*.o,*.obj,*.bak,*.exe,*.pyc,
                      \*.jpg,*.gif,*.png

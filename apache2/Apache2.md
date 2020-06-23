@@ -17,6 +17,7 @@
 	* [Menonaktifkan Fungsi PHP Berbahaya](#menonaktifkan-fungsi-php-berbahaya)
 	* [PHP Fastcgi / CGI – cgi.force_redirect Directive](#php-fastcgi-cgi-cgiforceredirect-directive)
 	* [PHP User and Group ID](#php-user-and-group-id)
+* [Linux PHP Error](#linux-php-error)
 * [Configure Apache2 untuk codeigniter](#configure-apache2-untuk-codeigniter)
     * [Install PHP](#install-php)
     * [Membuat 2 virtual host](#change-2-host-virtualhost-apache2)
@@ -185,6 +186,19 @@ cgi.force_redirect=On
 
 mod_fastcgi adalah cgi-module untuk server web Apache. Itu dapat terhubung ke server FASTCGI eksternal. Anda harus memastikan php dijalankan sebagai pengguna non-root. Jika PHP dieksekusi sebagai root atau UID di bawah 100, ia dapat mengakses dan / atau memanipulasi file sistem.
 
+
+### Linux PHP Error
+
+PHP module gd: Missing - Only an issue if you want to play with captchas
+```
+$ sudo apt-get install vim apache2 php7.3
+```
+```
+$ sudo apt-get install mariadb-server mariadb-client php7.3-mysql php7.3-gd 
+```
+```
+$ sudo  apt-get install git
+```
 ### Configure Apache2 untuk codeigniter
 
 #### Install PHP

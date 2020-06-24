@@ -6,6 +6,7 @@
 	* [Device Root](#jika-device-kondisi-root)
 	* [Device Non-Root](#jika-device-kondisi-non-root)
 * [Cara Mirror Smartphone ke laptop](#cara-mirror-smartphone-ke-laptop)
+* [Ubuntu in Termux](#ubuntu-in-termux)
 * [Build Web Server](#bulid-web-server)
     * [Persiapan](#persiapan)
     * [Problem](#problem)
@@ -51,6 +52,30 @@ https://github.com/Genymobile/scrcpy
 
 ```
 scrcpy
+```
+
+#### Ubuntu in Termux
+```
+apt-get update && apt-get upgrade -y
+```
+```
+apt-get install wget proot git -y
+```
+```
+git clone https://github.com/MFDGaming/ubuntu-in-termux.git
+```
+```
+cd ubuntu-in-termux
+```
+```
+chmod +x ubuntu.sh
+```
+```
+./ubuntu.sh -y
+```
+Setiap mau jalan kan ubuntu silakhkan ketik
+```
+./startubuntu.sh
 ```
 
 ### Build Web Server

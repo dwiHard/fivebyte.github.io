@@ -27,6 +27,7 @@
     * [Repository Kali Linux](#repository-kali-linux)
     * [Date fix kali linux](#date-fix-kali-linux)
     * [Install wine kali linux](#install-wine-kali-linux)
+    * [Install Disk Mounter](#install-disk-mounter)
     * [Install Telegram desktop](#install-telegram-desktop)
     * [Install Virtualbox di kali linux](#install-virtualbox-di-kali-linux)
     * [Error virtualbox](#error-virtualbox)
@@ -39,7 +40,7 @@
 
 #### cek linux header
 ```
-apt-cache search linux-headers
+$ apt-cache search linux-headers
 ```
 
 #### Connect Wifi with Commands
@@ -155,10 +156,10 @@ $ ethtool eth0 | grep "Speed:"
 #### Disable webcam.
 cek list webcam
 ```
-sudo lsmod | grep uvcvideo
+$ sudo lsmod | grep uvcvideo
 ```
 ```
-vi /etc/modprobe.d/blacklist-libnfc.conf 
+$ vi /etc/modprobe.d/blacklist-libnfc.conf 
 ```
 
 ```
@@ -219,17 +220,17 @@ https://wiki.archlinux.org/index.php/Solid_state_drive#TRIM
 
 Pastikan SSD anda mendukung untuk memverifikasi dukungan TRIM, jalankan:
 ```
-lsblk --discard
+$ lsblk --discard
 ```
 Dan periksa nilai-nilai DISC-GRAN (discard granularity) dan DISC-MAX (discard max bytes) kolom. Nilai bukan nol menunjukkan dukungan TRIM.
 
 Atau, instal paket hdparm dan jalankan:
 ```
-sudo hdparm -I /dev/sda | grep TRIM
+$ sudo hdparm -I /dev/sda | grep TRIM
 ```
 jika mendukung maka lanjutkan
 ```
-sudo vi /etc/fstab
+$ sudo vi /etc/fstab
 ```
 
 #### Add noatime to fstab
@@ -244,14 +245,14 @@ tmpfs   /var/spool      tmpfs   defaults,noatime,mode=1777      0 0
 tmpfs   /var/tmp        tmpfs   defaults,noatime,mode=1777      0 0
 ```
 ```
-sudo systemctl reboot
+$ sudo systemctl reboot
 ```
 #### Jalankan fstrim secara berkala
 #### Menggunakan cron
 buat  cron mingguan /etc/cron.weekly/fstrim. Jika tidak, buat sendiri
 
 ```
-sudo vi /etc/cron.weekly/fstrim
+$ sudo vi /etc/cron.weekly/fstrim
 ```
 tambahkan
 ```
@@ -261,18 +262,18 @@ tambahkan
 ```
 #### Menggunakan systemctl
 ```
-sudo systemctl enable fstrim.timer
+$ sudo systemctl enable fstrim.timer
 ```
 ```
-sudo systemctl start fstrim.service
+$ sudo systemctl start fstrim.service
 ```
 ```
-sudo systemctl start fstrim.timer
+$ sudo systemctl start fstrim.timer
 ```
 
 #### Kurangi penggunaan swap
 ```
-sudo nano /etc/sysctl.conf
+$ sudo vi /etc/sysctl.conf
 ```
 tambahkan (ubuntu dan debian)
 ```
@@ -280,7 +281,7 @@ vm.swappiness=1
 vm.vfs_cache_pressure=50
 ```
 ```
-sudo systemctl reboot
+$ sudo systemctl reboot
 ```
 
 ### Problem di Linux
@@ -306,10 +307,10 @@ $ sudo apt install xserver-xorg-input-all
 cek ```/etc/apt/sources.list```
 
 ```
-deb http://http.kali.org/kali kali-rolling main non-free contrib
+$ deb http://http.kali.org/kali kali-rolling main non-free contrib
 ```
 ```
-sudo apt update
+$ sudo apt update
 ```
 info lebih lengkap cek link dibawah ini
 
@@ -317,74 +318,87 @@ https://www.kali.org/docs/general-use/kali-linux-sources-list-repositories/
 
 #### Date fix kali linux
 ```
-timedatectl
+$ timedatectl
 ```
 ```
-timedatectl list-timezones | grep Asia
+$ timedatectl list-timezones | grep Asia
 ```
 ```
-timedatectl set-timezone Asia/Jakarta
+$ timedatectl set-timezone Asia/Jakarta
 ```
 
 
 #### Install wine kali linux
 ```
-sudo dpkg --add-architecture i386
+$ sudo dpkg --add-architecture i386
 ```
 ```
-sudo apt-get update
+$ sudo apt-get update
 ```
 ```
-sudo apt-get install wine32
+$ sudo apt-get install wine32
+```
+
+Untuk Install Office :
+```
+$ WINEPREFIX=~/.wine/office2007 WINEARCH=win32 winecfg
 ```
 ```
-WINEPREFIX=~/.wine/office2007 WINEARCH=win32 winecfg
+$ sudo apt install winbind cabextract
 ```
 ```
-sudo apt install winbind cabextract
+$ wget  https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks
 ```
 ```
-wget  https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks
+$ chmod +x winetricks
 ```
 ```
-chmod +x winetricks
-```
-```
-sudo cp winetricks /usr/local/bin/
+$ sudo cp winetricks /usr/local/bin/
 ```
 
 ```
-sudo apt install zenity
+$ sudo apt install zenity
 ```
 ```
-WINEPREFIX=~/.wine/office2007 WINEARCH=win32 winetricks 
+$ WINEPREFIX=~/.wine/office2007 WINEARCH=win32 winetricks 
 ```
+Configure didalamnya
+```
+Select the default wineprefix
+Install a Windows DLL or component
+msxml6
+```
+
 cek apakah msxml6 sudah terinstall atau belum
 ```
-WINEPREFIX=~/.wine/office2007 WINEARCH=win32 winetricks msxml6
+$ WINEPREFIX=~/.wine/office2007 WINEARCH=win32 winetricks msxml6
 ```
 untuk instal office 
 ```
-WINEPREFIX=~/.wine/office2007 WINEARCH=win32 wine ./Microsoft-Office-Professional-2007.exe 
+$ WINEPREFIX=~/.wine/office2007 WINEARCH=win32 wine ./Microsoft-Office-Professional-2007.exe 
 ```
 
+#### Install Disk Mounter
+```
+$ sudo apt-get install gnome-disk-utility
+```
 
 #### Install Virtualbox di kali linux
 ```
-wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
+$ wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
 ```
 ```
-echo "deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian buster contrib" | sudo tee /etc/apt/sources.list.d/virtualbox.list
+$ echo "deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian buster contrib" | sudo tee /etc/apt/sources.list.d/virtualbox.list
 ```
 ```
-sudo apt update
+$ sudo apt update
 ```
 ```
-sudo apt install -y dkms virtualbox virtualbox-ext-pack
+$ sudo apt install -y dkms virtualbox virtualbox-ext-pack
 ```
 Jalankan
 ```
-virtualbox
+$ virtualbox
 ```
 info lebih
 https://www.kali.org/docs/virtualization/install-virtualbox-kali-host/
@@ -393,13 +407,13 @@ https://www.kali.org/docs/virtualization/install-virtualbox-kali-host/
 #### Error virtualbox
 #### Kernel driver not installed (rc=-1908)
 ```
-sudo apt update
+$ sudo apt update
 ```
 ```
-sudo apt install --reinstall linux-headers-$(uname -r) virtualbox-dkms dkms
+$ sudo apt install --reinstall linux-headers-$(uname -r) virtualbox-dkms dkms
 ```
 ```
-sudo modprobe vboxdrv
+$ sudo modprobe vboxdrv
 ```
 
 
@@ -422,4 +436,4 @@ $ sudo apt-get remove gnustep-base-common
 ```
 
 
-
+### Terima Kasih

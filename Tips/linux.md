@@ -5,6 +5,7 @@
 * [Linux Commands](#linux-commands)
     * [Cek Linux header](#cek-linux-header)
     * [Connect Wifi with Commands](#connect-wifi-with-commands)
+    * [Clear Cache di Linux](#clear-cache-di-linux)
     * [Menampilkan semua service yang berjalan / tidak](#menampilkan-semua-service-yang-berjalan-tidak)
     * [Cek Harddisk partitions](#cek-harddisk-partitions)
     * [Cara Memeriksa Available Network Interfaces, Associated IP Addresses, MAC Addresses, and Interface Speed on Linux](#cara-memeriksa-available-network-interfaces-associated-ip-addresses-mac-addresses-and-interface-speed-on-linux)
@@ -53,6 +54,43 @@ $ nmcli device wifi list
 ```
 $ nmcli device connect NamaSSID password DISINI PASSWORD
 ```
+
+#### Clear Cache di Linux
+
+Bersihkan hanya PageCache.
+```
+# sync; echo 1 > /proc/sys/vm/drop_caches
+```
+
+Bersihkan dentries and inodes.
+```
+# sync; echo 2 > /proc/sys/vm/drop_caches
+```
+
+Bersihakan PageCache, dentries and inodes.
+```
+# sync; echo 3 > /proc/sys/vm/drop_caches 
+```
+
+***Jalankan secara Otomatis***
+Buat file dan di simpan dengan nama ```clearcache.sh``` :
+```
+#!/bin/bash
+# Note, we are using "echo 3", but it is not recommended in production instead use "echo 1"
+echo "echo 3 > /proc/sys/vm/drop_caches"
+```
+Kasih permission :
+```
+# chmod 755 clearcache.sh
+```
+```
+# crontab -e
+```
+Tambahkan baris di bawah ini, simpan dan keluar untuk menjalankannya pukul 2 pagi setiap hari.
+```
+0  2  *  *  *  /path/to/clearcache.sh
+```
+
 #### Menampilkan semua service yang berjalan / tidak
 Menampilkan menggunakan ```service```
 ```

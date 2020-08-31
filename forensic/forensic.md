@@ -19,6 +19,8 @@
     * [SMB Enumeration](#smb-enumeration)
     * [MySQL Enumeration](#mysql-enumeration)
     * [Vulnerability Scanning With Nmap](#vulnerability-scanning-with-nmap)
+    * [Scan for network vulnerabilities](#scan-for-network-vulnerabilities)
+    * [Operating System Detection](#operating-system-detection)
 
 
 #### John the Ripper
@@ -181,6 +183,8 @@ exploit
 ```
 
 Masuk Browser jalankan file php yg berhasil di upload tadi di URL
+
+### Nmap
 
 #### Firewall Evasion (Decoys,MTU & Fragmentation)
 ```
@@ -352,5 +356,18 @@ nmap -T4 -p 3306 --script mysql-brute --script-args mysql-brute.threads=100 127.
 sudo nmap -sV -p21-8080 --script vulners 127.0.0.1
 ```
 
+#### Scan for network vulnerabilities
+```
+sudo nmap --script nmap-vulners -sV 192.168.x.x
+```
+
+#### Operating System Detection
+```
+sudo nmap -O 127.0.0.1
+```
+```
+sudo nmap -O --osscan-guess 127.0.0.1
+```
 ### Terima Kasih
+
 

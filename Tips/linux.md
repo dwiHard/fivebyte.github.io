@@ -470,7 +470,17 @@ E: Broken packages
 ```
 Perbaikan :
 ```
-$ sudo apt-get remove gnustep-base-common
+$ sudo apt-get autoclean
+$ sudo apt-get -f install
+$ sudo dpkg --configure -a
+$ sudo apt-get -f install
+```
+```
+$ sudo apt-get update
+$ sudo apt-get upgrade
+```
+```
+$ sudo apt-get full-upgrade
 ```
 
 

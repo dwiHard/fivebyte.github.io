@@ -31,9 +31,10 @@
     * [Install Disk Mounter](#install-disk-mounter)
     * [Install Telegram desktop](#install-telegram-desktop)
     * [Install Virtualbox di kali linux](#install-virtualbox-di-kali-linux)
+    * [Install Spotify](#install-spotify)
     * [Error virtualbox](#error-virtualbox)
 	* [Kernel driver not installed (rc=-1908)](#kernel-driver-not installed-rc1908)
-    * [Remove GNUStep](#remove-gnustep)
+    * [Fix GNUStep](#fix-gnustep)
 * [Kumpulan Konfigurasi](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/LinuxConfigBackup/MyConfig.md#kumpulan-configuration)
 
 
@@ -441,7 +442,14 @@ $ virtualbox
 info lebih
 https://www.kali.org/docs/virtualization/install-virtualbox-kali-host/
 
-
+#### Install Spotify
+```
+$ curl -sS https://download.spotify.com/debian/pubkey.gpg | sudo apt-key add - 
+$ echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+```
+```
+$ sudo apt-get update && sudo apt-get install spotify-client
+```
 #### Error virtualbox
 #### Kernel driver not installed (rc=-1908)
 ```
@@ -460,7 +468,7 @@ $ sudo modprobe vboxdrv
 $ sudo apt-get install telegram-desktop
 ```
 
-#### Remove GNUStep
+#### Fix GNUStep
 Problem :
 ```
 The following packages have unmet dependencies:

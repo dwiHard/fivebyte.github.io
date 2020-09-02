@@ -7,6 +7,7 @@
     * [Copy SSH key](#copy-ssh-key)
     * [Login  SSH Automatis](#login-automatis-ssh)
     * [Config SSH Server](#config-ssh-server)
+    * [Config SSH Login](#config-ssh-login)
 * [Set Timezone](#set-timezone)
 * [Update System](#update-system)
 * [Transfer File](#transfer-file)
@@ -91,6 +92,16 @@ keluar dari text editor
 ```
 # systemctl status ssh
 ```
+
+#### Config SSH Login 
+```
+Host NamaServer
+	Hostname HostServer
+	User UserServer
+	port portServer
+	identityFile ~/.ssh/id_rsa_tes
+```
+
 ## Set Timezone
 ```
 $ timedatectl set-timezone Asia/Jakarta

@@ -32,6 +32,7 @@
     * [Install Telegram desktop](#install-telegram-desktop)
     * [Install Virtualbox di kali linux](#install-virtualbox-di-kali-linux)
     * [Install Spotify](#install-spotify)
+    * [Install Scrcpy](#install-scrcpy)
     * [Error virtualbox](#error-virtualbox)
 	* [Kernel driver not installed (rc=-1908)](#kernel-driver-not installed-rc1908)
     * [Fix GNUStep](#fix-gnustep)
@@ -450,6 +451,32 @@ $ echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/s
 ```
 $ sudo apt-get update && sudo apt-get install spotify-client
 ```
+
+#### Install Scrcpy
+Install dependencies
+```
+$ sudo apt install adb ffmpeg libsdl2-2.0-0 make gcc pkg-config meson ninja-build libavcodec-dev libavformat-dev libavutil-dev libsdl2-dev
+```
+```
+sudo apt update && sudo apt install android-sdk
+```
+```
+$ git clone https://github.com/Genymobile/scrcpy
+```
+```
+$ cd scrcpy
+```
+Download and install the scrcpy server jar
+```
+$ meson x --buildtype release --strip -Db_lto=true  -Dprebuilt_server=/home/hard/Downloads/scrcpy-server-v1.16 
+```
+```
+$ ninja -Cx
+```
+```
+$ sudo ninja -Cx install
+```
+
 #### Error virtualbox
 #### Kernel driver not installed (rc=-1908)
 ```

@@ -21,6 +21,15 @@
     * [Vulnerability Scanning With Nmap](#vulnerability-scanning-with-nmap)
     * [Scan for network vulnerabilities](#scan-for-network-vulnerabilities)
     * [Operating System Detection](#operating-system-detection)
+* [Reconnaissance](#reconnaissance)
+    * [Finding e-mail](#finding-email)
+    * [Clone Website](#clone-website)
+    * [ICMP Reconnaissane](#icmp-reconnaissane)
+    * [DNS Reconnaissane with dig](#dns-reconnaissane-with-dig)
+    * [DNS target identification](#dns-target-identification)
+    * [DNS Enumerating with host](#dns-enumerating-with-host)
+    * [DNS Enumerating with Dnsrecon](#dns-enumerating-with-dnsrecon)
+    * [DNS Enumerating with Dnsenum](#dns-enumerating-with-dnsenum)
 
 
 #### John the Ripper
@@ -368,6 +377,74 @@ sudo nmap -O 127.0.0.1
 ```
 sudo nmap -O --osscan-guess 127.0.0.1
 ```
+
+### Reconnaissance
+
+#### Finding e-mail 
+```
+# theHarvester -d google.com -l 500 -b goole.com
+```
+```
+# theHarvester -d google.com -l 500 -b all
+```
+
+#### Clone Website
+```
+$ httrack
+```
+#### ICMP Reconnaissane
+```
+$ fping -asg 127.0.0.1/24
+```
+
+#### DNS Reconnaissane with dig
+```
+dig www.x.com
+```
+```
+dig -t ns www.x.com
+```
+
+#### DNS target identification
+```
+fierce -dns www.x.com
+```
+
+#### DNS Enumerating with host
+```
+# host -a google.com
+```
+```
+# host -t ns google.com
+```
+```
+# host -t mx google.com
+```
+```
+# host -l google.com ns1.google.com
+```
+
+#### DNS Enumerating with Dnsrecon
+```
+# dnsrecon -d google.com
+```
+Reverse lookups
+```
+# dnsrecon -r x.x.x.00-x.x.x.50
+```
+Zone transfer
+```
+# dnsrecon -d google.com -a
+```
+#### DNS Enumerating with Dnsenum
+```
+# dnsenum google.com
+```
+Brute-force
+```
+# dnsenum -f /usr/share/wordlists/subdomains/subdomains_popular_1000 -r google.com
+```
+
 ### Terima Kasih
 
 

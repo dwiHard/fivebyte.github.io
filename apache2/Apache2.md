@@ -352,48 +352,25 @@ IP kamu       hard.com
 ### Problem Apache2
 
 #### Apache2 eror di Ubuntu 18.04
-
-Cara dibawah ini mungkin dapat menghapus file Anda alangkah
- baiknya backup dahulu.
- ```
-$ service apache2 status
 ```
-● apache2.service - The Apache HTTP Server
-   Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor preset: 
-  Drop-In: /lib/systemd/system/apache2.service.d
-           └─apache2-systemd.conf
-   Active: failed (Result: exit-code) since Wed 2020-05-27 17:00:24 WIB; 1h 59mi
-  Process: 1002 ExecStart=/usr/sbin/apachectl start (code=exited, status=1/FAILU
-
-Mei 27 17:00:20 hard systemd[1]: Starting The Apache HTTP Server...
-Mei 27 17:00:24 hard apachectl[1002]: AH00558: apache2: Could not reliably deter
-Mei 27 17:00:24 hard apachectl[1002]: (2)No such file or directory: AH02291: Can
-Mei 27 17:00:24 hard apachectl[1002]: (2)No such file or directory: AH02291: Can
-Mei 27 17:00:24 hard apachectl[1002]: AH00014: Configuration check failed
-Mei 27 17:00:24 hard apachectl[1002]: Action 'start' failed.
-Mei 27 17:00:24 hard apachectl[1002]: The Apache error log may have more informa
-Mei 27 17:00:24 hard systemd[1]: apache2.service: Control process exited, code=e
-Mei 27 17:00:24 hard systemd[1]: apache2.service: Failed with result 'exit-code'
-Mei 27 17:00:24 hard systemd[1]: Failed to start The Apache HTTP Server.
-```
-$ systemctl  start apache2.service
-```
-Job for apache2.service failed because the control process exited with error code.
-See "systemctl status apache2.service" and "journalctl -xe" for details.
-```
-$ sudo apt-get -o DPkg::Options::="--force-confmiss" --reinstall install apache2
+$ sudo apachectl configtest
 ```
 ```
-$ sudo apt-get purge apache2
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1. Set the 'ServerName' directive globally to suppress this message
+(2)No such file or directory: AH02291: Cannot access directory '/var/log/apache2/' for main error log
+(2)No such file or directory: AH02291: Cannot access directory '/var/log/apache2/' for error log of vhost defined at /etc/apache2/sites-enabled/000-default.conf:1
+AH00014: Configuration check failed
+Action 'configtest' failed.
+The Apache error log may have more information.
 ```
 ```
-$ sudo apt-get install apache2
+$ sudo mkdir -p /var/log/apache2/
 ```
 ```
-$ sudo service apache2 start
+$ sudo chmod -R 744 /var/log/apache2/
 ```
 ```
-$ sudo service apache2 status
+$ sudo systemctl restart apache2
 ```
 
 #### Apache2 error module mpm_event

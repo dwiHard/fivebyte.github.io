@@ -2,10 +2,10 @@
 > Disusun oleh Hardiyanto
 
 ### Daftar Isi
-* [Burp Suite](https://gitlab.com/dwiHard/LinuxAdministration/-/edit/master/webserver/KeamananWeb.md#burp-suite)
-    * [Install bWapp](https://gitlab.com/dwiHard/LinuxAdministration/-/edit/master/webserver/KeamananWeb.md#install-bwapp)
-    * [BruteForce](https://gitlab.com/dwiHard/LinuxAdministration/-/edit/master/webserver/KeamananWeb.md#bruteforce)
-    * [SQL Injection](https://gitlab.com/dwiHard/LinuxAdministration/-/edit/master/webserver/KeamananWeb.md#sql-injection)
+* [Burp Suite](https://gitlab.com/dwiHard/LinuxAdministration/-/master/webserver/KeamananWeb.md#burp-suite)
+    * [Install bWapp](https://gitlab.com/dwiHard/LinuxAdministration/-/master/webserver/KeamananWeb.md#install-bwapp)
+    * [BruteForce](https://gitlab.com/dwiHard/LinuxAdministration/-/master/webserver/KeamananWeb.md#bruteforce)
+    * [SQL Injection](https://gitlab.com/dwiHard/LinuxAdministration/-/master/webserver/KeamananWeb.md#sql-injection)
 
 
 ## Burp Suite

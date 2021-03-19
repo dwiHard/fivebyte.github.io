@@ -4,6 +4,7 @@
 ### Daftar isi
 * [Linux Commands](#linux-commands)
     * [Cek Linux header](#cek-linux-header)
+    * [Fail2ban](#fail2ban)
     * [Connect Wifi with Commands](#connect-wifi-with-commands)
     * [Clear Cache di Linux](#clear-cache-di-linux)
     * [Menampilkan semua service yang berjalan / tidak](#menampilkan-semua-service-yang-berjalan-tidak)
@@ -41,6 +42,34 @@
 
 ### Linux Commands
 
+#### Fail2ban
+install fail2ban
+```
+$ sudo apt install fail2ban
+```
+configure fail2ban
+```
+$ sudo systemctl enable fail2ban.service
+```
+buat file di /etc/fail2ban dengan nama jail.local
+```
+[sshd]
+enable = true
+port = ssh
+filter = sshd
+logpath = /var/log/auth.log
+maxretry = 3
+bantime = 3600
+ignoreip = 127.0.0.1
+```
+cek status fail2ban
+```
+# fail2ban-client status
+```
+cek status fail2ban user
+```
+# fail2ban-client status sshd
+```
 #### cek linux header
 ```
 $ apt-cache search linux-headers

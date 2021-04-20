@@ -14,5 +14,5 @@
     * [Info NIC](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/LinuxConfigBackup/nic-info.sh)
     * [Port Speed](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/LinuxConfigBackup/port-speed.sh)
 * [Python Script]()
-    *[Decode Url](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/LinuxConfigBackup/decodeUrl.py)
-    *[Descrypt 12](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/LinuxConfigBackup/decrypt12.py)
+    * [Decode Url](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/LinuxConfigBackup/decodeUrl.py)
+    * [Descrypt 12](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/LinuxConfigBackup/decrypt12.py)

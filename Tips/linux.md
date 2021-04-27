@@ -14,6 +14,7 @@
     * [Disable webcam](#disable-webcam)
     * [Format FlashDisk Lewat Terminal](#format-flashdisk-lewat-terminal)
     * [Remove snap dari ubuntu 18.04](#remove-snap-dari-ubuntu-1804)
+    * [Install OpenVpn Server](#install-openvpn-server)
 * [Konfigurasi Bahasa Pemograman di Linux](#configurasi-bahasa-pemograman-di-linux)
     * [Configure Java](#configure-java-version)
 * [Optimalkan SSD](#optimalkan-ssd)
@@ -271,7 +272,32 @@ jika ingin mengembalikan software yang diintall di snap menggunakan apt :
 $ sudo apt-get install gnome-calculator gnome-characters gnome-logs gnome-system-monitor
 ```
 
+#### Install OpenVpn Server
 
+Cek Ip address
+```
+$ dig +short myip.opendns.com @resolver1.opendns.com
+```
+Install OpenVpn pada ubuntu
+```
+$ sudo apt install curl
+```
+```
+curl -O https://raw.githubusercontent.com/angristan/openvpn-install/master/openvpn-install.sh
+```
+```
+# chmod +x openvpn-install.sh
+```
+```
+$ sudo bash openvpn-install.sh
+```
+Cek ip dan port pada openvpn
+```
+$ sudo ss -tupln | grep openvpn
+```
+```
+$ ip add
+```
 ### Configurasi Bahasa Pemograman di Linux
 
 ##### Configure java version

@@ -15,6 +15,7 @@
     * [Format FlashDisk Lewat Terminal](#format-flashdisk-lewat-terminal)
     * [Remove snap dari ubuntu 18.04](#remove-snap-dari-ubuntu-1804)
     * [Install OpenVpn Server](#install-openvpn-server)
+    * [Change bash to fish](#change-bash-to-fish)
 * [Konfigurasi Bahasa Pemograman di Linux](#configurasi-bahasa-pemograman-di-linux)
     * [Configure Java](#configure-java-version)
 * [Optimalkan SSD](#optimalkan-ssd)
@@ -305,7 +306,20 @@ $ ip add
 $ sudo update-alternatives --config javac
 ```
 
-
+#### Change bash to fish
+```
+$ sudo apt install fish
+```
+```
+$ chsh -s /usr/bin/fish
+```
+untuk konfigurasi 
+```
+$ mkdir -p ~/.config/fish
+```
+```
+$ touch ~/.config/fish/config.fish
+```
 ### Optimalkan SSD
 
 #### Aktikan TRIM dan kurangi WRITE

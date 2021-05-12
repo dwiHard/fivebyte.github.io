@@ -8,6 +8,7 @@
 * [Check list config](#check-list-config)
 * [Clone dari repository](#clone-dari-repository)
 * [Git Connect SSH](#git-connect-ssh)
+* [Alternatif Connect](#alternatif-connect)
 * [Melihat status repository](#melihat-status-repository)
 * [Menambahkan file ke repository](#menambahkan-file-ke-repository)
 * [Menambahkan komentar](#menambahkan-komentar)
@@ -58,6 +59,16 @@ cek status ssh
 ```
 $ ssh -T git@gitlab.com
 ```
+#### Alternatif Connect
+```
+1. Goto https://gitlab.com/profile/personal_access_tokens
+2. Create new token and mark check to all.
+3. Copy your token
+4. Now go to your Terminal and paste it like this.
+5. git clone https://oauth2:YOUR_TOKEN@gitlab.com/PROFILE_NAME/REPO_NAME.git/
+
+```
+
 #### Melihat status repository
 ```
 $ git status

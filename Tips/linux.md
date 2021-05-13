@@ -16,6 +16,7 @@
     * [Remove snap dari ubuntu 18.04](#remove-snap-dari-ubuntu-1804)
     * [Install OpenVpn Server](#install-openvpn-server)
     * [Change bash to fish](#change-bash-to-fish)
+    * [Config Fish](#config-fish)
 * [Konfigurasi Bahasa Pemograman di Linux](#configurasi-bahasa-pemograman-di-linux)
     * [Configure Java](#configure-java-version)
 * [Optimalkan SSD](#optimalkan-ssd)
@@ -319,6 +320,21 @@ $ mkdir -p ~/.config/fish
 ```
 ```
 $ touch ~/.config/fish/config.fish
+```
+
+#### Config Fish
+```
+$ curl -L https://get.oh-my.fish | fish
+```
+```
+$ curl -L https://get.oh-my.fish > install
+```
+```
+$ fish install --path=~/.local/share/omf --config=~/.config/omf
+```
+Untuk lebih lengkapnya bisa dicek di link dibawah ini
+```
+https://github.com/oh-my-fish/oh-my-fish
 ```
 ### Optimalkan SSD
 

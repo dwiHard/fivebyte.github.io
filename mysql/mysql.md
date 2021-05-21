@@ -23,8 +23,12 @@
     * [Buat Tabel](#buat-tabel)
     * [Untuk Melihat Struktur Tabel](#untuk-melihat-struktur-tabel)
     * [Hapus Tabel](#hapus-tabel)
+    * [Hapus FOREIGN KEY](#hapus-foreign-key)
+    * [Hapus FOREIGN KEY(constraint)](#hapus-foreign-key-constraint)
     * [Insert tabel](#insert-tabel)
     * [Update tabel](#update-tabel)
+    * [Alter Table on FOREIGN KEY](#altertable-on-foreign-key)
+    * [Alter Table on FOREIGN KEY(constraint)](#altertable-on-foreign-key-constraint)
     * [Delete data](#delete-data)
     * [Limit Data](#limit-data)
     * [Select Distinct](#select-distinct)
@@ -189,6 +193,18 @@ FROM table_name;
 DROP TABLE namaTabel;
 ```
 
+#### Hapus FOREIGN KEY
+```
+ALTER TABLE NamaTabelSekarang
+DROP FOREIGN KEY FK_NamaField; 
+```
+
+#### Hapus FOREIGN KEY (constraint)
+```
+ALTER TABLE NamaTabelSekarang
+DROP CONSTRAINT FK_NamaField; 
+```
+
 #### Insert tabel
 ```
 INSERT INTO nama_tabel (column1, column2, column3,...)
@@ -209,6 +225,20 @@ DELETE FROM nama_tabel WHERE column = value
 Misalkan :
 ```
 DELETE FROM coba WHERE id = 1
+```
+
+#### Alter Table on FOREIGN KEY
+```
+ALTER TABLE NamaTabelSekarang
+ADD FOREIGN KEY (NamaField) 
+REFERENCES NamaTabelKunci(NamaField); 
+```
+
+#### Alter Table on FOREIGN KEY (constraint)
+```
+ALTER TABLE NamaTabelSekarang
+ADD CONSTRAINT FK_NamaField
+FOREIGN KEY (NamaField) REFERENCES NamaTabelKunci(NamaField); 
 ```
 
 #### Limit Data

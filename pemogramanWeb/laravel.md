@@ -3,36 +3,37 @@
 
 
 ### Daftar Isi
-- [x] [Install]
-- [x] [Migration]
-- [x] [Buat Controller dan Model]
-- [x] [Install Dompdf]
+- [x] [Install](#install)
+- [x] [Migration](#migration)
+- [x] [Buat Controller dan Model](#buat-controller-dan-model)
+- [x] [Install Dompdf](#install-dompdf)
+- [x] [Install Bootstrap in Laravel](#install-bootstrap-in-laravel)
 
 
-#### Insatall
+#### Install
 ```
-composer create-project --prefer-dist laravel/laravel NamaProject
+$ composer create-project --prefer-dist laravel/laravel NamaProject
 ```
 
 #### Migration
 ```
-php artisan make:migration NameMigration --create=Nama
+$ php artisan make:migration NameMigration --create=Nama
 ```
 ```
-php artisan migrate
+$ php artisan migrate
 ```
 Lebih detail bisa lihat link dibawah ini
 
 https://laravel.com/docs/8.x/migrations#introduction
 
-### Buat Controller dan Model
+#### Buat Controller dan Model
 ```
-php artisan make:controller DataController --resource --model=Data
+$ php artisan make:controller DataController --resource --model=Data
 ```
 
-### Install Dompdf
+#### Install Dompdf
 ```
-composer require barryvdh/laravel-dompdf
+$ composer require barryvdh/laravel-dompdf
 ```
 Edit di ```config/app.php```
 ```
@@ -45,3 +46,16 @@ Edit di ```config/app.php```
     'PDF' => Barryvdh\DomPDF\Facade::class,
 ]
 ```
+
+#### Install Bootstrap in Laravel
+```
+$ composer require laravel/ui:^2.4
+```
+```
+$ php artisan ui bootstrap
+```
+```
+$ npm install && npm run dev
+```
+
+### Terima kasih

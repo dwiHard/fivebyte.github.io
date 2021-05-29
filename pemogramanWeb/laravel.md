@@ -14,6 +14,11 @@
 ```
 $ composer create-project --prefer-dist laravel/laravel NamaProject
 ```
+install laravel berdasarkan versinya
+```
+$ composer create-project --prefer-dist laravel/laravel:^7.0 NamaProject
+
+```
 
 #### Migration
 ```

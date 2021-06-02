@@ -19,6 +19,7 @@
 	* [PHP User and Group ID](#php-user-and-group-id)
 * [Linux PHP Error](#linux-php-error)
 * [Configure Apache2 untuk codeigniter](#configure-apache2-untuk-codeigniter)
+    * [Problem Install Codeigniter 4](#problem-install-codeigniter-4)
     * [Install PHP](#install-php)
     * [Membuat 2 virtual host](#change-2-host-virtualhost-apache2)
     * [Membuat CA cloudflare](#configure-cloudflare-origin-ca-apache)
@@ -200,6 +201,30 @@ $ sudo apt-get install mariadb-server mariadb-client php7.3-mysql php7.3-gd
 $ sudo  apt-get install git
 ```
 ### Configure Apache2 untuk codeigniter
+
+#### Problem Install Codeigniter 4
+```
+Creating a "codeigniter4/appstarter" project at "./app"
+Installing codeigniter4/appstarter (v4.1.1)
+  - Installing codeigniter4/appstarter (v4.1.1): Extracting archive
+Created project in /var/www/html/codeigniter/app
+Loading composer repositories with package information
+Updating dependencies
+Your requirements could not be resolved to an installable set of packages.
+
+  Problem 1
+    - codeigniter4/framework[4.0.0, ..., v4.1.1] require ext-intl * -> it is missing from your system. Install or enable PHP's intl extension.
+    - Root composer.json requires codeigniter4/framework ^4 -> satisfiable by codeigniter4/framework[4.0.0, ..., v4.1.1].
+
+    ..............
+```
+Fix
+```
+$ sudo apt install php-intl
+```
+```
+$ composer install
+```
 
 #### Install PHP
 ```

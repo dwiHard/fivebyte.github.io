@@ -22,6 +22,7 @@
     * [Problem Install Codeigniter 4](#problem-install-codeigniter-4)
     * [Install PHP](#install-php)
     * [Membuat 2 virtual host](#change-2-host-virtualhost-apache2)
+    * [Redirect Http to Https](#redirect-http-to-https)
     * [Membuat CA cloudflare](#configure-cloudflare-origin-ca-apache)
     * [Membuat ssl](#configure-apache2-dengan-ssl)
 * [Problem Apache2](#problem-apache2)
@@ -296,6 +297,44 @@ $ sudo vi /etc/hosts
 ```
 IP kamu       hard.com
 IP kamu       hard2.com
+```
+
+#### Redirect Http to Https
+```
+$ sudo a2enmod rewrite
+```
+```
+$ sudo a2enmod ssl
+```
+Edit file
+```
+$ /etc/apache2/sites-available/000-default.conf
+```
+```
+<VirtualHost *:80>
+    RewriteEngine On
+    RewriteCond %{HTTPS} off
+    RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+</VirtualHost>
+
+<VirtualHost *:443>
+    SSLEngine on
+    SSLCertificateFile    <path to your crt file>
+    SSLCertificateKeyFile   <path to your private key file>
+
+    # Rest of your site config
+    # ...
+</VirtualHost>
+```
+Atau bisa juga tambahkan file di root dir dengan nama ```.htaccess```
+```
+RewriteEngine on
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*) https://%{HTTP_HOST}/$1
+```
+Langkah terakhir adalah
+```
+$ sudo service apache2 restart
 ```
 
 #### Configure cloudflare origin ca apache

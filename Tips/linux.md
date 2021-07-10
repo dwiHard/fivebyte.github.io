@@ -5,6 +5,7 @@
 * [Linux Commands](#linux-commands)
     * [Cek Linux header](#cek-linux-header)
     * [Fail2ban](#fail2ban)
+    * [Berjalan dilatar belakang dengan screen](#berjalan-dilatar-belakang-dengan-screen)
     * [Connect Wifi with Commands](#connect-wifi-with-commands)
     * [Clear Cache di Linux](#clear-cache-di-linux)
     * [Menampilkan semua service yang berjalan / tidak](#menampilkan-semua-service-yang-berjalan-tidak)
@@ -73,6 +74,25 @@ cek status fail2ban user
 ```
 # fail2ban-client status sshd
 ```
+
+#### Berjalan dilatar belakang dengan screen
+buat nama session
+```
+$ screen -S session_name
+```
+buat lihat daftar session
+```
+$ screen -ls
+```
+masuk ke session
+```
+$ screen -r id_session
+```
+atau
+```
+$ screen -rd id_session
+```
+
 #### cek linux header
 ```
 $ apt-cache search linux-headers

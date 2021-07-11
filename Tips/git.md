@@ -13,6 +13,7 @@
 * [Menambahkan file ke repository](#menambahkan-file-ke-repository)
 * [Menambahkan komentar](#menambahkan-komentar)
 * [Membuat cabang baru](#membuat-cabang-baru)
+* [Memindahkan cabang](#memindahkan-cabang)
 * [Cek daftar cabang baru atau branch](#cek-daftar-cabang-baru-atau-branch)
 * [Pindah cabang](#pindah-cabang)
 * [Menggabungkan cabang](#menggabungkan-cabang)
@@ -87,6 +88,11 @@ $ git commit -m "komentar"
 #### Membuat cabang baru 
 ```
 $ git branch NAMA_BRANCH
+```
+
+#### Memindahkan cabang
+```
+$ git switch -c master
 ```
 
 #### Push file

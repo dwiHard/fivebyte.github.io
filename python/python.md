@@ -34,6 +34,8 @@
     * [Required web](#required-web)
     * [Parsing htl BeautifulSoup](#parsing-htl-beautifulsoup)
     * [Menampilkan tag html](#menampilkan-tag-html)
+* [Python with selenium](#python-with-selenium)
+	* [Persiapan](#persiapan)
 * [Configure python](#configure-python)
     * [Path](#path)
     * [virtualenv](#virtualenv)
@@ -785,6 +787,36 @@ req = requests.get(url)
 soup = BeautifulSoup(req.content, 'html5lib')
 for cari in soup.find_all('a'):
     print(cari.text)
+```
+
+### Python with selenium
+#### Persiapan
+Siapakan browser disini saya menggunakan google chrome, yang perlu diperhatikan yang pertama install chromedriver, pada kasus ini saya menggunakan linux, langkah" bisa diikuti
+```
+$ wget https://chromedriver.storage.googleapis.com/91.0.4472.101/chromedriver_linux64.zip
+```
+```
+$ unzip chromedriver_linux64_2.3.zip
+```
+```
+$ sudo cp chromedriver /usr/bin/chromedriver
+```
+```
+$ sudo chown root /usr/bin/chromedriver
+```
+```
+$ sudo chmod +x /usr/bin/chromedriver
+```
+```
+$ sudo chmod 755 /usr/bin/chromedriver
+```
+untuk setup pathnya
+```
+driver = webdriver.Chrome('/usr/bin/chromedriver')
+```
+selanjutnya pastikan menggunakan python versi 3++, selanjutnya install selenium dengan cara berikut
+```
+$ pip3 install selenium
 ```
 
 ### Configure python

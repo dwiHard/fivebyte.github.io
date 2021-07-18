@@ -40,6 +40,7 @@
     * [Install Scrcpy](#install-scrcpy)
     * [Install Postman](#install-postman)
     * [Error virtualbox](#error-virtualbox)
+    * [Shortcuts Android Studio](#shortcuts-android-studio)
 	* [Kernel driver not installed (rc=-1908)](#kernel-driver-not installed-rc1908)
     * [Fix GNUStep](#fix-gnustep)
 * [Kumpulan Konfigurasi](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/LinuxConfigBackup/MyConfig.md#kumpulan-configuration)
@@ -606,6 +607,22 @@ $ sudo apt install --reinstall linux-headers-$(uname -r) virtualbox-dkms dkms
 ```
 ```
 $ sudo modprobe vboxdrv
+```
+
+#### Shortcuts Android Studio
+
+```
+$ sudo vim /usr/share/applications/android-studio.desktop
+```
+```
+[Desktop Entry]
+Type=Application
+Name=Android Studio
+Icon=/usr/local/android-studio/bin/studio.png
+Terminal=false
+Exec=mate-terminal -e "bash -c 'sudo bash /usr/local/android-studio/bin/studio.sh;'"
+Comment=Android Studio Desktop App
+Categories=Development;Code;
 ```
 
 

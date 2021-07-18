@@ -38,6 +38,7 @@
     * [Install Virtualbox di kali linux](#install-virtualbox-di-kali-linux)
     * [Install Spotify](#install-spotify)
     * [Install Scrcpy](#install-scrcpy)
+    * [Install Postman](#install-postman)
     * [Error virtualbox](#error-virtualbox)
 	* [Kernel driver not installed (rc=-1908)](#kernel-driver-not installed-rc1908)
     * [Fix GNUStep](#fix-gnustep)
@@ -558,28 +559,41 @@ $ sudo apt-get update && sudo apt-get install spotify-client
 ```
 
 #### Install Scrcpy
-Install dependencies
+
 ```
-$ sudo apt install adb ffmpeg libsdl2-2.0-0 make gcc pkg-config meson ninja-build libavcodec-dev libavformat-dev libavutil-dev libsdl2-dev
+$ sudo apt install scrcpy
 ```
+
+##### Install Postman
 ```
-sudo apt update && sudo apt install android-sdk
-```
-```
-$ git clone https://github.com/Genymobile/scrcpy
-```
-```
-$ cd scrcpy
-```
-Download and install the scrcpy server jar
-```
-$ meson x --buildtype release --strip -Db_lto=true  -Dprebuilt_server=/home/hard/Downloads/scrcpy-server-v1.16 
+$ cd Downloads/
 ```
 ```
-$ ninja -Cx
+$ tar -xzf Postman-linux-x64-7.32.0.tar.gz
 ```
 ```
-$ sudo ninja -Cx install
+$ sudo mkdir -p /opt/apps/
+```
+```
+$ sudo mv Postman /opt/apps/
+```
+```
+$ sudo ln -s /opt/apps/Postman/Postman /usr/local/bin/postman
+```
+```
+$ postman
+```
+```
+$ sudo vim /usr/share/applications/postman.desktop
+```
+```
+[Desktop Entry]
+Type=Application
+Name=Postman
+Icon=/opt/apps/Postman/app/resources/app/assets/icon.png
+Exec="/opt/apps/Postman/Postman"
+Comment=Postman Desktop App
+Categories=Development;Code;
 ```
 
 #### Error virtualbox

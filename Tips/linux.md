@@ -18,6 +18,7 @@
     * [Install OpenVpn Server](#install-openvpn-server)
     * [Change bash to fish](#change-bash-to-fish)
     * [Config Fish](#config-fish)
+    * [Export Inkscape to AI](#export-inkscape-to-ai)
 * [Konfigurasi Bahasa Pemograman di Linux](#configurasi-bahasa-pemograman-di-linux)
     * [Configure Java](#configure-java-version)
 * [Optimalkan SSD](#optimalkan-ssd)
@@ -358,6 +359,26 @@ Untuk lebih lengkapnya bisa dicek di link dibawah ini
 ```
 https://github.com/oh-my-fish/oh-my-fish
 ```
+
+#### Export Inkscape to AI
+Install
+```
+$ sudo curl 'https://langitketujuh.id/sh/l7-export' | sudo bash
+```
+```
+$ sudo l7-export --install
+```
+cara pakai
+langkah pertama cari id file
+```
+- Masuk Inkscape
+- Object-> Object Properties
+```
+
+```
+$ l7-export namaFile.svg IdFile
+```
+
 ### Optimalkan SSD
 
 #### Aktikan TRIM dan kurangi WRITE

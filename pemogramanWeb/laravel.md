@@ -8,6 +8,7 @@
 - [x] [Buat Controller dan Model](#buat-controller-dan-model)
 - [x] [Install Dompdf](#install-dompdf)
 - [x] [Install Bootstrap in Laravel](#install-bootstrap-in-laravel)
+- [x] [Memindahkan laravel berbeda platform](#memindahkan-laravel-berbeda-platform)
 
 
 #### Install
@@ -61,6 +62,21 @@ $ php artisan ui bootstrap
 ```
 ```
 $ npm install && npm run dev
+```
+
+#### Memindahkan laravel berbeda platform
+```
+$ composer install
+```
+```
+$ php artisan key:generate  
+```
+```
+$ php artisan cache:clear
+```
+jika terjadi error **Failed to clear cache. Make sure you have the appropriate permissions.**__ masuk folder _bootstrap/cache/_ hapus semua file didalamnya
+```
+$ php artisan migrate
 ```
 
 ### Terima kasih

@@ -14,6 +14,7 @@
 * [Install Apache](#install-apache)
     * [Membuat Virtual Host](#membuat-virtual-host)
 * [Install PHP 7.4](#install-php-74)
+* [Install phpmyadmin](#install-phpmyadmin)
 * [Install composer](#install-composer)
 * [Install MariaDB 10.4](#install-mariadb-104)
 * [Install SSL Let's Encrypt untuk Apache](#install-ssl-lets-encrypt-untuk-apache)
@@ -207,6 +208,14 @@ post_max_size = 10M
 ```
 ```
 # systemctl restart apache2
+```
+
+## Install phpmyadmin
+```
+$ sudo apt install -y apache2 mysql-server php libapache2-mod-php php-mysql -y 
+```
+```
+$ sudo apt install phpmyadmin php-json php-curl php-mbstring php-zip
 ```
 ## Install composer
 

@@ -36,6 +36,7 @@
     * [Menampilkan tag html](#menampilkan-tag-html)
 * [Python with selenium](#python-with-selenium)
 	* [Persiapan](#persiapan)
+	* [Basic](#basic)
 * [Configure python](#configure-python)
     * [Path](#path)
     * [virtualenv](#virtualenv)
@@ -819,6 +820,21 @@ selanjutnya pastikan menggunakan python versi 3++, selanjutnya install selenium 
 $ pip3 install selenium
 ```
 
+### Basic
+```
+from selenium import webdriver
+import time
+
+driver = webdriver.Chrome() 
+
+driver.get("http://localhost")
+driver.maximize_window()
+
+driver.find_element_by_id('signin-email').send_keys('operator@gmail.com')
+driver.find_element_by_id('submit').click()
+driver.find_element_by_link_text('modal').click()
+driver.switch_to_window(driver.window_handles[0])
+```
 ### Configure python
 #### Path
 ```

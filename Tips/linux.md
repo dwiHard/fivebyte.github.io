@@ -44,6 +44,7 @@
     * [Shortcuts Android Studio](#shortcuts-android-studio)
 	* [Kernel driver not installed (rc=-1908)](#kernel-driver-not installed-rc1908)
     * [Fix GNUStep](#fix-gnustep)
+    * [Fix libpangox-1.0.so.0](#fix-libpangox-1-0-so-0)
 * [Kumpulan Konfigurasi](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/LinuxConfigBackup/MyConfig.md#kumpulan-configuration)
 
 
@@ -675,5 +676,14 @@ $ sudo apt-get upgrade
 $ sudo apt-get full-upgrade
 ```
 
+#### Fix libpangox-1.0.so.0
+problem :
+```
+anydesk: error while loading shared libraries: libpangox-1.0.so.0: cannot open shared object file: No such file or directory
+```
+Perbaikan :
+```
+$ sudo apt-get install -y libpangox-1.0-0
+```
 
 ### Terima Kasih

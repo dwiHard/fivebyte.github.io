@@ -41,10 +41,11 @@
     * [Install Scrcpy](#install-scrcpy)
     * [Install Postman](#install-postman)
     * [Error virtualbox](#error-virtualbox)
+    	* [Kernel driver not installed (rc=-1908)](#kernel-driver-not-installed-rc-1908)
     * [Shortcuts Android Studio](#shortcuts-android-studio)
-	* [Kernel driver not installed (rc=-1908)](#kernel-driver-not installed-rc1908)
+    * [Shortcuts Web Server Localhost]($shortcuts-server-web-localhost)
     * [Fix GNUStep](#fix-gnustep)
-    * [Fix libpangox-1.0.so.0](#fix-libpangox-1-0-so-0)
+    * [Fix libpangox-1.0.so.0](#fix-libpangox-10so0)
 * [Kumpulan Konfigurasi](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/LinuxConfigBackup/MyConfig.md#kumpulan-configuration)
 
 
@@ -645,8 +646,22 @@ Terminal=false
 Exec=mate-terminal -e "bash -c 'sudo bash /usr/local/android-studio/bin/studio.sh;'"
 Comment=Android Studio Desktop App
 Categories=Development;Code;
-```
+``` 
 
+#### Shortcuts Web Server Localhost
+```
+$ sudo vim /usr/share/applications/android-studio.desktop
+```
+```
+[Desktop Entry]
+Type=Application
+Name=Localhost
+Icon=/var/www/html/logo.png
+Terminal=true
+Exec=firefox http://localhost
+Comment=Web Server Local
+Categories=Development;Code;
+```
 
 #### Install Telegram desktop
 ```

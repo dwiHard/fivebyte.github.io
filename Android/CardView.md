@@ -197,6 +197,6 @@ Pada activity_main.xml ikuti source code berikut :
 ```
 
 #### Hasil
-
+<img src="https://gitlab.com/dwiHard/LinuxAdministration/-/raw/master/Android/ScreenShot/photo_2021-09-17_19-30-44.jpg"  width="270" height="502">
 
 ### Terima Kasih

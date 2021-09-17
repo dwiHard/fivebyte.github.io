@@ -12,6 +12,7 @@
     * [Problem](#problem)
 * [Program Android](#)
     * [Desain menggunakan card view](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/Android/CardView.md)
+    * [Remove Action Bar](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/Android/RemoveActionBar.md)
 
 # Cara Connect Android ke Laptop dengan WI-FI atau USB
 #### Jika device kondisi root<br>

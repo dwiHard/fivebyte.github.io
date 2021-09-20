@@ -40,6 +40,8 @@
     * [Install Spotify](#install-spotify)
     * [Install Scrcpy](#install-scrcpy)
     * [Install Postman](#install-postman)
+    * [Install Libreoffice](#install-libreoffice)
+    * [Uninstall Libreoffice](#uninstall-libreoffice)
     * [Error virtualbox](#error-virtualbox)
     	* [Kernel driver not installed (rc=-1908)](#kernel-driver-not-installed-rc-1908)
     * [Shortcuts Android Studio](#shortcuts-android-studio)
@@ -619,7 +621,28 @@ Exec="/opt/apps/Postman/Postman"
 Comment=Postman Desktop App
 Categories=Development;Code;
 ```
+#### Install Libreoffice
+Kunjungi link dibawah ini terus download filenya
+```
+https://www.libreoffice.org/download/download/
+```
+jika sudah extrak file yang udah didownload tadi lalu masuk ke folder hasil extrakannya lalu ke folder DEBS
+```
+../libreoffice*/DEBS/
+```
+lalu masuk ke terminal arahkan path folder seperti path diatas atau didalam folder DEB jika sudah ketikan :
+```
+$ sudo dpkg -i *.deb
+```
 
+#### Unistall Libreoffice
+```
+$ sudo apt purge libreoffice7.0*
+```
+jika diatas tidak berhasil coba :
+```
+$ sudo dpkg --purge libreoffice*
+```
 #### Error virtualbox
 #### Kernel driver not installed (rc=-1908)
 ```

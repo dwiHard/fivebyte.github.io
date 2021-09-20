@@ -42,6 +42,8 @@
     * [Install Postman](#install-postman)
     * [Install Libreoffice](#install-libreoffice)
     * [Uninstall Libreoffice](#uninstall-libreoffice)
+    * [Install Inkscape](#install-inkscape)
+    * [Uninstall Inkscape](#uninstall-inkscape)
     * [Error virtualbox](#error-virtualbox)
     	* [Kernel driver not installed (rc=-1908)](#kernel-driver-not-installed-rc-1908)
     * [Shortcuts Android Studio](#shortcuts-android-studio)
@@ -635,7 +637,7 @@ lalu masuk ke terminal arahkan path folder seperti path diatas atau didalam fold
 $ sudo dpkg -i *.deb
 ```
 
-#### Unistall Libreoffice
+#### Uninstall Libreoffice
 ```
 $ sudo apt purge libreoffice7.0*
 ```
@@ -643,6 +645,31 @@ jika diatas tidak berhasil coba :
 ```
 $ sudo dpkg --purge libreoffice*
 ```
+
+#### Install Inkscape
+Saya disini pakai yang portable sebelumnya kunjungi link dibawah ini dan download file yang appimage
+```
+https://inkscape.org/release/inkscape-dev/?latest=1
+```
+```
+$ sudo vim /usr/share/applications/inkscape.desktop
+```
+```
+[Desktop Entry]
+Type=Application
+Name=Inkscape
+Icon=/home/hard/Downloads/Inkscape/inkscape.svg
+Terminal=false
+Exec=mate-terminal -e "bash -c 'cd Downloads/Inkscape/ && ./Inkscape-c4e8f9e-x86_64.AppImage;'"
+Comment=Inkscape 
+Categories=Graphics;2DGraphics;RasterGraphics;GTK;
+
+```
+#### Uninstall Inkscape
+```
+$ sudo apt purge inkscape
+```
+
 #### Error virtualbox
 #### Kernel driver not installed (rc=-1908)
 ```

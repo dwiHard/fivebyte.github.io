@@ -21,6 +21,7 @@
     * [Export Inkscape to AI](#export-inkscape-to-ai)
 * [Konfigurasi Bahasa Pemograman di Linux](#configurasi-bahasa-pemograman-di-linux)
     * [Configure Java](#configure-java-version)
+    * [Install Kotlin](#install-kotlin)
 * [Optimalkan SSD](#optimalkan-ssd)
 	* [Aktikan TRIM dan kurangi WRITE](#aktikan-trim-dan-kurangi-write)
 	* [Add noatime to fstab](#add-noatime-to-fstab)
@@ -334,6 +335,17 @@ $ ip add
 ##### Configure java version
 ```
 $ sudo update-alternatives --config javac
+```
+
+#### Install Kotlin
+```
+$ curl -s https://get.sdkman.io | bash
+```
+```
+$ source "/home/hard/.sdkman/bin/sdkman-init.sh"
+```
+```
+$ sdk install kotlin
 ```
 
 #### Change bash to fish

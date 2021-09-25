@@ -10,6 +10,8 @@
 * [Build Web Server](#bulid-web-server)
     * [Persiapan](#persiapan)
     * [Problem](#problem)
+* [Android Studio Plugin](#)
+    * [Plugin Android Drawable Importer](#plugin-android-drawable-importer)
 * [Program Android](#)
     * [Desain menggunakan card view](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/Android/CardView.md)
     * [Remove Action Bar](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/Android/RemoveActionBar.md)
@@ -119,5 +121,15 @@ Lalu edit juga di bagian :
 ```
 ```
  ServerName 127.0.0.1
+```
+
+#### Plugin Android Drawable Importer
+download file yang ada di link dibawah ini untuk android studio versi arctic fox
+```
+https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/Android/File/ADI-hack-0.8.zip
+```
+lalu buka android studio
+```
+file->setting->plugins->setting->install plugin from disk
 ```
 

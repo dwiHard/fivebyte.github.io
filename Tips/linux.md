@@ -45,6 +45,7 @@
     * [Uninstall Libreoffice](#uninstall-libreoffice)
     * [Install Inkscape](#install-inkscape)
     * [Uninstall Inkscape](#uninstall-inkscape)
+    * [Install Blender](#install-blender)
     * [Error virtualbox](#error-virtualbox)
     	* [Kernel driver not installed (rc=-1908)](#kernel-driver-not-installed-rc-1908)
     * [Shortcuts Android Studio](#shortcuts-android-studio)
@@ -681,6 +682,21 @@ Categories=Graphics;2DGraphics;RasterGraphics;GTK;
 ```
 $ sudo apt purge inkscape
 ```
+
+#### Install Blender
+Kunjungi link dibawah ini lalu download dan extrack
+```
+https://docs.blender.org/manual/en/latest/getting_started/installing/linux.html
+```
+hasil compress dipindahkan di **user/local/bin** lalu ketikan di terminal
+```
+$ sudo ln -s /usr/local/blender-2.93.4-linux-x64/blender /usr/local/bin/
+```
+jika blender tidak muncul dishortcut lalu kan dibawah ini : 
+```
+$ sudo cp blender.desktop /usr/share/applications/
+```
+lokasikan pathnya di folder yang aktif
 
 #### Error virtualbox
 #### Kernel driver not installed (rc=-1908)

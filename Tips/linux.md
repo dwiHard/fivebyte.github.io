@@ -673,7 +673,7 @@ Type=Application
 Name=Inkscape
 Icon=/home/hard/Downloads/Inkscape/inkscape.svg
 Terminal=false
-Exec=mate-terminal -e "bash -c 'cd Downloads/Inkscape/ && ./Inkscape-c4e8f9e-x86_64.AppImage;'"
+Exec=/home/hard/Inkscape/Inkscape-3bf5ae0-x86_64.AppImage
 Comment=Inkscape 
 Categories=Graphics;2DGraphics;RasterGraphics;GTK;
 

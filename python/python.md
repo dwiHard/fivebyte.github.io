@@ -815,6 +815,24 @@ untuk setup pathnya
 ```
 driver = webdriver.Chrome('/usr/bin/chromedriver')
 ```
+Ini langkah selanjutnya untuk setting web driver untuk firefox download link dibawah ini
+```
+https://github.com/mozilla/geckodriver/releases
+```
+Langkah selanjutnya ikuti dibawah ini pastikan filenya udah diextrack
+```
+$ sudo cp geckodriver /usr/bin/geckodriver
+```
+```
+$ sudo chown root /usr/bin/geckodriver
+```
+```
+$ sudo chmod +x /usr/bin/geckodriver
+```
+```
+$ sudo chmod 755 /usr/bin/chromedriver
+```
+Langkah selanjutnya menginstall python 
 selanjutnya pastikan menggunakan python versi 3++, selanjutnya install selenium dengan cara berikut
 ```
 $ pip3 install selenium

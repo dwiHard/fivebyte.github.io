@@ -35,6 +35,7 @@
     * [Repository Kali Linux](#repository-kali-linux)
     * [Date fix kali linux](#date-fix-kali-linux)
     * [Install wine kali linux](#install-wine-kali-linux)
+    * [Install zoom](#install-zoom)
     * [Install Disk Mounter](#install-disk-mounter)
     * [Install Telegram desktop](#install-telegram-desktop)
     * [Install Virtualbox di kali linux](#install-virtualbox-di-kali-linux)
@@ -568,6 +569,23 @@ $ WINEPREFIX=~/.wine/office2007 WINEARCH=win32 wine ./Microsoft-Office-Professio
 #### Install Disk Mounter
 ```
 $ sudo apt-get install gnome-disk-utility
+```
+
+#### Install zoom
+donwnload file deb disini
+```
+https://zoom.us/download?os=linux
+```
+langkah selanjutnya
+```
+$ sudo dpkg -i zoom_amd64.deb
+```
+langkah selanjutkan update repository
+```
+$ sudo vi /etc/apt/sources.list
+```
+```
+$ sudo apt update
 ```
 
 #### Install Virtualbox di kali linux

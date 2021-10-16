@@ -37,6 +37,8 @@
 * [Python with selenium](#python-with-selenium)
 	* [Persiapan](#persiapan)
 	* [Basic](#basic)
+* [Python with appium](#python-with-appium)
+	* [Persiapan](#persiapan)
 * [Configure python](#configure-python)
     * [Path](#path)
     * [virtualenv](#virtualenv)
@@ -852,6 +854,33 @@ driver.find_element_by_id('signin-email').send_keys('operator@gmail.com')
 driver.find_element_by_id('submit').click()
 driver.find_element_by_link_text('modal').click()
 driver.switch_to_window(driver.window_handles[0])
+```
+
+### Python with appium
+#### persiapan
+Kunjuni halaman berikut 
+```
+https://pypi.org/project/Appium-Python-Client/
+```
+lalu untuk menginstall app client
+```
+$ pip install Appium-Python-Client
+```
+jika untuk mengintall desktopnya
+```
+https://github.com/appium/appium-desktop/releases/
+```
+sesuaikan dengan os yang kalian pakai
+
+#### Send whatsapp text
+cari app package android buka aplikasinya lalu
+Untuk linux :
+```
+$ adb shell dumpsys window | grep -E 'mCurrentFocus'
+```
+Untuk Windows :
+```
+$ adb shell dumpsys window | find "mCurrentFocus"
 ```
 ### Configure python
 #### Path

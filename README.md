@@ -20,6 +20,7 @@ Gitlab yang dibangun dan dikembangkan oleh ***Hardiyanto***. Sebagian besar gitl
 - [x] [Git](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/Tips/git.md#rangkuman-git)
 - [x] [Basic command linux](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/Tips/BasicLinux.md#rangkuman-basic-command-linux) 
 - [x] [Forensic](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/forensic/forensic.md#trik-tips-forensic)
+- [x] [Sumber Belajar](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/Tips/linkInspirasi.md)
 - [x] [Kumpulan Konfigurasi dan Script](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/LinuxConfigBackup/MyConfig.md#kumpulan-configuration)
 
 

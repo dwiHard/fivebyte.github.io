@@ -862,13 +862,27 @@ Kunjuni halaman berikut
 ```
 https://pypi.org/project/Appium-Python-Client/
 ```
-lalu untuk menginstall app client
+lalu untuk menginstall appium client
 ```
 $ pip install Appium-Python-Client
 ```
 jika untuk mengintall desktopnya
 ```
 https://github.com/appium/appium-desktop/releases/
+```
+lalu install appium inspector
+```
+https://github.com/appium/appium-inspector/releases
+```
+edit session pada appium inspector
+```
+{
+  "platformName": "Android",
+  "appium:platformVersion": "10",
+  "appium:deviceName": "your id",
+  "appium:app": "/home/hard/Documents/python/aplikasiku/tes.ipa",
+  "appium:udid": "your id"
+}
 ```
 sesuaikan dengan os yang kalian pakai
 

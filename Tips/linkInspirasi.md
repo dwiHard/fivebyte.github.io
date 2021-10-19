@@ -100,6 +100,10 @@
 
 - <https://www.lapa.ninja/> Lapa Ninja - UI/UX Landing Page
 
+- <https://www.checklist.design/> checklist - UI/UX Component Page
+
+- <https://blush.design/> Blush - UI/UX Ilustration
+
 #### Mockup
 - <https://freebiesui.com/> Freebiesui - Mockup Desain
 

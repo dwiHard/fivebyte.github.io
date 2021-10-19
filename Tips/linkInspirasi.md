@@ -26,6 +26,16 @@
 
 - <https://medium.com/@snow_20352/20-creative-search-bar-design-inspirations-with-html-css-bootstrap-6717109fa0a0> Medium - CSS Search Bar
 
+- <https://www.smashingmagazine.com/> Smashing Magazine - Tutorial
+
+- <https://cssauthor.com/> CSS Author - Tutorial
+
+- <https://www.tutorialspoint.com/index.htm> Tutorial Sploit - Tutorial
+
+- <https://www.geeksforgeeks.org/> GeeksforGeeks - Tutorial
+
+- <https://cssgenerator.org/> CSS Generator - Tutorial
+
 <br>
 
 - <https://animate.style/> Animate - CSS Animasi

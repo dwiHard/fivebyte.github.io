@@ -16,3 +16,4 @@
 * [Python Script]()
     * [Decode Url](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/LinuxConfigBackup/decodeUrl.py)
     * [Descrypt 12](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/LinuxConfigBackup/decrypt12.py)
+    * [Spam Chat Whatapps](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/python/kumpulan%20script/spamChat.py)

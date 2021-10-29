@@ -12,6 +12,7 @@
     * [UI/UX](#uiux)
     * [Mockup](#mockup)
     * [SVG](#svg)
+    * [Animasi](#animasi)
     * [Background](#background)
     * [Warna Inspirasi](#warna-inspirasi)
     * [Tool Cepat](#tool-cepat)
@@ -117,6 +118,11 @@
 
 #### SVG
 - <https://www.svgrepo.com/> SVG repo - Vector and Icon
+
+- <https://illlustrations.co/> illlustrations - Vector and illustration
+
+#### Animasi
+- <https://lordicon.com/icons> lordicon - Animasi icon
 
 #### Warna Inspirasi
 - <https://www.0to255.com/> oto255 - Color Picker Tool

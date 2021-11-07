@@ -105,6 +105,8 @@
 
 - <https://blush.design/> Blush - UI/UX Ilustration
 
+- <https://www.uidesigndaily.com/> UI/UX Desaign
+
 #### Mockup
 - <https://freebiesui.com/> Freebiesui - Mockup Desain
 
@@ -129,6 +131,10 @@
 
 #### Tool Cepat
 - <https://ray.so/> Ray - Membuat Kode Program Cantik
+
+- <https://blobs.app/> blobs - Membuat blops
+
+- <https://getwaves.io/> Get Waves - generator waves svg
 
 #### Video
 - <https://pixabay.com/sound-effects/> pPxabay - Sound Effects

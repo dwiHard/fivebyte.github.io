@@ -6,22 +6,22 @@ Gitlab yang dibangun dan dikembangkan oleh ***Hardiyanto***. Sebagian besar gitl
 
 
 ### Daftar Isi
-- [x] [MYSQL-Server](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/mysql/mysql.md)
-- [x] [Apache2](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/apache2/Apache2.md)
-- [x] [Python](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/python/python.md)
-- [x] [Pemograman Web](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/pemogramanWeb/README.md)
-- [x] [Nodejs](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/nodejs/nodejs.md)
-- [x] [Docker](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/docker/docker.md#docker-di-linux)
-- [x] [Web Server](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/webserver/webserver.md#rangkuman-konfigurasi-webserver-di-ubuntu-heavy_check_mark)
+- [x] [MYSQL-Server](https://github.com/dwiHard/five_byte.github.io/blob/master/mysql/mysql.md)
+- [x] [Apache2](https://github.com/dwiHard/five_byte.github.io/blob/master/apache2/Apache2.md)
+- [x] [Python](https://github.com/dwiHard/five_byte.github.io/blob/master/python/python.md)
+- [x] [Pemograman Web](https://github.com/dwiHard/five_byte.github.io/blob/master/pemogramanWeb/README.md)
+- [x] [Nodejs](https://github.com/dwiHard/five_byte.github.io/blob/master/nodejs/nodejs.md)
+- [x] [Docker](https://github.com/dwiHard/five_byte.github.io/blob/master/docker/docker.md)
+- [x] [Web Server](https://github.com/dwiHard/five_byte.github.io/blob/master/webserver/webserver.md)
 - [x] [Keamanan Web](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/webserver/KeamananWeb.md)
-- [x] [vim](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/vim/vim.md#rangkuman-vim)
-- [x] [Linux](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/Tips/linux.md#tips-dan-triks-linux)
-- [x] [Android](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/Tips/android.md#tips-dan-trik-android)
-- [x] [Git](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/Tips/git.md#rangkuman-git)
-- [x] [Basic command linux](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/Tips/BasicLinux.md#rangkuman-basic-command-linux) 
-- [x] [Forensic](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/forensic/forensic.md#trik-tips-forensic)
-- [x] [Sumber Belajar](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/Tips/linkInspirasi.md)
-- [x] [Kumpulan Konfigurasi dan Script](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/LinuxConfigBackup/MyConfig.md#kumpulan-configuration)
+- [x] [vim](https://github.com/dwiHard/five_byte.github.io/blob/master/vim/vim.md)
+- [x] [Linux](https://github.com/dwiHard/five_byte.github.io/blob/master/Tips/linux.md)
+- [x] [Android](https://github.com/dwiHard/five_byte.github.io/blob/master/Tips/android.md)
+- [x] [Git](https://github.com/dwiHard/five_byte.github.io/blob/master/Tips/git.md)
+- [x] [Basic command linux](https://github.com/dwiHard/five_byte.github.io/blob/master/Tips/BasicLinux.md)
+- [x] [Forensic](https://github.com/dwiHard/five_byte.github.io/blob/master/forensic/forensic.md)
+- [x] [Sumber Belajar](https://github.com/dwiHard/five_byte.github.io/blob/master/Tips/linkInspirasi.md)
+- [x] [Kumpulan Konfigurasi dan Script](https://github.com/dwiHard/five_byte.github.io/blob/master/LinuxConfigBackup/MyConfig.md)
 
 
 <br>Dengan segala kerendahan hati, saya mengucapkan selamat membaca rangkuman / catatan-catatan kecil yang saya buat digitlab ini.<br>

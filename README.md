@@ -7,6 +7,74 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+<style>
+
+ * {
+   margin: 0;
+   padding: 20;
+ }
+
+ body {
+   background-color: #34353a;
+   color: white;
+ }
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.content {
+  width: 400px;
+  height: 240px;
+}
+.text-content {
+  color: white;
+  font-size: 30px;
+  font-family: 'Kosugi Maru', sans-serif;
+}
+.text-isi {
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  text-align: justify;
+  margin-top: 13px;
+}
+.foto {
+  width: 200px;
+}
+.img {
+  padding-left: 15px;
+}
+.text-header {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  color: white;
+}
+.box-isi {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
+}
+.isi {
+  flex: auto;
+  padding: 10px;
+  padding-left: 10px;
+  box-sizing: border-box;
+  width: 100px;
+  line-height: 1.4;
+}
+.text-isi-header {
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  padding-bottom: 10px;
+}
+.link {
+  color: #989FFF;
+}
+</style>
   </head>
   <body>
     <div class="container">

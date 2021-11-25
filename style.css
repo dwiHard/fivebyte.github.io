@@ -1,0 +1,22 @@
+.clearfix {
+    display: inline-flex
+  }
+  .text-content {
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    font-family: 'Kosugi Maru', sans-serif;
+  }
+  .text-isi {
+    color: rgb(0, 0, 0);
+    font-family: 'Open Sans', sans-serif;
+    text-align: justify;
+    margin-top: 13px;
+  }
+  
+  .text-header {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    color: rgb(0, 0, 0);
+  }
+  

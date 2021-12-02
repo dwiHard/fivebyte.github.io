@@ -26,7 +26,8 @@
     * [Membuat CA cloudflare](#configure-cloudflare-origin-ca-apache)
     * [Membuat ssl](#configure-apache2-dengan-ssl)
 * [Configure Apache2 untuk laravel](#configure-apache2-untuk-laravel)
-	* [Intall PHP7.4](#install-php74)
+	* [Intall PHP7.4](#intall-php74)
+	* [Htaccess laravel](#htaccess-laravel)
 * [Problem Apache2](#problem-apache2)
     * [Apache2 error](#apache2-eror-di-ubuntu-1804)
     * [Apache2 error module mpm_event](#apache2-error-module-mpmevent)
@@ -441,6 +442,23 @@ $ sudo a2enmod rewrite
 ```
 ```
 $ sudo service apache2 restart
+```
+
+### Htaccess laravel
+```
+<IfModule mod_rewrite.c>
+# That was ONLY to protect you from 500 errors
+# if your server did not have mod_rewrite enabled
+
+RewriteEngine On
+# RewriteBase /
+# NOT needed unless you're using mod_alias to redirect
+
+RewriteCond %{REQUEST_URI} !/public
+RewriteRule ^(.*)$ public/$1 [L]
+# Direct all requests to /public folder
+
+</IfModule>
 ```
 
 ### Problem Apache2

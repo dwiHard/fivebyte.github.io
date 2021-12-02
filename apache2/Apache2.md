@@ -25,6 +25,8 @@
     * [Redirect Http to Https](#redirect-http-to-https)
     * [Membuat CA cloudflare](#configure-cloudflare-origin-ca-apache)
     * [Membuat ssl](#configure-apache2-dengan-ssl)
+* [Configure Apache2 untuk laravel](#configure-apache2-untuk-laravel)
+	* [Intall PHP7.4](#install-php74)
 * [Problem Apache2](#problem-apache2)
     * [Apache2 error](#apache2-eror-di-ubuntu-1804)
     * [Apache2 error module mpm_event](#apache2-error-module-mpmevent)
@@ -411,6 +413,34 @@ $ sudo vi /etc/hosts
 ```
 ```
 IP kamu       hard.com
+```
+
+### Configure Apache2 untuk laravel
+#### Intall PHP7.4
+```
+$ sudo apt update && sudo apt upgrade
+```
+```
+$ sudo apt install software-properties-common
+```
+```
+$ sudo add-apt-repository ppa:ondrej/php
+```
+```
+$ sudo apt update
+```
+```
+$ sudo apt install libapache2-mod-php7.4 php7.4 php7.4-common php7.4-mysql php7.4-curl php7.4-gd php-imagick php7.4-cli php7.4-mbstring php7.4-zip php7.4-bcmath -y
+```
+edit apache2.conf
+```
+$ sudo vi /etc/apache2/apache2.conf 
+```
+```
+$ sudo a2enmod rewrite
+```
+```
+$ sudo service apache2 restart
 ```
 
 ### Problem Apache2

@@ -30,6 +30,7 @@
     * [DNS Enumerating with host](#dns-enumerating-with-host)
     * [DNS Enumerating with Dnsrecon](#dns-enumerating-with-dnsrecon)
     * [DNS Enumerating with Dnsenum](#dns-enumerating-with-dnsenum)
+* [Steghide](#steghide)
 
 
 #### John the Ripper
@@ -461,6 +462,21 @@ Zone transfer
 Brute-force
 ```
 # dnsenum -f /usr/share/wordlists/subdomains/subdomains_popular_1000 -r google.com
+```
+
+### Steghide
+Install
+```
+$ sudo apt install steghide
+```
+cara pakai
+Untuk memasukan filenya
+```
+$ steghide embed -cf cvr.jpg -ef emb.txt
+```
+untuk extraknya
+```
+$ steghide extract -sf stg.jpg
 ```
 
 ### Terima Kasih

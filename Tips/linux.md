@@ -19,6 +19,7 @@
     * [Change bash to fish](#change-bash-to-fish)
     * [Config Fish](#config-fish)
     * [Export Inkscape to AI](#export-inkscape-to-ai)
+    * [Edit Background grub](#edit-background-grub)
 * [Konfigurasi Bahasa Pemograman di Linux](#configurasi-bahasa-pemograman-di-linux)
     * [Configure Java](#configure-java-version)
     * [Install Kotlin](#install-kotlin)
@@ -387,6 +388,17 @@ $ sudo curl 'https://langitketujuh.id/sh/l7-export' | sudo bash
 ```
 ```
 $ sudo l7-export --install
+```
+Tambahkan text dibawah ini
+```
+ GRUB_BACKGROUND="/usr/share/backgrounds/sun.png"
+```
+```
+$  sudo update-grub
+```
+#### Edit Background grub
+```
+$ sudo vi /etc/default/grub
 ```
 cara pakai
 langkah pertama cari id file

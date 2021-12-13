@@ -389,16 +389,17 @@ $ sudo curl 'https://langitketujuh.id/sh/l7-export' | sudo bash
 ```
 $ sudo l7-export --install
 ```
+
+#### Edit Background grub
+```
+$ sudo vi /etc/default/grub
+```
 Tambahkan text dibawah ini
 ```
  GRUB_BACKGROUND="/usr/share/backgrounds/sun.png"
 ```
 ```
 $  sudo update-grub
-```
-#### Edit Background grub
-```
-$ sudo vi /etc/default/grub
 ```
 cara pakai
 langkah pertama cari id file

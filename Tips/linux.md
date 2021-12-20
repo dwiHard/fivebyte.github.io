@@ -33,6 +33,7 @@
     * [Linux Mengalami hang](#linux-mengalami-hang)
     * [Keyboard Tidak Terdeteksi test on Xubuntu 18.04](#keyboard-tidak-terdeteksi-test-on-xubuntu-1804)
 * [Problem Kali Linux](#problem-kali-linux)
+    * [Langkah Pertama](#langkah-pertama)
     * [Repository Kali Linux](#repository-kali-linux)
     * [Date fix kali linux](#date-fix-kali-linux)
     * [Install wine kali linux](#install-wine-kali-linux)
@@ -502,6 +503,14 @@ $ sudo apt install xserver-xorg-input-all
 
 
 ### Problem Kali Linux
+
+#### Langkah pertama
+```
+$ sudo apt install apt-transport-https
+```
+```
+$ sudo apt update
+```
 
 #### Repository Kali Linux
 

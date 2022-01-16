@@ -85,7 +85,8 @@
 - <https://www.lapa.ninja/> Lapa Ninja - UI/UX Landing Page
 - <https://www.checklist.design/> checklist - UI/UX Component Page
 - <https://blush.design/> Blush - UI/UX Ilustration
-- <https://www.uidesigndaily.com/> UI/UX Desaign
+- <https://www.uidesigndaily.com/> UI/UX Desain
+- <https://www.uistore.design> UI/UX desain
 
 #### Mockup
 - <https://freebiesui.com/> Freebiesui - Mockup Desain
@@ -101,11 +102,18 @@
 - <https://illlustrations.co/> illlustrations - Vector and illustration
 - <https://www.openpeeps.com/> Open Peeps - vektor karakter 
 - <https://www.opendoodles.com/> Open Doodles - vektor karakter
+- <https://pngtree.com/illustration-design> PNGtree - Vektor
+- <https://drawkit.com/> Drawkit - Vektor
 - <https://blobs.app/> blobs - Membuat blops
 - <https://getwaves.io/> Get Waves - generator waves svg
 - <https://wordmark.it/?ref=producthunt> word mark - check fonts 
 - <https://haikei.app/> haikei - Generate unique SVG design assets
 - <https://askplaybook.com/> Ask Paly book - Carier design
+- <https://purepng.com> Pure PNG - Assets PNG
+- <https://favpng.com> Fav PNG - Assets PNG
+- <https://cleanpng.com> clean PNG - Assets PNG
+- <http://stickpng.com> stick PNG - Assets PNG
+- <https://pngtree.com> PNGtree - Assets PNG
 
 #### Animasi
 - <https://lordicon.com/icons> lordicon - Animasi icon
@@ -114,28 +122,50 @@
 - <https://www.0to255.com/> oto255 - Color Picker Tool
 
 #### Hidden Website
-- <https://ray.so/> Ray - Membuat Kode Program Cantik
-- <https://sketch2code.azurewebsites.net/?ref=uxdatabase.io> Sketch2code - hand drawn to html
-- <https://www.peppertype.ai/> peppertype - Caption Instagram
-- <https://www.flick.tech/learn/blog/post/instagram-analytics-benchmarks-tool/> Open banchmarks - benchmarks instagram
+
+Untuk Kebutuhan media sosial
 - <https://www.hashtagstack.com/hashtag-generator> Hashtag Stack - Hashtag sosial media
+- <https://www.peppertype.ai/> peppertype - Caption Instagram
+- <https://ray.so/> Ray - Membuat Kode Program Cantik
 - <https://url.bio/> URL Bio - Bio URL
-- <https://panzoid.com/> Panzoid - 3D intro marker
-- <https://qrcodescan.in/> QR Code Scan - Scan QR
-- <https://www.lucidchart.com/pages/ > Lucidchart - Diagramming application
-- <https://www.followupthen.com/> Follow Up Then - Personal Assitent
+- <https://www.flick.tech/learn/blog/post/instagram-analytics-benchmarks-tool/> Open banchmarks - benchmarks instagram
+- <https://www.contentrow.com/tools/headline-generator> Content Row - generator headline 
+- <https://hashtagify.me> Hashtagify - generator hashtag
+- <https://quotescover.com> Quotes Cover - generator caption
+
+Untuk Kebutuhan editan
 - <https://www9.lunapic.com/editor/> luna pic - Edit foto
-- <https://voicemaker.in/> Voice marker - Edit Voice
-- <https://www.lalal.ai/> lalal - Extract Vocal
 - <https://uizard.io/> uizard - Design Tool
-- <https://www.checksub.com/> Check sub - Automatic subtitle generator
+- <https://www.lalal.ai/> lalal - Extract Vocal
+- <https://sketch2code.azurewebsites.net/?ref=uxdatabase.io> Sketch2code - hand drawn to html
+- <https://panzoid.com/> Panzoid - 3D intro marker
+- <https://www.lucidchart.com/pages/ > Lucidchart - Diagramming application
+- <https://uberduck.ai/> Uberduck - voice marker
+- <https://voicemaker.in/> Voice marker - Edit Voice
+- <https://www.canva.com/> Canva - Edit video, foto, video dan presentasi
+- <https://www.figma.com> Figma - Edit foto Basis Vektor
+- <https://www.animaker.com/> Animaker - Edit Video dan presentasi
+- <https://draw.io/> Draw - Edit flowchart
+
+Website menarik 
+- <https://www.followupthen.com/> Follow Up Then - Personal Assitent
 - <https://shortlyai.com/> shortlyai - Writting AI
 - <http://internet-map.net/> Internet Map - map internet
 - <https://dictation.io/> Dictation - write email with voice
 - <https://www.deseat.me/> deseat - check your accounts
 - <https://betalist.com/startups/neverinstall> Never Install - Jalankan software tanpa install
-- <https://omatsuri.app/> omatsuri - Tool generator
-- <https://tiny-helpers.dev/> tiny Helpers - Koleksi online tools
+- <https://keywordtool.io/> Keywordtool -  website tempat mencari ide kata kunci untuk artikel 
+- <https://www.wordstream.com/> Word Stream - website tempat mencari ide kata kunci untuk artikel 
+- <https://neilpatel.com/ubersuggest/> Uber Suggest - website tempat mencari ide kata kunci untuk artikel 
+- <https://ads.google.com/home/tools/keyword-planner/> Google Keyword Planner - website tempat mencari ide kata kunci untuk artikel 
+- <https://autum.com/> Autum - website tempat mencari ide kata kunci untuk artikel 
+
+Website untuk developer
+- <https://unbug.github.io/codelf> Codelf - Search Programming project
+- <https://devhints.io> Devhints - Search Programming project
+- <https://bundlephobia.com> Bundlephobia - Search programming project
+- <https://caniuse.com> Counise - Memeberi tahu browser apa yang ada gunakan
+- <https://hiddentools.dev> Hidden tools - alat-alat untuk project anda
 
 Mid Mapping Apss
 - <https://coggle.it/> Coggle - Mind Mapping
@@ -143,11 +173,60 @@ Mid Mapping Apss
 - <https://www.mindomo.com/> Mindomo - Mind Mapping
 - <https://www.gliffy.com/> Gliffy - Mind Mapping
 
+Catatan online
+- <https://www.notion.so> Notion - Catatan Online
+- <https://evernote.com> Evernote - Catatan Online
+- <https://trello.com/> Trello - Catatan Online
+- <https://www.atlassian.com/software/jira> Jira - Catatan Online
+- <https://asana.com> Asana - Catatan Online
+
+Website Tool online
+- <https://qrcodescan.in/> QR Code Scan - Scan QR
+- <https://tiny-helpers.dev/> tiny Helpers - Koleksi online tools
+- <https://www.ilovepdf.com/> I Love PDF - PDF Tools
+- <https://omatsuri.app/> omatsuri - Tool generator
+- <https://123apps.com> 123apps - Tool generator
+- <https://www.checksub.com/> Check sub - Automatic subtitle generator
+
+Color palette
+- <https://color.adobe.com/create/color-contrast-analyzer> adobe -Color palette
+- <https://www.0to255.com> Oto255 - Color palette
+- <https://mycolor.space> my color - Color palette
+- <https://2colors.colorion.co> colorin - Color palette
+- <https://colorhunt.co> color hunt - Color palette
+- <https://paletton.com> paletton - Color palette
+- <http://colormind.io> color mind - Color palette
+- <http://brandcolors.net> brand color - Color palette
+- <https://www.color-hex.com> color hex - Color palette
+- <http://colorlisa.com> color lisa -  Color palette
+- <https://colors.muz.li> colors - Color palette
+- <http://www.cssdrive.com/imagepalette> css drive - Color palette
+- <https://coolors.co> colors - Color palette
+- <https://www.canva.com/colors/color-palette-generator> canva - Color palette
+- <https://brandfolder.com/workbench/color-palette> brand folder - Color palette
+
+Website penyedia hosting gratis 
+- <https://github.com > github
+- <https://www.awardspace.com> award space
+- <https://www.netlify.com> netlify
+- <https://cloud.google.com/solutions/web-hosting> google
+- <https://infinityfree.net> infinity free
+
+Website belajar hacking
+- <http://index-of.es> index of
+- <http://dtors.net/Hacking> dtors
+- <https://doc.lagout.org/security> logout
+- <https://osintframework.com> osint framework
+- <https://www.hacking-tutorial.com> hacking tutorial
+
 #### Video dan audio
 - <https://pixabay.com/sound-effects/> Pixabay - Sound Effects
 - <https://www.bensound.com/> Bansound - Sound Effects
 - <https://ncs.io/> NCS - Sound Effects
 - <https://www.noisli.com/> Noisli - Backsound Effects
+- <https://icons8.com/music> Icon8 - Sound effects
+- <https://www.unminus.com> Umnimus - Sound effects
+- <https://uppbeat.io> Uppbeat - Sound effects
 - <https://soundcloud.com/> - Sound Cloud - music tracks
 - <https://spik.ai/> Spik - Generator realistic sound
 

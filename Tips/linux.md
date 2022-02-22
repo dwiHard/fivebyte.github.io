@@ -23,6 +23,7 @@
 * [Konfigurasi Bahasa Pemograman di Linux](#configurasi-bahasa-pemograman-di-linux)
     * [Configure Java](#configure-java-version)
     * [Install Kotlin](#install-kotlin)
+    * [Rename wlp2s0 to wlan0 in ubuntu](#wlp2s0-to-wlan0-in-ubuntu)
 * [Optimalkan SSD](#optimalkan-ssd)
 	* [Aktikan TRIM dan kurangi WRITE](#aktikan-trim-dan-kurangi-write)
 	* [Add noatime to fstab](#add-noatime-to-fstab)
@@ -350,6 +351,23 @@ $ source "/home/hard/.sdkman/bin/sdkman-init.sh"
 ```
 ```
 $ sdk install kotlin
+```
+
+#### Rename wlp2s0 to wlan0 in ubuntu
+```
+$ sudo vi /etc/default/grub
+```
+Edit Dari
+```
+ GRUB_CMDLINE_LINUX=""
+```
+ke 
+```
+GRUB_CMDLINE_LINUX="net.ifnames=0 biosdevname=0"
+```
+Simpan lalu keluar
+```
+$ sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
 #### Change bash to fish

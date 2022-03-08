@@ -30,6 +30,8 @@
 	* [Kurangi penggunaan swap](#kurangi-penggunaan-swap)
 	* [Jalankan fstrim secara berkala](#jalankan-fstrim-secara-berkala)
 	* [Kurangi penggunaan swap](#kurangi-penggunaan-swap)
+* [Software Install](#Software-install)
+    * [Install cfiles](#install-cfiles)
 * [Problem di Linux](#problem-di-linux) 
     * [Linux Mengalami hang](#linux-mengalami-hang)
     * [Keyboard Tidak Terdeteksi test on Xubuntu 18.04](#keyboard-tidak-terdeteksi-test-on-xubuntu-1804)
@@ -56,8 +58,7 @@
     * [Shortcuts Web Server Localhost]($shortcuts-server-web-localhost)
     * [Fix GNUStep](#fix-gnustep)
     * [Fix libpangox-1.0.so.0](#fix-libpangox-10so0)
-* [Kumpulan Konfigurasi](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/LinuxConfigBackup/MyConfig.md#kumpulan-configuration)
-
+* [Kumpulan Konfigurasi](https://github.com/dwiHard/five_byte.github.io/blob/master/LinuxConfigBackup/MyConfig.md)
 
 ### Linux Commands
 
@@ -502,6 +503,19 @@ vm.vfs_cache_pressure=50
 ```
 ```
 $ sudo systemctl reboot
+```
+
+### Software Install
+#### Install cfiles 
+cfiles – Manajer File Terminal Cepat dengan Vim Keybindings
+```
+$ sudo apt-get install libncurses5-dev
+```
+```
+$ make
+```
+```
+$ sudo make install
 ```
 
 ### Problem di Linux

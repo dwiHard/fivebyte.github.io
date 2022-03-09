@@ -3,6 +3,7 @@
 
 ### Daftar Isi
 * [Install MySQL](#install-mysql)
+    * [Setup MySQL](#setup-mysql)
     * [Izinkan Remote akses](#izinkan-remote-akses)
     * [Launch at reboot](#launch-at-reboot)
     * [Configure interfaces](#configure-interfaces)
@@ -50,6 +51,29 @@ $ sudo mysql_secure_installation utility
 ```
 Utilitas ini meminta Anda untuk menentukan kata sandi root mysql dan opsi terkait keamanan lainnya, termasuk menghapus akses jarak jauh ke pengguna root dan mengatur kata sandi root.
 
+#### Setup MySQL
+```
+$ sudo mysql -u root
+```
+```
+mysql> USE mysql;
+```
+```
+mysql> UPDATE user SET plugin='mysql_native_password' WHERE User='root';
+```
+Jika ingin menambahkan password ikuti langkah dibawah, jika tidak lompati langkah dibawah ini langsung Flush Privileges
+```
+$ ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'new-password';
+```
+```
+mysql> FLUSH PRIVILEGES;
+```
+```
+mysql> exit;
+```
+```
+$ sudo service mysql restart
+```
 
 #### Izinkan Remote akses
 Jika Anda memiliki iptables yang diaktifkan dan ingin terhubung ke database MySQL dari komputer lain, Anda harus membuka port di firewall server Anda (port default adalah 3306). Anda tidak perlu melakukan ini jika aplikasi yang menggunakan MySQL berjalan di server yang sama.

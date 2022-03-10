@@ -8,6 +8,7 @@
     * [Launch at reboot](#launch-at-reboot)
     * [Configure interfaces](#configure-interfaces)
     * [Start the mysql shell](#start-the-mysql-shell)
+* [Error mysql](#error-mysql)
 * [Uninstall MySQL](#uninstall-mysql)
     * [Re-install MySQL Server](#re-install-mysql-server)
 * [Configure MySQL](#configure-mysql)
@@ -104,6 +105,18 @@ bind-address		= 0.0.0.0 ( All ip addresses. )
 ##### Start the mysql shell
 ```
 $ mysql -u root -p
+```
+
+### Error MySQL
+Coba jalankan dibawah ini
+```
+$ sudo chown mysql:mysql -R /var/log/mysql
+```
+```
+$ sudo chmod -R u+rwx /etc/mysql/
+```
+```
+$ sudo chown -R mysql.mysql /etc/mysql/
 ```
 
 ### Uninstall MySQL

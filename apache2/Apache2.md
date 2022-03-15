@@ -29,7 +29,7 @@
 	* [Intall PHP7.4](#intall-php74)
 	* [Htaccess laravel](#htaccess-laravel)
 * [Problem Apache2](#problem-apache2)
-    * [Apache2 error](#apache2-eror-di-ubuntu-1804)
+    * [Apache2 error log ](#apache2-error-log)
     * [Apache2 error module mpm_event](#apache2-error-module-mpmevent)
 <br>
 </br>
@@ -463,7 +463,7 @@ RewriteRule ^(.*)$ public/$1 [L]
 
 ### Problem Apache2
 
-#### Apache2 eror di Ubuntu 18.04
+#### Apache2 error log
 ```
 $ sudo apachectl configtest
 ```

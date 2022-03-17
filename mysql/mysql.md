@@ -9,6 +9,7 @@
     * [Configure interfaces](#configure-interfaces)
     * [Start the mysql shell](#start-the-mysql-shell)
 * [Error mysql](#error-mysql)
+    * [ERROR 1055 (42000)](#ERROR-1055-42000)
 * [Uninstall MySQL](#uninstall-mysql)
     * [Re-install MySQL Server](#re-install-mysql-server)
 * [Configure MySQL](#configure-mysql)
@@ -42,19 +43,19 @@
 
 #### Install MySQL 
 ```
-$ sudo apt-get update
+sudo apt-get update
 ```
 ```
-$ sudo apt-get install mysql-server
+sudo apt-get install mysql-server
 ```
 ```
-$ sudo mysql_secure_installation utility
+sudo mysql_secure_installation utility
 ```
 Utilitas ini meminta Anda untuk menentukan kata sandi root mysql dan opsi terkait keamanan lainnya, termasuk menghapus akses jarak jauh ke pengguna root dan mengatur kata sandi root.
 
 #### Setup MySQL
 ```
-$ sudo mysql -u root
+sudo mysql -u root
 ```
 ```
 mysql> USE mysql;
@@ -64,7 +65,7 @@ mysql> UPDATE user SET plugin='mysql_native_password' WHERE User='root';
 ```
 Jika ingin menambahkan password ikuti langkah dibawah, jika tidak lompati langkah dibawah ini langsung Flush Privileges
 ```
-$ ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'new-password';
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'new-password';
 ```
 ```
 mysql> FLUSH PRIVILEGES;
@@ -73,7 +74,7 @@ mysql> FLUSH PRIVILEGES;
 mysql> exit;
 ```
 ```
-$ sudo service mysql restart
+sudo service mysql restart
 ```
 
 #### Izinkan Remote akses
@@ -82,16 +83,16 @@ Jika Anda memiliki iptables yang diaktifkan dan ingin terhubung ke database MySQ
 $ sudo ufw enable
 ```
 ```
-$ sudo ufw allow mysql
+sudo ufw allow mysql
 ```
 #### Start the MySQL service
 ```
-$ sudo systemctl start mysql
+sudo systemctl start mysql
 ```
 
 #### Launch at reboot
 ```
-$ sudo systemctl enable mysql
+sudo systemctl enable mysql
 ```
 
 #### Configure interfaces
@@ -104,19 +105,28 @@ bind-address		= 0.0.0.0 ( All ip addresses. )
 
 ##### Start the mysql shell
 ```
-$ mysql -u root -p
+mysql -u root -p
 ```
 
 ### Error MySQL
 Coba jalankan dibawah ini
 ```
-$ sudo chown mysql:mysql -R /var/log/mysql
+sudo chown mysql:mysql -R /var/log/mysql
 ```
 ```
-$ sudo chmod -R u+rwx /etc/mysql/
+sudo chmod -R u+rwx /etc/mysql/
 ```
 ```
-$ sudo chown -R mysql.mysql /etc/mysql/
+sudo chown -R mysql.mysql /etc/mysql/
+```
+
+### ERROR 1055 (42000)
+```
+ERROR 1055 (42000): Expression #2 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'data_siswa.siswa.nama_siswa' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+```
+ketikan ini di mysql servernya
+```
+SET GLOBAL sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY','')); 
 ```
 
 ### Uninstall MySQL
@@ -125,10 +135,10 @@ $ sudo chown -R mysql.mysql /etc/mysql/
 Berikut langkahnya : <br>
 
 ``` 
-$ sudo apt-get purge mysql-server mysql-common mysql-client 
+sudo apt-get purge mysql-server mysql-common mysql-client 
 ```
 ``` 
-$ sudo apt-get install mysql-client mysql-server mysql-common
+sudo apt-get install mysql-client mysql-server mysql-common
 ````
 
 ### Configure MySQL
@@ -195,12 +205,12 @@ FLUSH PRIVILEGES;
 
 Untuk set root :
 ```
-$ sudo mysqladmin --user=root password "newpassword"
+sudo mysqladmin --user=root password "newpassword"
 ```
 
 Untuk reset password :
 ```
-$ sudo mysqladmin --user=root --password=oldpassword password "newpassword"
+sudo mysqladmin --user=root --password=oldpassword password "newpassword"
 ```
 
 ### Basic MySQL

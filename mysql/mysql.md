@@ -57,22 +57,24 @@ Utilitas ini meminta Anda untuk menentukan kata sandi root mysql dan opsi terkai
 ```
 sudo mysql -u root
 ```
+ketikan ini di mysql server
 ```
-mysql> USE mysql;
+USE mysql;
 ```
 ```
-mysql> UPDATE user SET plugin='mysql_native_password' WHERE User='root';
+UPDATE user SET plugin='mysql_native_password' WHERE User='root';
 ```
 Jika ingin menambahkan password ikuti langkah dibawah, jika tidak lompati langkah dibawah ini langsung Flush Privileges
 ```
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'new-password';
 ```
 ```
-mysql> FLUSH PRIVILEGES;
+FLUSH PRIVILEGES;
 ```
 ```
-mysql> exit;
+exit;
 ```
+ketikan ini di command line
 ```
 sudo service mysql restart
 ```
@@ -80,7 +82,7 @@ sudo service mysql restart
 #### Izinkan Remote akses
 Jika Anda memiliki iptables yang diaktifkan dan ingin terhubung ke database MySQL dari komputer lain, Anda harus membuka port di firewall server Anda (port default adalah 3306). Anda tidak perlu melakukan ini jika aplikasi yang menggunakan MySQL berjalan di server yang sama.
 ```
-$ sudo ufw enable
+sudo ufw enable
 ```
 ```
 sudo ufw allow mysql
@@ -144,27 +146,30 @@ sudo apt-get install mysql-client mysql-server mysql-common
 ### Configure MySQL
 
 ##### Set the root password
+ketikan ini di dalam mysql server
 ```
-mysql> ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
 ```
 Kemudian, jalankan FLUSH PRIVILEGES yang memberi tahu server untuk memuat ulang tabel dan menerapkan perubahan baru Anda:
 ```
-mysql> FLUSH PRIVILEGES;
+FLUSH PRIVILEGES;
 ```
 
 ##### Buat User Baru 
+ketika ini di my sql server
 ```
-mysql> CREATE USER 'hard'@'localhost' IDENTIFIED BY 'password';
+CREATE USER 'hard'@'localhost' IDENTIFIED BY 'password';
 ```
 
 
 ##### Hak Akses user
-
+ketikan ini di my sql server
 ```
-mysql> GRANT ALL PRIVILEGES ON NAMA_DATABASE . NAMA_TABEL  TO 'hard'@'localhost' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON NAMA_DATABASE . NAMA_TABEL  TO 'hard'@'localhost' WITH GRANT OPTION;
 ```
 
 ##### Cabut Hak Akses
+ketikan ini di mysql server
 ```
 REVOKE  ALL PRIVILEGES ON NAMA_DATABASE . NAMA_TABEL FROM 'coba'@'localhost';
 ```
@@ -181,6 +186,7 @@ REVOKE  ALL PRIVILEGES ON NAMA_DATABASE . NAMA_TABEL FROM 'coba'@'localhost';
 ```GRANT OPTION``` - memungkinkan mereka untuk memberikan atau menghapus hak pengguna lain.<br>
 
 #### Melihat Detail User
+ketikan ini di mysql server
 ```
 select * from mysql.user;
 ```
@@ -197,6 +203,7 @@ drop user coba@localhost;
 ```
 
 #### Reload
+ketikan ini di mysql server
 ```
 FLUSH PRIVILEGES;
 ```

@@ -15,6 +15,10 @@
     * [Disable webcam](#disable-webcam)
     * [Format FlashDisk Lewat Terminal](#format-flashdisk-lewat-terminal)
     * [Remove snap dari ubuntu 18.04](#remove-snap-dari-ubuntu-1804)
+    * [IP Static](#ip-tatic)
+    * [Change IP](#change-ip)
+    * [Add Gateway](#add-gateway)
+    * [Remove Gateway](#remove-gateway)
     * [Install OpenVpn Server](#install-openvpn-server)
     * [Change bash to fish](#change-bash-to-fish)
     * [Config Fish](#config-fish)
@@ -65,11 +69,11 @@
 #### Fail2ban
 install fail2ban
 ```
-$ sudo apt install fail2ban
+sudo apt install fail2ban
 ```
 configure fail2ban
 ```
-$ sudo systemctl enable fail2ban.service
+sudo systemctl enable fail2ban.service
 ```
 buat file di /etc/fail2ban dengan nama jail.local
 ```
@@ -94,35 +98,35 @@ cek status fail2ban user
 #### Berjalan dilatar belakang dengan screen
 buat nama session
 ```
-$ screen -S session_name
+screen -S session_name
 ```
 buat lihat daftar session
 ```
-$ screen -ls
+screen -ls
 ```
 masuk ke session
 ```
-$ screen -r id_session
+screen -r id_session
 ```
 atau
 ```
-$ screen -rd id_session
+screen -rd id_session
 ```
 
 #### cek linux header
 ```
-$ apt-cache search linux-headers
+apt-cache search linux-headers
 ```
 
 #### Connect Wifi with Commands
 ```
-$ nmcli device wifi rescan
+nmcli device wifi rescan
 ```
 ```
-$ nmcli device wifi list
+nmcli device wifi list
 ```
 ```
-$ nmcli device connect NamaSSID password DISINI PASSWORD
+nmcli device connect NamaSSID password DISINI PASSWORD
 ```
 
 #### Clear Cache di Linux
@@ -164,29 +168,29 @@ Tambahkan baris di bawah ini, simpan dan keluar untuk menjalankannya pukul 2 pag
 #### Menampilkan semua service yang berjalan / tidak
 Menampilkan menggunakan ```service```
 ```
-$ sudo service --status-all
+sudo service --status-all
 ```
 
 Menampilkan  manggunakan ```systemctl```
 ```
-$ sudo systemctl list-unit-files
+sudo systemctl list-unit-files
 ```
 ```
-$ sudo systemctl list-units --type service
+sudo systemctl list-units --type service
 ```
 
 Menampilkan menggunakan ```netstat```
 ```
-$ sudo netstat -pnltu
+sudo netstat -pnltu
 ```
 Cara Lain Menggunakan tools :<br><br>
 ***systemd-cgtop***<br>
 ```
-$ sudo systemd-cgtop
+sudo systemd-cgtop
 ```
 ***chkservice***
 ```
-$ sudo chkservice
+sudo chkservice
 ```
 
 #### Cek Harddisk partitions
@@ -195,39 +199,39 @@ $ sudo chkservice
 ***fdisk***<br>
 Fdisk adalah perintah yang paling umum digunakan untuk memeriksa partisi pada disk. Perintah fdisk dapat menampilkan partisi dan detail seperti tipe sistem file. Namun itu tidak melaporkan ukuran setiap partisi.
 ```
-$ sudo fdisk -l
+sudo fdisk -l
 ```
 
 ***parted***<br>
 Parted adalah utilitas baris perintah lain untuk membuat daftar partisi dan memodifikasinya jika diperlukan.
 Berikut adalah contoh yang mencantumkan detail partisi.
 ```
-$ sudo parted -l
+sudo parted -l
 ```
 
 ***df***<br>
 Df bukan utilitas partisi, tetapi mencetak rincian tentang hanya sistem file yang dipasang. Daftar yang dihasilkan oleh df bahkan mencakup sistem file yang bukan partisi disk nyata.
 ```
-$ df -h
+df -h
 ```
 Ingin menampilkan hanya sistem file yang dimulai dengan / dev
 ```
-$ df -h | grep ^/dev
+df -h | grep ^/dev
 ```
 Untuk menampilkan partisi disk nyata bersama dengan tipe partisi, gunakan df seperti ini
 ```
-$ df -h --output=source,fstype,size,used,avail,pcent,target -x tmpfs -x devtmpfs
+df -h --output=source,fstype,size,used,avail,pcent,target -x tmpfs -x devtmpfs
 ```
 ***lsblk***<br>
 Daftar semua blok penyimpanan, yang mencakup partisi disk dan drive optik. Rincian termasuk ukuran total partisi / blok dan titik pemasangan jika ada.
 Tidak melaporkan ruang disk yang digunakan / kosong pada partisi.
 ```
-$ lsblk
+lsblk
 ```
 ***blkid***<br>
 Mencetak atribut perangkat blok (partisi dan media penyimpanan) seperti tipe uuid dan sistem file. Tidak melaporkan ruang di partisi.
 ```
-$ sudo blkid
+sudo blkid
 ```
 
 #### Cara Memeriksa Available Network Interfaces, Associated IP Addresses, MAC Addresses, and Interface Speed on Linux
@@ -241,33 +245,33 @@ $ sudo blkid
 ```
 Memeriksa Antarmuka Jaringan yang Tersedia di Linux Menggunakan Perintah IP
 ```
-$ ip a |awk '/state UP/{print $2}'
+ip a |awk '/state UP/{print $2}'
 ```
 Memeriksa Alamat IP Antarmuka Jaringan di Linux Menggunakan Perintah IP
 ```
-$ ip -o a show | cut -d ' ' -f 2,7
+ip -o a show | cut -d ' ' -f 2,7
 ```
 or
 ```
-$ ip a |grep -i inet | awk '{print $7, $2}'
+ip a |grep -i inet | awk '{print $7, $2}'
 ```
 Memeriksa Alamat MAC Kartu Antarmuka Jaringan di Linux Menggunakan Perintah IP
 ```
-$ ip link show dev eth0 |awk '/link/{print $2}'
+ip link show dev eth0 |awk '/link/{print $2}'
 ```
 Memeriksa Kecepatan Port Antarmuka Jaringan di Linux Menggunakan Perintah ethtool
 ```
-$ ethtool eth0 | grep "Speed:"
+ethtool eth0 | grep "Speed:"
 ```
 ### Konfigurasi Linux
 
 #### Disable webcam.
 cek list webcam
 ```
-$ sudo lsmod | grep uvcvideo
+sudo lsmod | grep uvcvideo
 ```
 ```
-$ vi /etc/modprobe.d/blacklist-libnfc.conf 
+vi /etc/modprobe.d/blacklist-libnfc.conf 
 ```
 
 ```
@@ -278,85 +282,134 @@ blacklist uvcvideo
 ***Format FlashDisk Lewat Terminal***<br>
 Cek dahulu letak flashdisk ada di device boot  mana :
 ```
-$ sudo fdisk -l
+sudo fdisk -l
 ```
 Sebelum format unmount dulu semisal letak flashdisk saya di ```/dev/sdc1```:
 ```
-$ sudo umount /dev/sdc1
+sudo umount /dev/sdc1
 ```
 Lalu format
 ```
-$ sudo mkfs.vfat /dev/sdc1
+sudo mkfs.vfat /dev/sdc1
 ```
 
 #### Remove snap dari ubuntu 18.04
 
 Jalankan :
 ```
- $ rm -rf ~/snap
+rm -rf ~/snap
 ```
 ```
-$ sudo rm -rf /var/cache/snapd
+sudo rm -rf /var/cache/snapd
 ```
 ```
-$ sudo apt purge snapd
+sudo apt purge snapd
 ```
 ```
-$ sudo apt-get update
+sudo apt-get update
 ```
 
 jika ingin mengembalikan software yang diintall di snap menggunakan apt :
 ```
-$ sudo apt-get install gnome-calculator gnome-characters gnome-logs gnome-system-monitor
+sudo apt-get install gnome-calculator gnome-characters gnome-logs gnome-system-monitor
+```
+
+#### IP Static
+ubuntu 20.04
+```
+sudo vi  /etc/netplan/00-installer-config.yaml
+```
+edit seperti ini menyeseuaikan
+```
+network:
+   ethernets:
+        enp0s3:
+                dhcp4: no
+                addresses: [192.168.xx.xx/24]
+                gateway4: 192.168.xx.xx
+                nameservers:
+                        addresses: [8.8.8.8,192.168.xx.xx]
+
+```
+simpan lalu jalankan
+```
+sudo netplan try
+```
+command ini untuk testing
+```
+sudo netplan generate
+```
+command ini untuk generate config files
+```
+sudo netplan apply
+```
+command ini untuk apply config jika sudah tidak ada error jalankan command dibawah ini
+```
+reboot
+```
+
+#### Change IP
+```
+sudo ifconfig eth0 192.168.xx.xx netmask 255.255.255.0
+```
+
+#### Add Gateway
+```
+route add default gw 192.168.x.x eth0
+```
+
+#### Remove Gateway
+```
+route delete default gw 192.168.xx.xx eth0
 ```
 
 #### Install OpenVpn Server
 
 Cek Ip address
 ```
-$ dig +short myip.opendns.com @resolver1.opendns.com
+dig +short myip.opendns.com @resolver1.opendns.com
 ```
 Install OpenVpn pada ubuntu
 ```
-$ sudo apt install curl
+sudo apt install curl
 ```
 ```
 curl -O https://raw.githubusercontent.com/angristan/openvpn-install/master/openvpn-install.sh
 ```
 ```
-# chmod +x openvpn-install.sh
+sudo chmod +x openvpn-install.sh
 ```
 ```
-$ sudo bash openvpn-install.sh
+sudo bash openvpn-install.sh
 ```
 Cek ip dan port pada openvpn
 ```
-$ sudo ss -tupln | grep openvpn
+sudo ss -tupln | grep openvpn
 ```
 ```
-$ ip add
+ip add
 ```
 ### Configurasi Bahasa Pemograman di Linux
 
 ##### Configure java version
 ```
-$ sudo update-alternatives --config javac
+sudo update-alternatives --config javac
 ```
 
 #### Install Kotlin
 ```
-$ curl -s https://get.sdkman.io | bash
+curl -s https://get.sdkman.io | bash
 ```
 ```
-$ source "/home/hard/.sdkman/bin/sdkman-init.sh"
+source "/home/hard/.sdkman/bin/sdkman-init.sh"
 ```
 ```
-$ sdk install kotlin
+sdk install kotlin
 ```
 
 #### Rename wlp2s0 to wlan0 in ubuntu
 ```
-$ sudo vi /etc/default/grub
+sudo vi /etc/default/grub
 ```
 Edit Dari
 ```
@@ -368,33 +421,33 @@ GRUB_CMDLINE_LINUX="net.ifnames=0 biosdevname=0"
 ```
 Simpan lalu keluar
 ```
-$ sudo grub-mkconfig -o /boot/grub/grub.cfg
+sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
 #### Change bash to fish
 ```
-$ sudo apt install fish
+sudo apt install fish
 ```
 ```
-$ chsh -s /usr/bin/fish
+chsh -s /usr/bin/fish
 ```
 untuk konfigurasi 
 ```
-$ mkdir -p ~/.config/fish
+mkdir -p ~/.config/fish
 ```
 ```
-$ touch ~/.config/fish/config.fish
+touch ~/.config/fish/config.fish
 ```
 
 #### Config Fish
 ```
-$ curl -L https://get.oh-my.fish | fish
+curl -L https://get.oh-my.fish | fish
 ```
 ```
-$ curl -L https://get.oh-my.fish > install
+curl -L https://get.oh-my.fish > install
 ```
 ```
-$ fish install --path=~/.local/share/omf --config=~/.config/omf
+fish install --path=~/.local/share/omf --config=~/.config/omf
 ```
 Untuk lebih lengkapnya bisa dicek di link dibawah ini
 ```
@@ -404,22 +457,22 @@ https://github.com/oh-my-fish/oh-my-fish
 #### Export Inkscape to AI
 Install
 ```
-$ sudo curl 'https://langitketujuh.id/sh/l7-export' | sudo bash
+sudo curl 'https://langitketujuh.id/sh/l7-export' | sudo bash
 ```
 ```
-$ sudo l7-export --install
+sudo l7-export --install
 ```
 
 #### Edit Background grub
 ```
-$ sudo vi /etc/default/grub
+sudo vi /etc/default/grub
 ```
 Tambahkan text dibawah ini
 ```
  GRUB_BACKGROUND="/usr/share/backgrounds/sun.png"
 ```
 ```
-$  sudo update-grub
+ sudo update-grub
 ```
 cara pakai
 langkah pertama cari id file
@@ -429,7 +482,7 @@ langkah pertama cari id file
 ```
 
 ```
-$ l7-export namaFile.svg IdFile
+l7-export namaFile.svg IdFile
 ```
 
 ### Optimalkan SSD
@@ -441,17 +494,17 @@ https://wiki.archlinux.org/index.php/Solid_state_drive#TRIM
 
 Pastikan SSD anda mendukung untuk memverifikasi dukungan TRIM, jalankan:
 ```
-$ lsblk --discard
+lsblk --discard
 ```
 Dan periksa nilai-nilai DISC-GRAN (discard granularity) dan DISC-MAX (discard max bytes) kolom. Nilai bukan nol menunjukkan dukungan TRIM.
 
 Atau, instal paket hdparm dan jalankan:
 ```
-$ sudo hdparm -I /dev/sda | grep TRIM
+sudo hdparm -I /dev/sda | grep TRIM
 ```
 jika mendukung maka lanjutkan
 ```
-$ sudo vi /etc/fstab
+sudo vi /etc/fstab
 ```
 
 #### Add noatime to fstab
@@ -466,14 +519,14 @@ tmpfs   /var/spool      tmpfs   defaults,noatime,mode=1777      0 0
 tmpfs   /var/tmp        tmpfs   defaults,noatime,mode=1777      0 0
 ```
 ```
-$ sudo systemctl reboot
+sudo systemctl reboot
 ```
 #### Jalankan fstrim secara berkala
 #### Menggunakan cron
 buat  cron mingguan /etc/cron.weekly/fstrim. Jika tidak, buat sendiri
 
 ```
-$ sudo vi /etc/cron.weekly/fstrim
+sudo vi /etc/cron.weekly/fstrim
 ```
 tambahkan
 ```
@@ -483,18 +536,18 @@ tambahkan
 ```
 #### Menggunakan systemctl
 ```
-$ sudo systemctl enable fstrim.timer
+sudo systemctl enable fstrim.timer
 ```
 ```
-$ sudo systemctl start fstrim.service
+sudo systemctl start fstrim.service
 ```
 ```
-$ sudo systemctl start fstrim.timer
+sudo systemctl start fstrim.timer
 ```
 
 #### Kurangi penggunaan swap
 ```
-$ sudo vi /etc/sysctl.conf
+sudo vi /etc/sysctl.conf
 ```
 tambahkan (ubuntu dan debian)
 ```
@@ -502,20 +555,20 @@ vm.swappiness=1
 vm.vfs_cache_pressure=50
 ```
 ```
-$ sudo systemctl reboot
+sudo systemctl reboot
 ```
 
 ### Software Install
 #### Install cfiles 
 cfiles – Manajer File Terminal Cepat dengan Vim Keybindings
 ```
-$ sudo apt-get install libncurses5-dev
+sudo apt-get install libncurses5-dev
 ```
 ```
-$ make
+make
 ```
 ```
-$ sudo make install
+sudo make install
 ```
 
 ### Problem di Linux
@@ -530,7 +583,7 @@ Ctrl+shift+alt+prntsrc+R+E+I+S+U+B
 
 Jalankan:
 ```
-$ sudo apt install xserver-xorg-input-all
+sudo apt install xserver-xorg-input-all
 ```
 
 
@@ -538,10 +591,10 @@ $ sudo apt install xserver-xorg-input-all
 
 #### Langkah pertama
 ```
-$ sudo apt install apt-transport-https
+sudo apt install apt-transport-https
 ```
 ```
-$ sudo apt update
+sudo apt update
 ```
 
 #### Repository Kali Linux
@@ -549,10 +602,10 @@ $ sudo apt update
 cek ```/etc/apt/sources.list```
 
 ```
-$ deb http://http.kali.org/kali kali-rolling main non-free contrib
+deb http://http.kali.org/kali kali-rolling main non-free contrib
 ```
 ```
-$ sudo apt update
+sudo apt update
 ```
 info lebih lengkap cek link dibawah ini
 
@@ -560,49 +613,49 @@ https://www.kali.org/docs/general-use/kali-linux-sources-list-repositories/
 
 #### Date fix kali linux
 ```
-$ timedatectl
+timedatectl
 ```
 ```
-$ timedatectl list-timezones | grep Asia
+timedatectl list-timezones | grep Asia
 ```
 ```
-$ timedatectl set-timezone Asia/Jakarta
+timedatectl set-timezone Asia/Jakarta
 ```
 
 
 #### Install wine kali linux
 ```
-$ sudo dpkg --add-architecture i386
+sudo dpkg --add-architecture i386
 ```
 ```
-$ sudo apt-get update
+sudo apt-get update
 ```
 ```
-$ sudo apt-get install wine32
+sudo apt-get install wine32
 ```
 
 Untuk Install Office :
 ```
-$ WINEPREFIX=~/.wine/office2007 WINEARCH=win32 winecfg
+WINEPREFIX=~/.wine/office2007 WINEARCH=win32 winecfg
 ```
 ```
-$ sudo apt install winbind cabextract
+sudo apt install winbind cabextract
 ```
 ```
-$ wget  https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks
+wget  https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks
 ```
 ```
-$ chmod +x winetricks
+chmod +x winetricks
 ```
 ```
-$ sudo cp winetricks /usr/local/bin/
+sudo cp winetricks /usr/local/bin/
 ```
 
 ```
-$ sudo apt install zenity
+sudo apt install zenity
 ```
 ```
-$ WINEPREFIX=~/.wine/office2007 WINEARCH=win32 winetricks 
+WINEPREFIX=~/.wine/office2007 WINEARCH=win32 winetricks 
 ```
 Configure didalamnya
 ```
@@ -613,16 +666,16 @@ msxml6
 
 cek apakah msxml6 sudah terinstall atau belum
 ```
-$ WINEPREFIX=~/.wine/office2007 WINEARCH=win32 winetricks msxml6
+WINEPREFIX=~/.wine/office2007 WINEARCH=win32 winetricks msxml6
 ```
 untuk instal office 
 ```
-$ WINEPREFIX=~/.wine/office2007 WINEARCH=win32 wine ./Microsoft-Office-Professional-2007.exe 
+WINEPREFIX=~/.wine/office2007 WINEARCH=win32 wine ./Microsoft-Office-Professional-2007.exe 
 ```
 
 #### Install Disk Mounter
 ```
-$ sudo apt-get install gnome-disk-utility
+sudo apt-get install gnome-disk-utility
 ```
 
 #### Install zoom
@@ -632,72 +685,72 @@ https://zoom.us/download?os=linux
 ```
 langkah selanjutnya
 ```
-$ sudo dpkg -i zoom_amd64.deb
+sudo dpkg -i zoom_amd64.deb
 ```
 langkah selanjutkan update repository
 ```
-$ sudo vi /etc/apt/sources.list
+sudo vi /etc/apt/sources.list
 ```
 ```
-$ sudo apt update
+sudo apt update
 ```
 
 #### Install Virtualbox di kali linux
 ```
-$ wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
+wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
 ```
 ```
-$ echo "deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian buster contrib" | sudo tee /etc/apt/sources.list.d/virtualbox.list
+echo "deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian buster contrib" | sudo tee /etc/apt/sources.list.d/virtualbox.list
 ```
 ```
-$ sudo apt update
+sudo apt update
 ```
 ```
-$ sudo apt install -y dkms virtualbox virtualbox-ext-pack
+sudo apt install -y dkms virtualbox virtualbox-ext-pack
 ```
 Jalankan
 ```
-$ virtualbox
+virtualbox
 ```
 info lebih
 https://www.kali.org/docs/virtualization/install-virtualbox-kali-host/
 
 #### Install Spotify
 ```
-$ curl -sS https://download.spotify.com/debian/pubkey.gpg | sudo apt-key add - 
-$ echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+curl -sS https://download.spotify.com/debian/pubkey.gpg | sudo apt-key add - 
+echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
 ```
 ```
-$ sudo apt-get update && sudo apt-get install spotify-client
+sudo apt-get update && sudo apt-get install spotify-client
 ```
 
 #### Install Scrcpy
 
 ```
-$ sudo apt install scrcpy
+sudo apt install scrcpy
 ```
 
 ##### Install Postman
 ```
-$ cd Downloads/
+cd Downloads/
 ```
 ```
-$ tar -xzf Postman-linux-x64-7.32.0.tar.gz
+tar -xzf Postman-linux-x64-7.32.0.tar.gz
 ```
 ```
-$ sudo mkdir -p /opt/apps/
+sudo mkdir -p /opt/apps/
 ```
 ```
-$ sudo mv Postman /opt/apps/
+sudo mv Postman /opt/apps/
 ```
 ```
-$ sudo ln -s /opt/apps/Postman/Postman /usr/local/bin/postman
+sudo ln -s /opt/apps/Postman/Postman /usr/local/bin/postman
 ```
 ```
-$ postman
+postman
 ```
 ```
-$ sudo vim /usr/share/applications/postman.desktop
+sudo vim /usr/share/applications/postman.desktop
 ```
 ```
 [Desktop Entry]
@@ -719,16 +772,16 @@ jika sudah extrak file yang udah didownload tadi lalu masuk ke folder hasil extr
 ```
 lalu masuk ke terminal arahkan path folder seperti path diatas atau didalam folder DEB jika sudah ketikan :
 ```
-$ sudo dpkg -i *.deb
+sudo dpkg -i *.deb
 ```
 
 #### Uninstall Libreoffice
 ```
-$ sudo apt purge libreoffice7.0*
+sudo apt purge libreoffice7.0*
 ```
 jika diatas tidak berhasil coba :
 ```
-$ sudo dpkg --purge libreoffice*
+sudo dpkg --purge libreoffice*
 ```
 
 #### Install Inkscape
@@ -737,7 +790,7 @@ Saya disini pakai yang portable sebelumnya kunjungi link dibawah ini dan downloa
 https://inkscape.org/release/inkscape-dev/?latest=1
 ```
 ```
-$ sudo vim /usr/share/applications/inkscape.desktop
+sudo vim /usr/share/applications/inkscape.desktop
 ```
 ```
 [Desktop Entry]
@@ -752,7 +805,7 @@ Categories=Graphics;2DGraphics;RasterGraphics;GTK;
 ```
 #### Uninstall Inkscape
 ```
-$ sudo apt purge inkscape
+sudo apt purge inkscape
 ```
 
 #### Install Blender
@@ -762,30 +815,30 @@ https://docs.blender.org/manual/en/latest/getting_started/installing/linux.html
 ```
 hasil compress dipindahkan di **user/local/bin** lalu ketikan di terminal
 ```
-$ sudo ln -s /usr/local/blender-2.93.4-linux-x64/blender /usr/local/bin/
+sudo ln -s /usr/local/blender-2.93.4-linux-x64/blender /usr/local/bin/
 ```
 jika blender tidak muncul dishortcut lalu kan dibawah ini : 
 ```
-$ sudo cp blender.desktop /usr/share/applications/
+sudo cp blender.desktop /usr/share/applications/
 ```
 lokasikan pathnya di folder yang aktif
 
 #### Error virtualbox
 #### Kernel driver not installed (rc=-1908)
 ```
-$ sudo apt update
+sudo apt update
 ```
 ```
-$ sudo apt install --reinstall linux-headers-$(uname -r) virtualbox-dkms dkms
+sudo apt install --reinstall linux-headers-$(uname -r) virtualbox-dkms dkms
 ```
 ```
-$ sudo modprobe vboxdrv
+sudo modprobe vboxdrv
 ```
 
 #### Shortcuts Android Studio
 
 ```
-$ sudo vim /usr/share/applications/android-studio.desktop
+sudo vim /usr/share/applications/android-studio.desktop
 ```
 ```
 [Desktop Entry]
@@ -800,7 +853,7 @@ Categories=Development;Code;
 
 #### Shortcuts Web Server Localhost
 ```
-$ sudo vim /usr/share/applications/android-studio.desktop
+sudo vim /usr/share/applications/android-studio.desktop
 ```
 ```
 [Desktop Entry]
@@ -815,7 +868,7 @@ Categories=Development;Code;
 
 #### Install Telegram desktop
 ```
-$ sudo apt-get install telegram-desktop
+sudo apt-get install telegram-desktop
 ```
 
 #### Fix GNUStep
@@ -828,17 +881,17 @@ E: Broken packages
 ```
 Perbaikan :
 ```
-$ sudo apt-get autoclean
-$ sudo apt-get -f install
-$ sudo dpkg --configure -a
-$ sudo apt-get -f install
+sudo apt-get autoclean
+sudo apt-get -f install
+sudo dpkg --configure -a
+sudo apt-get -f install
 ```
 ```
-$ sudo apt-get update
-$ sudo apt-get upgrade
+sudo apt-get update
+sudo apt-get upgrade
 ```
 ```
-$ sudo apt-get full-upgrade
+sudo apt-get full-upgrade
 ```
 
 #### Fix libpangox-1.0.so.0
@@ -848,7 +901,7 @@ anydesk: error while loading shared libraries: libpangox-1.0.so.0: cannot open s
 ```
 Perbaikan :
 ```
-$ sudo apt-get install -y libpangox-1.0-0
+sudo apt-get install -y libpangox-1.0-0
 ```
 
 ### Terima Kasih

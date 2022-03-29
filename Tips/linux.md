@@ -35,6 +35,7 @@
 	* [Jalankan fstrim secara berkala](#jalankan-fstrim-secara-berkala)
 	* [Kurangi penggunaan swap](#kurangi-penggunaan-swap)
 * [Software Install](#Software-install)
+    * [Install Barcode to PC](install-barcode-to-pc)
     * [Install cfiles](#install-cfiles)
 * [Problem di Linux](#problem-di-linux) 
     * [Linux Mengalami hang](#linux-mengalami-hang)
@@ -559,6 +560,14 @@ sudo systemctl reboot
 ```
 
 ### Software Install
+#### Install Barcode to PC
+```
+sudo apt install libavahi-compat-libdnssd1 libnss-mdns avahi-daemon avahi-discover -y
+```
+lalu kunjungi 
+```
+https://barcodetopc.com/
+```
 #### Install cfiles 
 cfiles – Manajer File Terminal Cepat dengan Vim Keybindings
 ```

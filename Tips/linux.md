@@ -45,6 +45,7 @@
     * [Repository Kali Linux](#repository-kali-linux)
     * [Date fix kali linux](#date-fix-kali-linux)
     * [Install wine kali linux](#install-wine-kali-linux)
+    * [Install Wine ubuntu](#install-wine-ubuntu)
     * [Install zoom](#install-zoom)
     * [Install Disk Mounter](#install-disk-mounter)
     * [Install Telegram desktop](#install-telegram-desktop)
@@ -680,6 +681,30 @@ WINEPREFIX=~/.wine/office2007 WINEARCH=win32 winetricks msxml6
 untuk instal office 
 ```
 WINEPREFIX=~/.wine/office2007 WINEARCH=win32 wine ./Microsoft-Office-Professional-2007.exe 
+```
+
+#### Install Wine Ubuntu
+```
+apt-cache policy wine64
+```
+Sebelum Anda dapat menginstal Wine di Ubuntu 20.04, Anda harus mengaktifkan dukungan sistem 32-bit.
+```
+sudo dpkg --add-architecture i386
+```
+Anda sekarang dapat menginstal Wine di Ubuntu 20.04 dengan menjalankan perintah di bawah ini;
+```
+sudo apt update
+```
+```
+sudo apt install wine64
+```
+Verifikasi Instalasi Anggur
+```
+wine --version
+```
+Reboot System
+```
+systemctl reboot
 ```
 
 #### Install Disk Mounter

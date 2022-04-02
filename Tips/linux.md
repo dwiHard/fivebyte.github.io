@@ -47,6 +47,7 @@
     * [Install wine kali linux](#install-wine-kali-linux)
     * [Install Wine ubuntu](#install-wine-ubuntu)
     * [Install zoom](#install-zoom)
+    * [Install TigerVNC di ubuntu](#install-tigervnc-di-ubuntu)
     * [Install Disk Mounter](#install-disk-mounter)
     * [Install Telegram desktop](#install-telegram-desktop)
     * [Install Virtualbox di kali linux](#install-virtualbox-di-kali-linux)
@@ -727,6 +728,18 @@ sudo vi /etc/apt/sources.list
 ```
 ```
 sudo apt update
+```
+
+#### Install TigerVNC di ubuntu
+```
+sudo apt-get install libfltk1.3-dev 
+```
+download file .deb di sini https://github.com/TigerVNC/tigervnc/releases lalu ketikan di terminal
+```
+sudo dpkg -i xtigervncviewer_1.12.0-1ubuntu1_amd64.deb 
+```
+```
+xtigervncviewer
 ```
 
 #### Install Virtualbox di kali linux

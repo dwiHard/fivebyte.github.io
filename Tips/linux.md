@@ -15,6 +15,7 @@
     * [Disable webcam](#disable-webcam)
     * [Format FlashDisk Lewat Terminal](#format-flashdisk-lewat-terminal)
     * [Remove snap dari ubuntu 18.04](#remove-snap-dari-ubuntu-1804)
+    * [Set Default Nautilus](#set-default-nautilus)
     * [IP Static](#ip-tatic)
     * [Change IP](#change-ip)
     * [Add Gateway](#add-gateway)
@@ -315,6 +316,11 @@ sudo apt-get update
 jika ingin mengembalikan software yang diintall di snap menggunakan apt :
 ```
 sudo apt-get install gnome-calculator gnome-characters gnome-logs gnome-system-monitor
+```
+
+#### Set Default Nautilus
+```
+xdg-mime default nautilus.desktop inode/directory application/x-gnome-saved-search
 ```
 
 #### IP Static

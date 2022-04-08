@@ -38,16 +38,16 @@
 
 #### Cek PHP Module 
 ```
-$ php -m
+php -m
 ```
 Saya menyarankan Anda menggunakan PHP dengan modul yang dikurangi untuk kinerja dan keamanan.
 
 ```
-# rm /etc/php.d/sqlite3.ini
+sudo rm /etc/php.d/sqlite3.ini
 ```
 Atau
 ```
-# mv /etc/php.d/sqlite3.ini /etc/php.d/sqlite3.disable
+sudo mv /etc/php.d/sqlite3.ini /etc/php.d/sqlite3.disable
 ```
 Jika ingin compile dan reinstall 
 ```
@@ -196,13 +196,13 @@ mod_fastcgi adalah cgi-module untuk server web Apache. Itu dapat terhubung ke se
 
 PHP module gd: Missing - Only an issue if you want to play with captchas
 ```
-$ sudo apt-get install vim apache2 php7.3
+sudo apt-get install vim apache2 php7.3
 ```
 ```
-$ sudo apt-get install mariadb-server mariadb-client php7.3-mysql php7.3-gd 
+sudo apt-get install mariadb-server mariadb-client php7.3-mysql php7.3-gd 
 ```
 ```
-$ sudo  apt-get install git
+sudo  apt-get install git
 ```
 ### Configure Apache2 untuk codeigniter
 
@@ -224,15 +224,15 @@ Your requirements could not be resolved to an installable set of packages.
 ```
 Fix
 ```
-$ sudo apt install php-intl
+sudo apt install php-intl
 ```
 ```
-$ composer install
+composer install
 ```
 
 #### Install PHP
 ```
-$ sudo su
+sudo su
 ```
 ```
 # apt install libapache2-mod-php7.4 php7.4 php7.4-common php7.4-mysql php7.4-curl php7.4-gd php-imagick php7.4-cli php7.4-mbstring php7.4-zip php7.4-bcmath -y
@@ -240,32 +240,32 @@ $ sudo su
 #### Change 2 host virtualhost apache2
 Buat Folder
 ```
-$ sudo mkdir -p /var/www/hard.com/public_html
+sudo mkdir -p /var/www/hard.com/public_html
 ```
 ```
-$ sudo mkdir -p /var/www/hard2.com/public_html
+sudo mkdir -p /var/www/hard2.com/public_html
 ```
 Grant permission
 ```
-$ sudo chown -R $USER:$USER /var/www/hard.com/public_html
+sudo chown -R $USER:$USER /var/www/hard.com/public_html
 ```
 ```
-$ sudo chown -R $USER:$USER /var/www/hard2.com/public_html
+sudo chown -R $USER:$USER /var/www/hard2.com/public_html
 ```
 ```
-$ sudo chmod -R 755 /var/www
+sudo chmod -R 755 /var/www
 ```
 
 salin domain ```000-default.conf```
 ```
-$ sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/hard.com.conf
+sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/hard.com.conf
 ```
 ```
-$ sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/hard2.com.conf
+sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/hard2.com.conf
 ```
 lalu open file ```hard.com.conf``` & ```hard2.com.conf``` rubah dan sesuikan :
 ```
-# vi /etc/apache2/sites-available/hard.com.conf
+sudo vi /etc/apache2/sites-available/hard.com.conf
 ```
 ```
 <VirtualHost *:80> 
@@ -276,26 +276,26 @@ lalu open file ```hard.com.conf``` & ```hard2.com.conf``` rubah dan sesuikan :
 ```
 Untuk Mengaktikan site
 ```
-$ sudo a2ensite hard.com.conf
+sudo a2ensite hard.com.conf
 ```
 ```
-$ sudo a2ensite hard.com.conf
+sudo a2ensite hard.com.conf
 ```
 Untuk Mematikan site
 ```
-$ sudo a2dissite 000-default.conf
+sudo a2dissite 000-default.conf
 ```
 Lalu
 ```
-$ sudo systemctl restart apache2
+sudo systemctl restart apache2
 ```
 ```
-$  sudo service apache2 restart
+ sudo service apache2 restart
 ```
 
 Set Hosts
 ```
-$ sudo vi /etc/hosts
+sudo vi /etc/hosts
 ```
 ```
 IP kamu       hard.com
@@ -304,14 +304,14 @@ IP kamu       hard2.com
 
 #### Redirect Http to Https
 ```
-$ sudo a2enmod rewrite
+sudo a2enmod rewrite
 ```
 ```
-$ sudo a2enmod ssl
+sudo a2enmod ssl
 ```
 Edit file
 ```
-$ /etc/apache2/sites-available/000-default.conf
+/etc/apache2/sites-available/000-default.conf
 ```
 ```
 <VirtualHost *:80>
@@ -337,35 +337,35 @@ RewriteRule ^(.*) https://%{HTTP_HOST}/$1
 ```
 Langkah terakhir adalah
 ```
-$ sudo service apache2 restart
+sudo service apache2 restart
 ```
 
 #### Configure cloudflare origin ca apache
 Buat folder
 ```
-$ sudo mkdir -p /etc/cloudflare/
+sudo mkdir -p /etc/cloudflare/
 ```
 copy cert dan key
 ```
-$ sudo vi /etc/cloudflare/hard.com.pem
+sudo vi /etc/cloudflare/hard.com.pem
 ```
 pastekan  ***Origin Certificate*** 
 ```
-$ sudo vi /etc/cloudflare/hard.com.key
+sudo vi /etc/cloudflare/hard.com.key
 ```
 pastekan ***Private Key***
 
 #### Mengaktikan ssl
 ```
-$ sudo a2enmod ssl
+sudo a2enmod ssl
 ```
 ```
-$ sudo service apache2 restart
+sudo service apache2 restart
 ```
 #### Configure apache2 dengan ssl
 
 ```
-# vi /etc/apache2/sites-available/hard.com.conf
+sudo vi /etc/apache2/sites-available/hard.com.conf
 ```
 ```
 <VirtualHost *:80> 
@@ -394,23 +394,23 @@ $ sudo service apache2 restart
 ```
 Untuk Mengaktikan site
 ```
-$ sudo a2ensite hard.com.conf
+sudo a2ensite hard.com.conf
 ```
 Untuk Mematikan site
 ```
-$ sudo a2dissite 000-default.conf
+sudo a2dissite 000-default.conf
 ```
 Lalu
 ```
-$ sudo systemctl restart apache2
+sudo systemctl restart apache2
 ```
 ```
-$  sudo service apache2 restart
+ sudo service apache2 restart
 ```
 
 Set Hosts
 ```
-$ sudo vi /etc/hosts
+sudo vi /etc/hosts
 ```
 ```
 IP kamu       hard.com
@@ -419,29 +419,29 @@ IP kamu       hard.com
 ### Configure Apache2 untuk laravel
 #### Intall PHP7.4
 ```
-$ sudo apt update && sudo apt upgrade
+sudo apt update && sudo apt upgrade
 ```
 ```
-$ sudo apt install software-properties-common
+sudo apt install software-properties-common
 ```
 ```
-$ sudo add-apt-repository ppa:ondrej/php
+sudo add-apt-repository ppa:ondrej/php
 ```
 ```
-$ sudo apt update
+sudo apt update
 ```
 ```
-$ sudo apt install libapache2-mod-php7.4 php7.4 php7.4-common php7.4-mysql php7.4-curl php7.4-gd php-imagick php7.4-cli php7.4-mbstring php7.4-zip php7.4-bcmath -y
+sudo apt install libapache2-mod-php7.4 php7.4 php7.4-common php7.4-mysql php7.4-curl php7.4-gd php-imagick php7.4-cli php7.4-mbstring php7.4-zip php7.4-bcmath -y
 ```
 edit apache2.conf
 ```
-$ sudo vi /etc/apache2/apache2.conf 
+sudo vi /etc/apache2/apache2.conf 
 ```
 ```
-$ sudo a2enmod rewrite
+sudo a2enmod rewrite
 ```
 ```
-$ sudo service apache2 restart
+sudo service apache2 restart
 ```
 
 ### Htaccess laravel
@@ -465,7 +465,7 @@ RewriteRule ^(.*)$ public/$1 [L]
 
 #### Apache2 error log
 ```
-$ sudo apachectl configtest
+sudo apachectl configtest
 ```
 ```
 AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1. Set the 'ServerName' directive globally to suppress this message
@@ -476,13 +476,13 @@ Action 'configtest' failed.
 The Apache error log may have more information.
 ```
 ```
-$ sudo mkdir -p /var/log/apache2/
+sudo mkdir -p /var/log/apache2/
 ```
 ```
-$ sudo chmod -R 744 /var/log/apache2/
+sudo chmod -R 744 /var/log/apache2/
 ```
 ```
-$ sudo systemctl restart apache2
+sudo systemctl restart apache2
 ```
 
 #### Apache2 error module mpm_event

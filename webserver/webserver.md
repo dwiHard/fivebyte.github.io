@@ -2,6 +2,7 @@
 > Disusun oleh Hardiyanto
 
 ## Daftar Isi
+* [Install Web Server Pada Arch Linux](#install-web-server-pada-arch-linux)
 * [Membuat User Baru](#membuat-user-baru)
 * [SSH Configure](#ssh-configure)
     * [Copy SSH key](#copy-ssh-key)
@@ -27,46 +28,97 @@
     1. [Cek Using cURL for Redirect Loops](#cek-using-curl-for-redirect-loops)
     2. [Redirects in the .htaccess File](#redirects-in-the-htaccess-file)
 
-***Keterangan***<br>
-$  -->  Sebagai user biasa <br> 
-\#  -->  Sebagai super user / root
+###Install Web Server Pada Arch Linux
+install apache
+```
+sudo pacman -S apache 
+```
+menjalankan/mematikan service
+```
+sudo systemctl start httpd.service 
+```
+```
+sudo systemctl stop httpd.service 
+```
+install mariadb
+```
+sudo pacman -S mariadb
+```
+Konfigurasi mariadb
+```
+sudo mysql_install_db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
+```
+```
+sudo mysql_secure_installation
+```
+menjalankan/mematikan service
+```
+sudo systemctl start mariadb.service
+```
+```
+sudo systemctl stop mariadb.service
+```
+install php
+```
+sudo pacman -S php php-apache php-cgi php-gd php-imap
+```
+konfigurasi php
+```
+sudo vim /etc/php/php.ini
+```
+untuk menampilkan error
+```
+display_errors = on
+```
+hapus komentar dan edit seperti ini
+```
+date.timezone = Asia/Jakarta
+```
+konfigurasi hhtpd
+```
+sudo vim /etc/httpd/conf/httpd.conf
+```
+melihat list module
+```
+ls /etc/httpd/modules/ 
+```
 
 #### Membuat User Baru
 ```
-$ adduser hard
+adduser hard
 ```
 ```
-$ usermod -aG sudo hard
+usermod -aG sudo hard
 ```
 
 ## SSH Configure
 #### Copy SSH Key
 ```
-$ su - hard
+su - hard
 ```
 ```
-# mkdir ~/.ssh
+sudo mkdir ~/.ssh
 ```
 ```
-# chmod 700 ~/.ssh
+sudo chmod 700 ~/.ssh
 ```
 ```
-# nano ~/.ssh/authorized_keys
+sudo nano ~/.ssh/authorized_keys
 ```
 ```
-# chmod 600 ~/.ssh/authorized_keys
+sudo chmod 600 ~/.ssh/authorized_keys
 ```
 ```
-# exit
+sudo exit
 ```
 #### Login Automatis ssh
 Pastikan Anda sudah membuat ssh keygen jika belum ketikan :
 ```
-$ ssh-keygen
+ssh-keygen
 ```
 Jika sudah langsung ketikkan :
 ```
-$ ssh-copy-id user@ip 
+ssh-copy-id user@ip 
 ```
 
 #### Config SSH Server
@@ -77,7 +129,7 @@ Ports 49152-65535 = dynamic / private ports. <br>
 
 Untuk Konfigurasi ikuti cara berikut :
 ```
-$ vim /etc/ssh/sshd_config
+vim /etc/ssh/sshd_config
 ```
 Rubah seperti ini
 ```
@@ -88,10 +140,10 @@ PasswordAuthentication no
 ```
 keluar dari text editor
 ```
-# systemctl restart ssh
+sudo systemctl restart ssh
 ```
 ```
-# systemctl status ssh
+sudo systemctl status ssh
 ```
 
 #### Config SSH Login 
@@ -105,39 +157,39 @@ Host NamaServer
 
 ## Set Timezone
 ```
-$ timedatectl set-timezone Asia/Jakarta
+timedatectl set-timezone Asia/Jakarta
 date
 ````
 ## Update System
 ```
-# apt update
+sudo apt update
 ```
 ```
-# apt upgrade -y
+sudo apt upgrade -y
 ```
 ```
-# reboot
+sudo reboot
 ```
 ## Transfer File
 ```
-$ scp crud.zip server:~/
+scp crud.zip server:~/
 ```
 ## Install Apache
 ```
-# apt install apache2 -y
+sudo apt install apache2 -y
 ```
 #### Membuat Virtual Host
 ```
-$ mkdir /var/www/hard.com
+mkdir /var/www/hard.com
 ```
 ```
-$ vim /var/www/hard.com/index.html
+vim /var/www/hard.com/index.html
 ```
 ```
-$ cd /etc/apache2/sites-available
+cd /etc/apache2/sites-available
 ```
 ```
-# vi hard.com.conf
+sudo vi hard.com.conf
 ```
 
 ```
@@ -155,110 +207,110 @@ $ cd /etc/apache2/sites-available
 </VirtualHost>
 ```
 ```
-# a2ensite hard.com.conf
+sudo a2ensite hard.com.conf
 ```
 ```
-# a2enmod rewrite
+sudo a2enmod rewrite
 ```
 ```
-# systemctl restart apache2
+sudo systemctl restart apache2
 ```
 ```
-# systemctl status apache2
+sudo systemctl status apache2
 ```
 
 ## Install PHP 7.4
 
 ```
-# apt show php
+sudo apt show php
 ```
 https://launchpad.net/~ondrej/+archive/ubuntu/php
 
 ```
-# apt install software-properties-common -y
+sudo apt install software-properties-common -y
 ```
 ```
-# add-apt-repository ppa:ondrej/php
+sudo add-apt-repository ppa:ondrej/php
 ```
 ```
-# apt install libapache2-mod-php7.4 php7.4 php7.4-common php7.4-mysql php7.4-curl php7.4-gd php-imagick php7.4-cli php7.4-mbstring php7.4-zip php7.4-bcmath -y
+sudo apt install libapache2-mod-php7.4 php7.4 php7.4-common php7.4-mysql php7.4-curl php7.4-gd php-imagick php7.4-cli php7.4-mbstring php7.4-zip php7.4-bcmath -y
 ```
 ```
-$ php -v
+php -v
 ```
 ```
-$ php -m
+php -m
 ```
 ```
-# apt search php7.4
+sudo apt search php7.4
 ```
 ```
-# vi /var/www/hard.com/info.php
+sudo vi /var/www/hard.com/info.php
 ```
 ```
 <?php phpinfo(); ?>
 ```
 
 ```
-# vi /etc/php/7.4/apache2/php.ini
+sudo vi /etc/php/7.4/apache2/php.ini
 ```
 ```
 upload_max_filesize = 10M
 post_max_size = 10M
 ```
 ```
-# systemctl restart apache2
+sudo systemctl restart apache2
 ```
 
 ## Install phpmyadmin
 ```
-$ sudo apt install -y apache2 mysql-server php libapache2-mod-php php-mysql -y 
+sudo apt install -y apache2 mysql-server php libapache2-mod-php php-mysql -y 
 ```
 ```
-$ sudo apt install phpmyadmin php-json php-curl php-mbstring php-zip
+sudo apt install phpmyadmin php-json php-curl php-mbstring php-zip
 ```
 ## Install composer
 
 ```
-# apt install curl php7.4-cli php7.4-mbstring git unzip -y
+sudo apt install curl php7.4-cli php7.4-mbstring git unzip -y
 ```
 ```
-$ curl –sS https://getcomposer.org/installer | php
+curl –sS https://getcomposer.org/installer | php
 ```
 ```
-# mv composer.phar /usr/local/bin/composer
+sudo mv composer.phar /usr/local/bin/composer
 ```
 Di Ubuntu 18.04 bisa juga langsung :
 ```
-$ sudo apt update
+sudo apt update
 ```
 ```
-$ sudo apt install composer
+sudo apt install composer
 ```
 
 ## Install MariaDB 10.4
 Default MariaDB 10.1
 ```
-# apt show mariadb-server
+sudo apt show mariadb-server
 ```
 https://downloads.mariadb.org/mariadb/repositories/
 ```
-# apt-key adv --fetch-keys 'https://mariadb.org/mariadb_release_signing_key.asc'
+sudo apt-key adv --fetch-keys 'https://mariadb.org/mariadb_release_signing_key.asc'
 ```
 ```
-# add-apt-repository 'deb [arch=amd64,arm64,ppc64el] http://sgp1.mirrors.digitalocean.com/mariadb/repo/10.4/ubuntu bionic main'
+sudo add-apt-repository 'deb [arch=amd64,arm64,ppc64el] http://sgp1.mirrors.digitalocean.com/mariadb/repo/10.4/ubuntu bionic main'
 ```
 ```
-# apt install mariadb-server -y
+sudo apt install mariadb-server -y
 ```
 ```
-# systemctl status mariadb
+sudo systemctl status mariadb
 ```
 ```
-# mysql_secure_installation
+sudo mysql_secure_installation
 ```
 ```
-# mysql -u root -p
+sudo mysql -u root -p
 ```
 
 ```
@@ -278,71 +330,71 @@ mysql> exit
 ```
 
 ```
-$ cd /home/hard
+cd /home/hard
 ```
 ```
-$ unzip crud.zip
+unzip crud.zip
 ```
 ```
-# mysql -u musa -p toko < crud/toko.sql
+sudo mysql -u musa -p toko < crud/toko.sql
 ```
 ```
-$ cp -v crud/* /var/www/hard.com/
+cp -v crud/* /var/www/hard.com/
 ```
 ```
-$ cd /var/www
+cd /var/www
 ```
 ```
-# rm hard.com/index.html
+sudo rm hard.com/index.html
 ```
 ```
-# chown -R hard:www-data hard.com
+sudo chown -R hard:www-data hard.com
 ```
 ```
-# chmod -R 775 hard.com
+sudo chmod -R 775 hard.com
 ```
 ```
-# ls -l 
+sudo ls -l 
 ```
 
 ## Install SSL Let's Encrypt untuk Apache
  https://certbot.eff.org/all-instructions
 ```
-# add-apt-repository ppa:certbot/certbot
+sudo add-apt-repository ppa:certbot/certbot
 ```
 ```
-# apt install certbot python3-certbot-apache -y
+sudo apt install certbot python3-certbot-apache -y
 ```
 ```
-$ certbot --apache -d hard.com -d www.hard.com
+certbot --apache -d hard.com -d www.hard.com
 ```
 ## Install Nginx dan PHP-FPM
 ```
-# systemctl stop apache2
+sudo systemctl stop apache2
 ```
 ```
-# systemctl disable apache2
+sudo systemctl disable apache2
 ```
 ```
-# systemctl status apache2
+sudo systemctl status apache2
 ```
 ```
-# apt install nginx -y
+sudo apt install nginx -y
 ```
 ```
-# apt install php7.4-fpm php7.4 php7.4-common php7.4-mysql php7.4-curl php7.4-gd php-imagick php7.4-cli php7.4-mbstring php7.4-zip php7.4-bcmath -y
+sudo apt install php7.4-fpm php7.4 php7.4-common php7.4-mysql php7.4-curl php7.4-gd php-imagick php7.4-cli php7.4-mbstring php7.4-zip php7.4-bcmath -y
 ```
 ```
-# systemctl status php7.4-fpm
+sudo systemctl status php7.4-fpm
 ```
 ```
-# vi /etc/php/7.4/fpm/pool.d/www.conf
+sudo vi /etc/php/7.4/fpm/pool.d/www.conf
 ```
 ```
-# cd /etc/nginx/conf.d
+sudo cd /etc/nginx/conf.d
 ```
 ```
-# nano hard.com.conf
+sudo nano hard.com.conf
 ```
 ```
 server {
@@ -369,16 +421,16 @@ server {
 }
 ```
 ```
-# nginx -t
+sudo nginx -t
 ```
 ```
-# systemctl restart nginx
+sudo systemctl restart nginx
 ```
 ```
-# systemctl status nginx
+sudo systemctl status nginx
 ```
 ```
-# vi /etc/php/7.4/fpm/php.ini
+sudo vi /etc/php/7.4/fpm/php.ini
 ```
 ```
 upload_max_filesize = 10M
@@ -386,10 +438,10 @@ post_max_size = 10M
 ```
 ## Install SSL Let's Encrypt untuk Nginx
 ```
-# apt install certbot python3-certbot-nginx -y
+sudo apt install certbot python3-certbot-nginx -y
 ```
 ```
-# certbot --nginx -d hard.com -d www.hard.com
+sudo certbot --nginx -d hard.com -d www.hard.com
 ```
 ## Firewall iptables
 
@@ -399,57 +451,57 @@ post_max_size = 10M
 * iptables
 
 ```
-# apt install iptables-persistent -y
+sudo apt install iptables-persistent -y
 ```
 ```
-# iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
+sudo iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
 ```
 ```
-# iptables -A INPUT -p icmp -j ACCEPT
+sudo iptables -A INPUT -p icmp -j ACCEPT
 ```
 ```
-# iptables -A INPUT -p tcp --dport 50000 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
+sudo iptables -A INPUT -p tcp --dport 50000 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
 ```
 ```
-# iptables -A INPUT -p tcp --dport 80 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
+sudo iptables -A INPUT -p tcp --dport 80 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
 ```
 ```
-# iptables -A INPUT -p tcp --dport 443 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
+sudo iptables -A INPUT -p tcp --dport 443 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
 ```
 ```
-# iptables -P INPUT DROP
+sudo iptables -P INPUT DROP
 ```
 ```
-# netfilter-persistent save
+sudo netfilter-persistent save
 ```
 ```
-# netfilter-persistent reload
+sudo netfilter-persistent reload
 ```
 ```
-# iptables -L
+sudo iptables -L
 ```
 ```
-# iptables -P INPUT ACCEPT
+sudo iptables -P INPUT ACCEPT
 ```
 ```
-# iptables -F
+sudo iptables -F
 ```
 ```
-# iptables -L
+sudo iptables -L
 ```
 ## Backup
 ```
-# cd
+cd
 ```
 ```
-# mkdir -p backup/hard.com/www
+sudo mkdir -p backup/hard.com/www
 ```
 ```
-# mkdir backup/hard.com/db
+sudo mkdir backup/hard.com/db
 ```
 
 ```
-# vi mysqldump-toko.cnf
+sudo vi mysqldump-toko.cnf
 ```
 ```
 [mysqldump]
@@ -457,7 +509,7 @@ user=hard
 password=rahasia
 ```
 ```
-$ vi backup.sh
+vi backup.sh
 ```
 ```
 #!/bin/bash
@@ -466,39 +518,39 @@ rsync -av /var/www/defnex.com/ /root/backup/defnex.com/www --delete
 mysqldump --defaults-extra-file=/root/mysqldump-toko.cnf toko | gzip > /root/backup/defnex.com/db/toko-$(date +%d%m%Y).sql.gz
 ```
 ```
-# chmod u+x backup.sh
+sudo chmod u+x backup.sh
 ```
 ```
-# ./backup.sh
+sudo ./backup.sh
 ```
 ```
-$ ls -l backup/hard.com/www
+ls -l backup/hard.com/www
 ```
 ```
-$ ls -l backup/hard.com/db
+ls -l backup/hard.com/db
 ```
 ```
-$ rm backup/hard.com/www/*
+rm backup/hard.com/www/*
 ```
 ```
-$ rm backup/hard.com/db/*
+rm backup/hard.com/db/*
 ```
 
 ```
-$ crontab -e
+crontab -e
 ```
 ```
 15 10 * * * /bin/bash /root/backup.sh
 ```
 ```
-# systemctl restart cron
+sudo systemctl restart cron
 ```
  Format https://crontab.guru
 ```
-$ ls -l backup/hard.com/www
+ls -l backup/hard.com/www
 ```
 ```
-$ ls -l backup/hard.com/db
+ls -l backup/hard.com/db
 ```
 
 #### Problem Server

@@ -29,6 +29,9 @@
     * [Configure Java](#configure-java-version)
     * [Install Kotlin](#install-kotlin)
     * [Rename wlp2s0 to wlan0 in ubuntu](#wlp2s0-to-wlan0-in-ubuntu)
+* [Arch Linux](#arch-linux)
+    * [Install AUR](#install-aur)
+    * [Arch install ntfs support](#arch-install-ntfs-support)
 * [Optimalkan SSD](#optimalkan-ssd)
 	* [Aktikan TRIM dan kurangi WRITE](#aktikan-trim-dan-kurangi-write)
 	* [Add noatime to fstab](#add-noatime-to-fstab)
@@ -398,40 +401,6 @@ sudo ss -tupln | grep openvpn
 ```
 ip add
 ```
-### Configurasi Bahasa Pemograman di Linux
-
-##### Configure java version
-```
-sudo update-alternatives --config javac
-```
-
-#### Install Kotlin
-```
-curl -s https://get.sdkman.io | bash
-```
-```
-source "/home/hard/.sdkman/bin/sdkman-init.sh"
-```
-```
-sdk install kotlin
-```
-
-#### Rename wlp2s0 to wlan0 in ubuntu
-```
-sudo vi /etc/default/grub
-```
-Edit Dari
-```
- GRUB_CMDLINE_LINUX=""
-```
-ke 
-```
-GRUB_CMDLINE_LINUX="net.ifnames=0 biosdevname=0"
-```
-Simpan lalu keluar
-```
-sudo grub-mkconfig -o /boot/grub/grub.cfg
-```
 
 #### Change bash to fish
 ```
@@ -492,6 +461,62 @@ langkah pertama cari id file
 
 ```
 l7-export namaFile.svg IdFile
+```
+
+
+### Configurasi Bahasa Pemograman di Linux
+
+##### Configure java version
+```
+sudo update-alternatives --config javac
+```
+
+#### Install Kotlin
+```
+curl -s https://get.sdkman.io | bash
+```
+```
+source "/home/hard/.sdkman/bin/sdkman-init.sh"
+```
+```
+sdk install kotlin
+```
+
+#### Rename wlp2s0 to wlan0 in ubuntu
+```
+sudo vi /etc/default/grub
+```
+Edit Dari
+```
+ GRUB_CMDLINE_LINUX=""
+```
+ke 
+```
+GRUB_CMDLINE_LINUX="net.ifnames=0 biosdevname=0"
+```
+Simpan lalu keluar
+```
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+```
+
+
+### Arch Linux
+
+#### Install AUR
+```
+sudo pacman -S git base-devel
+```
+tuliskan automasi di bawah ini di .bashrc
+```
+ayy() { git clone https://aur.archlinux.org/$1.git && cd $1 && makepkg --noconfirm -isc && cd .. && rm -rf $1 ;}
+```
+
+#### Arch install ntfs support
+```
+sudo pacman -Syu 
+```
+```
+sudo pacman -S ntfs-3g
 ```
 
 ### Optimalkan SSD

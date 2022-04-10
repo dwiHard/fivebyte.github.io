@@ -32,6 +32,7 @@
 * [Arch Linux](#arch-linux)
     * [Install AUR](#install-aur)
     * [Arch install ntfs support](#arch-install-ntfs-support)
+    * [Troubleshooting Audio](#troubleshooting-audio)
 * [Optimalkan SSD](#optimalkan-ssd)
 	* [Aktikan TRIM dan kurangi WRITE](#aktikan-trim-dan-kurangi-write)
 	* [Add noatime to fstab](#add-noatime-to-fstab)
@@ -519,6 +520,16 @@ sudo pacman -Syu
 sudo pacman -S ntfs-3g
 ```
 
+#### Troubleshooting Audio
+Untuk DE yang saya pakai xfce
+```
+
+```
+
+#### Troubleshooting Wifi
+```
+sudo pacman -S network-manager-applet
+```
 ### Optimalkan SSD
 
 #### Aktikan TRIM dan kurangi WRITE

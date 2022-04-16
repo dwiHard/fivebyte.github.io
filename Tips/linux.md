@@ -30,6 +30,7 @@
     * [Install Kotlin](#install-kotlin)
     * [Rename wlp2s0 to wlan0 in ubuntu](#wlp2s0-to-wlan0-in-ubuntu)
 * [Arch Linux](#arch-linux)
+    * [Install Arch](#install-arch)
     * [Install AUR](#install-aur)
     * [Arch install ntfs support](#arch-install-ntfs-support)
     * [Troubleshooting Audio](#troubleshooting-audio)
@@ -502,6 +503,171 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 
 ### Arch Linux
+
+#### Install Arch
+cek Mode UEFI
+```
+ls /sys/firmware/efi/efivars/
+```
+Jika Tampil maka mode yang dipakai laptop adalah mode UEFI
+Selanjutnya sambungkan laptop dengan connecting internet dibawah ini langkah untuk sambungkan ke internet
+```
+iwctl
+```
+untuk cek list wifi
+```
+device list
+```
+lihat detail wlan0
+```
+device wlan0 show
+```
+melakukan scan wifi
+```
+station wlan0 scan
+```
+menampilkan wifi
+```
+station wlan0 show
+```
+melihat nama wifi
+```
+station wlan0 get-networks
+```
+cara connect ke jaringan wifi
+```
+station wlan0 connect "Nama wifi"
+```
+melihat apakah sudah terkoneksi atau belum pakai perintah
+```
+device wlan0 show
+```
+
+selanjutnya jika sudah terkoneksi lalu cek partition
+cek posisi partisi
+```
+fdisk -l
+```
+membuat partisi
+```
+cfdisk /dev/sda
+```
+membuat partisi untuk UEFI
+```
+mkfs.fat -F32 /dev/sda1
+```
+membuat partisi untuk home/root
+```
+mkfs.ext4 /dev/sda3
+```
+membuat partisi untuk swap
+```
+mkswap /dev/sda2
+```
+selanjutnya mount partisi home
+```
+mount /dev/sda3 /mnt
+```
+```
+mkdir /mnt/efi
+```
+mount partisi UEFI
+```
+mount /dev/sda1 /mnt/efi
+```
+mount swapnya
+```
+swapon /dev/sda2
+```
+install software" yang dibutuhkan
+```
+pacstrap /mnt base linux linux-firmware net-tools networkmanager openssh vim
+```
+jika sudah selesai installnya selanjutnya buat fstab
+```
+genfstab -U /mnt >> /mnt/etc/fstab
+```
+melihat isi fstab/partisi
+```
+cat /mnt/etc/fstab
+```
+masuk ke archnya
+```
+arch-chroot /mnt
+```
+setting bahasa
+```
+vim /etc/locale.gen
+```
+hapus # sehingga menjadi
+```
+en_US.UTF-8 UTF-8
+```
+selanjutnya generate bahasa yang sudah dipilih
+```
+locale-gen
+```
+```
+echo "LANG=en_US.UTF-8" > /etc/locale.conf
+```
+
+setting time zone
+```
+ls /usr/share/zoneinfo
+```
+```
+ln -sf /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
+```
+```
+hwclock --systohc  --utc
+```
+
+membuat hostname
+```
+echo "hard" > /etc/hostname
+```
+membuat passwd
+```
+passwd hard
+```
+```
+pacman -S grub efibootmgr
+```
+jika menggunakan bios tidak perlu install efibootmgrnya
+```
+grub-install --efi-directory=/efi
+```
+```
+grub-mkconfig -o /boot/grub/grub.cfg
+```
+```
+exit
+```
+```
+reboot
+```
+untuk login uernya pakai root
+setelah berhasil login cek upgrade an terbaru dengan ketik command
+```
+pacman -Syyu
+```
+membuat user
+```
+useradd -n -g users -G wheel,storage,power -s /bin/bash NamaUser
+```
+```
+passwd NamaUser
+```
+```
+pacman -S sudo
+```
+```
+vim /etc/sudoers
+```
+cari perintah # %Wheel ALL=(ALL) ALL hilangkan tanda # sehingga
+```
+%wheel ALL=(ALL) ALL
+```
 
 #### Install AUR
 ```

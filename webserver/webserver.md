@@ -28,7 +28,7 @@
     1. [Cek Using cURL for Redirect Loops](#cek-using-curl-for-redirect-loops)
     2. [Redirects in the .htaccess File](#redirects-in-the-htaccess-file)
 
-###Install Web Server Pada Arch Linux
+### Install Web Server Pada Arch Linux
 install apache
 ```
 sudo pacman -S apache 
@@ -81,6 +81,10 @@ sudo vim /etc/httpd/conf/httpd.conf
 melihat list module
 ```
 ls /etc/httpd/modules/ 
+```
+cek status konfigurasi apache server 
+```
+sudo apachectl configtest
 ```
 
 #### Membuat User Baru

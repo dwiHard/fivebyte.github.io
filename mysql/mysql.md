@@ -13,6 +13,8 @@
 * [Uninstall MySQL](#uninstall-mysql)
     * [Re-install MySQL Server](#re-install-mysql-server)
 * [Configure MySQL](#configure-mysql)
+    * [Show user](#show-user)
+    * [Show Hak Akses](#show-hak-akses)
     * [Set the root password](#set-the-root-password)
     * [Buat User Baru](#buat-user-baru)
     * [Hak Akses user](#hak-akses-user)
@@ -144,6 +146,16 @@ sudo apt-get install mysql-client mysql-server mysql-common
 ````
 
 ### Configure MySQL
+
+##### Show user
+```
+SELECT user FROM user.mysql;
+```
+
+##### Show Hak Akses
+```
+SHOW GRANTS FOR 'coba'@'localhost';
+```
 
 ##### Set the root password
 ketikan ini di dalam mysql server

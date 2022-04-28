@@ -25,6 +25,8 @@
     * [Config Fish](#config-fish)
     * [Export Inkscape to AI](#export-inkscape-to-ai)
     * [Edit Background grub](#edit-background-grub)
+    * [Buka Web Blokir](#buka-web-blokir)
+    * [Linux Hostpot wifi](#linux-hostpot-wifi)
 * [Konfigurasi Bahasa Pemograman di Linux](#configurasi-bahasa-pemograman-di-linux)
     * [Configure Java](#configure-java-version)
     * [Install Kotlin](#install-kotlin)
@@ -465,6 +467,29 @@ langkah pertama cari id file
 l7-export namaFile.svg IdFile
 ```
 
+##### Buka Web Blokir
+```
+yay -S cloudflare-warp-bin
+```
+```
+sudo systemctl start warp-svc
+```
+```
+warp-cli register
+```
+```
+warp-cli status
+```
+```
+warp-cli connect
+```
+```
+warp-cli enable-always-on
+```
+link referensi : https://developers.cloudflare.com/warp-client/get-started/linux/
+
+##### Linux Hostpot wifi
+link referensi : https://github.com/lakinduakash/linux-wifi-hotspot
 
 ### Configurasi Bahasa Pemograman di Linux
 

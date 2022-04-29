@@ -27,6 +27,7 @@
     * [Edit Background grub](#edit-background-grub)
     * [Buka Web Blokir](#buka-web-blokir)
     * [Linux Hostpot wifi](#linux-hostpot-wifi)
+    * [Downgrade linux-lts back to 5.10 on Arch Linux/Manjaro from 5.15](#downgrade-linux-lts back-to-5-10-on-Arch-linux-manjaro-from-5-15)
 * [Konfigurasi Bahasa Pemograman di Linux](#configurasi-bahasa-pemograman-di-linux)
     * [Configure Java](#configure-java-version)
     * [Install Kotlin](#install-kotlin)
@@ -491,6 +492,23 @@ link referensi : https://developers.cloudflare.com/warp-client/get-started/linux
 ##### Linux Hostpot wifi
 link referensi : https://github.com/lakinduakash/linux-wifi-hotspot
 
+##### Downgrade linux-lts back to 5.10 on Arch Linux/Manjaro from 5.15
+```
+sudo vi /etc/pacman.conf
+```
+edit menjadi
+```
+IgnorePkg   = linux-lts
+IgnorePkg   = linux-lts-headers
+```
+simpan lalu kelar dari text editor lalu jalankan:
+```
+sudo pacman -U https://archive.archlinux.org/packages/l/linux-lts/linux-lts-5.10.90-1-x86_64.pkg.tar.zst
+```
+```
+sudo pacman -U https://archive.archlinux.org/packages/l/linux-lts-headers/linux-lts-5.10.90-1-x86_64.pkg.tar.zst
+```
+lalu reboot
 ### Configurasi Bahasa Pemograman di Linux
 
 ##### Configure java version

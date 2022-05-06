@@ -518,7 +518,7 @@ https://wiki.archlinux.org/title/File_manager_functionality#Mounting
 
 ##### Linux connect cloud
 ```
-sudo pacman -S gnome-shell nautilus gnome-terminal guake gnome-tweak-tool gn
+sudo pacman -S gnome-shell nautilus gnome-tweak-tool gn
 ome-control-center xdg-user-dirs gdm gvfs-google gvfs-goa
 ```
 ### Configurasi Bahasa Pemograman di Linux

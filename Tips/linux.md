@@ -29,6 +29,7 @@
     * [Linux Hostpot wifi](#linux-hostpot-wifi)
     * [Downgrade linux-lts back to 5.10 on Arch Linux/Manjaro from 5.15](#downgrade-linux-lts-back-to-5-10-on-Arch-linux-manjaro-from-5-15)
     * [USB Mobile tidak tampil](#usb-mobile-tidak-tampil)
+    * [Linux connect cloud](#linux-connect-cloud)
 * [Konfigurasi Bahasa Pemograman di Linux](#configurasi-bahasa-pemograman-di-linux)
     * [Configure Java](#configure-java-version)
     * [Install Kotlin](#install-kotlin)
@@ -515,6 +516,11 @@ lalu reboot
 
 https://wiki.archlinux.org/title/File_manager_functionality#Mounting
 
+##### Linux connect cloud
+```
+sudo pacman -S gnome-shell nautilus gnome-terminal guake gnome-tweak-tool gn
+ome-control-center xdg-user-dirs gdm gvfs-google gvfs-goa
+```
 ### Configurasi Bahasa Pemograman di Linux
 
 ##### Configure java version

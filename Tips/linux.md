@@ -27,7 +27,8 @@
     * [Edit Background grub](#edit-background-grub)
     * [Buka Web Blokir](#buka-web-blokir)
     * [Linux Hostpot wifi](#linux-hostpot-wifi)
-    * [Downgrade linux-lts back to 5.10 on Arch Linux/Manjaro from 5.15](#downgrade-linux-lts back-to-5-10-on-Arch-linux-manjaro-from-5-15)
+    * [Downgrade linux-lts back to 5.10 on Arch Linux/Manjaro from 5.15](#downgrade-linux-lts-back-to-5-10-on-Arch-linux-manjaro-from-5-15)
+    * [USB Mobile tidak tampil](#usb-mobile-tidak-tampil)
 * [Konfigurasi Bahasa Pemograman di Linux](#configurasi-bahasa-pemograman-di-linux)
     * [Configure Java](#configure-java-version)
     * [Install Kotlin](#install-kotlin)
@@ -509,6 +510,11 @@ sudo pacman -U https://archive.archlinux.org/packages/l/linux-lts/linux-lts-5.10
 sudo pacman -U https://archive.archlinux.org/packages/l/linux-lts-headers/linux-lts-5.10.90-1-x86_64.pkg.tar.zst
 ```
 lalu reboot
+
+##### USB Mobile tidak tampil
+
+https://wiki.archlinux.org/title/File_manager_functionality#Mounting
+
 ### Configurasi Bahasa Pemograman di Linux
 
 ##### Configure java version

@@ -30,6 +30,7 @@
     * [Downgrade linux-lts back to 5.10 on Arch Linux/Manjaro from 5.15](#downgrade-linux-lts-back-to-5-10-on-Arch-linux-manjaro-from-5-15)
     * [USB Mobile tidak tampil](#usb-mobile-tidak-tampil)
     * [Linux connect cloud](#linux-connect-cloud)
+    * [Resize Video](#resize-video)
 * [Konfigurasi Bahasa Pemograman di Linux](#configurasi-bahasa-pemograman-di-linux)
     * [Configure Java](#configure-java-version)
     * [Install Kotlin](#install-kotlin)
@@ -521,6 +522,17 @@ https://wiki.archlinux.org/title/File_manager_functionality#Mounting
 sudo pacman -S gnome-shell nautilus gnome-tweak-tool gn
 ome-control-center xdg-user-dirs gdm gvfs-google gvfs-goa
 ```
+
+##### Resize Video
+Baris perintah di bawah ini akan membantu mengubah ukuran resolusi video dari 1920 X 1080 piksel menjadi 640 X 360 piksel.
+```
+ffmpeg -i video_1920.mp4 -vf scale=640:360 video_640.mp4 -hide_banner
+```
+Jika tampilan video perlu diubah, setdar dapat digunakan sebagai filter tambahan. Misalnya, dalam situasi di atas, jika Anda ingin mengubah rasio aspek dari 16:9 menjadi 4:3, berikut adalah perintahnya.
+```
+ffmpeg -i video_1920.mp4 -vf scale=640:480,setdar=4:3 video_640x480.mp4 -hide_banner
+```
+
 ### Configurasi Bahasa Pemograman di Linux
 
 ##### Configure java version

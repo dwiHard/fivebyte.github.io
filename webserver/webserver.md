@@ -372,6 +372,49 @@ sudo apt install certbot python3-certbot-apache -y
 ```
 certbot --apache -d hard.com -d www.hard.com
 ```
+jika command diatas tidak bisa dijalankan maka ikuti command dibawah ini
+Checking Your Apache Virtual Host Configuration
+```
+sudo vi /etc/apache2/sites-available/your_domain.conf
+```
+edit
+```
+...
+ServerName your_domain;
+SeverAlias www.your_domain
+...
+```
+```
+sudo apache2ctl configtest
+```
+```
+sudo systemctl reload apache2
+```
+izinkan firefall
+```
+sudo ufw status
+```
+```
+sudo ufw allow 'Apache Full'
+```
+```
+sudo ufw delete allow 'Apache'
+```
+```
+sudo ufw status
+```
+Mendapatkan  SSL Certificate
+```
+sudo certbot --apache --register-unsafely-without-email 
+```
+Menverifikasi pembaruan certbot
+karena Let’s Encrypt berlaku selama 10 hari maka lakukan pembaruan otomatis lankahnya seperti dibawah ini
+```
+sudo systemctl status certbot.timer
+```
+```
+sudo certbot renew --dry-run
+```
 ## Install Nginx dan PHP-FPM
 ```
 sudo systemctl stop apache2

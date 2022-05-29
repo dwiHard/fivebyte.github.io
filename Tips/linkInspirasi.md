@@ -70,6 +70,14 @@ Free SSL
 
 
 - <https://nibbler.silktide.com/> nibber - Test keamanan Website
+
+<br>
+</br>
+
+Documentasi
+- <https://quickref.me/> - Dokumentasi cheatsheet lengkap
+- <https://www.programiz.com/> Belajar Programming
+
 #### DevOS 
 
 - <https://www.geeksforgeeks.org/python-programming-language/?ref=grb> Geeks For Geeks - Python Testing
@@ -101,15 +109,30 @@ Free SSL
 - <https://blush.design/> Blush - UI/UX Ilustration
 - <https://www.uidesigndaily.com/> UI/UX Desain
 - <https://www.uistore.design> UI/UX desain
+- <https://www.logotouse.com/> Logo Inspirasi
+- <https://figside.com/> personal websites, portfolio
+- <https://pattern.monster/> Generate pattern
+- <https://fontjoy.com> Generate Font
+- <https://hexcolorpedia.com/> Color Tools
+- <https://www.screensizes.app/> Screen Size Tools
 
 #### Mockup
-- <https://freebiesui.com/> Freebiesui - Mockup Desain
+- <https://freebiesui.com/> Freebiesui 
+- <https://smartmockups.com/> Smart Mockups
+- <https://mockups-design.com/> Mockup Design
+- <https://mockuuups.studio/> Mokuuups Studio
 
 #### Background
 
 - <https://www.pexels.com/> Pexels - Background Wallpaper
 - <https://freestocktextures.com/> Free Stock Textures - Background Texture
-- <http://texturelib.com/>Texture Lib - Background Texture
+- <http://texturelib.com/> Texture Lib - Background Texture
+- <http://telias.free.fr/> Telias - Free models
+- <https://www.textures.com/> Texture - Free Texture
+- <https://architextures.org/> Archive Texture - Free Texture
+- <https://www.brusheezy.com/> Brush eezy - Free texture brush
+- <https://plaintextures.com/> Plain Testure - Free texture
+- <https://www.3dvalley.com/> 3D Valley - Free 3D model dan texture
 
 #### Vektor
 - <https://www.svgrepo.com/> SVG repo - Vector and Icon
@@ -118,7 +141,6 @@ Free SSL
 - <https://www.opendoodles.com/> Open Doodles - vektor karakter
 - <https://pngtree.com/illustration-design> PNGtree - Vektor
 - <https://drawkit.com/> Drawkit - Vektor
-- <https://blobs.app/> blobs - Membuat blops
 - <https://getwaves.io/> Get Waves - generator waves svg
 - <https://wordmark.it/?ref=producthunt> word mark - check fonts 
 - <https://haikei.app/> haikei - Generate unique SVG design assets
@@ -149,10 +171,13 @@ Untuk Kebutuhan media sosial
 
 Untuk Kebutuhan editan
 - <https://www9.lunapic.com/editor/> luna pic - Edit foto
+- <https://blobanimation.com/> Blob Animation - Generate animation blob
+- <https://blobs.app/> blobs - Membuat blops
 - <https://uizard.io/> uizard - Design Tool
 - <https://www.lalal.ai/> lalal - Extract Vocal
 - <https://sketch2code.azurewebsites.net/?ref=uxdatabase.io> Sketch2code - hand drawn to html
 - <https://panzoid.com/> Panzoid - 3D intro marker
+- <https://spacers.wannathis.one/> Spacer - 3D Characters 
 - <https://www.lucidchart.com/pages/ > Lucidchart - Diagramming application
 - <https://uberduck.ai/> Uberduck - voice marker
 - <https://voicemaker.in/> Voice marker - Edit Voice
@@ -160,9 +185,17 @@ Untuk Kebutuhan editan
 - <https://www.figma.com> Figma - Edit foto Basis Vektor
 - <https://www.animaker.com/> Animaker - Edit Video dan presentasi
 - <https://draw.io/> Draw - Edit flowchart
+- <https://openstickers.craftwork.design/> Open stikers - Koleksi Stiker Free 
+
+Gradient
+- <https://gradienta.io/> Gradienta 
+- <https://www.iconshock.com/svg-icons/> Gradientify
+- <https://meshgradient.com/> Mesh Gradient
+- <https://coolors.co/gradients> Colors Gradients
 
 Website menarik 
 - <https://www.followupthen.com/> Follow Up Then - Personal Assitent
+- <https://www.getbiyo.io/> Biyo - Personalisasikan portofolio Anda
 - <https://shortlyai.com/> shortlyai - Writting AI
 - <http://internet-map.net/> Internet Map - map internet
 - <https://dictation.io/> Dictation - write email with voice
@@ -220,7 +253,7 @@ Color palette
 - <https://brandfolder.com/workbench/color-palette> brand folder - Color palette
 
 Website penyedia hosting gratis 
-- <https://github.com > github
+- <https://github.com> github
 - <https://www.awardspace.com> award space
 - <https://www.netlify.com> netlify
 - <https://cloud.google.com/solutions/web-hosting> google
@@ -232,6 +265,22 @@ Website belajar hacking
 - <https://doc.lagout.org/security> logout
 - <https://osintframework.com> osint framework
 - <https://www.hacking-tutorial.com> hacking tutorial
+- <https://www.hacksplaining.com/> Hack Planning
+- <https://www.exploit-db.com/google-hacking-database> exploit db
+
+Get Software paid to free
+- <https://soft98.ir/> soft98
+- <https://getintopc.com/> Get Into PC
+- <https://haxnode.net/> Haxnode
+- <https://filecr.com/> Filecr - For Mac
+
+Website Untuk Edukasi
+- <https://quillbot.com/> - Bisa untuk parafrase auto, cek grammar, summarizer dan bikin citation
+- <https://getdigest.com> - Website untuk merangkum jurnal secara otomatis
+- <https://www.studocu.com> - Website untuk bertukar materi berbentuk catatan
+- <https://www.grammarly.com/> - Website untuk koreksi grammar otomatis menggunakan ektensi
+- <https://hemingwayapp.com/> - Website cek grammar lebih user friendly
+- <https://prowritingaid.com/> - Extention untuk cek grammar
 
 #### Video dan audio
 - <https://pixabay.com/sound-effects/> Pixabay - Sound Effects

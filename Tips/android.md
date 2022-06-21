@@ -15,6 +15,7 @@
 * [Program Android](#)
     * [Desain menggunakan card view](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/Android/CardView.md)
     * [Remove Action Bar](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/Android/RemoveActionBar.md)
+* [Check health EMMC](#check-health-emmc)
 
 # Cara Connect Android ke Laptop dengan WI-FI atau USB
 #### Jika device kondisi root<br>
@@ -133,3 +134,23 @@ lalu buka android studio
 file->setting->plugins->setting->install plugin from disk
 ```
 
+#### Check Health EMMC
+```
+Method to check EMMC’s Health 
+
+Check at /sys/class/mmchost/mmc0/mmc0:0001/lifetime via any root explorer 
+
+0x01 0x01 = 100%-90%
+0x01 0x02 = 90-80%
+0x01 0x03 = 80-70%
+0x01 0x04 = 70-60%
+0x01 0x05 = 60-50℅
+0x01 0x06 = 50℅-40℅
+0x01 0x07 = 40℅-30℅
+0x01 0x08 = 30℅-20℅
+0x01 0x09 = 30℅-20℅
+0x01 0x0A = 20℅-10℅
+0x0b 0x0b = Dead AF 
+```
+Atau download apk
+https://github.com/dwiHard/five_byte.github.io/blob/master/Android/File/Disk%20Health%20Checker.apk

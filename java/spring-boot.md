@@ -6,6 +6,7 @@
 * [Dokumentasi spring boot](#dokumentasi-spring-boot)
 * [Maven Repository](#maven-repository)
 * [Project Lombok](#project-lombok)
+* [Current Time Date](#current-time-date)
 
 
 
@@ -24,3 +25,7 @@ https://mvnrepository.com/tags/spring
 #### Project Lombok
 Dokumentasi
 https://projectlombok.org/features/all
+
+
+#### Current Time Date
+https://currentmillis.com/

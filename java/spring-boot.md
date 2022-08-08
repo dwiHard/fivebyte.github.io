@@ -3,7 +3,7 @@
 
 ## Daftar Isi
 * [Mulai Project](#mulai-project)
-* [Dokumentasi spring boot][#dokumentasi-spring-boot)
+* [Dokumentasi spring boot](#dokumentasi-spring-boot)
 * [Maven Repository](#maven-repository)
 * [Project Lombok](#project-lombok)
 

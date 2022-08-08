@@ -26,6 +26,7 @@
     * [Reset the MySQL/MariaDB Root Password](#reset-the-mysqlmariadb-root-password)
 * [Basic MySQL](#basic-mysql)
     * [Buat Tabel](#buat-tabel)
+    * [Melihat Source Code](#melihat-source-code)
     * [Untuk Melihat Struktur Tabel](#untuk-melihat-struktur-tabel)
     * [Hapus Tabel](#hapus-tabel)
     * [Hapus FOREIGN KEY](#hapus-foreign-key)
@@ -242,6 +243,10 @@ CREATE TABLE `data` (
 	`data_kejadian` VARCHAR(20),
 	PRIMARY KEY (`id_data`)
 );
+```
+#### Melihat Source Code
+```
+SHOW CREATE TABLE nama_table \G
 ```
 #### Untuk Melihat Struktur Tabel
 ```

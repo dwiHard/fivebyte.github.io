@@ -33,6 +33,7 @@
     * [Resize Video](#resize-video)
 * [Konfigurasi Bahasa Pemograman di Linux](#configurasi-bahasa-pemograman-di-linux)
     * [Configure Java](#configure-java-version)
+    * [Buat Project Maven](#buat-project-maven)
     * [Install Kotlin](#install-kotlin)
     * [Rename wlp2s0 to wlan0 in ubuntu](#wlp2s0-to-wlan0-in-ubuntu)
 * [Arch Linux](#arch-linux)
@@ -540,6 +541,12 @@ ffmpeg -i video_1920.mp4 -vf scale=640:480,setdar=4:3 video_640x480.mp4 -hide_ba
 ```
 sudo update-alternatives --config javac
 ```
+
+##### Buat Project Maven
+```
+mvn -B archetype:generate -DgroupId=com.mycompany.app -DartifactId=my-app -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4
+```
+https://maven.apache.org/guides/getting-started/
 
 #### Install Kotlin
 ```

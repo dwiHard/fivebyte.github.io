@@ -32,6 +32,7 @@
     * [Linux connect cloud](#linux-connect-cloud)
     * [Resize Video](#resize-video)
     * [File Transfer dengan SCP](#file-transfer-dengan-scp)
+    * [Multi Window pada Server dengan Screen](#multi-window-pada-server-dengan-screen)
 * [Konfigurasi Bahasa Pemograman di Linux](#configurasi-bahasa-pemograman-di-linux)
     * [Configure Java](#configure-java-version)
     * [Buat Project Maven](#buat-project-maven)
@@ -541,6 +542,36 @@ megirimkan dari lokal ke server
 scp namafile ubuntu@IPSERVER:/pathFolder
 ```
 
+#### Multi Window pada Server dengan Screen
+menampilkan list screen
+```
+screen -ls
+```
+membuat session baru
+```
+screen -S namaSession
+```
+pindah window screen
+```
+screen -r ID
+```
+untuk pindah screen dengan shortcut<br>
+```
+Ctrl a n: move to next window
+Ctrl a p: move to previous window
+```
+Kill a session from within it
+```
+Ctrl + a + k
+```
+New Windows Session from within screen
+```
+Ctrl + a + c
+```
+List all windows in a session
+```
+Ctrl + a + w
+```
 ### Configurasi Bahasa Pemograman di Linux
 
 ##### Configure java version

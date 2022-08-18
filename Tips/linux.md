@@ -31,6 +31,7 @@
     * [USB Mobile tidak tampil](#usb-mobile-tidak-tampil)
     * [Linux connect cloud](#linux-connect-cloud)
     * [Resize Video](#resize-video)
+    * [File Transfer dengan SCP](#file-transfer-dengan-scp)
 * [Konfigurasi Bahasa Pemograman di Linux](#configurasi-bahasa-pemograman-di-linux)
     * [Configure Java](#configure-java-version)
     * [Buat Project Maven](#buat-project-maven)
@@ -533,6 +534,11 @@ ffmpeg -i video_1920.mp4 -vf scale=640:360 video_640.mp4 -hide_banner
 Jika tampilan video perlu diubah, setdar dapat digunakan sebagai filter tambahan. Misalnya, dalam situasi di atas, jika Anda ingin mengubah rasio aspek dari 16:9 menjadi 4:3, berikut adalah perintahnya.
 ```
 ffmpeg -i video_1920.mp4 -vf scale=640:480,setdar=4:3 video_640x480.mp4 -hide_banner
+```
+#### File Transfer dengan SCP
+megirimkan dari lokal ke server
+```
+scp namafile ubuntu@IPSERVER:/pathFolder
 ```
 
 ### Configurasi Bahasa Pemograman di Linux

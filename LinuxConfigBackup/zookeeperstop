@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+cd ~/Documents/apacheStrom/apache-zookeeper-3.7.1-bin/bin
+./zkServer.sh stop
+./zkServer.sh status
+rm -rf ~/zookeeper
+echo "Zookeeper Shutdown and remove folder zookeeper!!"

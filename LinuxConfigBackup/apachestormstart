@@ -1,0 +1,8 @@
+#!/bin/bash
+
+
+alacritty -e nimbus &
+sleep 5
+alacritty -e supervisor &
+sleep 5
+alacritty -e ui &

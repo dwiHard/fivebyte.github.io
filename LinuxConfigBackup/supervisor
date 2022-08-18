@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cd ~/Documents/apacheStrom/apache-storm-2.3.0/bin/
+python storm.py supervisor

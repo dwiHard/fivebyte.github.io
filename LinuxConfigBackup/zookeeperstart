@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+cd ~/Documents/apacheStrom/apache-zookeeper-3.7.1-bin/bin
+./zkServer.sh start
+./zkServer.sh status
+echo "ZooKeeper pid : "
+cat ~/zookeeper/zookeeper_server.pid
+echo -e "\nZooKeeper Success Running!!!"

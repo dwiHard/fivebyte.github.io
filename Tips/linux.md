@@ -575,8 +575,18 @@ Ctrl + a + w
 ### Configurasi Bahasa Pemograman di Linux
 
 ##### Configure java version
+untuk debian
+
 ```
 sudo update-alternatives --config javac
+```
+
+untuk arch linux
+```
+archlinux-java status
+```
+```
+sudo archlinux-java set java-18-openjdk
 ```
 
 ##### Buat Project Maven

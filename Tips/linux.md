@@ -749,6 +749,10 @@ membuat hostname
 ```
 echo "hard" > /etc/hostname
 ```
+membuat user
+```
+useradd namaUser
+```
 membuat passwd
 ```
 passwd hard

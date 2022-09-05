@@ -77,6 +77,7 @@
     * [Install Blender](#install-blender)
     * [Error virtualbox](#error-virtualbox)
     	* [Kernel driver not installed (rc=-1908)](#kernel-driver-not-installed-rc-1908)
+    	* [Virtualbox shared folder permission](#virtualbox-shared-folder-permission)
     * [Shortcuts Android Studio](#shortcuts-android-studio)
     * [Shortcuts Web Server Localhost]($shortcuts-server-web-localhost)
     * [Fix GNUStep](#fix-gnustep)
@@ -1231,6 +1232,16 @@ sudo apt install --reinstall linux-headers-$(uname -r) virtualbox-dkms dkms
 ```
 ```
 sudo modprobe vboxdrv
+```
+
+#### Virtualbox shared folder permission
+untuk ubuntu
+```
+sudo adduser $USER vboxsf
+```
+untuk suse
+```
+sudo usermod --append --groups vboxsf $USER
 ```
 
 #### Shortcuts Android Studio

@@ -627,6 +627,7 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 ### Arch Linux
 
 #### Install Arch
+untuk install divirtualbox jenis partitionnya pilih dos<br>
 cek Mode UEFI
 ```
 ls /sys/firmware/efi/efivars/
@@ -758,6 +759,13 @@ pacman -S grub efibootmgr
 jika menggunakan bios tidak perlu install efibootmgrnya
 ```
 grub-install --efi-directory=/efi
+```
+```
+grub-mkconfig -o /boot/grub/grub.cfg
+```
+jika divirtualbox
+```
+grub-install /dev/sda
 ```
 ```
 grub-mkconfig -o /boot/grub/grub.cfg

@@ -10,6 +10,7 @@ Gitlab yang dibangun dan dikembangkan oleh ***Hardiyanto***. Sebagian besar gitl
 - [x] [Apache2](https://github.com/dwiHard/five_byte.github.io/blob/master/apache2/Apache2.md)
 - [x] [Python](https://github.com/dwiHard/five_byte.github.io/blob/master/python/python.md)
 - [x] [Pemograman Web](https://github.com/dwiHard/five_byte.github.io/blob/master/pemogramanWeb/README.md)
+- [x] [HTML](https://github.com/dwiHard/five_byte.github.io/blob/master/html/htlm.md)
 - [x] [Nodejs](https://github.com/dwiHard/five_byte.github.io/blob/master/nodejs/nodejs.md)
 - [x] [Spring Boot](https://github.com/dwiHard/five_byte.github.io/blob/master/java/spring-boot.md)
 - [x] [Docker](https://github.com/dwiHard/five_byte.github.io/blob/master/docker/docker.md#docker-di-linux)

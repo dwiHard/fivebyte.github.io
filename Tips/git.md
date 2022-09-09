@@ -13,6 +13,8 @@
 * [Melihat status repository](#melihat-status-repository)
 * [Menambahkan file ke repository](#menambahkan-file-ke-repository)
 * [Menambahkan komentar](#menambahkan-komentar)
+* [Melihat Perubahan di file](#melihat-perubahan-di-file)
+* [Membatalkan perubahan](#membatalkan-perubahan)
 * [Membuat cabang baru](#membuat-cabang-baru)
 * [Memindahkan cabang](#memindahkan-cabang)
 * [Cek daftar cabang baru atau branch](#cek-daftar-cabang-baru-atau-branch)
@@ -104,7 +106,56 @@ git add nama_file
 ```
 git commit -m "komentar"
 ```
-
+#### Melihat Perubahan di file
+```
+git diff
+```
+#### Membatalkan perubahan
+```
+git clean -f
+```
+#### Membatalkan perubahan file/penghapusan file
+```
+git restore namaFile
+```
+#### Membatalkan perubahan Staging index
+```
+git restore --staged namaFile
+```
+#### Commit Log
+```
+git log
+```
+#### Commit Log OneLine
+```
+git log --oneline
+```
+#### Graph
+```
+git log --oneline --graph
+```
+#### Melihat detail commit
+hashya diisi dengan kode hash
+```
+git show hashnya
+```
+#### Compare Commit
+```
+git diff hash1 hash2
+```
+untuk melihat diVSCode
+```
+git difftool hash1 hash2
+```
+#### Git Reset commit
+untuk mode ada soft, mixed dan hard
+```
+git reset <mode> hash
+```
+example
+```
+git reset --soft hash
+```
 #### Membuat cabang baru 
 ```
 git branch NAMA_BRANCH

@@ -9,6 +9,7 @@
 * [Clone dari repository](#clone-dari-repository)
 * [Git Connect SSH](#git-connect-ssh)
 * [Alternatif Connect](#alternatif-connect)
+* [Menambahkan Repository](#menambahkan-repository)
 * [Melihat status repository](#melihat-status-repository)
 * [Menambahkan file ke repository](#menambahkan-file-ke-repository)
 * [Menambahkan komentar](#menambahkan-komentar)
@@ -22,33 +23,46 @@
 #### Menambahkan identitas di github
 Menambahkan nama
 ```
-$ git config --global user.name "NAMA KAMU"
+git config --global user.name "NAMA KAMU"
 ```
 Menambahkan email
 ```
-$ git config --global user.email EMAIL@example.com
+git config --global user.email EMAIL@example.com
 ```
 
 #### Menambahkan Text editor
 ini tidak harus dilakukan
 ```
-$ git config --global core.editor NAMA TEXT EDITOR
+git config --global core.editor NAMA TEXT EDITOR
+```
+cara untuk menambahkan dengan visual studio code
+```
+git config --global core.editor "code --wait"
+```
+```
+git config --global diff.tool "default-difftool"
+```
+```
+git config --global difftool.default-difftool.cmd "code --wait --diff \$LOCAL \$REMOTE"
 ```
 
 #### Check list config
 ```
-$ git config --list
+git config --list
+```
+```
+git config --list --show-origin
 ```
 
 #### Clone dari repository
 ```
-$ git clone URL
+git clone URL
 ```
 
 #### Git Connect SSH
 buat ssh-keygen
 ```
-$ ssh-keygen -t ed25519
+ssh-keygen -t ed25519
 ```
 Edit di ```~/.ssh/config```
 ```
@@ -59,7 +73,7 @@ Host gitlab.com
 ```
 cek status ssh
 ```
-$ ssh -T git@gitlab.com
+ssh -T git@gitlab.com
 ```
 #### Alternatif Connect
 ```
@@ -71,49 +85,54 @@ $ ssh -T git@gitlab.com
 
 ```
 
+#### Menambahkan Repository
+```
+git init
+```
+
 #### Melihat status repository
 ```
-$ git status
+git status
 ```
 
 #### Menambahkan file ke repository
 ```
-$ git add nama_file
+git add nama_file
 ```
 
 #### Menambahkan komentar
 ```
-$ git commit -m "komentar"
+git commit -m "komentar"
 ```
 
 #### Membuat cabang baru 
 ```
-$ git branch NAMA_BRANCH
+git branch NAMA_BRANCH
 ```
 
 #### Memindahkan cabang
 ```
-$ git switch -c master
+git switch -c master
 ```
 
 #### Push file
 ```
-$ git push origin master
+git push origin master
 ```
 
 #### Cek daftar cabang baru atau branch 
 ```
-$ git branch
+git branch
 ```
 
 #### Pindah cabang
 ```
-$ git checkout NAMA_BRANCH
+git checkout NAMA_BRANCH
 ```
 
 #### Menggabungkan cabang 
 ```
-$ git merge nama_file
+git merge nama_file
 ```
 
 #### Kumpulan link github

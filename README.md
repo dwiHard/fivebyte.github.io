@@ -7,13 +7,15 @@ Gitlab yang dibangun dan dikembangkan oleh ***Hardiyanto***. Sebagian besar gitl
 
 ### Daftar Isi
 - [x] [MYSQL-Server](https://github.com/dwiHard/five_byte.github.io/blob/master/mysql/mysql.md)
-- [x] [Apache2](https://github.com/dwiHard/five_byte.github.io/blob/master/apache2/Apache2.md)
+- [x] [Apache HTTP Server](https://github.com/dwiHard/five_byte.github.io/blob/master/apache2/Apache2.md)
+- [x] [Apache Maven](https://github.com/dwiHard/five_byte.github.io/blob/master/java/apacheMaven.md)
+- [x] [Apache Kafka](https://github.com/dwiHard/five_byte.github.io/blob/master/java/apacheKafka.md)
+- [x] [Apache Storm](https://github.com/dwiHard/belajar-apache-storm)
 - [x] [Python](https://github.com/dwiHard/five_byte.github.io/blob/master/python/python.md)
 - [x] [Pemograman Web](https://github.com/dwiHard/five_byte.github.io/blob/master/pemogramanWeb/README.md)
 - [x] [HTML](https://github.com/dwiHard/five_byte.github.io/blob/master/html/htlm.md)
 - [x] [Nodejs](https://github.com/dwiHard/five_byte.github.io/blob/master/nodejs/nodejs.md)
 - [x] [Spring Boot](https://github.com/dwiHard/five_byte.github.io/blob/master/java/spring-boot.md)
-- [x] [Apache Storm](https://github.com/dwiHard/belajar-apache-storm)
 - [x] [Docker](https://github.com/dwiHard/five_byte.github.io/blob/master/docker/docker.md#docker-di-linux)
 - [x] [Web Server](https://github.com/dwiHard/five_byte.github.io/blob/master/webserver/webserver.md#rangkuman-konfigurasi-webserver-di-ubuntu-heavy_check_mark)
 - [x] [Keamanan Web](https://github.com/dwiHard/five_byte.github.io/blob/master/webserver/KeamananWeb.md)

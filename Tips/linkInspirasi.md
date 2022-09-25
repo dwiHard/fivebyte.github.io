@@ -52,8 +52,6 @@
 - <https://github.com/public-apis/public-apis> Kumpulan Public API KEY
 - <https://github.com/farizdotid/DAFTAR-API-LOKAL-INDONESIA> Kumpulan Public API KEY Local
 
-<br>
-</br>
 
 Free SSL
 
@@ -64,15 +62,13 @@ Free SSL
 - <https://freessl.org/> - Free SSL
 - <https://www.freesslcertificate.org/> - Free SSL Certificate
 
-
-<br>
-</br>
-
-
+Keamanan Web
+- <https://cyberchef.org/> Cyber Chef - Untuk Crack Decode and Encode
 - <https://nibbler.silktide.com/> nibber - Test keamanan Website
 
-<br>
-</br>
+
+JSON
+- <https://jsoncrack.com/> JsonCarck - Untuk View Json
 
 Documentasi
 - <https://quickref.me/> - Dokumentasi cheatsheet lengkap

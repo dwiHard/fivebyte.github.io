@@ -37,6 +37,7 @@
     * [Configure Java](#configure-java-version)
     * [Buat Project Maven](#buat-project-maven)
     * [Install Kotlin](#install-kotlin)
+    * [JSON Satu Baris](#json-satu-baris)
     * [Rename wlp2s0 to wlan0 in ubuntu](#wlp2s0-to-wlan0-in-ubuntu)
 * [Arch Linux](#arch-linux)
     * [Install Arch](#install-arch)
@@ -605,6 +606,11 @@ source "/home/hard/.sdkman/bin/sdkman-init.sh"
 ```
 ```
 sdk install kotlin
+```
+
+#### JSON Satu Baris
+```
+cat NamaFile.json | jq -c '.[]'  >> OutputFile.json
 ```
 
 #### Rename wlp2s0 to wlan0 in ubuntu

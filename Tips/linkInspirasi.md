@@ -1,5 +1,23 @@
-# Kumpulan link inspirasi Desain dan Pemograman
-> disusun oleh Hardiyanto
+<div align="center">
+  <a href="https://github.com/othneildrew/Best-README-Template">
+    <img src="https://github.com/dwiHard/five_byte.github.io/blob/master/images/web.png" alt="Logo" width="140" height="100">
+  </a>
+
+<h3 align="center">README-Referensi</h3>
+
+  <p align="center">
+    An awesome README by <b>Hardiyanto</b>!
+    <br />
+    <a href="https://github.com/dwiHard/five_byte.github.io/blob/master/README.md"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/dwiHard/five_byte.github.io/blob/master/Tips/linkInspirasi.md#daftar-isi">Daftar Isi</a>
+    ·
+    <a href="https://github.com/dwiHard/five_byte.github.io/blob/master/Tips/linkInspirasi.md#desain">Link to Desain</a>
+  </p>
+</div>
+
+
 
 #### Daftar Isi
 
@@ -23,269 +41,272 @@
 ### Pemograman
 #### WEBSITE
 
-- <https://cssreference.io/> CSS Reference - CSS Style
-- <https://getcssscan.com/css-box-shadow-examples> Getcsscan - CSS box shadow
-- <https://medium.com/@snow_20352/20-creative-search-bar-design-inspirations-with-html-css-bootstrap-6717109fa0a0> Medium - CSS Search Bar
-- <https://www.smashingmagazine.com/> Smashing Magazine - Tutorial
-- <https://cssauthor.com/> CSS Author - Tutorial
-- <https://www.tutorialspoint.com/index.htm> Tutorial Sploit - Tutorial
-- <https://www.geeksforgeeks.org/> GeeksforGeeks - Tutorial
-- <https://cssgenerator.org/> CSS Generator - Tutorial
+- <a href="https://cssreference.io/">CSS Reference</a> - Untuk CSS Style
+- <a href="https://getcssscan.com/css-box-shadow-examples/">Getcsscan</a> - CSS box shadow
+- <a href="https://medium.com/@snow_20352/20-creative-search-bar-design-inspirations-with-html-css-bootstrap-6717109fa0a0/">CSS Search Bar</a> Medium - CSS Search Bar
+- <a href="https://www.smashingmagazine.com/">Smashing Magazine</a> - Artikel buat belajar website
+- <a href="https://cssauthor.com/">CSS Author</a> - Referensi CSS
+- <a href="https://www.tutorialspoint.com/index.htm/">Tutorial Sploit</a> - Belajar Bahasa Pemograman
+- <a href="https://www.geeksforgeeks.org/">GeeksforGeeks</a>  - Belajar bahasa pemograman
+- <a href="https://cssgenerator.org/">CSS Generator</a> - Tutorial generator CSS
 
 <br>
 
-- <https://animate.style/> Animate - CSS Animasi
-- <https://www.minimamente.com/project/magic/> minimamente - CSS Animasi
-- <http://vivify.mkcreative.cz/> vivify - CSS Animasi
-- <https://kushagra.dev/lab/hint/> Hint - CSS Animasi
-
-<br>
-</br>
-
-- <https://moderncss.dev/> Kushagra - CSS Soution
-- <https://tobiasahlin.com/> Tobiasahlin - Desain web
+- <a href="https://animate.style/">Animate</a>  - CSS Animasi
+- <a href="https://www.minimamente.com/project/magic/">Minimamente</a>  - CSS Animasi
+- <a href="http://vivify.mkcreative.cz/">Vivify</a>  - CSS Animasi
+- <a href="https://kushagra.dev/lab/hint/">Hint</a>  - CSS Animasi
 
 <br>
 </br>
 
-- <https://any-api.com/> Any API - Kumpulan REST API KEY
-- <https://github.com/public-apis/public-apis> Kumpulan Public API KEY
-- <https://github.com/farizdotid/DAFTAR-API-LOKAL-INDONESIA> Kumpulan Public API KEY Local
+- <a href="https://moderncss.dev/">Kushagra</a>  - CSS Soution
+- <a href="https://tobiasahlin.com/">Tobiasahlin</a>  - Desain web
+
+<br>
+</br>
+
+- <a href="https://any-api.com/">Any API</a>  - Kumpulan REST API KEY
+- <a href="https://github.com/public-apis/public-apis/">Public APIs</a> Kumpulan Public API KEY
+- <a href="https://github.com/farizdotid/DAFTAR-API-LOKAL-INDONESIA/">API Local Daftar</a> Kumpulan Public API KEY Local
 
 
 Free SSL
 
-- <https://letsencrypt.org/> - Let's Encrypt
-- <https://freessl.tech/> - Free SSL
-- <https://www.cloudflare.com/en-in/ssl/> - CloudFlare
-- <https://www.sslforfree.com/> SSL For Free
-- <https://freessl.org/> - Free SSL
-- <https://www.freesslcertificate.org/> - Free SSL Certificate
+- <a href="https://letsencrypt.org/">Les't Encrypt</a> - Let's Encrypt
+- <a href="https://freessl.tech/">Free SSL</a> - SSL gratis
+- <a href="https://www.cloudflare.com/en-in/ssl/">CloudFlare</a> - Konfigurasi SSL dari cloudflare
+- <a href="https://www.sslforfree.com/">SSL For Free</a> SSL For Free
+- <a href="https://freessl.org/">Free SSL</a> - Free SSL
+- <a href="https://www.freesslcertificate.org/">Free SSL Certificate</a> - Free SSL Certificate
 
 Keamanan Web
-- <https://cyberchef.org/> Cyber Chef - Untuk Crack Decode and Encode
-- <https://nibbler.silktide.com/> nibber - Test keamanan Website
+- <a href="https://cyberchef.org/">Cyber Chef</a>  - Untuk Crack Decode and Encode
+- <a href="https://nibbler.silktide.com/">Nibber</a>  - Test keamanan Website
 
 
 JSON
-- <https://jsoncrack.com/> JsonCarck - Untuk View Json
+- <a href="https://jsoncrack.com/">JSON Crack</a>  - Untuk View Json
 
 Documentasi
-- <https://quickref.me/> - Dokumentasi cheatsheet lengkap
-- <https://www.programiz.com/> Belajar Programming
+- <a href="https://quickref.me/">Quickref</a> - Dokumentasi cheatsheet lengkap
+- <a href="https://www.programiz.com/">Progamiz</a> Belajar Programming
 
 #### DevOS 
 
-- <https://www.geeksforgeeks.org/python-programming-language/?ref=grb> Geeks For Geeks - Python Testing
-- <https://overapi.com/> Over API - Kumpulan link-link 
-- <https://regex101.com/> Regex - Regex generator
+- <a href="https://www.geeksforgeeks.org/python-programming-language/?ref=grb/">Geeks For Geeks</a>  - Python Testing
+- <a href="https://overapi.com/">Over API</a>  - Kumpulan link-link 
+- <a href="https://regex101.com/">Regex</a>  - Regex generator
 
 #### Android
 
-- <https://support.testsigma.com/support/solutions/articles/32000028757-testsigma-changelog> Testsigma - Android Testing
-- <http://adbcommand.com/awesome-adb> ADB command - ADB cheat sheet
-- <https://github.com/kmvignesh/SplashScreen/tree/master/app/src/main/res/anim> Contoh Animasi Splash Screen Android
+- <a href="https://support.testsigma.com/support/solutions/articles/32000028757-testsigma-changelog/">Testsigma</a>  - Android Testing
+- <a href="http://adbcommand.com/awesome-adb/">ADB command</a>  - ADB cheat sheet
+- <a href="https://github.com/kmvignesh/SplashScreen/tree/master/app/src/main/res/anim/">Splash Screen Android</a> Contoh Animasi Splash Screen Android
 
 ### Desain
 #### Blender
 
-- <https://polyhaven.com/all> Polyhaven - Assets Untuk Blender
-- <https://www.textures.com/library> Textures - Assets Untuk Blender
+- <a href="https://polyhaven.com/all/">Polyhaven</a>  - Assets Untuk Blender
+- <a href="https://www.textures.com/library/">Textures</a>  - Assets Untuk Blender
 
 #### UI/UX
 
-- <https://uigarage.net> Ui Garde - UI/UX
-- <https://www.uistore.design/> Ui Store - UI/UX
-- <https://www.dwinawan.com/learn> Dwinawan - UI/UX
-- <https://chamjo.design/> Chamjo - UI/UX Inspirasi
-- <https://mobbin.design/browse/android/apps> Mobbin - UI/UX
-- <https://www.bookmarks.design/> Bookmarks - Resource UI/UX
-- <https://www.lapa.ninja/> Lapa Ninja - UI/UX Landing Page
-- <https://www.checklist.design/> checklist - UI/UX Component Page
-- <https://blush.design/> Blush - UI/UX Ilustration
-- <https://www.uidesigndaily.com/> UI/UX Desain
-- <https://www.uistore.design> UI/UX desain
-- <https://www.logotouse.com/> Logo Inspirasi
-- <https://figside.com/> personal websites, portfolio
-- <https://pattern.monster/> Generate pattern
-- <https://fontjoy.com> Generate Font
-- <https://hexcolorpedia.com/> Color Tools
-- <https://www.screensizes.app/> Screen Size Tools
+- <a href="https://uigarage.net/">Ui Garde</a>  - UI/UX
+- <a href="https://www.uistore.design/">Ui Store</a>  - UI/UX
+- <a href="https://www.dwinawan.com/learn/">Dwinawan</a>  - UI/UX
+- <a href="https://chamjo.design/">Chamjo</a>  - UI/UX Inspirasi
+- <a href="https://mobbin.design/browse/android/apps/">Mobbin</a>  - UI/UX
+- <a href="https://www.bookmarks.design/">Bookmarks</a>  - Resource UI/UX
+- <a href="https://www.lapa.ninja/">Lapa Ninja</a>  - UI/UX Landing Page
+- <a href="https://www.checklist.design/">Checklist</a>  - UI/UX Component Page
+- <a href="https://blush.design/">Blush</a>  - UI/UX Ilustration
+- <a href="https://www.uidesigndaily.com/">UI Design Daily</a> UI/UX Desain
+- <a href="https://www.uistore.design">UI Store</a> UI/UX desain
+- <a href="https://www.logotouse.com/">Logo Touse</a> Logo Inspirasi
+- <a href="https://figside.com/">Figside</a> personal websites, portfolio
+- <a href="https://pattern.monster/">Pattern Monster</a> Generate pattern
+- <a href="https://fontjoy.com/">Font Joy</a> Generate Font
+- <a href="https://hexcolorpedia.com/">HEX Colorpedia</a> Color Tools
+- <a href="https://www.screensizes.app/">Screen Sizes</a> Screen Size Tools
 
 #### Mockup
-- <https://freebiesui.com/> Freebiesui 
-- <https://smartmockups.com/> Smart Mockups
-- <https://mockups-design.com/> Mockup Design
-- <https://mockuuups.studio/> Mokuuups Studio
+- <a href="https://freebiesui.com/">Freebiesui</a>  Mockup Design Inspirasi
+- <a href="https://smartmockups.com/">Smart Mockups</a> Mockup Design Inspirasi
+- <a href="https://mockups-design.com/">Mockup Design</a> Mockup Design Inspirasi
+- <a href="https://mockuuups.studio/">Mokuuups Studio</a> Mockup Design Inspirasi
 
 #### Background
 
-- <https://www.pexels.com/> Pexels - Background Wallpaper
-- <https://freestocktextures.com/> Free Stock Textures - Background Texture
-- <http://texturelib.com/> Texture Lib - Background Texture
-- <http://telias.free.fr/> Telias - Free models
-- <https://www.textures.com/> Texture - Free Texture
-- <https://architextures.org/> Archive Texture - Free Texture
-- <https://www.brusheezy.com/> Brush eezy - Free texture brush
-- <https://plaintextures.com/> Plain Testure - Free texture
-- <https://www.3dvalley.com/> 3D Valley - Free 3D model dan texture
+- <a href="https://www.pexels.com/">Pexels</a>  - Background Wallpaper
+- <a href="https://freestocktextures.com/">Free Stock Textures</a>  - Background Texture
+- <a href="http://texturelib.com/">Texture Lib</a>  - Background Texture
+- <a href="http://telias.free.fr/">Telias</a>  - Free models
+- <a href="https://www.textures.com/">Texture</a>  - Free Texture
+- <a href="https://architextures.org/">Archive Texture</a>  - Free Texture
+- <a href="https://www.brusheezy.com/">Brush eezy</a>  - Free texture brush
+- <a href="https://plaintextures.com/">Plain Testure</a>  - Free texture
+- <a href="https://www.3dvalley.com/">3D Valley</a>  - Free 3D model dan texture
 
 #### Vektor
-- <https://www.svgrepo.com/> SVG repo - Vector and Icon
-- <https://illlustrations.co/> illlustrations - Vector and illustration
-- <https://www.openpeeps.com/> Open Peeps - vektor karakter 
-- <https://www.opendoodles.com/> Open Doodles - vektor karakter
-- <https://pngtree.com/illustration-design> PNGtree - Vektor
-- <https://drawkit.com/> Drawkit - Vektor
-- <https://getwaves.io/> Get Waves - generator waves svg
-- <https://wordmark.it/?ref=producthunt> word mark - check fonts 
-- <https://haikei.app/> haikei - Generate unique SVG design assets
-- <https://askplaybook.com/> Ask Paly book - Carier design
-- <https://purepng.com> Pure PNG - Assets PNG
-- <https://favpng.com> Fav PNG - Assets PNG
-- <https://cleanpng.com> clean PNG - Assets PNG
-- <http://stickpng.com> stick PNG - Assets PNG
-- <https://pngtree.com> PNGtree - Assets PNG
+- <a href="https://www.svgrepo.com/">SVG repo</a>  - Vector and Icon
+- <a href="https://illlustrations.co/">illlustrations</a>  - Vector and illustration
+- <a href="https://www.openpeeps.com/">Open Peeps</a> - vektor karakter 
+- <a href="https://www.opendoodles.com/">Open Doodles</a>  - vektor karakter
+- <a href="https://pngtree.com/illustration-design/">PNGtree</a>  - Vektor
+- <a href="https://drawkit.com/">Drawkit</a>  - Vektor
+- <a href="https://getwaves.io/">Get Waves</a>  - generator waves svg
+- <a href="https://wordmark.it/?ref=producthunt/">Word mark</a>  - check fonts 
+- <a href="https://haikei.app/">Haikei</a>  - Generate unique SVG design assets
+- <a href="https://askplaybook.com/">Ask Paly book</a> - Carier design
+- <a href="https://purepng.com/">Pure PNG</a>  - Assets PNG
+- <a href="https://favpng.com/">Fav PNG</a>  - Assets PNG
+- <a href="https://cleanpng.com/">Clean PNG</a>  - Assets PNG
+- <a href="http://stickpng.com/">Stick PNG</a>  - Assets PNG
+- <a href="https://pngtree.com/">PNGtree</a>  - Assets PNG
 
 #### Animasi
-- <https://lordicon.com/icons> lordicon - Animasi icon
+- <a href="https://lordicon.com/icons/">Lordicon</a>  - Animasi icon
 
 #### Warna Inspirasi
-- <https://www.0to255.com/> oto255 - Color Picker Tool
+- <a href="https://www.0to255.com/">Oto255</a>  - Color Picker Tool
 
 #### Hidden Website
 
 Untuk Kebutuhan media sosial
-- <https://www.hashtagstack.com/hashtag-generator> Hashtag Stack - Hashtag sosial media
-- <https://www.peppertype.ai/> peppertype - Caption Instagram
-- <https://ray.so/> Ray - Membuat Kode Program Cantik
-- <https://url.bio/> URL Bio - Bio URL
-- <https://www.flick.tech/learn/blog/post/instagram-analytics-benchmarks-tool/> Open banchmarks - benchmarks instagram
-- <https://www.contentrow.com/tools/headline-generator> Content Row - generator headline 
-- <https://hashtagify.me> Hashtagify - generator hashtag
-- <https://quotescover.com> Quotes Cover - generator caption
+- <a href="https://www.hashtagstack.com/hashtag-generator/">Hashtag Stack</a>  - Hashtag sosial media
+- <a href="https://www.peppertype.ai/">Peppertype</a>  - Caption Instagram
+- <a href="https://ray.so/">Ray.so</a>  - Membuat Kode Program Cantik
+- <a href="https://url.bio/">URL Bio</a> - Bio URL
+- <a href="https://www.flick.tech/learn/blog/post/instagram-analytics-benchmarks-tool/">Open banchmarks</a>  - benchmarks instagram
+- <a href="https://www.contentrow.com/tools/headline-generator/">Content Row</a>  - generator headline 
+- <a href="https://hashtagify.me/">Hashtagify</a>  - generator hashtag
+- <a href="https://quotescover.com/">Quotes Cover</a>  - generator caption
 
 Untuk Kebutuhan editan
-- <https://www9.lunapic.com/editor/> luna pic - Edit foto
-- <https://blobanimation.com/> Blob Animation - Generate animation blob
-- <https://blobs.app/> blobs - Membuat blops
-- <https://uizard.io/> uizard - Design Tool
-- <https://www.lalal.ai/> lalal - Extract Vocal
-- <https://sketch2code.azurewebsites.net/?ref=uxdatabase.io> Sketch2code - hand drawn to html
-- <https://panzoid.com/> Panzoid - 3D intro marker
-- <https://spacers.wannathis.one/> Spacer - 3D Characters 
-- <https://www.lucidchart.com/pages/ > Lucidchart - Diagramming application
-- <https://uberduck.ai/> Uberduck - voice marker
-- <https://voicemaker.in/> Voice marker - Edit Voice
-- <https://www.canva.com/> Canva - Edit video, foto, video dan presentasi
-- <https://www.figma.com> Figma - Edit foto Basis Vektor
-- <https://www.animaker.com/> Animaker - Edit Video dan presentasi
-- <https://draw.io/> Draw - Edit flowchart
-- <https://openstickers.craftwork.design/> Open stikers - Koleksi Stiker Free 
+- <a href="https://www9.lunapic.com/editor/">Luna pic</a>  - Edit foto
+- <a href="https://blobanimation.com/">Blob Animation</a>  - Generate animation blob
+- <a href="https://blobs.app/">Blobs</a>  - Membuat blops
+- <a href="https://uizard.io/">UI Zard</a>  - Design Tool
+- <a href="https://www.lalal.ai/">Lalal</a>  - Extract Vocal
+- <a href="https://sketch2code.azurewebsites.net/?ref=uxdatabase.io/">Sketch2code</a>  - hand drawn to html
+- <a href="https://panzoid.com/">Panzoid</a>  - 3D intro marker
+- <a href="https://spacers.wannathis.one/">Spacer</a>  - 3D Characters 
+- <a href="https://www.lucidchart.com/pages/">Lucidchart</a>  - Diagramming application
+- <a href="https://uberduck.ai/">Uberduck</a>  - voice marker
+- <a href="https://voicemaker.in/">Voice marker</a>  - Edit Voice
+- <a href="https://www.canva.com/">Canva</a>  - Edit video, foto, video dan presentasi
+- <a href="https://www.figma.com/">Figma</a>  - Edit foto Basis Vektor
+- <a href="https://www.animaker.com/">Animaker</a>  - Edit Video dan presentasi
+- <a href="https://draw.io/">Draw.io</a>  - Edit flowchart
+- <a href="https://openstickers.craftwork.design/">Open stikers</a>  - Koleksi Stiker Free 
 
 Gradient
-- <https://gradienta.io/> Gradienta 
-- <https://www.iconshock.com/svg-icons/> Gradientify
-- <https://meshgradient.com/> Mesh Gradient
-- <https://coolors.co/gradients> Colors Gradients
+- <a href="https://gradienta.io/">Gradienta</a>  
+- <a href="https://www.iconshock.com/svg-icons/">Gradientify</a> 
+- <a href="https://meshgradient.com/">Mesh Gradient</a> 
+- <a href="https://coolors.co/gradients/">Colors Gradients</a> 
 
 Website menarik 
-- <https://www.followupthen.com/> Follow Up Then - Personal Assitent
-- <https://www.getbiyo.io/> Biyo - Personalisasikan portofolio Anda
-- <https://shortlyai.com/> shortlyai - Writting AI
-- <http://internet-map.net/> Internet Map - map internet
-- <https://dictation.io/> Dictation - write email with voice
-- <https://www.deseat.me/> deseat - check your accounts
-- <https://betalist.com/startups/neverinstall> Never Install - Jalankan software tanpa install
-- <https://keywordtool.io/> Keywordtool -  website tempat mencari ide kata kunci untuk artikel 
-- <https://www.wordstream.com/> Word Stream - website tempat mencari ide kata kunci untuk artikel 
-- <https://neilpatel.com/ubersuggest/> Uber Suggest - website tempat mencari ide kata kunci untuk artikel 
-- <https://ads.google.com/home/tools/keyword-planner/> Google Keyword Planner - website tempat mencari ide kata kunci untuk artikel 
-- <https://autum.com/> Autum - website tempat mencari ide kata kunci untuk artikel 
+- <a href="https://www.followupthen.com/">Follow Up Then</a>  - Personal Assitent
+- <a href="https://www.getbiyo.io/">Get Biyo</a>  - Personalisasikan portofolio Anda
+- <a href="https://shortlyai.com/">Shortlyai</a>  - Writting AI
+- <a href="http://internet-map.net/">Internet Map</a>  - map internet
+- <a href="https://dictation.io/">Dictation</a>  - write email with voice
+- <a href="https://www.deseat.me/">Deseat</a>  - check your accounts
+- <a href="https://betalist.com/startups/neverinstall/">Never Install</a>  - Jalankan software tanpa install
+- <a href="https://keywordtool.io/">Keywordtool</a>  -  website tempat mencari ide kata kunci untuk artikel 
+- <a href="https://www.wordstream.com/">Word Stream</a>  - website tempat mencari ide kata kunci untuk artikel 
+- <a href="https://neilpatel.com/ubersuggest/">Uber Suggest</a>  - website tempat mencari ide kata kunci untuk artikel 
+- <a href="https://ads.google.com/home/tools/keyword-planner/">Google Keyword Planner </a> - website tempat mencari ide kata kunci untuk artikel 
+- <a href="https://autum.com/">Autum</a>  - website tempat mencari ide kata kunci untuk artikel 
 
 Website untuk developer
-- <https://unbug.github.io/codelf> Codelf - Search Programming project
-- <https://devhints.io> Devhints - Search Programming project
-- <https://bundlephobia.com> Bundlephobia - Search programming project
-- <https://caniuse.com> Counise - Memeberi tahu browser apa yang ada gunakan
-- <https://hiddentools.dev> Hidden tools - alat-alat untuk project anda
+- <a href="https://unbug.github.io/codelf/">Codelf</a>  - Search Programming project
+- <a href="https://devhints.io/">Devhints</a>  - Search Programming project
+- <a href="https://bundlephobia.com/">Bundlephobia</a>  - Search programming project
+- <a href="https://caniuse.com/">Counise</a>  - Memeberi tahu browser apa yang ada gunakan
+- <a href="https://hiddentools.dev/">Hidden tools</a>  - alat-alat untuk project anda
 
 Mid Mapping Apss
-- <https://coggle.it/> Coggle - Mind Mapping
-- <https://www.mindmeister.com/> Mid Meister - Mind Mapping
-- <https://www.mindomo.com/> Mindomo - Mind Mapping
-- <https://www.gliffy.com/> Gliffy - Mind Mapping
+- <a href="https://coggle.it/">Coggle</a>  - Mind Mapping
+- <a href="https://www.mindmeister.com/">Mid Meister</a>  - Mind Mapping
+- <a href="https://www.mindomo.com/">Mindomo</a>  - Mind Mapping
+- <a href="https://www.gliffy.com/">Gliffy</a>  - Mind Mapping
 
 Catatan online
-- <https://www.notion.so> Notion - Catatan Online
-- <https://evernote.com> Evernote - Catatan Online
-- <https://trello.com/> Trello - Catatan Online
-- <https://www.atlassian.com/software/jira> Jira - Catatan Online
-- <https://asana.com> Asana - Catatan Online
+- <a href="https://www.notion.so/">Notion</a>  - Catatan Online
+- <a href="https://evernote.com/">Evernote</a>  - Catatan Online
+- <a href="https://trello.com/">Trello</a>  - Catatan Online
+- <a href="https://www.atlassian.com/software/jira/">Jira</a>  - Catatan Online
+- <a href="https://asana.com/">Asana</a>  - Catatan Online
 
 Website Tool online
-- <https://qrcodescan.in/> QR Code Scan - Scan QR
-- <https://tiny-helpers.dev/> tiny Helpers - Koleksi online tools
-- <https://www.ilovepdf.com/> I Love PDF - PDF Tools
-- <https://omatsuri.app/> omatsuri - Tool generator
-- <https://123apps.com> 123apps - Tool generator
-- <https://www.checksub.com/> Check sub - Automatic subtitle generator
+- <a href="https://qrcodescan.in/">QR Code Scan</a>  - Scan QR
+- <a href="https://tiny-helpers.dev/">Tiny Helpers</a>  - Koleksi online tools
+- <a href="https://www.ilovepdf.com/">I Love PDF</a>  - PDF Tools
+- <a href="https://omatsuri.app/">Omatsuri</a>  - Tool generator
+- <a href="https://123apps.com/">123apps</a>  - Tool generator
+- <a href="https://www.checksub.com/">Check sub</a>  - Automatic subtitle generator
 
 Color palette
-- <https://color.adobe.com/create/color-contrast-analyzer> adobe -Color palette
-- <https://www.0to255.com> Oto255 - Color palette
-- <https://mycolor.space> my color - Color palette
-- <https://2colors.colorion.co> colorin - Color palette
-- <https://colorhunt.co> color hunt - Color palette
-- <https://paletton.com> paletton - Color palette
-- <http://colormind.io> color mind - Color palette
-- <http://brandcolors.net> brand color - Color palette
-- <https://www.color-hex.com> color hex - Color palette
-- <http://colorlisa.com> color lisa -  Color palette
-- <https://colors.muz.li> colors - Color palette
-- <http://www.cssdrive.com/imagepalette> css drive - Color palette
-- <https://coolors.co> colors - Color palette
-- <https://www.canva.com/colors/color-palette-generator> canva - Color palette
-- <https://brandfolder.com/workbench/color-palette> brand folder - Color palette
+- <a href="https://color.adobe.com/create/color-contrast-analyzer/">Adobe</a>  -Color palette
+- <a href="https://www.0to255.com/">Oto255</a>  - Color palette
+- <a href="https://mycolor.space/">My color</a> - Color palette
+- <a href="https://2colors.colorion.co/">Colorin</a>  - Color palette
+- <a href="https://colorhunt.co/">Color hunt</a>  - Color palette
+- <a href="https://paletton.com/">Paletton</a>  - Color palette
+- <a href="http://colormind.io/">Color mind</a>  - Color palette
+- <a href="http://brandcolors.net/">Brand color</a>  - Color palette
+- <a href="https://www.color-hex.com/">Color Hex</a>  - Color palette
+- <a href="http://colorlisa.com/">Color Lisa</a>  -  Color palette
+- <a href="https://colors.muz.li/">Colors.muz.li</a>  - Color palette
+- <a href="http://www.cssdrive.com/imagepalette/">CSS drive</a>  - Color palette
+- <a href="https://coolors.co/">Colors.co</a>  - Color palette
+- <a href="https://www.canva.com/colors/color-palette-generator/">Canva</a>  - Color palette
+- <a href="https://brandfolder.com/workbench/color-palette/">Brand folder</a>  - Color palette
+- <a href="https://www.color-name.com/">Color Name</a> Inspirasi warna
 
 Website penyedia hosting gratis 
-- <https://github.com> github
-- <https://www.awardspace.com> award space
-- <https://www.netlify.com> netlify
-- <https://cloud.google.com/solutions/web-hosting> google
-- <https://infinityfree.net> infinity free
+- <a href="https://github.com/">Github</a> 
+- <a href="https://www.awardspace.com/">Award space</a> 
+- <a href="https://www.netlify.com/">Netlify</a> 
+- <a href="https://cloud.google.com/solutions/web-hosting/">Google</a> 
+- <a href="https://infinityfree.net/">infinity free</a> 
 
 Website belajar hacking
-- <http://index-of.es> index of
-- <http://dtors.net/Hacking> dtors
-- <https://doc.lagout.org/security> logout
-- <https://osintframework.com> osint framework
-- <https://www.hacking-tutorial.com> hacking tutorial
-- <https://www.hacksplaining.com/> Hack Planning
-- <https://www.exploit-db.com/google-hacking-database> exploit db
+- <a href="http://index-of.es/">Index of</a> index of
+- <a href="http://dtors.net/Hacking/">Dtors</a> dtors
+- <a href="https://doc.lagout.org/security/">Lagout</a> logout
+- <a href="https://osintframework.com/">OSINT Framework</a> osint framework
+- <a href="https://www.hacking-tutorial.com/">hacking tutorial</a> hacking tutorial
+- <a href="https://www.hacksplaining.com/">Hack Planning</a> Hack Planning
+- <a href="https://www.exploit-db.com/google-hacking-database/">Exploit DB</a> exploit db
+- <a href="https://portswigger.net/web-security/all-labs/">Portswigger</a> portswigger
 
 Get Software paid to free
-- <https://soft98.ir/> soft98
-- <https://getintopc.com/> Get Into PC
-- <https://haxnode.net/> Haxnode
-- <https://filecr.com/> Filecr - For Mac
+- <a href="https://soft98.ir/">Soft98</a> Untuk mendapatkan free software
+- <a href="https://getintopc.com/">Get Into PC</a> Untuk mendapatkan free software
+- <a href="https://haxnode.net/">Haxnode</a> Untuk mendapatkan free software
+- <a href="https://filecr.com/">Filecr</a>  - Untuk mendapatkan free software bisa juga untuk Mac
 
 Website Untuk Edukasi
-- <https://quillbot.com/> - Bisa untuk parafrase auto, cek grammar, summarizer dan bikin citation
-- <https://getdigest.com> - Website untuk merangkum jurnal secara otomatis
-- <https://www.studocu.com> - Website untuk bertukar materi berbentuk catatan
-- <https://www.grammarly.com/> - Website untuk koreksi grammar otomatis menggunakan ektensi
-- <https://hemingwayapp.com/> - Website cek grammar lebih user friendly
-- <https://prowritingaid.com/> - Extention untuk cek grammar
+- <a href="https://quillbot.com/">Quill Bot</a> - Bisa untuk parafrase auto, cek grammar, summarizer dan bikin citation
+- <a href="https://getdigest.com/">Get Digest</a> - Website untuk merangkum jurnal secara otomatis
+- <a href="https://www.studocu.com/">Studocu</a> - Website untuk bertukar materi berbentuk catatan
+- <a href="https://www.grammarly.com/">Grammarly</a> - Website untuk koreksi grammar otomatis menggunakan ektensi
+- <a href="https://hemingwayapp.com/">Hemingwayapp</a> - Website cek grammar lebih user friendly
+- <a href="https://prowritingaid.com/">Pro Writingid</a> - Extention untuk cek grammar
 
 #### Video dan audio
-- <https://pixabay.com/sound-effects/> Pixabay - Sound Effects
-- <https://www.bensound.com/> Bansound - Sound Effects
-- <https://ncs.io/> NCS - Sound Effects
-- <https://www.noisli.com/> Noisli - Backsound Effects
-- <https://icons8.com/music> Icon8 - Sound effects
-- <https://www.unminus.com> Umnimus - Sound effects
-- <https://uppbeat.io> Uppbeat - Sound effects
-- <https://soundcloud.com/> - Sound Cloud - music tracks
-- <https://spik.ai/> Spik - Generator realistic sound
+- <a href="https://pixabay.com/sound-effects/">Pixabay</a>  - Sound Effects
+- <a href="https://www.bensound.com/">Bansound</a>  - Sound Effects
+- <a href="https://ncs.io/">NCS</a>  - Sound Effects
+- <a href="https://www.noisli.com/">Noisli</a>  - Backsound Effects
+- <a href="https://icons8.com/music/">Icon8</a>  - Sound effects
+- <a href="https://www.unminus.com/">Umnimus</a>  - Sound effects
+- <a href="https://uppbeat.io/">Uppbeat</a>  - Sound effects
+- <a href="https://soundcloud.com/">Sound Cloud</a> - music tracks
+- <a href="https://spik.ai/">Spik</a>  - Generator realistic sound
 
+### Terima Kasih

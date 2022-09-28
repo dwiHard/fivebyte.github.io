@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/linux-22621.png" alt="Logo" width="140" height="100">
+    <img src="https://github.com/dwiHard/five_byte.github.io/blob/master/images/linux-22621.png" alt="Logo" width="140" height="100">
   </a>
 
 <h3 align="center">README-Linux</h3>
@@ -13,7 +13,7 @@
     <br />
     <a href="https://github.com/dwiHard/five_byte.github.io/blob/master/Tips/linux.md#daftar-isi">Daftar Isi</a>
     ·
-    <a href="https://github.com/dwiHard/five_byte.github.io/blob/master/Tips/linux.md#kumpulan-konfigurasi">Awesome Link</a>
+    <a href="https://github.com/dwiHard/five_byte.github.io/blob/master/LinuxConfigBackup/MyConfig.md">Awesome Konfiguration</a>
   </p>
 </div>
 

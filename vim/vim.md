@@ -1,5 +1,22 @@
-# Rangkuman Vim
-> Disusun oleh Hardiyanto
+<div align="center">
+  <a href="https://github.com/othneildrew/Best-README-Template">
+    <img src="https://github.com/dwiHard/five_byte.github.io/blob/master/images/Vim.svg" alt="Logo" width="140" height="100">
+  </a>
+
+<h3 align="center">README-Vim</h3>
+
+  <p align="center">
+    An awesome README by <b>Hardiyanto</b>!
+    <br />
+    <a href="https://github.com/dwiHard/five_byte.github.io/blob/master/README.md"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/dwiHard/five_byte.github.io/blob/master/vim/vim.md#daftar-isi">Daftar Isi</a>
+    ·
+    <a href="https://github.com/dwiHard/five_byte.github.io/tree/master/vim">Awesome Konfiguration</a>
+  </p>
+</div>
+
 
 ### Daftar Isi
 * [Gerakan Kursor dalam Mode Normal](#gerakan-kursor-dalam-mode-normal)

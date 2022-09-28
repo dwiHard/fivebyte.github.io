@@ -1,5 +1,22 @@
-# Rangkuman git
->di susun oleh Hardiyanto
+<div align="center">
+  <a href="https://github.com/othneildrew/Best-README-Template">
+    <img src="https://git-scm.com/images/logos/downloads/Git-Logo-1788C.svg" alt="Logo" width="140" height="100">
+  </a>
+
+<h3 align="center">README-Git</h3>
+
+  <p align="center">
+    An awesome README by <b>Hardiyanto</b>!
+    <br />
+    <a href="https://github.com/dwiHard/five_byte.github.io/blob/master/README.md"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/dwiHard/five_byte.github.io/blob/master/Tips/git.md#daftar-isi">Daftar Isi</a>
+    ·
+    <a href="https://github.com/dwiHard/five_byte.github.io/blob/master/Tips/git.md#kumpulan-link-github">Awesome Link</a>
+  </p>
+</div>
+
 
 ### Daftar isi
 
@@ -189,43 +206,43 @@ git merge nama_file
 #### Kumpulan link github
 
 Linux :
-- <https://github.com/hastinbe/theme-kawasaki> - Custom fish
-- <https://github.com/vinceliuice/Vimix-cursors> - Custom cursor Linux
-- <https://github.com/vinceliuice/Tela-circle-icon-theme> - Custom tema linux
-- <https://www.xfce-look.org/p/1661983> - My Favorit icon theme
+- <a href="https://github.com/hastinbe/theme-kawasaki">Theme Kawasaki</a> - Untuk custom tema pada fish(terminal)
+- <a href="https://github.com/vinceliuice/Vimix-cursors">Vimix Cursors</a> - Untuk custom cursor Linux
+- <a href="https://github.com/vinceliuice/Tela-circle-icon-theme">Tela Circle Icon Theme</a> - Untuk custom tema desktop enviroment linux
+- <a href="https://www.xfce-look.org/p/1661983">Icon Favorit</a> - My Favorit icon theme
 
 
 Testing :
-- <https://github.com/KathanP19/HowToHunt> - Tutorial Vulnerability
-- <https://github.com/gchq/CyberChef> - a web app for encryption, encoding, compression and data analysis
-- <https://github.com/medpaf/hawk> - Hawk:-- Network and pentest tool for Linux systems
-- <https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/XSS%20Injection> - XSS
-- <https://github.com/ivan-sincek/xss-catcher> - XSS
-- <https://github.com/PushpenderIndia/thorse> - RAT (Remote Administrator Trojan)
-- <https://github.com/m4ndingo/.net-WebBruteForcer> - BruteForce
-- <https://github.com/kaotickj/The-Not-So-Simple-PHP-Command-Shell> - Serangan
-- <https://github.com/swagkarna/Nivistealer> - Serangan
-- <https://github.com/HerraVp/H4X-Tools> - Tools Serangan
-- <https://github.com/Sunlight-Rim/SQLbit> - SQL Injection
-- <https://github.com/d4rckh/vaf> - very advanced (web) fuzzer
-- <https://github.com/sebastienrousseau/password-generator> - Password Generator
-- <https://github.com/anouarbensaad/wsvuls> - Website vulnerabilit
-- <https://github.com/XZB-1248/Spark> - RAT (Remote Administration Tool)
-- <https://github.com/Johnng007/Live-Forensicator> - Forensic
-- <https://github.com/botherder/androidqf> - Android Quick Forensics
-- <https://github.com/mrd0x/EvilSeleniu>m - Selenium Attact
-- <https://github.com/Anteste/WebMap> - Web Vulnerability
-- <https://github.com/RAJANAGORI/Nightingale> - Docker for Pentesters
-- <https://github.com/TelefonicaTC2Tech/packagedna> - This tool gives developers, researchers and companies the ability to analyze software packages 
-- <https://github.com/Esc4iCEscEsc/skanuvaty> - Dangerously fast dns/network/port scanner, all-in-one
-- <https://github.com/megadose/toutatis> - information from instagrams accounts
-- <https://github.com/rly0nheart/octosuite> - OSINT Framework
-- <https://github.com/bmshifat/TecSpy> - A cloud-based Android Monitoring Tools
-- <https://github.com/obsidianforensics/hindsight> - Hindsight is a free tool for analyzing web artifacts 
+- <a href="https://github.com/KathanP19/HowToHunt">How To Hunt</a> - Belajar mencari Vulnerability/kerentanan
+- <a href="https://github.com/gchq/CyberChef">Cyber Chef</a> - a web app for encryption, encoding, compression and data analysis
+- <a href="https://github.com/medpaf/hawk">Hawk</a> - Network and pentest tool for Linux systems
+- <a href="https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/XSS%20Injection">XSS</a> - Belajar Cross-site scripting (XSS)
+- <a href="https://github.com/ivan-sincek/xss-catcher">XSS Catcher</a> - Belajar Cross-site scripting (XSS)
+- <a href="https://github.com/PushpenderIndia/thorse">RAT</a> - RAT (Remote Administrator Trojan)
+- <a href="https://github.com/m4ndingo/.net-WebBruteForcer">BruteForce</a> -  Web Belajar BruteForcer and tujuan pentesting 
+- <a href="https://github.com/kaotickj/The-Not-So-Simple-PHP-Command-Shell">Simple PHP Command Shell</a> - Script Shell PHP
+- <a href="https://github.com/swagkarna/Nivistealer">Nivistealer</a> - Tools Untuk Melakukan Serangan
+- <a href="https://github.com/HerraVp/H4X-Tools">H4X Tools</a> - Tools Untuk Melakukan Serangan
+- <a href="https://github.com/Sunlight-Rim/SQLbit">SQL bit</a> - SQL Injection
+- <a href="https://github.com/d4rckh/vaf">VAF</a> - very advanced (web) fuzzer
+- <a href="https://github.com/sebastienrousseau/password-generator">Password Generator</a> - Password Generator
+- <a href="https://github.com/anouarbensaad/wsvuls">Ws Vuln</a> - Website vulnerabilit
+- <a href="https://github.com/XZB-1248/Spark">Spark</a> - RAT (Remote Administration Tool)
+- <a href="https://github.com/Johnng007/Live-Forensicator">Live Forensicator</a> - Forensic
+- <a href="https://github.com/botherder/androidqf">Android Qf</a> - Android Quick Forensics
+- <a href="https://github.com/mrd0x/EvilSelenium">Evil Selenium</a> - Selenium Attact
+- <a href="https://github.com/Anteste/WebMap">Web Map</a> - Web Vulnerability
+- <a href="https://github.com/RAJANAGORI/Nightingale">Nightingle</a> - Docker for Pentesters
+- <a href="https://github.com/TelefonicaTC2Tech/packagedna">Packagedna</a> - This tool gives developers, researchers and companies the ability to analyze software packages 
+- <a href="https://github.com/Esc4iCEscEsc/skanuvaty">Skanuvaty</a> - Dangerously fast dns/network/port scanner, all-in-one
+- <a href="https://github.com/megadose/toutatis">Tuotatis</a> - information from instagrams accounts
+- <a href="https://github.com/rly0nheart/octosuite">Octosuite</a> - OSINT Framework
+- <a href="https://github.com/bmshifat/TecSpy">Tec Spy</a> - A cloud-based Android Monitoring Tools
+- <a href="https://github.com/obsidianforensics/hindsight">Hindsignt</a> - Hindsight is a free tool for analyzing web artifacts 
 
 Android :
-- <https://github.com/newbit1/rootAVDa> - Root AVD
-- <https://github.com/tanprathan/MobileApp-Pentest-Cheatsheet> - Mobile Cheet Sheet
+- <a href="https://github.com/newbit1/rootAVDa">Root AVD</a> - Root AVD Android Virtual Device
+- <a href="https://github.com/tanprathan/MobileApp-Pentest-Cheatsheet">Mobile Pentest CheetSheet</a> - Mobile Cheet Sheet tujuan pentest
 
 
 

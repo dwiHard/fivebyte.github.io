@@ -1266,7 +1266,28 @@ untuk suse
 ```
 sudo usermod --append --groups vboxsf $USER
 ```
-
+untuk arch
+Masuk menu virtualbox cari
+```
+Device > Insert Guest Adittions CD Image...
+```
+Masuk ke directory hasil installan Guest tadi
+```
+sudo ./VBoxLinuxAdditions.run
+```
+```
+sudo pacman -S linux-headers virtualbox-guest-utils
+```
+```
+sudo systemctl enable vboxservice
+```
+lalu reboot
+```
+useradd -m -G vboxsf hard
+```
+```
+sudo chown -R hard:users /media/sf_Public/
+```
 #### Shortcuts Android Studio
 
 ```

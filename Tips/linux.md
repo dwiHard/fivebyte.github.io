@@ -773,14 +773,11 @@ membuat hostname
 ```
 echo "hard" > /etc/hostname
 ```
-membuat user
+membuat password untuk user root
 ```
-useradd namaUser
+passwd
 ```
-membuat passwd
-```
-passwd hard
-```
+install untuk kebutuhan boot jika non-UEFI tidak perlu install efibootmgr
 ```
 pacman -S grub efibootmgr
 ```
@@ -801,17 +798,34 @@ grub-mkconfig -o /boot/grub/grub.cfg
 ```
 exit
 ```
+command reboot untuk install non-virtualbox
 ```
 reboot
 ```
-untuk login uernya pakai root
-setelah berhasil login cek upgrade an terbaru dengan ketik command
+untuk install divirtualbox ketikkan command berikut
+```
+exit
+```
+```
+shutdown -h now
+```
+untuk login usernya pakai root
+setelah berhasil login cek upgrade terbaru dengan ketik command
 ```
 pacman -Syyu
 ```
 membuat user
+Perintah ini tidak membuatkan directory otomatis
 ```
-useradd -n -g users -G wheel,storage,power -s /bin/bash NamaUser
+useradd namaUser
+```
+untuk mengatasi maka gunakan flag -m
+```
+useradd -m namaUser
+```
+“-G” untuk menentukan grup mana yang akan didaftarkan.
+```
+useradd -G wheel,storage,power -m NamaUser
 ```
 ```
 passwd NamaUser

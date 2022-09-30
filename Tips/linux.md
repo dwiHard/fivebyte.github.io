@@ -814,6 +814,13 @@ setelah berhasil login cek upgrade terbaru dengan ketik command
 ```
 pacman -Syyu
 ```
+Lalukan ini jika tidak ada koneksi internet
+```
+sudo systemctl enable NetworkManager.service
+```
+```
+sudo systemctl start NetworkManager.service
+```
 membuat user
 Perintah ini tidak membuatkan directory otomatis
 ```

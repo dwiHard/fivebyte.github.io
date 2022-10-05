@@ -1,7 +1,7 @@
-# Hardi Repository ![Website shields.io](https://img.shields.io/badge/ubuntu-v.18.04-orange) [![Website shields.io](https://img.shields.io/badge/vim-v--8.0-brightgreen)](http://shields.io/) [![Website monip.org](https://img.shields.io/badge/mysql-v--14.14-lightgrey)](http://monip.org/)
+# My Repository ![Website shields.io](https://img.shields.io/badge/ubuntu-v.18.04-orange) [![Website shields.io](https://img.shields.io/badge/vim-v--8.0-brightgreen)](http://shields.io/) [![Website monip.org](https://img.shields.io/badge/mysql-v--14.14-lightgrey)](http://monip.org/)
 
 ### Selamat Datang 
-Gitlab yang dibangun dan dikembangkan oleh ***Hardiyanto***. Sebagian besar gitlab ini berisi catatan / rangkuman yang berhubungan dengan Teknologi komputer. Seperti, Sistem Operasi GNU/Linux, jaringan komputer, bahasa pemograman, basis data dan konfigurasi tools serta hal-hal lain yang masih berkaitan dengan komputer yang saya rangkum dari hasil berekplorasi dalam menggunakan sistem operasi ***GNU/Linux***, ***Android*** & ***Linux***.
+Github yang dibangun dan dikembangkan oleh ***Hardiyanto***. Sebagian besar github ini berisi catatan / rangkuman yang berhubungan dengan Teknologi komputer. Seperti, Sistem Operasi GNU/Linux, jaringan komputer, bahasa pemograman, basis data dan konfigurasi tools serta hal-hal lain yang masih berkaitan dengan komputer yang saya rangkum dari hasil berekplorasi dalam menggunakan sistem operasi ***GNU/Linux***, ***Android*** & ***Linux***.
 
 
 

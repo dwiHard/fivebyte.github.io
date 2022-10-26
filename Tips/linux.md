@@ -33,6 +33,7 @@
     * [Format FlashDisk Lewat Terminal](#format-flashdisk-lewat-terminal)
     * [Remove snap dari ubuntu 18.04](#remove-snap-dari-ubuntu-1804)
     * [Set Default Nautilus](#set-default-nautilus)
+    * [Cron Job](#cron-job)
     * [IP Static](#ip-tatic)
     * [Change IP](#change-ip)
     * [Add Gateway](#add-gateway)
@@ -355,6 +356,20 @@ sudo apt-get install gnome-calculator gnome-characters gnome-logs gnome-system-m
 #### Set Default Nautilus
 ```
 xdg-mime default nautilus.desktop inode/directory application/x-gnome-saved-search
+```
+
+#### Cron Job
+Untuk Arch Linux
+```
+pacman -Syu cronie
+```
+Perintah dibawah ini jika ingin mengaktifkan ketika boot dijalankan
+```
+systemctl enable --now cronie.service
+```
+Untuk mengecek status cron
+```
+systemctl status cronie.service
 ```
 
 #### IP Static

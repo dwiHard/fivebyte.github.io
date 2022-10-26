@@ -11,6 +11,7 @@ Github yang dibangun dan dikembangkan oleh ***Hardiyanto***. Sebagian besar gith
 - [x] [Apache Maven](https://github.com/dwiHard/five_byte.github.io/blob/master/java/apacheMaven.md)
 - [x] [Apache Kafka](https://github.com/dwiHard/five_byte.github.io/blob/master/java/apacheKafka.md)
 - [x] [Apache Storm](https://github.com/dwiHard/belajar-apache-storm)
+- [x] [Apache HBase](https://github.com/dwiHard/five_byte.github.io/blob/master/java/apacheHBase.md)
 - [x] [Python](https://github.com/dwiHard/five_byte.github.io/blob/master/python/python.md)
 - [x] [Pemograman Web](https://github.com/dwiHard/five_byte.github.io/blob/master/pemogramanWeb/README.md)
 - [x] [HTML](https://github.com/dwiHard/five_byte.github.io/blob/master/html/htlm.md)

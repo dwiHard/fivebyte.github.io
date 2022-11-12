@@ -31,6 +31,8 @@
 * [Problem Apache2](#problem-apache2)
     * [Apache2 error log ](#apache2-error-log)
     * [Apache2 error module mpm_event](#apache2-error-module-mpmevent)
+    * [Dom missing](#dom-missing)
+    * [PHP extension curl is missing](#php-extension-curl-is-missing)
 <br>
 </br>
 
@@ -511,6 +513,25 @@ php -v
 samakan dengan versi phpnya
 ```
 sudo a2enmod php7.3
+```
+
+#### Dom missing
+Error Message
+```
+the requested PHP extension dom is missing from your system.
+```
+fixing
+```
+sudo apt-get install php-xml
+```
+
+#### PHP extension curl is missing
+Error message
+```
+the requested PHP extension curl is missing from your system
+```
+```
+sudo apt-get install php-curl
 ```
 
 ### Terima Kasih

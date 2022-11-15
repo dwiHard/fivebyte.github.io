@@ -27,6 +27,7 @@
     * [Membuat ssl](#configure-apache2-dengan-ssl)
 * [Configure Apache2 untuk laravel](#configure-apache2-untuk-laravel)
 	* [Intall PHP7.4](#intall-php74)
+    * [Downgrade PHP8.1 to PHP7.4](#downgrade-php8-1-to-php7-4)
 	* [Htaccess laravel](#htaccess-laravel)
 * [Problem Apache2](#problem-apache2)
     * [Apache2 error log ](#apache2-error-log)
@@ -444,6 +445,11 @@ sudo a2enmod rewrite
 ```
 ```
 sudo service apache2 restart
+```
+
+### Downgrade PHP8.1 to PHP7.4
+```
+sudo update-alternatives --config php
 ```
 
 ### Htaccess laravel

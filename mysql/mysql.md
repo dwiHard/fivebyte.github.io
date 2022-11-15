@@ -24,6 +24,7 @@
     * [Hapus User](#hapus-user)
     * [Reload](#reload)
     * [Reset the MySQL/MariaDB Root Password](#reset-the-mysqlmariadb-root-password)
+    * [Show Variable password](#show-variable-password)
 * [Basic MySQL](#basic-mysql)
     * [Buat Tabel](#buat-tabel)
     * [Melihat Source Code](#melihat-source-code)
@@ -231,6 +232,11 @@ sudo mysqladmin --user=root password "newpassword"
 Untuk reset password :
 ```
 sudo mysqladmin --user=root --password=oldpassword password "newpassword"
+```
+
+#### Show Variable password
+```
+SHOW VARIABLES LIKE 'validate_password%';
 ```
 
 ### Basic MySQL

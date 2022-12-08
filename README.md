@@ -1,5 +1,19 @@
 # My Repository ![Website shields.io](https://img.shields.io/badge/ubuntu-v.18.04-orange) [![Website shields.io](https://img.shields.io/badge/vim-v--8.0-brightgreen)](http://shields.io/) [![Website monip.org](https://img.shields.io/badge/mysql-v--14.14-lightgrey)](http://monip.org/)
 
+<div align="center">
+  <a href="#">
+    <img src="https://github.com/dwiHard/five_byte.github.io/blob/master/images/logo.png" alt="Logo" width="170" height="170">
+  </a>
+
+<h3 align="center">README-Vim</h3>
+
+  <p align="center">
+    An awesome README by <b>Hardiyanto</b>!
+    <br />
+    <a href="https://github.com/dwiHard/five_byte.github.io#my-repository---"><strong>Explore the docs »</strong></a>
+  </p>
+</div>
+
 ### Selamat Datang 
 Github yang dibangun dan dikembangkan oleh ***Hardiyanto***. Sebagian besar github ini berisi catatan / rangkuman yang berhubungan dengan Teknologi komputer. Seperti, Sistem Operasi GNU/Linux, jaringan komputer, bahasa pemograman, basis data dan konfigurasi tools serta hal-hal lain yang masih berkaitan dengan komputer yang saya rangkum dari hasil berekplorasi dalam menggunakan sistem operasi ***GNU/Linux***, ***Android*** & ***Linux***.
 

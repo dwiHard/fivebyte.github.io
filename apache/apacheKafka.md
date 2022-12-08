@@ -1,8 +1,27 @@
 ## Apache Kafka
 > disusun oleh Hardiyanto
 
+<div align="center">
+  <a href="https://github.com/othneildrew/Best-README-Template">
+    <img src="https://github.com/dwiHard/five_byte.github.io/blob/master/images/kafka.png" alt="Logo" width="140" height="130">
+  </a>
+
+<h3 align="center">README-Vim</h3>
+
+  <p align="center">
+    An awesome README by <b>Hardiyanto</b>!
+    <br />
+    <a href="https://kafka.apache.org"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/dwiHard/five_byte.github.io/blob/master/vim/vim.md#daftar-isi">Daftar Isi</a>
+    ·
+    <a href="https://github.com/dwiHard/five_byte.github.io#my-repository---">Awesome My READMe</a>
+  </p>
+</div>
 
 ### Daftar Isi
+
 * [Install Apache Kafka](#install-apache-kafka)
 * [Mengirimkan Topic](#mengirimkan-topic)
 * [Melihat List Topic](#melihat-list-topic)

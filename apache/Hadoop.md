@@ -1,6 +1,25 @@
 ## Apache Hadoop
 > disusun oleh Hardiyanto
 
+<div align="center">
+  <a href="https://hadoop.apache.org">
+    <img src="https://github.com/dwiHard/five_byte.github.io/blob/master/images/hadoop.jpg" alt="Logo" width="150" height="120">
+  </a>
+
+<h3 align="center">README-Vim</h3>
+
+  <p align="center">
+    An awesome README by <b>Hardiyanto</b>!
+    <br />
+    <a href="https://hadoop.apache.org"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/dwiHard/five_byte.github.io/blob/master/apache/Hadoop.md#daftar-isi">Daftar Isi</a>
+    ·
+    <a href="https://github.com/dwiHard/five_byte.github.io#my-repository---">Awesome My README</a>
+  </p>
+</div>
+
 
 ### Daftar Isi
 * [x] [Installation Configuration](#installation-configuration)

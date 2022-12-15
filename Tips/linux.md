@@ -59,7 +59,8 @@
     * [Rename wlp2s0 to wlan0 in ubuntu](#wlp2s0-to-wlan0-in-ubuntu)
 * [Arch Linux](#arch-linux)
     * [Install Arch](#install-arch)
-    * [Pacman dan Yay](#pacman-dan-yay)
+    * [Install yay](#install-yay)
+    * [Pacman dan Yay remove](#pacman-dan-yay-remove)
     * [Install AUR](#install-aur)
     * [Arch install ntfs support](#arch-install-ntfs-support)
     * [Troubleshooting Audio](#troubleshooting-audio)
@@ -863,7 +864,20 @@ cari perintah # %Wheel ALL=(ALL) ALL hilangkan tanda # sehingga
 %wheel ALL=(ALL) ALL
 ```
 
-##### Pacman dan Yay
+#### Install yay
+```
+sudo pacman -S --needed base-devel git
+```
+```
+git clone https://aur.archlinux.org/yay.git
+```
+```
+cd yay
+```
+```
+makepkg -si
+```
+##### Pacman dan Yay remove
 hapus packages
 ```
 sudo pacman -R nama packages

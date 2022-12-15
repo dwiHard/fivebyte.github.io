@@ -31,6 +31,7 @@
     * [DNS Enumerating with Dnsrecon](#dns-enumerating-with-dnsrecon)
     * [DNS Enumerating with Dnsenum](#dns-enumerating-with-dnsenum)
 * [Steghide](#steghide)
+* [Compress and protect folder](#compress-and-protect-folder)
 
 
 #### John the Ripper
@@ -477,6 +478,19 @@ $ steghide embed -cf cvr.jpg -ef emb.txt
 untuk extraknya
 ```
 $ steghide extract -sf stg.jpg
+```
+
+#### Compress and protect folder
+encrypt
+```
+tar -cz namaDir | openssl enc -aes-256-cbc -salt -out namaDir.tar.gz.enc
+```
+```
+mv namaDir.tar.gz.enc namaDir.tar.gz.enc.tar.gz
+```
+decrypt
+```
+openssl enc -aes-256-cbc -d -in namaDir.tar.gz.enc.tar.gz | tar -xz
 ```
 
 ### Terima Kasih

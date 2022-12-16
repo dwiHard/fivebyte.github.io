@@ -17,22 +17,22 @@
 #### Install Docker di ubuntu 18.04
 
 ```
-$  sudo apt update 
+sudo apt update 
 ```
 ```
-$  sudo apt-get install  curl apt-transport-https ca-certificates software-properties-common 
+sudo apt-get install  curl apt-transport-https ca-certificates software-properties-common 
 ```
 ```
-$  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 ```
 ```
-$ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" 
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" 
 ```
 ```
-$ sudo apt update
+sudo apt update
 ```
 ```
-$ sudo apt install docker-ce 
+sudo apt install docker-ce 
 ```
 ```
 sudo usermod -aG docker $USER
@@ -41,19 +41,19 @@ sudo usermod -aG docker $USER
 #### Install Docker di kali linux 2020.2
 
 ```
-$ curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
+curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
 ```
 ```
-$ echo 'deb [arch=amd64] https://download.docker.com/linux/debian buster stable' | sudo tee /etc/apt/sources.list.d/docker.list
+echo 'deb [arch=amd64] https://download.docker.com/linux/debian buster stable' | sudo tee /etc/apt/sources.list.d/docker.list
 ```
 ```
-$ sudo apt-get update
+sudo apt-get update
 ```
 ```
-$ sudo apt-get install docker-ce
+sudo apt-get install docker-ce
 ```
 ```
-$ sudo usermod -aG docker $USER
+sudo usermod -aG docker $USER
 ```
 
 ### Configurasi Docker
@@ -61,13 +61,13 @@ $ sudo usermod -aG docker $USER
 #### Otomatis start
 
 ```
-$ sudo systemctl enable docker
+sudo systemctl enable docker
 ```
 
 #### Memeriksa status docker
 
 ```
- $ sudo systemctl status docker
+ sudo systemctl status docker
 ```
 
 #### Image docker untuk mirror Android
@@ -87,7 +87,7 @@ docker run --rm -i -t --privileged \
 
 #### Image docker web server
 ```
-$ sudo docker run -dit --name hard-web  -p 8080:80 -v /home/user/website/:/usr/local/apache2/htdocs/ httpd:2.4
+sudo docker run -dit --name hard-web  -p 8080:80 -v /home/user/website/:/usr/local/apache2/htdocs/ httpd:2.4
 ```
 
 cek :
@@ -97,7 +97,7 @@ sudo docker ps
 
 Edit file :
 ```
-# vi /home/user/website/docker.html
+sudo vi /home/user/website/docker.html
 ```
 ```
 <!DOCTYPE html>
@@ -114,15 +114,15 @@ Edit file :
 
 Untuk Stop docker :
 ```
-$ sudo docker stop hard-web
+sudo docker stop hard-web
 ```
 Untuk remove :
 ```
-$ sudo docker rm hard-web
+sudo docker rm hard-web
 ```
 Untuk remove container
 ```
-$ sudo docker image remove httpd:2.4
+sudo docker image remove httpd:2.4
 ```
 
 ### Sekian dan Terima Kasih

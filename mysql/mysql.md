@@ -16,6 +16,7 @@
     * [Show user](#show-user)
     * [Show Hak Akses](#show-hak-akses)
     * [Set the root password](#set-the-root-password)
+    * [Allow IP Address](#allow-ip-address)
     * [Buat User Baru](#buat-user-baru)
     * [Hak Akses user](#hak-akses-user)
     * [Cabut Hak Akses](#cabut-hak-akses)
@@ -167,6 +168,21 @@ ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password
 Kemudian, jalankan FLUSH PRIVILEGES yang memberi tahu server untuk memuat ulang tabel dan menerapkan perubahan baru Anda:
 ```
 FLUSH PRIVILEGES;
+```
+
+##### Allow IP Address
+edit file **sudo nvim /etc/mysql/my.cnf**
+```
+[mysqld]
+bind-address = 0.0.0.0
+```
+
+masuk ke mysql server lalu jalankan perintah
+```
+CREATE USER 'hard'@'192.168.x.x' IDENTIFIED BY 'password';
+```
+```
+GRANT ALL PRIVILEGES ON `java`.* TO `hard`@`192.168.x.x` WITH GRANT OPTION;
 ```
 
 ##### Buat User Baru 

@@ -22,8 +22,10 @@
 #### Daftar Isi
 
 * [Pemograman](#pemograman)
-    * [Website](#website)
+    * [Frontend](#frontend)
+    * [Backend](#backend)
     * [DevOS](#devos)
+    * [Dokumentasi](#dokumentasi)
     * [Android](#android)
 * [Desain](#desain)
     * [Blender](#blender)
@@ -35,11 +37,13 @@
     * [Warna Inspirasi](#warna-inspirasi)
     * [Hidden Website](#hidden-website)
     * [Video dan Audio](#video-dan-audio)
+* [Website AI](#website-ai)
+* [IT Solusi](#it-solusi)
 <br>
 </br>
 
 ### Pemograman
-#### WEBSITE
+#### Frontend
 
 - <a href="https://cssreference.io/">CSS Reference</a> - Untuk CSS Style
 - <a href="https://getcssscan.com/css-box-shadow-examples/">Getcsscan</a> - CSS box shadow
@@ -71,6 +75,8 @@
 - <a href="https://github.com/farizdotid/DAFTAR-API-LOKAL-INDONESIA/">API Local Daftar</a> Kumpulan Public API KEY Local
 
 
+#### Backend
+
 Free SSL
 
 - <a href="https://letsencrypt.org/">Les't Encrypt</a> - Let's Encrypt
@@ -87,16 +93,48 @@ Keamanan Web
 
 JSON
 - <a href="https://jsoncrack.com/">JSON Crack</a>  - Untuk View Json
+- <a href="https://jsonformatter.curiousconcept.com/">JSON Formatter</a>  - Untuk format Json
+- <a href="https://jsoneditoronline.org/">JSON Editor</a>  - Untuk Edit dan proses Json
+- <a href="https://jsonlint.com/">JSON Lint</a>  - Untuk validator dan reformat Json
+- <a href="https://jsonplaceholder.typicode.com/">JSON Placeholder</a>  - Untuk Test API
+- <a href="https://json2csv.com/">JSON to CSV</a>  - Untuk Convert Json to CSV
+- <a href="https://www.json2table.com/">JSON to Table</a>  - Untuk Convert Json to Table
+- <a href="https://www.json2html.com/">JSON to HTML</a>  - Untuk Convert Json to HTML
+- <a href="https://www.json2xml.com/">JSON to XML</a>  - Untuk Convert Json to XML
+- <a href="https://www.json2yaml.com/">JSON to YAML</a>  - Untuk Convert Json to YAML
+- <a href="https://www.json2go.com/">JSON to Go</a>  - Untuk Convert Json to Go
+- <a href="https://www.json2csharp.com/">JSON to C#</a>  - Untuk Convert Json to C#
+- <a href="https://www.json2java.com/">JSON to Java</a>  - Untuk Convert Json to Java
+- <a href="https://www.json2kotlin.com/">JSON to Kotlin</a>  - Untuk Convert Json to Kotlin
+- <a href="https://www.json2swift.com/">JSON to Swift</a>  - Untuk Convert Json to Swift
+- <a href="https://www.json2typescript.com/">JSON to TypeScript</a>  - Untuk Convert Json to TypeScript
+- <a href="https://www.json2rust.com/">JSON to Rust</a>  - Untuk Convert Json to Rust
+- <a href="https://www.json2perl.com/">JSON to Perl</a>  - Untuk Convert Json to Perl
+- <a href="https://www.json2php.com/">JSON to PHP</a>  - Untuk Convert Json to PHP
+- <a href="https://www.json2ruby.com/">JSON to Ruby</a>  - Untuk Convert Json to Ruby
+- <a href="https://www.json2python.com/">JSON to Python</a>  - Untuk Convert Json to Python
+- <a href="https://www.json2dart.com/">JSON to Dart</a>  - Untuk Convert Json to Dart
+- <a href="https://www.json2scala.com/">JSON to Scala</a>  - Untuk Convert Json to Scala
 
-Documentasi
-- <a href="https://quickref.me/">Quickref</a> - Dokumentasi cheatsheet lengkap
-- <a href="https://www.programiz.com/">Progamiz</a> Belajar Programming
+Regex
+- <a href="https://regex101.com/">Regex 101</a>  - Untuk Test Regex
+- <a href="https://regexr.com/">Regexr</a>  - Untuk Test Regex
+- <a href="https://regexper.com/">Regexper</a>  - Untuk Test Regex
+- <a href="https://www.regextester.com/">Regex Tester</a>  - Untuk Test Regex
+
+Mencari package
+- <a href="https://openbase.com/">Openbase</a>  - Mencari package
 
 #### DevOS 
 
 - <a href="https://www.geeksforgeeks.org/python-programming-language/?ref=grb/">Geeks For Geeks</a>  - Python Testing
 - <a href="https://overapi.com/">Over API</a>  - Kumpulan link-link 
 - <a href="https://regex101.com/">Regex</a>  - Regex generator
+
+#### Dokumentasi
+- <a href="https://quickref.me/">Quickref</a> - Dokumentasi cheatsheet lengkap
+- <a href="https://www.programiz.com/">Progamiz</a> Belajar Programming
+- <a href="https://www.stationx.net/category/cheat-sheets/>StationX</a> Cheat Sheet
 
 #### Android
 
@@ -298,6 +336,18 @@ Website Untuk Edukasi
 - <a href="https://hemingwayapp.com/">Hemingwayapp</a> - Website cek grammar lebih user friendly
 - <a href="https://prowritingaid.com/">Pro Writingid</a> - Extention untuk cek grammar
 
+Website osint
+- <a href="https://osintframework.com/">OSINT Framework</a> - OSINT Framework
+- <a href="https://start.me/p/rx6Qj8/nixintel-s-osint-resource-list">Nixintel</a> - Nixintel
+
+Website untuk belajar coding
+- <a href="https://www.freecodecamp.org/">Free Code Camp</a> - Free Code Camp
+- <a href="https://www.codecademy.com/">Code Academy</a> - Code Academy
+- <a href="https://www.w3schools.com/">W3Schools</a> - W3Schools
+- <a href="https://www.sololearn.com/">Solo Learn</a> - Solo Learn
+- <a href="https://www.java67.com/">Java 67</a> - Java 67
+- <a href="https://www.tutorialspoint.com/">Tutorials Point</a> - Tutorials Point
+
 #### Video dan audio
 - <a href="https://pixabay.com/sound-effects/">Pixabay</a>  - Sound Effects
 - <a href="https://www.bensound.com/">Bansound</a>  - Sound Effects
@@ -308,5 +358,12 @@ Website Untuk Edukasi
 - <a href="https://uppbeat.io/">Uppbeat</a>  - Sound effects
 - <a href="https://soundcloud.com/">Sound Cloud</a> - music tracks
 - <a href="https://spik.ai/">Spik</a>  - Generator realistic sound
+
+#### Website AI
+- <a href="https://appinventor.mit.edu">App Inventor</a> - Mit computer science and AI
+- <a href="https://curlconverter.com/java/">Curl converter</a> - Convert curl ke java
+
+#### IT Solusi
+- <a href="https://www.zerotier.com/>Zerotier</a> - Zerotier
 
 ### Terima Kasih

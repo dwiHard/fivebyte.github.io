@@ -134,7 +134,7 @@ Mencari package
 #### Dokumentasi
 - <a href="https://quickref.me/">Quickref</a> - Dokumentasi cheatsheet lengkap
 - <a href="https://www.programiz.com/">Progamiz</a> Belajar Programming
-- <a href="https://www.stationx.net/category/cheat-sheets/>StationX</a> Cheat Sheet
+- <a href="https://www.stationx.net/category/cheat-sheets/">StationX</a> Cheat Sheet
 
 #### Android
 

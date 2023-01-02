@@ -2,7 +2,7 @@
 > disusun oleh Hardiyanto
 
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
+  <a href="https://kafka.apache.org">
     <img src="https://github.com/dwiHard/five_byte.github.io/blob/master/images/kafka.png" alt="Logo" width="140" height="130">
   </a>
 
@@ -23,13 +23,14 @@
 ### Daftar Isi
 
 * [Install Apache Kafka](#install-apache-kafka)
+* [Membuat Topic](#membuat-topic)
 * [Mengirimkan Topic](#mengirimkan-topic)
 * [Melihat List Topic](#melihat-list-topic)
 * [Mengirim Data Ke Topic](#mengirim-data-ke-topic)
 * [Menerima Data dari Topic](#menerima-data-dari-topic)
 * [Kafka Producer](#kafka-producer)
 * [Kafka Consumer](#kafka-consumer)
-
+* [Kafka di Systemd](#kafka-di-systemd)
 
 #### Install Kafka
 Kunjungi link berikut https://kafka.apache.org/downloads
@@ -46,6 +47,11 @@ bin/zookeeper-server-start.sh config/zookeeper.properties
 Untuk menjalankan apache kafka
 ```
 bin/kafka-server-start.sh config/server.properties
+```
+
+#### Membuat Topic
+```
+bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic dem
 ```
 
 #### Mengirimkan Topic
@@ -123,6 +129,28 @@ public static void main(String[] args) {
             }
         }
     }
+```
+
+#### Kafka di Systemd
+Edit dan buat file baru di /etc/systemd/system/kafka.service
+```
+[Unit]
+Description=Kafka with broker id (%i)
+After=network.target
+After=zk.service
+
+[Service]
+Type=forking
+
+SyslogIdentifier=kafka (%i)
+Restart=on-failure
+LimitNOFILE=16384:163840
+
+ExecStart=/home/hard/apache/kafka/bin/kafka-server-start.sh /home/hard/apache/kafka/config/server.properties
+ExecStop=/home/hard/apache/kafka/bin/kafka-server-stop.sh
+
+[Install]
+WantedBy=multi-user.target
 ```
 
 ### Terima Kasih

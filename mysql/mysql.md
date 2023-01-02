@@ -41,6 +41,7 @@
     * [Limit Data](#limit-data)
     * [Select Distinct](#select-distinct)
 * [BruteForce phpmyadmin](#bruteforce-phpmyadmin)
+* [Backup MySQL](#backup-mysql)
     
 <br>
 <br>
@@ -349,6 +350,10 @@ python3 main.py -url http://example.com/pma/ -user root -dict password.txt
 Bisa dilihat link dibawah ini :
 https://github.com/safflower/phpmyadmin-authentication-bruteforce
 
+### Backup MySQL
+```
+mysqldump -u USERNAME -p PASSWORD NAMA_DATABASE --ignore-table=NAMA_TABEL > backup_database.sql
+```
 
 
 ### Terima Kasih

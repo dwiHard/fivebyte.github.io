@@ -51,6 +51,7 @@ Github yang dibangun dan dikembangkan oleh ***Hardiyanto***. Sebagian besar gith
   - [x] [Linux](https://github.com/dwiHard/five_byte.github.io/blob/master/cheatsheet/linux.md#tips-dan-triks-linux)
   - [x] [Open Search](https://github.com/dwiHard/five_byte.github.io/blob/master/cheatsheet/OpenSearch.md)
   - [x] [Vagrant](https://github.com/dwiHard/five_byte.github.io/blob/master/cheatsheet/vagrant.md)
+  - [x] [Promeheus](https://github.com/dwiHard/five_byte.github.io/blob/master/Tips/prometheus.md)
   - [x] [Node Exporter](https://github.com/dwiHard/five_byte.github.io/blob/master/Tips/node_exporter.md)
   - [x] [Android](https://github.com/dwiHard/five_byte.github.io/blob/master/cheatsheet/android.md#tips-dan-trik-android)
   - [x] [Basic command linux](https://github.com/dwiHard/five_byte.github.io/blob/master/cheatsheet/BasicLinux.md#rangkuman-basic-command-linux) 

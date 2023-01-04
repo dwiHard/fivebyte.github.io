@@ -135,18 +135,17 @@ public static void main(String[] args) {
 Edit dan buat file baru di /etc/systemd/system/kafka.service
 ```
 [Unit]
-Description=Kafka with broker id (%i)
 After=network.target
+Requires=zk.service
 After=zk.service
 
 [Service]
-Type=forking
+Type=simple
+user=kafka
 
-SyslogIdentifier=kafka (%i)
-Restart=on-failure
-LimitNOFILE=16384:163840
+Restart=on-abnormal
 
-ExecStart=/home/hard/apache/kafka/bin/kafka-server-start.sh /home/hard/apache/kafka/config/server.properties
+ExecStart=/bin/sh -c '/home/hard/apache/kafka/bin/kafka-server-start.sh /home/hard/apache/kafka/config/server.properties > /home/hard/apache/kafka/kafka.log 2>&1'
 ExecStop=/home/hard/apache/kafka/bin/kafka-server-stop.sh
 
 [Install]

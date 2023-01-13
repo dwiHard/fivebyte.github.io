@@ -24,6 +24,7 @@
 ### Daftar Isi
 * [x] [Installation Configuration](#installation-configuration)
 * [x] [Jika Error SSH](#jika-error-ssh)
+* [x] [Error resource manager](#error-resource-manager)
 * [x] [Perintah Dasar](#perintah-dasar)
 
 ### Installation Configuration
@@ -97,6 +98,15 @@ cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
 ```
 ```
 chmod 0600 ~/.ssh/authorized_keys
+```
+
+### Error resource manager
+```
+resourcemanager is running as process 7002.  Stop it first and ensure /tmp/hadoop-hard-resourcemanager.pid file is empty before retry.
+```
+fix
+```
+sbin/yarn-daemon.sh stop resourcemanager
 ```
 
 ### Perintah Dasar

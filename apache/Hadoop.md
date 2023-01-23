@@ -23,6 +23,8 @@
 
 ### Daftar Isi
 * [x] [Installation Configuration](#installation-configuration)
+* [x] [Jika Error SSH](#jika-error-ssh)
+* [x] [Error resource manager](#error-resource-manager)
 * [x] [Perintah Dasar](#perintah-dasar)
 
 ### Installation Configuration
@@ -76,6 +78,35 @@ lalu edit dan tambahkan di file **hdfs-site.xml**
         <value>~/apache/hadoop-2.10.2/data/dfs/datanode</value>
 </property>
 </configuration>
+```
+### Jika Error SSH
+ini terjadi error karena ketika memasukkan ```ssh localhost``` memasukan password
+```
+localhost: hard@localhost: Permission denied (publickey,password).
+Starting datanodes
+localhost: hard@localhost: Permission denied (publickey,password).
+Starting secondary namenodes [hard]
+hard: hard@hard: Permission denied (publickey,password).
+Starting resourcemanager
+```
+fix
+```
+ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa
+```
+```
+cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
+```
+```
+chmod 0600 ~/.ssh/authorized_keys
+```
+
+### Error resource manager
+```
+resourcemanager is running as process 7002.  Stop it first and ensure /tmp/hadoop-hard-resourcemanager.pid file is empty before retry.
+```
+fix
+```
+sbin/yarn-daemon.sh stop resourcemanager
 ```
 
 ### Perintah Dasar

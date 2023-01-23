@@ -21,8 +21,14 @@
 </div>
 
 ### Daftar Isi
+* [Confing Java](#config-java)
 * [ERROR: KeeperErrorCode](#errorkeepererrorcode)
 
+### Config Java
+edit atau tamabahkan kode berikut di file ```nvim conf/hbase-env.sh ```
+```
+export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64/
+```
 ### ERROR: KeeperErrorCode
 Error detail
 ```

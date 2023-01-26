@@ -28,6 +28,8 @@
 * [Melihat List Topic](#melihat-list-topic)
 * [Mengirim Data Ke Topic](#mengirim-data-ke-topic)
 * [Menerima Data dari Topic](#menerima-data-dari-topic)
+* [Menghapus topic](#menghapus-topic)
+* [Log Compaction](#log-compaction)
 * [Kafka Producer](#kafka-producer)
 * [Kafka Consumer](#kafka-consumer)
 * [Kafka di Systemd](#kafka-di-systemd)
@@ -50,8 +52,13 @@ bin/kafka-server-start.sh config/server.properties
 ```
 
 #### Membuat Topic
+untuk zookepeer
 ```
 bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic dem
+```
+untuk kafka
+```
+bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic demo
 ```
 
 #### Mengirimkan Topic
@@ -64,8 +71,13 @@ untuk partition 3
 ./bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 3 --topic belajar-kafka
 ```
 #### Melihat List Topic
+untuk kafka
 ```
 ./bin/kafka-topics.sh --list --bootstrap-server localhost:9092
+```
+untuk zookepeer
+```
+./bin/kafka-topics.sh --list --zookeeper localhost:2181
 ```
 
 #### Mengirim Data Ke Topic
@@ -85,6 +97,30 @@ menerima ketika kafka console customer dari awal
 biar tidak duplikasi data gunakan command seperti dibawah ini dan pastikan kafkanya partitionnya lebih dari 1
 ```
 ./bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic belajar-kafka-lagi --group belajar
+```
+
+#### Menghapus topic
+untuk zookepeer
+```
+./bin/kafka-topics.sh --zookeeper localhost:2181 --delete --topic demo
+```
+untuk kafka
+```
+./bin/kafka-topics.sh --bootstrap-server localhost:9092 --delete --topic demo
+```
+
+#### Log Compaction
+membuat topic jika pakai zookepeer maka ganti --bootstrap-server menjadi --zookeeper localhost:2181
+```
+./bin/kafka-topics.sh --bootstrap-server localhost:9092 --create --topic employee-salary --partitions 1 --replication-factor 1 --config cleanup.policy=compact --config min.cleanable.dirty.ratio=0.001 --config segment.ms=5000
+```
+melihat detail topic
+```
+./bin/kafka-topics.sh --bootstrap-server localhost:9092 --describe --topic employee-salary
+```
+jalankan kafka consumer
+```
+./bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic employee-salary --from-beginning --property print.key=true --property key.separator=,
 ```
 #### Kafka Producer
 ```

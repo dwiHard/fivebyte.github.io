@@ -5,7 +5,7 @@
     <img src="https://github.com/dwiHard/five_byte.github.io/blob/master/images/logo.png" alt="Logo" width="170" height="170">
   </a>
 
-<h3 align="center">README-Vim</h3>
+<h3 align="center">README</h3>
 
   <p align="center">
     An awesome README by <b>Hardiyanto</b>!
@@ -24,7 +24,6 @@ Github yang dibangun dan dikembangkan oleh ***Hardiyanto***. Sebagian besar gith
     - [x] [Apache Maven](https://github.com/dwiHard/five_byte.github.io/blob/master/apache/apacheMaven.md)
     - [x] [Apache Kafka](https://github.com/dwiHard/five_byte.github.io/blob/master/apache/apacheKafka.md)
     - [x] [Apache Storm](https://github.com/dwiHard/belajar-apache-storm)
-    - [x] [Apache HBase](https://github.com/dwiHard/five_byte.github.io/blob/master/apache/apacheHBase.md)
     - [x] [Apache Zookeeper](https://github.com/dwiHard/five_byte.github.io/blob/master/apache/apacheZookeeper.md)
     - [x] [Apache Hadoop](https://github.com/dwiHard/five_byte.github.io/blob/master/apache/Hadoop.md)
 - [x] [Linux Security](#)
@@ -43,8 +42,10 @@ Github yang dibangun dan dikembangkan oleh ***Hardiyanto***. Sebagian besar gith
     - [x] [Git](https://github.com/dwiHard/five_byte.github.io/blob/master/cheatsheet/git.md#rangkuman-git)
     - [x] [Docker](https://github.com/dwiHard/five_byte.github.io/blob/master/docker/docker.md#docker-di-linux)
     - [x] [vim](https://github.com/dwiHard/five_byte.github.io/blob/master/vim/vim.md#rangkuman-vim)
+- [x] [Linux Database](#)
+  - [x] [Apache HBase](https://github.com/dwiHard/five_byte.github.io/blob/master/apache/apacheHBase.md)
+  - [x] [MYSQL-Server](https://github.com/dwiHard/five_byte.github.io/blob/master/mysql/mysql.md)
 - [x] [Linux Server](#)
-    - [x] [MYSQL-Server](https://github.com/dwiHard/five_byte.github.io/blob/master/mysql/mysql.md)
     - [x] [Apache HTTP Server](https://github.com/dwiHard/five_byte.github.io/blob/master/apache/ApacheHttp.md)
     - [x] [Web Server](https://github.com/dwiHard/five_byte.github.io/blob/master/pemogramanWeb/webserver.md#rangkuman-konfigurasi-webserver-di-ubuntu-heavy_check_mark)
 - [x] [Linux Design](#)

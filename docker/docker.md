@@ -21,6 +21,9 @@
 </div>
 
 ### Daftar Isi
+* [Install Docker](#install-docker)
+  * [Install docker di Ubuntu 18.04](#install-docker-di-ubuntu-1804)
+  * [Install Docker di kali linux 2020.2](#install-docker-di-kali-linux-20202)
 * [Basic Command](#basic-command)
   * [Melihat versi docker](#melihat-versi-docker)
   * [Melihat docker image](#melihat-docker-image)
@@ -50,15 +53,59 @@
   * [Menghapus network](#menghapus-network)
   * [Menghubungkan container ke network](#menghubungkan-container-ke-network)
   * [Menghapus container network](#menghapus-container-network)
-* [Install Docker](#install-docker)
-	* [Install docker di Ubuntu 18.04](#install-docker-di-ubuntu-1804)
-	* [Install Docker di kali linux 2020.2](#install-docker-di-kali-linux-20202)
+* [Docker Dockerfile](#docker-dockerfile)
+  * [Docker build](#docker-build)
+  * [Contoh Dockerfile](#contoh-dockerfile)
 * [Configurasi Docker](#configurasi-docker)
     * [Otomatis start](#otomatis-start)
 	* [Memeriksa status docker](#memeriksa-status-docker)
 * [Image](#image)
 	* [Image docker untuk mirror Android](#image-docker-untuk-mirror-android)
 	* [Image docker web server](#image-docker-web-server)
+
+### Install Docker
+
+#### Install Docker di ubuntu 18.04
+
+```
+sudo apt update 
+```
+```
+sudo apt-get install  curl apt-transport-https ca-certificates software-properties-common 
+```
+```
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+```
+```
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" 
+```
+```
+sudo apt update
+```
+```
+sudo apt install docker-ce 
+```
+```
+sudo usermod -aG docker $USER
+```
+
+#### Install Docker di kali linux 2020.2
+
+```
+curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
+```
+```
+echo 'deb [arch=amd64] https://download.docker.com/linux/debian buster stable' | sudo tee /etc/apt/sources.list.d/docker.list
+```
+```
+sudo apt-get update
+```
+```
+sudo apt-get install docker-ce
+```
+```
+sudo usermod -aG docker $USER
+```
 
 ### Basic Command
 #### Melihat versi docker
@@ -293,49 +340,39 @@ untuk menghapus semua yang tidak digunakan kecuali volume
 ```
 docker system prune
 ```
-### Install Docker
 
-#### Install Docker di ubuntu 18.04
+### Docker Dockerfile
+#### Docker build
+```
+docker build -t <nama_image> <path_dockerfile>
+```
+untuk display output
+```
+docker build -t <nama_image> <path_dockerfile> --progress=plain
+```
+tanpa cache
+```
+docker build -t <nama_image> <path_dockerfile> --no-cache
+```
+example:
+```
+docker build -t hard:latest /home/hard/docker/dockerfile
+```
+#### Contoh Dockerfile
+```
+FROM alpine:latest
 
-```
-sudo apt update 
-```
-```
-sudo apt-get install  curl apt-transport-https ca-certificates software-properties-common 
-```
-```
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-```
-```
-sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" 
-```
-```
-sudo apt update
-```
-```
-sudo apt install docker-ce 
-```
-```
-sudo usermod -aG docker $USER
-```
+RUN mkdir coba
+RUN echo "Hello World" > coba/hello.txt
+RUN cat coba/hello.txt
+ADD coba/hello.txt coba/hello.txt
 
-#### Install Docker di kali linux 2020.2
-
+CMD cat coba/hello.txt
 ```
-curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
-```
-```
-echo 'deb [arch=amd64] https://download.docker.com/linux/debian buster stable' | sudo tee /etc/apt/sources.list.d/docker.list
-```
-```
-sudo apt-get update
-```
-```
-sudo apt-get install docker-ce
-```
-```
-sudo usermod -aG docker $USER
-```
+FROM adalah perintah untuk mendefinisikan image yang akan digunakan
+ADD adalah perintah untuk memasukan file ke dalam image
+RUN adalah perintah untuk menjalankan perintah di dalam image
+CMD adalah perintah untuk menjalankan perintah di dalam container
 
 ### Configurasi Docker
 

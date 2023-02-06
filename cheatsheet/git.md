@@ -32,8 +32,13 @@
 * [Menambahkan komentar](#menambahkan-komentar)
 * [Melihat Perubahan di file](#melihat-perubahan-di-file)
 * [Membatalkan perubahan](#membatalkan-perubahan)
+* [Membatalkan perubahan Staging index](#membatalkan-perubahan-staging-index)
+* [Commit Log History](#commit-log-history)
+* [Compare Commit](#compare-commit)
+* [Git Reset commit](#git-reset-commit)
 * [Membuat cabang baru](#membuat-cabang-baru)
 * [Memindahkan cabang](#memindahkan-cabang)
+* [Push file ke repository](#push-file-ke-repository)
 * [Cek daftar cabang baru atau branch](#cek-daftar-cabang-baru-atau-branch)
 * [Pindah cabang](#pindah-cabang)
 * [Menggabungkan cabang](#menggabungkan-cabang)
@@ -139,20 +144,28 @@ git restore namaFile
 ```
 git restore --staged namaFile
 ```
-#### Commit Log
+#### Commit Log History
+melihat commit log
 ```
 git log
 ```
-#### Commit Log OneLine
+Melihat log dengan detail
+```
+git log -p NamaFile
+```
+Melihat siapa yang melakukan commit
+```
+git blame NamaFile
+```
+Melihat log satu line
 ```
 git log --oneline
 ```
-#### Graph
+melihat log dengan grafik
 ```
 git log --oneline --graph
 ```
-#### Melihat detail commit
-hashya diisi dengan kode hash
+Melihat Detail commit dengan kode hash
 ```
 git show hashnya
 ```
@@ -183,7 +196,7 @@ git branch NAMA_BRANCH
 git switch -c master
 ```
 
-#### Push file
+#### Push file ke repository
 ```
 git push origin master
 ```

@@ -26,8 +26,12 @@
 * [Membuat Topic](#membuat-topic)
 * [Mengirimkan Topic](#mengirimkan-topic)
 * [Melihat List Topic](#melihat-list-topic)
+* [Melihat Detail Topic](#melihat-detail-topic)
 * [Mengirim Data Ke Topic](#mengirim-data-ke-topic)
+* [Mengirim Data Ke Topic dengan key](#mengirim-data-ke-topic-dengan-key)
 * [Menerima Data dari Topic](#menerima-data-dari-topic)
+* [Menerima Data Ke Topic dengan key](#menerima-data-ke-topic-dengan-key)
+* [Melihat List Consumer](#melihat-list-consumer)
 * [Menghapus topic](#menghapus-topic)
 * [Log Compaction](#log-compaction)
 * [Kafka Producer](#kafka-producer)
@@ -79,10 +83,22 @@ untuk zookepeer
 ```
 ./bin/kafka-topics.sh --list --zookeeper localhost:2181
 ```
+#### Melihat Detail Topic
+```
+./kafka-topics.sh --zookeeper localhost:2181 --describe
+```
+```
+./kafka-topics.sh --zookeeper localhost:2181 --describe --topic <topic-name>
+```
 
 #### Mengirim Data Ke Topic
 ```
 ./bin/kafka-console-producer.sh --broker-list localhost:9092 --topic belajar-kafka
+```
+
+#### Mengirim Data Ke Topic dengan key
+```
+./bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test-topic --property "key.separator=-" --property "parse.key=true"
 ```
 
 #### Menerima Data dari Topic
@@ -97,6 +113,24 @@ menerima ketika kafka console customer dari awal
 biar tidak duplikasi data gunakan command seperti dibawah ini dan pastikan kafkanya partitionnya lebih dari 1
 ```
 ./bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic belajar-kafka-lagi --group belajar
+```
+
+#### Menerima Data Ke Topic dengan key
+```
+./bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test-topic --from-beginning --property "key.separator=-" --property "print.key=true"
+```
+
+#### Melihat List Consumer
+```
+./bin/kafka-consumer-groups.sh --bootstrap-server localhost:9092 --list
+```
+#### Consumer Group
+```
+./bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic belajar-kafka --group belajar
+```
+#### Melihat Commit log
+```
+./kafka-run-class.sh kafka.tools.DumpLogSegments --deep-iteration --files /tmp/kafka-logs/test-topic-0/00000000000000000000.log
 ```
 
 #### Menghapus topic

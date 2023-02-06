@@ -44,7 +44,8 @@ Github yang dibangun dan dikembangkan oleh ***Hardiyanto***. Sebagian besar gith
     - [x] [vim](https://github.com/dwiHard/five_byte.github.io/blob/master/vim/vim.md#rangkuman-vim)
 - [x] [Linux Database](#)
   - [x] [Apache HBase](https://github.com/dwiHard/five_byte.github.io/blob/master/apache/apacheHBase.md)
-  - [x] [MYSQL-Server](https://github.com/dwiHard/five_byte.github.io/blob/master/mysql/mysql.md)
+  - [x] [MYSQL-Server](https://github.com/dwiHard/five_byte.github.io/blob/master/sql/mysql.md)
+  - [x] [PostgreSQL](https://github.com/dwiHard/five_byte.github.io/blob/master/sql/postgresql.md)
 - [x] [Linux Server](#)
     - [x] [Apache HTTP Server](https://github.com/dwiHard/five_byte.github.io/blob/master/apache/ApacheHttp.md)
     - [x] [Web Server](https://github.com/dwiHard/five_byte.github.io/blob/master/pemogramanWeb/webserver.md#rangkuman-konfigurasi-webserver-di-ubuntu-heavy_check_mark)
@@ -57,7 +58,7 @@ Github yang dibangun dan dikembangkan oleh ***Hardiyanto***. Sebagian besar gith
   - [x] [Node Exporter](https://github.com/dwiHard/five_byte.github.io/blob/master/Tips/node_exporter.md)
   - [x] [Android](https://github.com/dwiHard/five_byte.github.io/blob/master/cheatsheet/android.md#tips-dan-trik-android)
   - [x] [Basic command linux](https://github.com/dwiHard/five_byte.github.io/blob/master/cheatsheet/BasicLinux.md#rangkuman-basic-command-linux)
-- [x] [Referensi](#)] 
+- [x] [Referensi](#)
   - [x] [Sumber Belajar](https://github.com/dwiHard/five_byte.github.io/blob/master/notes/linkInspirasi.md)
   - [x] [Kumpulan Konfigurasi dan Script](https://github.com/dwiHard/five_byte.github.io/blob/master/linux/MyConfig.md#kumpulan-configuration)
 

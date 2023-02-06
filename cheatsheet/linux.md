@@ -52,6 +52,8 @@
     * [Resize Video](#resize-video)
     * [File Transfer dengan SCP](#file-transfer-dengan-scp)
     * [Multi Window pada Server dengan Screen](#multi-window-pada-server-dengan-screen)
+    * [SSH tanpa password](#ssh-tanpa-password)
+    * [Sharing Folder virtualbox di ubuntu server](#sharing-folder-virtualbox-di-ubuntu-server)
 * [Konfigurasi Bahasa Pemograman di Linux](#configurasi-bahasa-pemograman-di-linux)
     * [Configure Java](#configure-java-version)
     * [Buat Project Maven](#buat-project-maven)
@@ -613,6 +615,35 @@ List all windows in a session
 ```
 Ctrl + a + w
 ```
+
+#### SSH tanpa password
+```
+ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa
+```
+```
+cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
+```
+```
+chmod 0600 ~/.ssh/authorized_keys
+```
+
+#### Sharing Folder virtualbox di ubuntu server
+```
+sudo apt update
+```
+```
+sudo apt-get install virtualbox-guest-dkms virtualbox-guest-utils virtualbox-guest-x11
+```
+```
+sudo reboot
+```
+```
+sudo mkdir /mnt/shared
+```
+```
+sudo mount -t vboxsf <shared_folder_name> /mnt/shared
+```
+
 ### Configurasi Bahasa Pemograman di Linux
 
 ##### Configure java version

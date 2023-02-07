@@ -14,7 +14,7 @@
     <a href="https://prometheus.io/docs/introduction/overview/"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/dwiHard/five_byte.github.io/blob/master/Tips/prometheus.md#daftar-isi">Daftar Isi</a>
+    <a href="https://github.com/dwiHard/five_byte.github.io/blob/master/cheatsheet/prometheus.md#daftar-isi">Daftar Isi</a>
     ·
     <a href="https://github.com/dwiHard/five_byte.github.io#my-repository---">Awesome My README</a>
   </p>

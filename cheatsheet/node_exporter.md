@@ -13,7 +13,7 @@
     <a href="https://github.com/prometheus/node_exporter"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/dwiHard/five_byte.github.io/blob/master/apache/nodeexporter.md#daftar-isi">Daftar Isi</a>
+    <a href="https://github.com/dwiHard/five_byte.github.io/blob/master/cheatsheet/nodeexporter.md#daftar-isi">Daftar Isi</a>
     ·
     <a href="https://github.com/dwiHard/five_byte.github.io#my-repository---">Awesome My README</a>
   </p>

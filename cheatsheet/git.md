@@ -1,5 +1,5 @@
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
+  <a href="https://git-scm.com/doc">
     <img src="https://git-scm.com/images/logos/downloads/Git-Logo-1788C.svg" alt="Logo" width="140" height="100">
   </a>
 
@@ -8,12 +8,12 @@
   <p align="center">
     An awesome README by <b>Hardiyanto</b>!
     <br />
-    <a href="https://github.com/dwiHard/five_byte.github.io/blob/master/README.md"><strong>Explore the docs »</strong></a>
+    <a href="https://git-scm.com/doc"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://github.com/dwiHard/five_byte.github.io/blob/master/Tips/git.md#daftar-isi">Daftar Isi</a>
     ·
-    <a href="https://github.com/dwiHard/five_byte.github.io/blob/master/Tips/git.md#kumpulan-link-github">Awesome Link</a>
+    <a href="https://github.com/dwiHard/five_byte.github.io/blob/master/Tips/git.md#kumpulan-link-github">Awesome Github Link</a>
   </p>
 </div>
 

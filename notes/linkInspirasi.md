@@ -135,6 +135,9 @@ Mencari package
 - <a href="https://quickref.me/">Quickref</a> - Dokumentasi cheatsheet lengkap
 - <a href="https://www.programiz.com/">Progamiz</a> Belajar Programming
 - <a href="https://www.stationx.net/category/cheat-sheets/">StationX</a> Cheat Sheet
+- <a href="https://intellipaat.com/blog/tutorials/">Intellipaat</a> Cheat Sheet
+- <a href="https://zealdocs.org/">Zeal</a> - Offline Documentation
+- <a href="https://devdocs.io/">DevDocs</a> - Offline Documentation
 
 #### Android
 
@@ -321,6 +324,8 @@ Website belajar hacking
 - <a href="https://www.hacksplaining.com/">Hack Planning</a> Hack Planning
 - <a href="https://www.exploit-db.com/google-hacking-database/">Exploit DB</a> exploit db
 - <a href="https://portswigger.net/web-security/all-labs/">Portswigger</a> portswigger
+- <a href="https://www.hackthebox.eu/">Hack The Box</a> hack the box
+- <a href="http://testphp.vulnweb.com/">Test PHP</a> test php
 
 Get Software paid to free
 - <a href="https://soft98.ir/">Soft98</a> Untuk mendapatkan free software

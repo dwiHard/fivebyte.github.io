@@ -251,11 +251,15 @@ Testing :
 - <a href="https://github.com/megadose/toutatis">Tuotatis</a> - information from instagrams accounts
 - <a href="https://github.com/rly0nheart/octosuite">Octosuite</a> - OSINT Framework
 - <a href="https://github.com/bmshifat/TecSpy">Tec Spy</a> - A cloud-based Android Monitoring Tools
-- <a href="https://github.com/obsidianforensics/hindsight">Hindsignt</a> - Hindsight is a free tool for analyzing web artifacts 
+- <a href="https://github.com/obsidianforensics/hindsight">Hindsignt</a> - Hindsight is a free tool for analyzing web artifacts
+- <a href="https://github.com/rev1si0n/lamda/">Lamda</a> - A tool for automating the process of creating a lambda function
 
 Android :
 - <a href="https://github.com/newbit1/rootAVDa">Root AVD</a> - Root AVD Android Virtual Device
 - <a href="https://github.com/tanprathan/MobileApp-Pentest-Cheatsheet">Mobile Pentest CheetSheet</a> - Mobile Cheet Sheet tujuan pentest
+
+Machine learning  :
+- <a href="https://github.com/doccano/doccano">Doccano</a> - Open Source Text Annotation Tool for Humans
 
 
 

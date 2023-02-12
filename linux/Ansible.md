@@ -22,7 +22,7 @@
 
 ### Daftar Isi
 * [Instalasi](#instalasi)
-
+* [Persiapan Awal](#persiapan-awal)
 
 
 #### Instalasi
@@ -44,4 +44,31 @@ untuk lebih detail bisa cek di https://docs.ansible.com/ansible/latest/installat
 Instalasi ansible di arch linux
 ```
 sudo pacman -S ansible-core
+```
+
+#### Persiapan Awal
+install sshpass
+```
+sudo pacman -S sshpass
+```
+copy file ansible ke direktori yang diinginkan
+```
+cp -rf /etc/ansible/ ~/Documents/ansible/ansible-docker
+```
+edit file ansible.cfg, rubah seperti berikut
+```
+hosts_key_checking=false
+```
+disable password authentication
+```
+sudo vim /etc/sudoers
+```
+edit seperti berikut
+```
+docker ALL=(ALL) NOPASSWD: ALL
+```
+
+#### Menjalankan Ansible Playbook
+```
+ansible-playbook -i hosts playbook.yml
 ```

@@ -54,6 +54,7 @@
     * [Multi Window pada Server dengan Screen](#multi-window-pada-server-dengan-screen)
     * [SSH tanpa password](#ssh-tanpa-password)
     * [Sharing Folder virtualbox di ubuntu server](#sharing-folder-virtualbox-di-ubuntu-server)
+    * [Check Enable systemd service](#check-enable-systemd-service)
 * [Konfigurasi Bahasa Pemograman di Linux](#configurasi-bahasa-pemograman-di-linux)
     * [Configure Java](#configure-java-version)
     * [Buat Project Maven](#buat-project-maven)
@@ -642,6 +643,11 @@ sudo mkdir /mnt/shared
 ```
 ```
 sudo mount -t vboxsf <shared_folder_name> /mnt/shared
+```
+
+#### Check Enable systemd service
+```
+sudo systemctl list-unit-files | grep enabled
 ```
 
 ### Configurasi Bahasa Pemograman di Linux

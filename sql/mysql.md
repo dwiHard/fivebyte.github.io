@@ -10,6 +10,7 @@
     * [Start the mysql shell](#start-the-mysql-shell)
 * [Error mysql](#error-mysql)
     * [ERROR 1055 (42000)](#ERROR-1055-42000)
+    * [ERROR Hak Akses](#error-hak-akses)
 * [Uninstall MySQL](#uninstall-mysql)
     * [Re-install MySQL Server](#re-install-mysql-server)
 * [Configure MySQL](#configure-mysql)
@@ -136,7 +137,10 @@ ketikan ini di mysql servernya
 ```
 SET GLOBAL sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY','')); 
 ```
-
+### ERROR Hak Akses
+```
+SHOW GRANTS FOR 'user'@'172.0.0.1';
+```
 ### Uninstall MySQL
 
 #### Re-install MySQL Server

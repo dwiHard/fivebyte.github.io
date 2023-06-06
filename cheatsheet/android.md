@@ -16,6 +16,8 @@
     * [Desain menggunakan card view](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/Android/CardView.md)
     * [Remove Action Bar](https://gitlab.com/dwiHard/LinuxAdministration/-/blob/master/Android/RemoveActionBar.md)
 * [Check health EMMC](#check-health-emmc)
+* [Problem ADB Android](#problem-adb-android)
+    * [ADB Device Unauthorized](#adb-device-unauthorized)
 
 # Cara Connect Android ke Laptop dengan WI-FI atau USB
 #### Jika device kondisi root<br>
@@ -154,3 +156,9 @@ Check at /sys/class/mmchost/mmc0/mmc0:0001/lifetime via any root explorer
 ```
 Atau download apk
 https://github.com/dwiHard/five_byte.github.io/blob/master/Android/File/Disk%20Health%20Checker.apk
+
+### Problem ADB Android
+#### ADB Device Unauthorized
+masuk folder /data/misc/adb lalu buat ssh key lalu masukkan ke /data/misc/adb/adb_keys
+
+## Terima Kasih

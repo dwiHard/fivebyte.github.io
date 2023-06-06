@@ -58,21 +58,21 @@ bin/kafka-server-start.sh config/server.properties
 #### Membuat Topic
 untuk zookepeer
 ```
-bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic dem
+bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic <nama_topic>
 ```
 untuk kafka
 ```
-bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic demo
+bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic <nama_topic>
 ```
 
 #### Mengirimkan Topic
 untuk partition 1
 ```
-./bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic belajar-kafka
+./bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic <nama_topic>
 ```
 untuk partition 3
 ```
-./bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 3 --topic belajar-kafka
+./bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 3 --topic <nama_topic>
 ```
 #### Melihat List Topic
 untuk kafka
@@ -88,31 +88,31 @@ untuk zookepeer
 ./kafka-topics.sh --zookeeper localhost:2181 --describe
 ```
 ```
-./kafka-topics.sh --zookeeper localhost:2181 --describe --topic <topic-name>
+./kafka-topics.sh --zookeeper localhost:2181 --describe --topic <nama_topic>
 ```
 
 #### Mengirim Data Ke Topic
 ```
-./bin/kafka-console-producer.sh --broker-list localhost:9092 --topic belajar-kafka
+./bin/kafka-console-producer.sh --broker-list localhost:9092 --topic <nama_topic>
 ```
 
 #### Mengirim Data Ke Topic dengan key
 ```
-./bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test-topic --property "key.separator=-" --property "parse.key=true"
+./bin/kafka-console-producer.sh --broker-list localhost:9092 --topic <nama_topic>--property "key.separator=-" --property "parse.key=true"
 ```
 
 #### Menerima Data dari Topic
 menerima ketika kafka console customer dihidupkan
 ```
- ./bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic belajar-kafka
+ ./bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic <nama_topic>
 ```
 menerima ketika kafka console customer dari awal
 ```
-./bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic belajar-kafka --from-beginning
+./bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic <nama_topic> --from-beginning
 ```
 biar tidak duplikasi data gunakan command seperti dibawah ini dan pastikan kafkanya partitionnya lebih dari 1
 ```
-./bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic belajar-kafka-lagi --group belajar
+./bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic <nama_topic> --group belajar
 ```
 
 #### Menerima Data Ke Topic dengan key
@@ -126,7 +126,7 @@ biar tidak duplikasi data gunakan command seperti dibawah ini dan pastikan kafka
 ```
 #### Consumer Group
 ```
-./bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic belajar-kafka --group belajar
+./bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic <nama_topic> --group belajar
 ```
 #### Melihat Commit log
 ```
@@ -136,25 +136,25 @@ biar tidak duplikasi data gunakan command seperti dibawah ini dan pastikan kafka
 #### Menghapus topic
 untuk zookepeer
 ```
-./bin/kafka-topics.sh --zookeeper localhost:2181 --delete --topic demo
+./bin/kafka-topics.sh --zookeeper localhost:2181 --delete --topic <nama_topic>
 ```
 untuk kafka
 ```
-./bin/kafka-topics.sh --bootstrap-server localhost:9092 --delete --topic demo
+./bin/kafka-topics.sh --bootstrap-server localhost:9092 --delete --topic <nama_topic>
 ```
 
 #### Log Compaction
 membuat topic jika pakai zookepeer maka ganti --bootstrap-server menjadi --zookeeper localhost:2181
 ```
-./bin/kafka-topics.sh --bootstrap-server localhost:9092 --create --topic employee-salary --partitions 1 --replication-factor 1 --config cleanup.policy=compact --config min.cleanable.dirty.ratio=0.001 --config segment.ms=5000
+./bin/kafka-topics.sh --bootstrap-server localhost:9092 --create --topic <nama_topic> --partitions 1 --replication-factor 1 --config cleanup.policy=compact --config min.cleanable.dirty.ratio=0.001 --config segment.ms=5000
 ```
 melihat detail topic
 ```
-./bin/kafka-topics.sh --bootstrap-server localhost:9092 --describe --topic employee-salary
+./bin/kafka-topics.sh --bootstrap-server localhost:9092 --describe --topic <nama_topic>
 ```
 jalankan kafka consumer
 ```
-./bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic employee-salary --from-beginning --property print.key=true --property key.separator=,
+./bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic <nama_topic> --from-beginning --property print.key=true --property key.separator=,
 ```
 #### Kafka Producer
 ```
@@ -177,7 +177,7 @@ public static void main( String[] args )
 ```
 untuk menjalankan
 ```
-./bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic topic-java
+./bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic <nama_topic>
 ```
 
 #### Kafka Consumer

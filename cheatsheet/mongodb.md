@@ -22,6 +22,7 @@
 
 ## Daftar Isi
 * [Mongo Installation Docker](#mongo-installation-docker)
+* [Basic Command CLI Cheatsheet](#basic-command-cli-cheatsheet)
 
 
 ### Mongo Installation Docker
@@ -49,3 +50,52 @@ untuk masuk menggunakan username dan password
 ```
 docker exec -it <nama_container> mongosh -u root -p
 ```
+
+### Basic Command CLI Cheatsheet 
+melihat database yang ada
+```
+show dbs
+```
+masuk ke database
+```
+use <nama_database>
+```
+melihat database yang aktif
+```
+db
+```
+menghapus database
+```
+db.dropDatabase()
+```
+membuat collection
+```
+db.createCollection("<nama_collection>")
+```
+melihat collection yang ada
+```
+show collections
+```
+melihat data yang ada di collection
+```
+db.<nama_collection>.find()
+```
+melihat data yang ada di collection dengan format json
+```
+db.<nama_collection>.find().pretty()
+```
+melihat data yang ada di collection dengan limit
+```
+db.<nama_collection>.find().limit(10)
+```
+menghitung jumlah data yang ada di collection
+```
+db.<nama_collection>.count()
+```
+mencaari data dengan query
+```
+db.<nama_collection>.find({<field>:<value>})
+```
+
+
+## Terima Kasih

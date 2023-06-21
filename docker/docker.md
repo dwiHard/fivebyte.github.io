@@ -29,16 +29,24 @@
   * [Melihat docker image](#melihat-docker-image)
   * [Download docker image](#download-docker-image)
   * [Menghapus docker image](#menghapus-docker-image)
-  * [Melihat nama container](#melihat-nama-container)
+  * [Melihat semua container](#melihat-semua-container)
   * [Melihat nama container](#melihat-nama-container)
   * [Membuat container](#membuat-container)
   * [Menjalankan container](#menjalankan-container)
   * [Menghentikan container](#menghentikan-container)
   * [Menghapus container](#menghapus-container)
+  * [Menghapus paksa container](#menghapus-paksa-container)
+  * [Stop container melalui SIGTERM](#stop-container-melalui-sigterm)
+  * [Stop container melalui SIGKILL](#stop-container-melalui-sigkill)
   * [Melihat log container](#melihat-log-container)
+  * [Melihat history image](#melihat-history-image)
   * [Masuk ke dalam container](#masuk-ke-dalam-container)
   * [Melakukan port forwarding](#melakukan-port-forwarding)
-  * [Melihat container statistik](#melihat-container-statistik)
+  * [Melihat port yang digunakan oleh container](#melihat-port-yang-digunakan-oleh-container)
+  * [Melihat IP address container](#melihat-ip-address-container)
+  * [Melihat container performa semua container](#melihat-container-performa-semua-container)
+  * [Melihat detail config container](#melihat-detail-config-container)
+  * [Melihat process yang berjalan di dalam container](#melihat-process-yang-berjalan-di-dalam-container)
   * [Container resource limit](#container-resource-limit)
   * [Menambahkan enviroment variable](#menambahkan-enviroment-variable)
   * [Melakukan mounting bind](#melakukan-mounting-bind)
@@ -53,6 +61,9 @@
   * [Menghapus network](#menghapus-network)
   * [Menghubungkan container ke network](#menghubungkan-container-ke-network)
   * [Menghapus container network](#menghapus-container-network)
+  * [Inspect](#inspect)
+  * [Perintah Prune](#perintah-prune)
+  * [Push Image ke Docker Hub](#push-image-ke-docker-hub)
 * [Docker Dockerfile](#docker-dockerfile)
   * [Docker build](#docker-build)
   * [Contoh Dockerfile](#contoh-dockerfile)
@@ -125,7 +136,7 @@ docker image pull <nama image>:<tag>
 ```
 docker image rm <nama image>:<tag>
 ```
-#### Melihat nama container
+#### Melihat semua container
 ```
 docker container ls -a
 ```
@@ -139,6 +150,10 @@ example:
 ```
 docker container create --name contohredis redis:latest
 ```
+or
+```
+docker run -d --name nama_container namaimage:tag
+```
 #### Menjalankan container
 ```
 docker container start nama_container/container_id
@@ -151,6 +166,18 @@ docker container stop nama_container/container_id
 ```
 docker container rm nama_container/container_id
 ```
+#### Menghapus paksa container
+```
+docker container rm -f nama_container/container_id
+```
+#### Stop container melalui SIGTERM
+```
+docker container stop nama_container/container_id
+```
+#### Stop container melalui SIGKILL
+```
+docker container kill nama_container/container_id
+```
 #### Melihat log container
 ```
 docker container logs nama_container/container_id
@@ -158,6 +185,10 @@ docker container logs nama_container/container_id
 jika ingin melihat secara realtime
 ```
 docker container logs -f nama_container/container_id
+```
+#### Melihat history image
+```
+docker history nama_image/tag
 ```
 #### Masuk ke dalam container
 ```
@@ -171,9 +202,25 @@ example:
 ```
 docker container create --name contohnginx --publish 8080:80 nginx:latest
 ```
-#### Melihat container statistik
+#### Melihat port yang digunakan oleh container
+```
+docker container port nama_container/container_id
+```
+#### Melihat IP address container
+```
+docker container inspect --format '{{ .NetworkSettings.IPAddress }}' nama_container/container_id
+```
+#### Melihat container performa semua container
 ```
 docker container stats
+```
+#### Melihat detail config container
+```
+docker container inspect nama_container/container_id
+```
+#### Melihat process yang berjalan di dalam container
+```
+docker container top nama_container/container_id
 ```
 #### Container resource limit
 ```
@@ -222,6 +269,10 @@ docker volume create mongodata
 ```
 ```
 docker container create --name contohmongo --publish 27017:27017 --mount "type=volume,source=mongodata,destination=/data/db" --env MONGO_INITDB_ROOT_USERNAME=username --env MONGO_INITDB_ROOT_PASSWORD=password mongo:latest
+```
+example satu baris execute:
+```
+docker container run -d --name nginx -p 80:80 -v $(pwd)/html:/usr/share/nginx/html nginx:latest
 ```
 #### Backup volume
 ```
@@ -340,7 +391,37 @@ untuk menghapus semua yang tidak digunakan kecuali volume
 ```
 docker system prune
 ```
-
+#### Push Image ke Docker Hub
+```
+docker login
+```
+melihat status login
+```
+cat ~/.docker/config.json
+```
+menambahkan tag
+```
+docker image tag <nama_image> <username_dockerhub>/<nama_image>:<tag>
+```
+example:
+```
+docker image tag nginx hardhard/nginx
+```
+```
+docker image push <username_dockerhub>/<nama_image>:<tag>
+```
+example:
+```
+docker image push hardhard/nginx
+```
+menambahkan tag baru
+```
+docker image tag <username_dockerhub>/<nama_image_lama>:<tag_lama> <username_dockerhub>/<nama_image_baru>:<tag_baru>
+```
+example:
+```
+docker image tag hardhard/nginx:latest hardhard/nginx:testing
+```
 ### Docker Dockerfile
 #### Docker build
 ```

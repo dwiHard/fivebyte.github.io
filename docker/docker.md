@@ -24,7 +24,7 @@
 * [Install Docker](#install-docker)
   * [Install docker di Ubuntu 18.04](#install-docker-di-ubuntu-1804)
   * [Install Docker di kali linux 2020.2](#install-docker-di-kali-linux-20202)
-* [Basic Command](#basic-command)
+* [Basic Command dan Docker Container](#basic-command-dan-docker-container)
   * [Melihat versi docker](#melihat-versi-docker)
   * [Melihat docker image](#melihat-docker-image)
   * [Download docker image](#download-docker-image)
@@ -50,12 +50,14 @@
   * [Container resource limit](#container-resource-limit)
   * [Menambahkan enviroment variable](#menambahkan-enviroment-variable)
   * [Melakukan mounting bind](#melakukan-mounting-bind)
+* [Docker Volume](#docker-volume)
   * [Melihat volume](#melihat-volume)
   * [Membuat volume](#membuat-volume)
   * [Menghapus volume](#menghapus-volume)
   * [Menghubungkan volume ke container](#menghubungkan-volume-ke-container)
   * [Backup volume](#backup-volume)
   * [Restore volume](#restore-volume)
+* [Docker Network](#docker-network)
   * [Melihat network](#melihat-network)
   * [Membuat network](#membuat-network)
   * [Menghapus network](#menghapus-network)
@@ -64,6 +66,11 @@
   * [Inspect](#inspect)
   * [Perintah Prune](#perintah-prune)
   * [Push Image ke Docker Hub](#push-image-ke-docker-hub)
+* [Docker Swarm](#docker-swarm)
+  * [Inisialisasi Docker Swarm](#inisialisasi-docker-swarm)
+* [Docker Service](#docker-service)
+  * [Membuat service](#membuat-service)
+  * [Melihat list service](#melihat-list-service)
 * [Docker Dockerfile](#docker-dockerfile)
   * [Docker build](#docker-build)
   * [Contoh Dockerfile](#contoh-dockerfile)
@@ -118,7 +125,7 @@ sudo apt-get install docker-ce
 sudo usermod -aG docker $USER
 ```
 
-### Basic Command
+### Basic Command dan Docker Container
 #### Melihat versi docker
 ```
 docker version
@@ -246,7 +253,7 @@ example:
 ```
 docker container create --name contohmongo --publish 27017:27017 --mount "type=bind,source=/home/hard/Documents/docker/mongodata,destination=/data/db" --env MONGO_INITDB_ROOT_USERNAME=username --env MONGO_INITDB_ROOT_PASSWORD=password mongo:latest
 ```
-
+### Docker Volume
 #### Melihat volume
 ```
 docker volume ls
@@ -316,6 +323,7 @@ docker volume create mongorestore
 docker container run --rm --name ubunturestore --mount "type=bind,source=/home/hard/docker/backupmongo,destination=/backup" --mount "type=volume,source=mongorestore,destination=/data" ubuntu:latest bash -c "cd /data && tar xvf /backup/backup.tar.gz --strip 1"
 ```
 
+### Docker Network
 #### Melihat network
 ```
 docker network ls
@@ -422,7 +430,43 @@ example:
 ```
 docker image tag hardhard/nginx:latest hardhard/nginx:testing
 ```
+### Docker Swarm
+#### Inisialisasi Docker Swarm
+```
+docker swarm init
+```
+jika terjadi error seperti ini:
+```
+Error response from daemon: could not choose an IP address to advertise since this system has multiple addresses on interface enp0s3...
+```
+maka jalankan perintah ini:
+```
+docker swarm init --advertise-addr <ip_address>
+```
 ### Docker Dockerfile
+
+### Docker Service
+#### Membuat Service
+```
+docker service create --name <nama_service> --replicas <jumlah_replicas> --publish <port_host>:<port_container> <nama_image>:<tag>
+```
+example:
+```
+docker service create alpine ping 8.8.8.8
+```
+#### Melihat list service
+```
+docker service ls
+```
+#### Melakukan update service (scale up/down)
+```
+docker service update <id_container> --replicas <jumlah_replicas>
+```
+example:
+```
+docker service update nginx --replicas 5
+```
+
 #### Docker build
 ```
 docker build -t <nama_image> <path_dockerfile>

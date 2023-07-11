@@ -28,6 +28,7 @@
     * [Menampilkan semua service yang berjalan / tidak](#menampilkan-semua-service-yang-berjalan-tidak)
     * [Cek Harddisk partitions](#cek-harddisk-partitions)
     * [Cek Capasitas Baterai](#cek-capasitas-baterai)
+    * [Cek Kesehatan Baterai](#cek-kesehatan-baterai)
     * [Cara Memeriksa Available Network Interfaces, Associated IP Addresses, MAC Addresses, and Interface Speed on Linux](#cara-memeriksa-available-network-interfaces-associated-ip-addresses-mac-addresses-and-interface-speed-on-linux)
 * [Konfigurasi Linux](#konfigurasi-linux)
     * [Disable webcam](#disable-webcam)
@@ -281,6 +282,17 @@ sudo blkid
 #### Cek Capasitas Baterai
 ```
 cat /sys/class/power_supply/BAT0/capacity
+```
+
+#### Cek Kesehatan Baterai
+```
+sudo apt-get install smartmontools
+```
+```
+sudo smartctl -a /dev/sda
+```
+```
+sudo smartctl -a /dev/sda | grep "SMART overall-health self-assessment"
 ```
 
 #### Cara Memeriksa Available Network Interfaces, Associated IP Addresses, MAC Addresses, and Interface Speed on Linux

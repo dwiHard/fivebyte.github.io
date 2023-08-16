@@ -353,6 +353,10 @@ Website untuk belajar coding
 - <a href="https://www.java67.com/">Java 67</a> - Java 67
 - <a href="https://www.tutorialspoint.com/">Tutorials Point</a> - Tutorials Point
 
+Website AI
+- <a href="https://chat.openai.com/">Open AI</a> - Open AI
+- <a href="https://poe.com/">Poe</a> - Poe
+
 #### Video dan audio
 - <a href="https://pixabay.com/sound-effects/">Pixabay</a>  - Sound Effects
 - <a href="https://www.bensound.com/">Bansound</a>  - Sound Effects

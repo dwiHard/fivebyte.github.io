@@ -27,6 +27,7 @@
     * [Reload](#reload)
     * [Reset the MySQL/MariaDB Root Password](#reset-the-mysqlmariadb-root-password)
     * [Show Variable password](#show-variable-password)
+    * [Show Status Connection](#show-status-connection)
 * [Basic MySQL](#basic-mysql)
     * [Buat Tabel](#buat-tabel)
     * [Melihat Source Code](#melihat-source-code)
@@ -258,6 +259,15 @@ sudo mysqladmin --user=root --password=oldpassword password "newpassword"
 #### Show Variable password
 ```
 SHOW VARIABLES LIKE 'validate_password%';
+```
+
+#### Show Status Connection
+```
+show status where `variable_name` = 'Threads_connected';
+```
+or
+```
+show processlist;
 ```
 
 ### Basic MySQL

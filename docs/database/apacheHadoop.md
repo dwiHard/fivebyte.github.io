@@ -118,9 +118,7 @@ untuk menjalankan service hadoop
 ./sbin/start-all.sh 
 ```
 
-untuk melihat di browser alamat
-http://localhost:8042/node
-http://localhost:8088/cluster
+untuk melihat di browser alamat localhost:8042/node, localhost:8088/cluster
 untuk cek directory
 
 ```sh

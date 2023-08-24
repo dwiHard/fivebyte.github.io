@@ -54,8 +54,8 @@ menjalankan service
 ```sh
 sudo systemctl start node_exporter.service
 ```
-cek di dashboard http://localhost:9100/
-cek untuk matric http://localhost:9100/metrics
+cek di dashboard localhost:9100
+cek untuk matric localhost:9100/metrics
 
 ## Monitoring node exporter with prometheus
 
@@ -77,7 +77,7 @@ cek status port prometheus (9090)
 netstat -plnt
 ```
 
-lihat di dashboard http://localhost:9090
-lihat targetnya http://localhost:9090/targets
+lihat di dashboard localhost:9090
+lihat targetnya localhost:9090/targets
 
 ## Terima Kasih

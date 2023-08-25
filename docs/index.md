@@ -4,7 +4,8 @@ layout: home
 
 hero:
   name: "Five Byte"
-  text: "Cheat sheet by hardiyanto"
+  text: "Cheat sheet"
+  tagline: "Eling lan Waspodo"
   actions:
     - theme: brand
       text: Docker

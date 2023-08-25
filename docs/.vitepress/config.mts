@@ -71,7 +71,6 @@ export default defineConfig({
         items: [
           { text: 'Node Exporter', link: '/monitoring/nodeExporter' },
           { text: 'Prometheus', link: '/monitoring/prometheus' },
-          { text: 'Open Search', link: '/monitoring/openSearch' },
         ]
       },
       {
@@ -110,7 +109,7 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'github', link: 'https://github.com/dwiHard' }
     ]
   }
 })

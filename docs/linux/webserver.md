@@ -348,7 +348,25 @@ sudo apt update
 ```sh
 sudo apt install composer
 ```
+Composer on docker
 
+```sh
+docker pull composer:<tags>
+```
+Cara Penggunaan
+
+```sh
+docker run --rm --interactive --tty \
+  --volume $PWD:/app \
+  composer <command>
+```
+
+Dicontoh ini saya akan menggunakan composer untuk install laravel
+```sh
+docker run --rm --interactive --tty \
+  --volume $PWD:/app \
+  composer:<tags> create-project laravel/laravel <nama-project>
+```
 ## Install MariaDB 10.4
 
 Default MariaDB 10.1

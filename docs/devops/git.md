@@ -228,6 +228,19 @@ git checkout NAMA_BRANCH
 git merge nama_file
 ```
 
+## Git add remote
+
+```sh
+git remote add origin <url_github>
+```
+
+## Git check remote
+
+```sh
+git remote -v
+```
+
+
 ## Kumpulan link github
 
 Linux :

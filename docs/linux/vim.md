@@ -43,25 +43,33 @@
 7. ```:%s/kata-lama/kata-baru/gc``` - Ganti semua format lama dengan format baru di seluruh file dengan konfirmasi.
 
 ## Komentar di VIM
+
 1. Arahkan kursor ke baris yang akan dikomentari.
 2. Tekan ``esc`` lalu ketikan ``v``memulai mode visual block.
 3. Tekan ``j`` untuk memilih baris yang akan dikomentari.
 4. Jika sudah, tekan ```:``` lalu ketikan ``norm I#``.
 
 ## Hapus Komentar di VIM
+
 1. Arahkan kursor ke baris yang akan dihapus komentarnya.
 2. Tekan ``esc`` lalu ketikan ``v``memulai mode visual block.
 3. Tekan ``j`` untuk memilih baris yang akan dihapus komentarnya.
 4. Jika sudah, tekan ```:``` lalu ketikan ``norm x``.
 
 ## Open Link URL di VIM
+
 1. Arahkan kursor ke link yang akan dibuka.
 2. Tekan ``esc`` lalu ketikan ``gx``.
 
 ## Ubah Huruf di VIM
+
 1. ``cw`` - Ubah kata dari kursor sampai akhir kata.
 2. ``caw`` - Ubah kata termasuk spasi.
 3. ``ciw`` - Ubah kata tanpa spasi.
+
+## Buat File dan Folder di VIM
+1. ``%`` - Membuat file baru.
+2. ``d`` - Membuat folder baru.
 
 
 ## Terima Kasih

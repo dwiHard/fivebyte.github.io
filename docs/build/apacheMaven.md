@@ -20,4 +20,20 @@ mvn clean package assembly:single
 https://search.maven.org/<br>
 https://mvnrepository.com/
 
+## Maven pada docker
+
+```sh
+docker pull maven:3.9.4-eclipse-temurin-8-alpine
+```
+
+## Reusing the Maven local repository
+
+```sh
+docker volume create --name maven-repo
+```
+
+```sh
+docker run -it -v maven-repo:/root/.m2 maven:3.9.4-eclipse-temurin-8-alpine mvn archetype:generate
+```
+
 ## Terima Kasih

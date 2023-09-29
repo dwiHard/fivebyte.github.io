@@ -347,7 +347,72 @@ jika ingin mengembalikan software yang diintall di snap menggunakan apt :
 ```sh
 sudo apt-get install gnome-calculator gnome-characters gnome-logs gnome-system-monitor
 ```
-
+## Remove snap dari ubuntu 22.04
+jika ingin melihat list package yang diinstall di snap
+```sh
+snap list
+```
+menghentikan snap daemon
+```sh
+sudo systemctl disable snapd.service
+```
+```sh
+sudo systemctl disable snapd.socket
+```
+```sh
+sudo systemctl disable snapd.seeded.service
+```
+menghapus package list yang ada di snap
+```sh
+sudo snap remove firefox
+```
+```sh
+sudo snap remove snap-store
+```
+```sh
+sudo snap remove gtk-common-themes
+```
+```sh
+sudo snap remove gnome-3-38-2004
+```
+```sh
+sudo snap remove core18
+```
+```sh
+sudo snap remove snapd-desktop-integration
+```
+purge snap
+```sh
+sudo apt autoremove --purge snapd
+```
+remove cache and folder snap
+```sh
+rm -rf ~/snap
+```
+```sh
+sudo rm -rf /var/cache/snapd/
+```
+opsional jika mau reinstall firefox
+buat file di lokasi path
+```sh
+sudo vim /etc/apt/preferences.d/firefox-no-snap
+```
+tambahkan script dibawah ini
+```sh
+Package: firefox*
+Pin: release o=Ubuntu*
+Pin-Priority: -1
+```
+Tambahkkan ppa dan lakukan installasi firefox
+```sh
+sudo add-apt-repository ppa:mozillateam/ppa
+```
+```sh
+sudo apt update
+```
+```sh
+sudo apt install firefox
+```
 ## Set Default Nautilus
 
 ```sh

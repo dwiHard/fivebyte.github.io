@@ -9,6 +9,7 @@
 - <a href="https://www.tutorialspoint.com/index.htm/">Tutorial Sploit</a> - Belajar Bahasa Pemograman
 - <a href="https://www.geeksforgeeks.org/">GeeksforGeeks</a>  - Belajar bahasa pemograman
 - <a href="https://cssgenerator.org/">CSS Generator</a> - Tutorial generator CSS
+- <a href="https://css-loaders.com/">CSS Loaders</a> - Tutorial generator CSS
 
 
 

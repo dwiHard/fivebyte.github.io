@@ -927,19 +927,44 @@ source ~/.profile
 
 ## Virtualenv
 
-Install :
+Cara membuat virtualenv
 
 ```sh
-python3 -m virtualenv venv
+python3 -m venv venv
 ```
 
-Mengaktifkan :
+Mengaktifkan virtualenv menggunakan bash:
 
 ```sh
 source venv/bin/activate
 ```
 
+Mengaktifkan virtualenv menggunakan fish: 
+
+
+```sh
+source venv/bin/activate.fish
+```
+
+## Memasukkan version library di file requirements
+
+
+```sh
+source venv/bin/activate
+```
+
+
+```sh
+pip install Flask
+```
+
+
+```sh
+pip freeze > requirements.txt
+```
+
 Untuk Menon-aktifkan :
+
 
 ```sh
 deactivate

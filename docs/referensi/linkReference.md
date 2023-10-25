@@ -196,7 +196,8 @@ Untuk Kebutuhan editan
 - <a href="https://www.figma.com/">Figma</a>  - Edit foto Basis Vektor
 - <a href="https://www.animaker.com/">Animaker</a>  - Edit Video dan presentasi
 - <a href="https://draw.io/">Draw.io</a>  - Edit flowchart
-- <a href="https://openstickers.craftwork.design/">Open stikers</a>  - Koleksi Stiker Free 
+- <a href="https://openstickers.craftwork.design/">Open stikers</a>  - Koleksi Stiker gratis
+- <a href="https://blendicons.com/">Blendicons</a> - Koleksi icons gratis
 
 Gradient
 - <a href="https://gradienta.io/">Gradienta</a>  

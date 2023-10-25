@@ -166,6 +166,7 @@ Mencari package
 
 ## Warna Inspirasi
 - <a href="https://www.0to255.com/">Oto255</a>  - Color Picker Tool
+- <a href="https://uicolors.app/create">UI Color</a> - UI Color
 
 ## Hidden Website
 
@@ -244,6 +245,7 @@ Website Tool online
 - <a href="https://omatsuri.app/">Omatsuri</a>  - Tool generator
 - <a href="https://123apps.com/">123apps</a>  - Tool generator
 - <a href="https://www.checksub.com/">Check sub</a>  - Automatic subtitle generator
+- <a href="https://www.waveform.com/tools/bufferbloat">Wafe Form</a> - SpeedTest menggunakan bufferbloat
 
 Color palette
 - <a href="https://color.adobe.com/create/color-contrast-analyzer/">Adobe</a>  -Color palette

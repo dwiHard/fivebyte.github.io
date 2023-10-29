@@ -1,6 +1,10 @@
+---
+outline: deep
+---
+
 ## Install Docker
 
-## Install Docker di ubuntu 18.04
+### Install Docker di ubuntu 18.04
 
 ```sh
 sudo apt update 
@@ -30,7 +34,7 @@ sudo apt install docker-ce
 sudo usermod -aG docker $USER
 ```
 
-## Install Docker di kali linux 2020.2
+### Install Docker di kali linux 2020.2
 
 ```sh
 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
@@ -52,244 +56,323 @@ sudo apt-get install docker-ce
 sudo usermod -aG docker $USER
 ```
 
-## Basic Command dan Docker Container
-## Melihat versi docker
+## Docker Basic
+### Melihat versi docker
 
 ```sh
 docker version
 ```
 
-## Melihat docker image
+### Menampilan informasi tentang docker
+
 
 ```sh
+docker info
+```
+
+### Melihat docker image
+
+::: code-group
+
+```sh [command 1]
 docker image ls
 ```
 
-## Download docker image
 
-```sh
-docker image pull <nama image>:<tag>
+```sh [command 2]
+docker images
+
+```
+:::
+
+### Melihat history image
+
+::: code-group
+```sh [command]
+docker history <nama image/tag>
 ```
 
-## Menghapus docker image
+```sh [contoh]
+docker history alpine:3.18.4
+```
+:::
 
-```sh
-docker image rm <nama image>:<tag>
+### Download docker image di Docker Hub
+
+::: code-group
+
+```sh [command]
+docker pull <nama image>:<tag>
 ```
 
-## Melihat semua container
 
-```sh
+```sh [contoh]
+docker pull alpine:3.18.4
+```
+:::
+
+### Melihat daftar container berjalan
+
+::: code-group
+
+```sh [command 1]
+docker ps
+```
+
+
+```sh [command 2]
+docker container ls
+```
+:::
+
+### Melihat semua daftar container (Termasuk yang berhenti)
+
+::: code-group
+
+```sh [command 1]
+docker ps -a
+```
+
+```sh [command 2]
 docker container ls -a
 ```
+:::
 
-## Membuat container
 
-nama_container adalah nama yang akan digunakan untuk container
-namaimage:tag adalah nama image yang akan digunakan untuk container
+### Membuat dan menjalankan container baru dari image 
 
-```sh
-docker container create --name nama_container namaimage:tag
+::: code-group
+```sh [command]
+docker run <options> --name <nama container> <nama image:tag>
 ```
 
-example:
+```sh [contoh 1]
+docker run -it --name myServer alpine:3.18.4
+```
+```sh [contoh 2]
+docker run -d --name myNginx -p 80:80 nginx:alpine3.18-slim
+```
+:::
 
-```sh
-docker container create --name contohredis redis:latest
+## Docker Container Lifecycle
+
+### Menjalankan container
+
+::: code-group
+```sh [command]
+docker start <nama container/container id>
 ```
 
-or
+```sh [contoh]
+docker start myNginx
+```
+:::
 
-```sh
-docker run -d --name nama_container namaimage:tag
+### Menghentikan container
+
+::: code-group
+```sh [command]
+docker stop <nama container/container id>
 ```
 
-## Menjalankan container
+```sh [contoh]
+docker stop myNginx
+```
+:::
 
-```sh
-docker container start nama_container/container_id
+### Menghentikan container (Gracefully)
+
+::: code-group
+```sh [command]
+docker stop <nama container/ container id>
 ```
 
-## Menghentikan container
+```sh [contoh]
+docker stop myNginx
+```
+:::
 
-```sh
-docker container stop nama_container/container_id
+### Menghentikan container dengan paksa (Forcefully)
+
+::: code-group
+```sh [command]
+docker kill <nama container/container id>
 ```
 
-## Menghapus container
+```sh [contoh]
+docker kill myNginx
+```
+:::
 
-```sh
-docker container rm nama_container/container_id
+### Restart container
+
+::: code-group
+```sh [command]
+docker restart <nama container/ container id>
 ```
 
-## Menghapus paksa container
+```sh [contoh]
+docker restart myNginx
+```
+:::
 
-```sh
-docker container rm -f nama_container/container_id
+### Menghapus container
+
+::: code-group
+```sh [command]
+docker rm <nama container/container id>
 ```
 
-## Stop container melalui SIGTERM
+```sh [contoh]
+docker rm myNginx
+```
+:::
 
-```sh
-docker container stop nama_container/container_id
+## Docker Configurasi
+### Melakukan port forwarding
+
+::: code-group
+```sh [command]
+docker run -d --name <nama container> --publish <port host>:<port container> <image>:<tag>
 ```
 
-## Stop container melalui SIGKILL
+```sh [contoh]
+docker run -d --name myNginx --publish 80:80 nginx:alpine3.18-slim
+```
+:::
 
+#### Melihat port: yang digunakan oleh container
+
+::: code-group
 ```sh
-docker container kill nama_container/container_id
+docker port <nama container/container id>
 ```
 
-## Melihat log container
+```sh [contoh]
+docker port myNginx
+```
+:::
 
-```sh
-docker container logs nama_container/container_id
+### Melihat detail config container
+
+::: code-group
+```sh [command]
+docker inspect <nama container/container id>
 ```
 
-jika ingin melihat secara realtime
+```sh [contoh]
+docker inspect myNginx
+```
+:::
 
-```sh
-docker container logs -f nama_container/container_id
+### Melihat IP address container
+
+::: code-group
+```sh [command]
+docker inspect --format '{{ .NetworkSettings.IPAddress }}' <nama container/container id>
 ```
 
-## Melihat history image
+```sh [contoh]
+docker inspect --format '{{ .NetworkSettings.IPAddress }}' myNginx
+```
+:::
 
-```sh
-docker history nama_image/tag
+### Melihat process yang berjalan di dalam container
+
+::: code-group
+```sh [command]
+docker top <nama container/container id>
 ```
 
-## Masuk ke dalam container
+```sh [contoh]
+docker top myNginx
+```
+:::
 
-```sh
-docker container exec -it nama_container/container_id /bin/bash
+### Container resource limit
+
+::: code-group
+```sh [command]
+docker run -d --name <nama_container> --memory 512m --cpus 0.5 <image>:<tag>
 ```
 
-## Melakukan port forwarding
+```sh [contoh]
+docker run -d --name myNginx --memory 512m --cpus 0.5 nginx:mainline.alpine3.18-slim
+```
+:::
 
-```sh
-docker container create --name contohredis --publish porthost:portcontainer image:tag
+### Menambahkan enviroment variable
+
+::: code-group
+```sh [command]
+docker run -d --name <nama_container> --env <image>:<tag>
 ```
 
-example:
-
-```sh
-docker container create --name contohnginx --publish 8080:80 nginx:latest
+```sh [contoh]
+docker run -d --name myMongo --publish 27017:27017 --env MONGO_INITDB_ROOT_USERNAME=username --env MONGO_INITDB_ROOT_PASSWORD=password mongo:latest
 ```
-
-## Melihat port yang digunakan oleh container
-
-```sh
-docker container port nama_container/container_id
-```
-
-## Melihat IP address container
-
-```sh
-docker container inspect --format '{{ .NetworkSettings.IPAddress }}' nama_container/container_id
-```
-
-## Melihat container performa semua container
-
-```sh
-docker container stats
-```
-
-## Melihat detail config container
-
-```sh
-docker container inspect nama_container/container_id
-```
-
-## Melihat process yang berjalan di dalam container
-
-```sh
-docker container top nama_container/container_id
-```
-
-## Container resource limit
-
-```sh
-docker container create --name nama_container --publish porthost:portcontainer --memory 512m --cpus 0.5 image:tag
-```
-
-example:
-
-```sh
-docker container create --name smallnginx --publish 8080:80 --memory 100m --cpus 0.5 nginx:latest
-```
-
-## Menambahkan enviroment variable
-
-```sh
-docker container create --name nama_container --publish porthost:portcontainer --env image:tag
-```
-
-example:
-
-```sh
-docker container create --name contohmongo --publish 27017:27017 --env MONGO_INITDB_ROOT_USERNAME=username --env MONGO_INITDB_ROOT_PASSWORD=password mongo:latest
-```
-
-## Melakukan mounting bind
-
-```sh
-docker container create --name nama_container --mount "type=bind,source=hostpath,target=containerpath" image:tag
-```
-
-example:
-
-```sh
-docker container create --name contohmongo --publish 27017:27017 --mount "type=bind,source=/home/hard/Documents/docker/mongodata,destination=/data/db" --env MONGO_INITDB_ROOT_USERNAME=username --env MONGO_INITDB_ROOT_PASSWORD=password mongo:latest
-```
+:::
 
 ## Docker Volume
-## Melihat volume
+### Melihat daftar volume
 
 ```sh
 docker volume ls
 ```
 
-## Membuat volume
+### Membuat volume
 
 ```sh
 docker volume create <nama volume>
 ```
 
-## Menghapus volume
+### Menghapus volume
 
 ```sh
 docker volume rm <nama volume>
 ```
 
-## Menghubungkan volume ke container
+### Menghubungkan volume ke container
 
-```sh
-docker container create --name nama_container --mount "type=volume,source=nama_volume,target=containerpath" image:tag
-```
-
-example:
+membuat volume baru
 
 ```sh
 docker volume create mongodata
 ```
 
-```sh
-docker container create --name contohmongo --publish 27017:27017 --mount "type=volume,source=mongodata,destination=/data/db" --env MONGO_INITDB_ROOT_USERNAME=username --env MONGO_INITDB_ROOT_PASSWORD=password mongo:latest
+::: code-group
+```sh [command]
+docker run -d --name <nama_container> --mount "type=volume,source=nama_volume,target=containerpath" <image>:<tag>
 ```
 
-example satu baris execute:
-
-```sh
-docker container run -d --name nginx -p 80:80 -v $(pwd)/html:/usr/share/nginx/html nginx:latest
+```sh [contoh 1] 
+docker run -d --name myMongo --publish 27017:27017 --mount "type=volume,source=mongodata,destination=/data/db" --env MONGO_INITDB_ROOT_USERNAME=username --env MONGO_INITDB_ROOT_PASSWORD=password mongo:latest
 ```
 
-## Backup volume
+```sh [contoh 2]
+docker run -d --name myNginx -p 80:80 -v $(pwd)/html:/usr/share/nginx/html nginx:latest
+```
+:::
 
-```sh
-docker container create --name nama_container --mount "type=bind,source=pathhost,destination=pathhostbackup" --mount "type=volume,source=name_volume,destination=path_volume" image:tag
+### Melakukan mounting bind
+
+::: code-group
+```sh [command]
+docker run -d --name <nama_container> --mount "type=bind,source=hostpath,target=containerpath" <image>:<tag>
 ```
 
-example:
+```sh [contoh]
+docker run -d --name myMongo --publish 27017:27017 --mount "type=bind,source=/home/hard/Documents/docker/mongodata,destination=/data/db" --env MONGO_INITDB_ROOT_USERNAME=username --env MONGO_INITDB_ROOT_PASSWORD=password mongo:latest
+```
+:::
+
+### Backup volume
+
+```sh
+docker run -d --name <nama_container> --mount "type=bind,source=pathhost,destination=pathhostbackup" --mount "type=volume,source=name_volume,destination=path_volume" <image>:<tag>
+```
+
+langkah-langkah pencadangan volume:
 buat volume dengan nama volumemongo
 
 ```sh
@@ -299,7 +382,7 @@ docker volume create volumemongo
 buat container imgae nginx dengan nama nginxbackup
 
 ```sh
-docker container create --name nginxbackup --mount "type=bind,source=/home/hard/docker/backupmongo,destination=/backup" --mount "type=volume,source=mongodata,destination=/data" nginx:latest
+docker run -d --name nginxbackup --mount "type=bind,source=/home/hard/docker/backupmongo,destination=/backup" --mount "type=volume,source=mongodata,destination=/data" nginx:latest
 ```
 
 jalankan container
@@ -323,10 +406,10 @@ tar cvf  /backup/backup.tar.gz /data
 example satu baris execute:
 
 ```sh
-docker container run --rm --name ubuntu --mount "type=bind,source=/home/hard/docker/backupmongo,destination=/backup" --mount "type=volume,source=mongodata,destination=/data" ubuntu:latest tar cvf /backup/backup2.tar.gz /data
+docker run --rm --name ubuntu --mount "type=bind,source=/home/hard/docker/backupmongo,destination=/backup" --mount "type=volume,source=mongodata,destination=/data" ubuntu:latest tar cvf /backup/backup2.tar.gz /data
 ```
 
-## Restore volume
+### Restore volume
 
 ```sh
 docker container run --rm --name ubunturestore --mount "type=bind,source=pathhost,destination=pathhostbackup" --mount "type=volume,source=name_volume,destination=path_volume" ubuntu:latest bash -c "cd /data && tar xvf /backup/backup.tar.gz --strip 1"
@@ -343,65 +426,70 @@ docker container run --rm --name ubunturestore --mount "type=bind,source=/home/h
 ```
 
 ## Docker Network
-## Melihat network
+### Melihat network
 
 ```sh
 docker network ls
 ```
 
-## Membuat network
+### Membuat network
 
 ```sh
 docker network create --driver <driver> <nama network>
 ```
 
-## Menghapus network
+### Menghapus network
 
 ```sh
 docker network rm <nama network>
 ```
 
-## Menghubungkan container ke network
+### Menghubungkan container ke network
 
-```sh
-docker container create --name <nama_container> --network <nama network> image:tag
-```
-
-example:
-
+membuat network baru
 ```sh
 docker network create --driver bridge mongonetwork
 ```
 
-```sh
-docker container create --name mongodb --network mongonetwork --env MONGO_INITDB_ROOT_USERNAME=username --env MONGO_INITDB_ROOT_PASSWORD=password mongo:4.4.18
+::: code-group
+```sh [command]
+docker run -d --name <nama_container> --network <nama network> image:tag
 ```
 
-mongodb adalah nama hostnya
-
-```sh
-docker container create --name mongoexpress --publish 8081:8081 --network mongonetwork --env ME_CONFIG_MONGODB_URL="mongodb://username:password@mongodb:27017" mongo-express:latest
+```sh [membuat mongodb]
+docker run -d --name mongodb --network mongonetwork --env MONGO_INITDB_ROOT_USERNAME=username --env MONGO_INITDB_ROOT_PASSWORD=password mongo:4.4.18
 ```
 
-## Menghapus container network
+```sh [menghubungkan mongodb dengan mongoexpress]
+docker run -d --name mongoexpress --publish 8081:8081 --network mongonetwork --env ME_CONFIG_MONGODB_URL="mongodb://username:password@mongodb:27017" mongo-express:latest
+```
+:::
 
-```sh
+### Menghapus container network
+
+::: code-group
+```sh [command]
 docker network disconnect <nama_network> <nama_container>
 ```
 
-example:
-
-```sh
-docker network disconnect mongonetwork mongodb
+```sh [contoh]
+docker network disconnect mongonetwork myMongo
 ```
+:::
 
 untuk menghubungkan kembali:
 
-```sh
-docker network connect mongonetwork mongodb
+::: code-group
+```sh [command]
+docker network connect <nama_network> <nama_container>
 ```
 
-## Inspect
+```sh [contoh]
+docker network connect mongonetwork myMongo
+```
+:::
+
+### Inspect
 
 untuk melihat detail dari image, container, volume, dan network
 
@@ -421,7 +509,58 @@ docker volume inspect <nama_volume>
 docker network inspect <nama_network>
 ```
 
-## Perintah Prune
+## Logs dan Debugging
+### Melihat log container
+
+::: code-group
+```sh [command]
+docker logs <nama container/container id>
+```
+
+```sh [contoh]
+docker logs myNginx
+```
+:::
+
+jika ingin melihat secara realtime
+
+::: code-group
+```sh [command]
+docker logs -f nama_container/container_id
+```
+
+```sh [contoh]
+docker logs -f myNginx
+```
+:::
+
+### Melihat realtime penggunaan resource
+
+:::code-group
+```sh [command]
+docker stats <nama container/container id>
+```
+
+```sh [contoh]
+docker stats myNginx
+```
+:::
+
+### Masuk ke dalam container yg berjalan (interactive shell)
+
+:::code-group
+```sh [command]
+docker exec -it <nama container/container id> bash or sh or etc
+```
+
+```sh [contoh]
+docker exec -it myNginx sh
+```
+:::
+
+
+## Docker Cleanup 
+### Perintah Prune
 
 menghapus semua container yang tidak digunakan
 
@@ -467,40 +606,42 @@ cat ~/.docker/config.json
 
 menambahkan tag
 
-```sh
+::: code-group
+```sh [command]
 docker image tag <nama_image> <username_dockerhub>/<nama_image>:<tag>
 ```
 
-example:
-
-```sh
+```sh [contoh]
 docker image tag nginx hardhard/nginx
 ```
+:::
 
-```sh
+push image ke docker hub
+
+::: code-group
+```sh [command]
 docker image push <username_dockerhub>/<nama_image>:<tag>
 ```
 
-example:
-
-```sh
+```sh [contoh]
 docker image push hardhard/nginx
 ```
+:::
 
 menambahkan tag baru
 
-```sh
+:::code-group
+```sh [command]
 docker image tag <username_dockerhub>/<nama_image_lama>:<tag_lama> <username_dockerhub>/<nama_image_baru>:<tag_baru>
 ```
 
-example:
-
-```sh
+```sh [contoh]
 docker image tag hardhard/nginx:latest hardhard/nginx:testing
 ```
+:::
 
 ## Docker Swarm
-## Inisialisasi Docker Swarm
+### Inisialisasi Docker Swarm
 
 ```sh
 docker swarm init
@@ -521,34 +662,35 @@ docker swarm init --advertise-addr <ip_address>
 ## Docker Dockerfile
 
 ## Docker Service
-## Membuat Service
-```sh
+### Membuat Service
+
+::: code-group
+```sh [command]
 docker service create --name <nama_service> --replicas <jumlah_replicas> --publish <port_host>:<port_container> <nama_image>:<tag>
 ```
 
-example:
-
-```sh
+```sh [contoh]
 docker service create alpine ping 8.8.8.8
 ```
+:::
 
-## Melihat list service
+### Melihat list service
 
 ```sh
 docker service ls
 ```
 
-## Melakukan update service (scale up/down)
+### Melakukan update service (scale up/down)
 
-```sh
+::: code-group
+```sh [command]
 docker service update <id_container> --replicas <jumlah_replicas>
 ```
 
-example:
-
-```sh
+```sh [contoh]
 docker service update nginx --replicas 5
 ```
+:::
 
 ## Docker build
 
@@ -564,15 +706,15 @@ docker build -t <nama_image> <path_dockerfile> --progress=plain
 
 tanpa cache
 
-```sh
+::: code-group
+```sh [command]
 docker build -t <nama_image> <path_dockerfile> --no-cache
 ```
 
-example:
-
-```sh
-docker build -t hard:latest /home/hard/docker/dockerfile
+```sh [contoh]
+docker build -t hard:latest /home/hard/docker/dockerfile --no-cache
 ```
+:::
 
 ## Contoh Dockerfile
 
@@ -591,21 +733,7 @@ ADD adalah perintah untuk memasukan file ke dalam image
 RUN adalah perintah untuk menjalankan perintah di dalam image
 CMD adalah perintah untuk menjalankan perintah di dalam container
 
-## Configurasi Docker
-
-## Otomatis start
-
-```sh
-sudo systemctl enable docker
-```
-
-## Memeriksa status docker
-
-```sh
- sudo systemctl status docker
-```
-
-## Image docker untuk mirror Android
+### Image docker: untuk mirror Android
 
 Untuk lebih lengkapnya bisa cek disini :<br>
 https://hub.docker.com/r/pierlo1/scrcpy<br>
@@ -620,7 +748,7 @@ docker run --rm -i -t --privileged \
     pierlo1/scrcpy:amd
 ```
 
-## Image docker web server
+### Image docker: web server
 
 ```sh
 sudo docker run -dit --name hard-web  -p 8080:80 -v /home/user/website/:/usr/local/apache2/htdocs/ httpd:2.4

@@ -79,8 +79,14 @@ mvn verify
 ```
 
 ## Running Spesific java class
+
+
 ```sh
 mvn exec:java -D"exec.mainClass"="com.example.Main"
+```
+
+```sh
+mvn compile exec:java -D"exec.mainClass"="id.solusi247.App" -Dexec.cleanupDaemonThreads=false
 ```
 
 ## Terima Kasih

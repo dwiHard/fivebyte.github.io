@@ -72,4 +72,23 @@
 2. ``d`` - Membuat folder baru.
 
 
+## Config default editor
+
+Mengubah default test editor
+
+
+```sh
+sudo update-alternatives --config editor
+```
+
+Menambahkan path lainnya
+```sh
+sudo update-alternatives --install /usr/bin/editor editor /usr/bin/nvim 100
+```
+
+Menghapus path config 
+```sh
+sudo update-alternatives --remove editor /usr/bin/nvim
+```
+
 ## Terima Kasih

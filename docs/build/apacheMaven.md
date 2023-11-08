@@ -86,7 +86,12 @@ mvn exec:java -D"exec.mainClass"="com.example.Main"
 ```
 
 ```sh
-mvn compile exec:java -D"exec.mainClass"="id.solusi247.App" -Dexec.cleanupDaemonThreads=false
+mvn compile exec:java -D"exec.mainClass"="com.example.App" -Dexec.cleanupDaemonThreads=false
+```
+
+running with file args
+```sh
+mvn compile exec:java -D"exec.mainClass"="com.example.App" -Dexec.cleanupDaemonThreads=false -Dexec.args="src/main/resources/config.properties"
 ```
 
 ## Terima Kasih

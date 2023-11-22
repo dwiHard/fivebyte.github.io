@@ -2,33 +2,29 @@
 outline: deep
 ---
 
-## Install Docker
+## Docker Cheat Sheet for Beginners and Advanced Users
 
 ### Install Docker di ubuntu 18.04
 
-```sh
+::: code-group
+```sh[manual]
 sudo apt update 
-```
 
-```sh
 sudo apt-get install  curl apt-transport-https ca-certificates software-properties-common 
-```
 
-```sh
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-```
 
-```sh
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" 
-```
 
-```sh
 sudo apt update
-```
 
-```sh
 sudo apt install docker-ce 
 ```
+
+```sh[automatic]
+curl -sSL https://get.docker.com/ | sh
+```
+:::
 
 ```sh
 sudo usermod -aG docker $USER

@@ -97,6 +97,15 @@ export default defineConfig({
           { text: 'Laravel', link: '/developer/laravel' },
           { text: 'Node Js', link: '/developer/nodejs' },
           { text: 'Python', link: '/developer/python' },
+          { 
+            text: 'Java', 
+            base: '/developer/java/',
+            items: [
+              { text: 'Stream Filter', link: '/streamFilter'},
+              { text: 'Stream collect', link: '/streamCollect' },
+              { text: 'ForEach', link: '/forEach'},
+            ]
+          }
         ]
       },
       {

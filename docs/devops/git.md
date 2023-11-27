@@ -1,4 +1,9 @@
-## Menambahkan identitas di github
+---
+outline: deep
+---
+
+## Setup
+### Menambahkan identitas di github
 
 Menambahkan nama
 
@@ -12,7 +17,7 @@ Menambahkan email
 git config --global user.email EMAIL@example.com
 ```
 
-## Menambahkan Text editor
+### Menambahkan Text editor
 
 ini tidak harus dilakukan
 
@@ -34,7 +39,7 @@ git config --global diff.tool "default-difftool"
 git config --global difftool.default-difftool.cmd "code --wait --diff \$LOCAL \$REMOTE"
 ```
 
-## Check list config
+### Check list config
 
 ```sh
 git config --list
@@ -44,91 +49,68 @@ git config --list
 git config --list --show-origin
 ```
 
-## Clone dari repository
+## Srart project
+### Membuat local repo
 
 ```sh
-git clone URL
+git init <nama_directory>
 ```
 
-## Git Connect SSH
-
-buat ssh-keygen
+### Clone dari repository
 
 ```sh
-ssh-keygen -t ed25519
+git clone <URL>
 ```
 
-Edit di ```~/.ssh/config```
-
-```bash
-Host gitlab.com
-  PreferredAuthentications publickey
-  IdentityFile ~/.ssh/id_ed25519
-```
-
-cek status ssh
-
-```sh
-ssh -T git@gitlab.com
-```
-
-## Alternatif Connect
-
-1. Goto https://gitlab.com/profile/personal_access_tokens
-2. Create new token and mark check to all.
-3. Copy your token
-4. Now go to your Terminal and paste it like this.
-5. git clone https://oauth2:YOUR_TOKEN@gitlab.com/PROFILE_NAME/REPO_NAME.git/
-
-## Menambahkan Repository
-
-```sh
-git init
-```
-
-## Melihat status repository
+## Perintah dasar git
+### Melihat status repository
 
 ```sh
 git status
 ```
 
-## Menambahkan file ke repository
+### Menambahkan file ke repository
 
+menambahkan file ke stage
 ```sh
-git add nama_file
+git add <nama_file>
+```
+stage semua file
+```sh
+git add -A
 ```
 
-## Menambahkan komentar
+### Menambahkan komentar
 
 ```sh
 git commit -m "komentar"
 ```
 
-## Melihat Perubahan di file
+### Melihat Perubahan di file
 
 ```sh
 git diff
 ```
 
-## Membatalkan perubahan
+### Membatalkan perubahan
 
 ```sh
 git clean -f
 ```
 
-## Membatalkan perubahan file/penghapusan file
+### Membatalkan perubahan file/penghapusan file
 
 ```sh
 git restore namaFile
 ```
 
-## Membatalkan perubahan Staging index
+### Membatalkan perubahan Staging index
 
 ```sh
 git restore --staged namaFile
 ```
 
-## Commit Log History
+### Commit Log History
 
 melihat commit log
 
@@ -166,7 +148,7 @@ Melihat Detail commit dengan kode hash
 git show hashnya
 ```
 
-## Compare Commit
+### Compare Commit
 
 ```sh
 git diff hash1 hash2
@@ -178,7 +160,7 @@ untuk melihat diVSCode
 git difftool hash1 hash2
 ```
 
-## Git Reset commit
+### Git Reset commit
 
 untuk mode ada soft, mixed dan hard
 
@@ -192,49 +174,65 @@ example
 git reset --soft hash
 ```
 
-## Membuat cabang baru 
+### Membuat cabang baru 
 
 ```sh
 git branch NAMA_BRANCH
 ```
 
-## Memindahkan cabang
+### Memindahkan cabang
 
 ```sh
 git switch -c master
 ```
 
-## Push file ke repository
-
-```sh
-git push origin master
-```
-
-## Cek daftar cabang baru atau branch 
+### Cek daftar cabang baru atau branch 
 
 ```sh
 git branch
 ```
 
-## Pindah cabang
+### Pindah cabang
 
 ```sh
 git checkout NAMA_BRANCH
 ```
 
-## Menggabungkan cabang 
+### Menggabungkan cabang 
 
 ```sh
 git merge nama_file
 ```
 
-## Git add remote
+## Git Remote
+### Push file ke repository
+
+```sh
+git push origin main
+```
+### Github Connect SSH
+
+buat ssh-keygen baru
+
+```sh
+ssh-keygen -t ed25519 -C "your_email@example.com"
+```
+
+menambahkan ssh key ke ssh-agent
+```sh
+eval "$(ssh-agent -s)"
+```
+
+Jika sudah lalu tambahkan public key di github untuk lebih lengkapnya bisa cek di link berikut
+https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account
+
+### Git add remote
 
 ```sh
 git remote add origin <url_github>
 ```
 
-## Git check remote
+### Git check remote
 
 ```sh
 git remote -v
@@ -285,7 +283,3 @@ Android :
 
 Machine learning  :
 - <a href="https://github.com/doccano/doccano">Doccano</a> - Open Source Text Annotation Tool for Humans
-
-
-
-## Terima Kasih

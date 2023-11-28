@@ -95,8 +95,10 @@ outline: deep
 - <a href="https://polyhaven.com/all/">Polyhaven</a>  - Assets Untuk Blender
 - <a href="https://www.textures.com/library/">Textures</a>  - Assets Untuk Blender
 
-### UI/UX
+### UI/UX atau web inspirasi
 
+- <a href="https://www.uiguideline.com/components">Ui Guide Line</a> - Website Handbook
+- <a href="https://godly.website/">Godly</a> - Website inspirasi
 - <a href="https://uigarage.net/">Ui Garde</a>  - UI/UX
 - <a href="https://www.uistore.design/">Ui Store</a>  - UI/UX
 - <a href="https://www.dwinawan.com/learn/">Dwinawan</a>  - UI/UX
@@ -271,9 +273,6 @@ outline: deep
 - <a href="https://infinityfree.net/">infinity free</a> 
 
 ### Website belajar hacking
-- <a href="http://index-of.es/">Index of</a> index of
-- <a href="http://dtors.net/Hacking/">Dtors</a> dtors
-- <a href="https://doc.lagout.org/security/">Lagout</a> logout
 - <a href="https://osintframework.com/">OSINT Framework</a> osint framework
 - <a href="https://www.hacking-tutorial.com/">hacking tutorial</a> hacking tutorial
 - <a href="https://www.hacksplaining.com/">Hack Planning</a> Hack Planning
@@ -281,6 +280,7 @@ outline: deep
 - <a href="https://portswigger.net/web-security/all-labs/">Portswigger</a> portswigger
 - <a href="https://www.hackthebox.eu/">Hack The Box</a> hack the box
 - <a href="http://testphp.vulnweb.com/">Test PHP</a> test php
+- <a href="https://www.invicti.com/learn/">invicti</a> Belar cyber security
 
 ### Website penyedia crack software
 - <a href="https://soft98.ir/">Soft98</a> Untuk mendapatkan free software
@@ -312,5 +312,9 @@ outline: deep
 
 ## IT Solusi
 - <a href="https://www.zerotier.com/">Zerotier</a> - Zerotier
+
+## Testing OS or Container
+- <a href="https://distrosea.com/">Distrosea</a> - Test drive linux
+- <a href="https://killercoda.com/">killercoda</a> - Test drive linux or container
 
 ## Terima Kasih

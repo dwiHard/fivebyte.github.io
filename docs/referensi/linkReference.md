@@ -81,6 +81,9 @@ outline: deep
 - <a href="https://www.sololearn.com/">Solo Learn</a> - Belajar coding
 - <a href="https://www.java67.com/">Java 67</a> - Belajar coding
 - <a href="https://www.tutorialspoint.com/">Tutorials Point</a> - Belajar coding
+- <a href="https://www.vogella.com/tutorials/">Vogella</a> - Belajar coding
+- <a href="https://www.baeldung.com/">Baeldung</a> - Belajar coding
+- <a href="https://javarevisited.blogspot.com/">Java Revisited</a> - Belajar coding
 
 
 ### Android

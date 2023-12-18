@@ -86,7 +86,8 @@ outline: deep
 - <a href="https://javarevisited.blogspot.com/">Java Revisited</a> - Belajar coding
 - <a href="https://tsdocs.dev/">TS Docs</a> - Belajar typescript
 - <a href="https://sqlbolt.com/">SQL Bolt</a> - Belajar SQL
-- <a hred="https://the-algorithms.com/en">The Algoritma</a> - Belajar algoritma
+- <a href="https://the-algorithms.com/en">The Algoritma</a> - Belajar algoritma
+- <a href="https://www.javaguides.net/">Java Guide</a> - belajar coding
 
 
 ### Android

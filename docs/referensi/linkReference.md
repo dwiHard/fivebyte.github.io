@@ -84,6 +84,9 @@ outline: deep
 - <a href="https://www.vogella.com/tutorials/">Vogella</a> - Belajar coding
 - <a href="https://www.baeldung.com/">Baeldung</a> - Belajar coding
 - <a href="https://javarevisited.blogspot.com/">Java Revisited</a> - Belajar coding
+- <a href="https://tsdocs.dev/">TS Docs</a> - Belajar typescript
+- <a href="https://sqlbolt.com/">SQL Bolt</a> - Belajar SQL
+- <a hred="https://the-algorithms.com/en">The Algoritma</a> - Belajar algoritma
 
 
 ### Android
@@ -295,6 +298,7 @@ outline: deep
 ### Website osint
 - <a href="https://osintframework.com/">OSINT Framework</a> - OSINT Framework
 - <a href="https://start.me/p/rx6Qj8/nixintel-s-osint-resource-list">Nixintel</a> - Nixintel
+- <a href="https://hunter.how/">Hunter</a> - Search engine
 
 ### Website AI
 - <a href="https://chat.openai.com/">Open AI</a> - Open AI
@@ -312,6 +316,9 @@ outline: deep
 - <a href="https://soundcloud.com/">Sound Cloud</a> - music tracks
 - <a href="https://spik.ai/">Spik</a>  - Generator realistic sound
 
+### Google Dorks
+- <a href="https://taksec.github.io/google-dorks-bug-bounty/">Taksec</a>
+- <a href="https://www.dorkgpt.com/">DorkGPT</a>
 
 ## IT Solusi
 - <a href="https://www.zerotier.com/">Zerotier</a> - Zerotier

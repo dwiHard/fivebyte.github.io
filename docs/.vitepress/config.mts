@@ -44,7 +44,12 @@ export default defineConfig({
         text: 'Linux',
         collapsed: true,
         items: [
-          { text: 'Basic Linux', link: '/linux/basicLinux' },
+          { text: 'Basic Linux',
+            base: 'linux/basic',
+            items: [
+              { text: 'Systemctl', link: '/systemctl' },
+            ]
+          },
           { text: 'Config Linux', link: '/linux/linux' },
           { text: 'Config Web Server', link: '/linux/webserver' },
           { text: 'Vim', link: '/linux/vim' },

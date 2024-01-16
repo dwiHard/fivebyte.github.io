@@ -13,7 +13,7 @@ outline: deep
 - <a href="https://www.geeksforgeeks.org/">GeeksforGeeks</a>  - Belajar bahasa pemograman
 - <a href="https://cssgenerator.org/">CSS Generator</a> - Tutorial generator CSS
 - <a href="https://css-loaders.com/">CSS Loaders</a> - Tutorial generator CSS
-
+- <a href="https://layout.bradwoods.io/">bradwoods</a> - CSS generator
 
 
 - <a href="https://animate.style/">Animate</a>  - CSS Animasi
@@ -88,6 +88,7 @@ outline: deep
 - <a href="https://sqlbolt.com/">SQL Bolt</a> - Belajar SQL
 - <a href="https://the-algorithms.com/en">The Algoritma</a> - Belajar algoritma
 - <a href="https://www.javaguides.net/">Java Guide</a> - belajar coding
+- <a href="https://wiki.mutable.ai/">Wiki Mutable</a> - Generator Dokumentasi
 
 
 ### Android
@@ -300,6 +301,7 @@ outline: deep
 - <a href="https://osintframework.com/">OSINT Framework</a> - OSINT Framework
 - <a href="https://start.me/p/rx6Qj8/nixintel-s-osint-resource-list">Nixintel</a> - Nixintel
 - <a href="https://hunter.how/">Hunter</a> - Search engine
+- <a href="https://www.lopseg.com.br/osint">Lopseg</a> - pengumpulan data informasi osint
 
 ### Website AI
 - <a href="https://chat.openai.com/">Open AI</a> - Open AI
@@ -327,5 +329,6 @@ outline: deep
 ## Testing OS or Container
 - <a href="https://distrosea.com/">Distrosea</a> - Test drive linux
 - <a href="https://killercoda.com/">killercoda</a> - Test drive linux or container
+- <a href="https://labs.iximiuz.com/playgrounds"/>iximiuz</a> - Tes drive pemograman, linux or container
 
 ## Terima Kasih

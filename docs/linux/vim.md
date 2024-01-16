@@ -71,6 +71,8 @@
 1. ``%`` - Membuat file baru.
 2. ``d`` - Membuat folder baru.
 
+## Hapus semua enter di vim
+```:%s/\n/```
 
 ## Config default editor
 

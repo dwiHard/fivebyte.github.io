@@ -329,6 +329,6 @@ outline: deep
 ## Testing OS or Container
 - <a href="https://distrosea.com/">Distrosea</a> - Test drive linux
 - <a href="https://killercoda.com/">killercoda</a> - Test drive linux or container
-- <a href="https://labs.iximiuz.com/playgrounds"/>iximiuz</a> - Tes drive pemograman, linux or container
+- <a href="https://labs.iximiuz.com/playgrounds">iximiuz</a> - Tes drive pemograman, linux or container
 
 ## Terima Kasih

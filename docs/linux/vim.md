@@ -74,6 +74,12 @@
 ## Hapus semua enter di vim
 ```:%s/\n/```
 
+## Copy file to clipboard
+```cat file.txt | xclip -selection clipboard```
+atau
+
+```cat file.txt | xclip -se c```
+
 ## Config default editor
 
 Mengubah default test editor

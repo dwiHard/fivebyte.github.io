@@ -17,6 +17,24 @@ Menambahkan email
 git config --global user.email EMAIL@example.com
 ```
 
+### Push folder yang udah ready di local ke github
+main adalah nama branchnya
+```sh
+git init --initial-branch=main
+```
+```sh
+git remote add origin <URL>
+```
+```
+git add -A
+```
+```sh
+git commit -m "komentar"
+```
+```sh
+git push -u origin main
+```
+
 ### Menambahkan Text editor
 
 ini tidak harus dilakukan

@@ -71,3 +71,14 @@ untuk melihat logs
 ```sh
 pm2 logs
 ```
+
+## Install bun js
+```sh
+sudo apt update && sudo apt upgrade
+```
+```sh
+curl -fsSL https://bun.sh/install | bash
+```
+```sh
+source ~/.bashrc
+```

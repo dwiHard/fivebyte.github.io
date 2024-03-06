@@ -88,28 +88,40 @@ untuk zookepeer
 
 ## Menerima Data dari Topic
 
-menerima ketika kafka console customer dihidupkan
+melihat data topic kafka dari akhir
 
 ```sh
  ./bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic <nama_topic>
 ```
 
-menerima ketika kafka console customer dari awal
+melihat data topic kafka dari awal
 
 ```sh
 ./bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic <nama_topic> --from-beginning
 ```
 
-biar tidak duplikasi data gunakan command seperti dibawah ini dan pastikan kafkanya partitionnya lebih dari 1
+melihat data topic kafka berdasarkan jumlah yang ditentukan
+
+```sh
+./bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic <nama_topic> --from-beginning --max-messages 10
+```
+
+melihat data topic kakfa berdasarkan group 
 
 ```sh
 ./bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic <nama_topic> --group belajar
 ```
 
-## Menerima Data Ke Topic dengan key
+melihat data topic kafka berdasarkan key
 
 ```sh
-./bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test-topic --from-beginning --property "key.separator=-" --property "print.key=true"
+./bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic <nama_topic> --from-beginning --property "key.separator=-" --property "print.key=true"
+```
+
+melihat data topic kafka berdasarkan partition
+
+```sh
+./bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic <nama_topic> --partition 0
 ```
 
 ## Melihat List Consumer

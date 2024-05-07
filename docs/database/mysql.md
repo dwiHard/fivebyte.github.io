@@ -72,7 +72,7 @@ sudo systemctl enable mysql
 
 ## Configure interfaces
 
-```
+```sh
 bind-address		= 127.0.0.1 ( The default. )
 bind-address		= XXX.XXX.XXX.XXX ( The ip address of your Public Net interface. )
 bind-address		= ZZZ.ZZZ.ZZZ.ZZZ ( The ip address of your Service Net interface. )
@@ -82,19 +82,23 @@ bind-address		= 0.0.0.0 ( All ip addresses. )
 ## Erorr Permission
 
 Access denied; you need (at least one of) the PROCESS privilege(s) for this operation' when trying to dump tablespaces
+
 ```sql
 GRANT PROCESS ON *.* TO someuser@localhost;
 ```
+Select command denied to user <i>userid@ip-address</i> for table <i>table-name</i>
 
-Select command denied to user '<userid>'@'<ip-address>' for table '<table-name>'
 ```sql
 GRANT SELECT ON performance_schema.* TO someuser@localhost WITH GRANT OPTION;
 ```
+
 Access denied you need (at least one of) the super, replication client privilege(s) for this operation
+
 ```sql
 GRANT SUPER ON *.* TO user1@localhost;
 ```
 Access denied you need (at least one of) the backup_admin privilege(s) for this operation
+
 ```sql
 GRANT BACKUP_ADMIN  ON *.* TO 'hard'@'localhost';
 ```

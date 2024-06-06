@@ -90,6 +90,17 @@ outline: deep
 - <a href="https://www.javaguides.net/">Java Guide</a> - belajar coding
 - <a href="https://wiki.mutable.ai/">Wiki Mutable</a> - Generator Dokumentasi
 - <a href="https://collabnix.com/">Collabnix</a> - Cheat Sheet untuk DevOS
+- <a href="https://sqlfordevs.com/tips">SQL for Devs</a> - Belajar SQL
+
+### Open Data for developer
+- <a href="https://opencagedata.com">Open CAGE</a> - Open data maps
+- <a href="https://openweathermap.org/">Open Weather Map</a> - Open data weather
+- <a href="https://open-meteo.com/">Open Meteo</a> - Open data weather
+- <a href="https://whois.whoisxmlapi.com/">Whois</a> - Open data whois
+
+
+### API testing
+- <a href="https://requestresponse.app/">Request Response</a>  - API Testing
 
 
 ### Android
@@ -290,6 +301,7 @@ outline: deep
 - <a href="https://www.hackthebox.eu/">Hack The Box</a> hack the box
 - <a href="http://testphp.vulnweb.com/">Test PHP</a> test php
 - <a href="https://www.invicti.com/learn/">invicti</a> Belar cyber security
+- <a href="https://book.hacktricks.xyz/">hacktricks</a>
 
 ### Website penyedia crack software
 - <a href="https://soft98.ir/">Soft98</a> Untuk mendapatkan free software

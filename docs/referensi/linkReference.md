@@ -91,6 +91,7 @@ outline: deep
 - <a href="https://wiki.mutable.ai/">Wiki Mutable</a> - Generator Dokumentasi
 - <a href="https://collabnix.com/">Collabnix</a> - Cheat Sheet untuk DevOS
 - <a href="https://sqlfordevs.com/tips">SQL for Devs</a> - Belajar SQL
+- <a href="https://rieckpil.de/start-here/">Rieckpil</a> - Belajar Java
 
 ### Open Data for developer
 - <a href="https://opencagedata.com">Open CAGE</a> - Open data maps

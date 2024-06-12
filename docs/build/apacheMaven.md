@@ -37,17 +37,40 @@ docker run -it -v maven-repo:/root/.m2 maven:3.9.4-eclipse-temurin-8-alpine mvn 
 ```
 
 ## Check Dependency tree
+
 ```sh
 mvn dependency:tree
 ```
 
+## Check dependency update
+
+```
+mvn versions:display-plugin-updates
+```
+
+## Update dependency automatically
+
+jika mendefinisikan versi di dependency itu sendiri ikuti langkah berikut: 
+
+```
+mvn versions: use-latest-versions
+```
+jika mendefinisikan versi dependency di properties block ikuti langkah berikut:
+
+```
+mvn versions:update-properties
+```
+
 ## Check Dependency Vulnerability
+
 langsung jalankan melalui terminal
+
 ```sh
 mvn org.owasp:dependency-check-maven:7.0.4:aggregate
 ```
 
 jika ingin menampilkan dengan output format lainnya
+
 ```sh
 mvn org.owasp:dependency-check-maven:7.0.4:aggregate -Dformats=html -Dformats=json
 ```

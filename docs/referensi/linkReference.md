@@ -92,6 +92,9 @@ outline: deep
 - <a href="https://collabnix.com/">Collabnix</a> - Cheat Sheet untuk DevOS
 - <a href="https://sqlfordevs.com/tips">SQL for Devs</a> - Belajar SQL
 - <a href="https://rieckpil.de/start-here/">Rieckpil</a> - Belajar Java
+- <a href="https://reflectoring.io/categories/">Reflectoring</a> - Dokumentasi
+- <a href="https://www.appsdeveloperblog.com/blog/">Dev Blog</a> - Dokumentasi
+- <a href="https://mkyong.com/">Mkyong</a> - Dokumentasi java
 
 ### Open Data for developer
 - <a href="https://opencagedata.com">Open CAGE</a> - Open data maps
@@ -99,6 +102,12 @@ outline: deep
 - <a href="https://open-meteo.com/">Open Meteo</a> - Open data weather
 - <a href="https://whois.whoisxmlapi.com/">Whois</a> - Open data whois
 
+### Artificial Intelligence Free used
+- <a href="https://www.genspark.ai/">Genspark</a> - Search engine AI
+- <a href="https://you.com/">You</a> - Search engine AI
+- <a href="https://gemini.google.com/>">Gemini</a> - Chat bot AI
+- <a href="https://claude.ai>">Claude</a> - Chat bot AI
+- <a href="https://www.mymemo.ai/">MyMemo</a> - Memo AI
 
 ### API testing
 - <a href="https://requestresponse.app/">Request Response</a>  - API Testing

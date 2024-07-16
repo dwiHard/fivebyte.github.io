@@ -322,6 +322,27 @@ Lalu format
 sudo mkfs.vfat /dev/sdc1
 ```
 
+## Problem anydesk ubuntu 22.04
+Display_Server_Not_Supported Error for Ubuntu 22.04
+
+konfigurasi login password
+
+```sh
+echo "P@ssw0rd" | sudo anydesk --set-password
+```
+
+konfigurasi GDM
+
+```sh
+sudo vi /etc/gdm3/custom.conf
+```
+yg perlu di hapus komentarnya sebagai berikut:
+```
+WaylandEnable=false
+AutomaticLoginEnable = true
+AutomaticLogin = $USERNAME
+```
+
 ## Remove snap dari ubuntu 18.04
 
 Jalankan :

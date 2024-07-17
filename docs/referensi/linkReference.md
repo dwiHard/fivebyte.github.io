@@ -310,8 +310,9 @@ outline: deep
 - <a href="https://portswigger.net/web-security/all-labs/">Portswigger</a> portswigger
 - <a href="https://www.hackthebox.eu/">Hack The Box</a> hack the box
 - <a href="http://testphp.vulnweb.com/">Test PHP</a> test php
-- <a href="https://www.invicti.com/learn/">invicti</a> Belar cyber security
+- <a href="https://www.invicti.com/learn/">invicti</a> Belajar cyber security
 - <a href="https://book.hacktricks.xyz/">hacktricks</a>
+- <a href="https://labs.watchtowr.com/">watchtowr</a> Lab Bug
 
 ### Website penyedia crack software
 - <a href="https://soft98.ir/">Soft98</a> Untuk mendapatkan free software

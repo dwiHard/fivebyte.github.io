@@ -149,4 +149,20 @@ running with file args
 mvn compile exec:java -D"exec.mainClass"="com.example.App" -Dexec.cleanupDaemonThreads=false -Dexec.args="src/main/resources/config.properties"
 ```
 
+### Fix Bug
+```
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#noProviders for further details.
+```
+
+```
+<dependency>
+    <groupId>org.slf4j</groupId>
+    <artifactId>slf4j-simple</artifactId>
+    <version>2.0.9</version>
+    <scope>runtime</scope>
+</dependency>
+```
+
 ## Terima Kasih

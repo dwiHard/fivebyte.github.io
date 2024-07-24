@@ -219,7 +219,7 @@ outline: deep
 - <a href="https://hashtagify.me/">Hashtagify</a>  - generator hashtag
 - <a href="https://quotescover.com/">Quotes Cover</a>  - generator caption
 
-### Untuk Kebutuhan editan
+### Website untuk kebutuhan design
 - <a href="https://www9.lunapic.com/editor/">Luna pic</a>  - Edit foto
 - <a href="https://www.vectorpea.com/">Vectorpea</a> - Edit Vektor
 - <a href="https://www.photopea.com/">Photopea</a> - Edit Foto
@@ -239,6 +239,12 @@ outline: deep
 - <a href="https://draw.io/">Draw.io</a>  - Edit flowchart
 - <a href="https://openstickers.craftwork.design/">Open stikers</a>  - Koleksi Stiker gratis
 - <a href="https://blendicons.com/">Blendicons</a> - Koleksi icons gratis
+- <a href="https://fotoram.io/">Fotoram</a>  - Edit vektor (alternatif canve)
+- <a href="https://snappa.com/">Snappa</a>  - Edit vektor (alternatif canve)
+- <a href="https://about.easil.com/">Easil</a>  - Edit vektor (alternatif canve)
+- <a href="https://pixlr.com/">Pixlr</a>  - Edit vektor (alternatif canve)
+- <a href="https://www.designcap.com/">Designcap</a>  - Edit vektor (alternatif canve)
+- <a href="https://designwizard.com/">Designwizard</a>  - Edit vektor (alternatif canve)
 
 ### Gradient
 - <a href="https://gradienta.io/">Gradienta</a>  
@@ -320,7 +326,6 @@ outline: deep
 - <a href="https://haxnode.net/">Haxnode</a> Untuk mendapatkan free software
 - <a href="https://filecr.com/">Filecr</a>  - Untuk mendapatkan free software bisa juga untuk Mac
 
-
 ### Website osint
 - <a href="https://osintframework.com/">OSINT Framework</a> - OSINT Framework
 - <a href="https://start.me/p/rx6Qj8/nixintel-s-osint-resource-list">Nixintel</a> - Nixintel
@@ -328,9 +333,19 @@ outline: deep
 - <a href="https://www.lopseg.com.br/osint">Lopseg</a> - pengumpulan data informasi osint
 
 ### Website AI
-- <a href="https://chat.openai.com/">Open AI</a> - Open AI
-- <a href="https://poe.com/">Poe</a> - Poe
-- <a href="https://appinventor.mit.edu">App Inventor</a> - Mit computer science and AI
+- <a href="https://chat.openai.com/">Open AI</a> - Open AI (chat bot)
+- <a href="https://poe.com/">Poe</a> - Poe (chat bot)
+- <a href="https://app.chathub.gg/">Chat Hub</a> - Chat Hub (chat bot)
+- <a href="https://glbgpt.com">Glbgpt</a> - Glbgpt (chat bot)
+- <a href="https://appinventor.mit.edu">App Inventor</a> - Mit computer science and AI (tools)
+- <a href="https://socratic.org/">Socratic</a> - Socratic (chat bot ngerjain PR)
+- <a href="https://www.midjourney.com/">Midjourney</a> - Midjourney AI menggambar
+- <a href="https://www.getconch.ai/">Conch</a> - Conch AI untuk pharafrase
+- <a href="https://www.writefull.com/">Writefull</a> - Writefull AI untuk koreksi tulisan
+- <a href="https://aipure.ai/">Aipure</a> - membantu menemukan AI
+- <a href="https://www.penpilot.ai/">Penpilot</a> - Penpilot AI membantu menulis
+- <a href="https://www.vidnoz.com/">Vidnoz</a> - Vidnoz AI membantu membuat video dubbing
+- <a href="https://www.visme.co/">Visme</a> - Visme AI membantu presentasi
 
 ### Website kebutuhan Video dan audio
 - <a href="https://pixabay.com/sound-effects/">Pixabay</a>  - Sound Effects

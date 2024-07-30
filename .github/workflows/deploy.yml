@@ -60,6 +60,11 @@ jobs:
     runs-on: ubuntu-latest
     name: Deploy
     steps:
+      - name: Update CA certificates
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ca-certificates
+          sudo update-ca-certificates
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2

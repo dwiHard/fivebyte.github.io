@@ -245,6 +245,10 @@ outline: deep
 - <a href="https://pixlr.com/">Pixlr</a>  - Edit vektor (alternatif canve)
 - <a href="https://www.designcap.com/">Designcap</a>  - Edit vektor (alternatif canve)
 - <a href="https://designwizard.com/">Designwizard</a>  - Edit vektor (alternatif canve)
+- <a href="https://flair.ai/">Flair</a>  - Edit vektor (alternatif canve)
+- <a href="https://designer.microsoft.com/">Designer</a>  - Edit vektor (alternatif canve)
+- <a href="https://clipdrop.co/">Clipdrop</a>  - Edit vektor (alternatif canve)
+- <a href="https://www.autodraw.com/">Autodraw</a>  - Edit vektor (alternatif canve)
 
 ### Gradient
 - <a href="https://gradienta.io/">Gradienta</a>  

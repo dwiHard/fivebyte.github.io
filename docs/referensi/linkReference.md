@@ -102,13 +102,6 @@ outline: deep
 - <a href="https://open-meteo.com/">Open Meteo</a> - Open data weather
 - <a href="https://whois.whoisxmlapi.com/">Whois</a> - Open data whois
 
-### Artificial Intelligence Free used
-- <a href="https://www.genspark.ai/">Genspark</a> - Search engine AI
-- <a href="https://you.com/">You</a> - Search engine AI
-- <a href="https://gemini.google.com/>">Gemini</a> - Chat bot AI
-- <a href="https://claude.ai>">Claude</a> - Chat bot AI
-- <a href="https://www.mymemo.ai/">MyMemo</a> - Memo AI
-
 ### API testing
 - <a href="https://requestresponse.app/">Request Response</a>  - API Testing
 
@@ -283,6 +276,7 @@ outline: deep
 - <a href="https://www.grammarly.com/">Grammarly</a> - Website untuk koreksi grammar otomatis menggunakan ektensi
 - <a href="https://hemingwayapp.com/">Hemingwayapp</a> - Website cek grammar lebih user friendly
 - <a href="https://prowritingaid.com/">Pro Writingid</a> - Extention untuk cek grammar
+- <a href="https://fakedetail.com/">Fake Detail</a> - fake screenshot
 
 ### Website untuk developer
 - <a href="https://unbug.github.io/codelf/">Codelf</a>  - Search Programming project
@@ -350,6 +344,13 @@ outline: deep
 - <a href="https://www.penpilot.ai/">Penpilot</a> - Penpilot AI membantu menulis
 - <a href="https://www.vidnoz.com/">Vidnoz</a> - Vidnoz AI membantu membuat video dubbing
 - <a href="https://www.visme.co/">Visme</a> - Visme AI membantu presentasi
+- <a href="https://www.genspark.ai/">Genspark</a> - Search engine AI
+- <a href="https://you.com/">You</a> - Search engine AI
+- <a href="https://gemini.google.com/>">Gemini</a> - Chat bot AI
+- <a href="https://claude.ai>">Claude</a> - Chat bot AI
+- <a href="https://www.mymemo.ai/">MyMemo</a> - Memo AI
+- <a href="https://otio.ai/">Otio</a> - Otio AI
+- <a href="https://codeium.com/">Codeium</a> - Codeium AI programming
 
 ### Website kebutuhan Video dan audio
 - <a href="https://pixabay.com/sound-effects/">Pixabay</a>  - Sound Effects

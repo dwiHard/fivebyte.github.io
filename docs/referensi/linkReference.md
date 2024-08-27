@@ -95,6 +95,8 @@ outline: deep
 - <a href="https://reflectoring.io/categories/">Reflectoring</a> - Dokumentasi
 - <a href="https://www.appsdeveloperblog.com/blog/">Dev Blog</a> - Dokumentasi
 - <a href="https://mkyong.com/">Mkyong</a> - Dokumentasi java
+- <a href="https://foojay.io/">Foojay</a> - Dokumentasi java
+- <a href="https://www.totaltypescript.com/">Total TypeScript</a> - Dokumentasi typescript
 
 ### Open Data for developer
 - <a href="https://opencagedata.com">Open CAGE</a> - Open data maps

@@ -165,4 +165,28 @@ SLF4J: See http://www.slf4j.org/codes.html#noProviders for further details.
 </dependency>
 ```
 
+### Maven repo test
+```
+<dependency>
+    <groupId>org.junit.jupiter</groupId>
+    <artifactId>junit-jupiter</artifactId>
+    <version>5.10.0</version>
+    <scope>test</scope>
+</dependency>
+```
+```
+<plugins>
+    <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.1.2</version>
+        <configuration>
+            <includes>
+                <include>**/*Test.java</include>
+            </includes>
+        </configuration>
+    </plugin>
+</plugins>
+```
+
 ## Terima Kasih

@@ -289,6 +289,7 @@ outline: deep
 - <a href="https://curlconverter.com/">Curl converter</a> - Alat convert dari curl ke bahasa pemograman
 - <a href="https://curlconverter.com/java/">Curl converter</a> - Convert curl ke java
 - <a href="https://algorithm-visualizer.org/">algorithm-visualizer</a> - Untuk belajar algoritma
+- <a href="https://workik.com/">Workik</a>  - generator sql
 
 ### Websites untik bisnis
 - <a href="https://coggle.it/">Coggle</a>  - Mind Mapping
@@ -307,6 +308,7 @@ outline: deep
 - <a href="https://www.netlify.com/">Netlify</a> 
 - <a href="https://cloud.google.com/solutions/web-hosting/">Google</a> 
 - <a href="https://infinityfree.net/">infinity free</a> 
+- <a href="https://vercel.com/">Vercel</a>
 
 ### Website belajar hacking
 - <a href="https://osintframework.com/">OSINT Framework</a> osint framework
@@ -337,6 +339,7 @@ outline: deep
 - <a href="https://poe.com/">Poe</a> - Poe (chat bot)
 - <a href="https://app.chathub.gg/">Chat Hub</a> - Chat Hub (chat bot)
 - <a href="https://glbgpt.com">Glbgpt</a> - Glbgpt (chat bot)
+- <a href="https://v0.dev">V0</a> - V0 (chat bot)
 - <a href="https://appinventor.mit.edu">App Inventor</a> - Mit computer science and AI (tools)
 - <a href="https://socratic.org/">Socratic</a> - Socratic (chat bot ngerjain PR)
 - <a href="https://www.midjourney.com/">Midjourney</a> - Midjourney AI menggambar
@@ -348,6 +351,7 @@ outline: deep
 - <a href="https://www.visme.co/">Visme</a> - Visme AI membantu presentasi
 - <a href="https://www.genspark.ai/">Genspark</a> - Search engine AI
 - <a href="https://you.com/">You</a> - Search engine AI
+- <a href="https://www.perplexity.ai/">Perplexity</a> - Search engine AI
 - <a href="https://gemini.google.com/>">Gemini</a> - Chat bot AI
 - <a href="https://claude.ai>">Claude</a> - Chat bot AI
 - <a href="https://www.mymemo.ai/">MyMemo</a> - Memo AI

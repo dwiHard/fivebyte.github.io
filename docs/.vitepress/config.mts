@@ -109,6 +109,7 @@ export default defineConfig({
               { text: 'Stream Filter', link: '/streamFilter'},
               { text: 'Stream collect', link: '/streamCollect' },
               { text: 'ForEach', link: '/forEach'},
+              { text: 'Stream Map', link: '/streamMap' },
               { text: 'Reference', link: '/referensi' },
             ]
           }

@@ -1,3 +1,31 @@
+## Install neovim
+kunjungi https://github.com/neovim/neovim/releases
+download nvim
+```
+wget https://github.com/neovim/neovim/releases/download/v0.10.0/nvim-linux64.tar.gz
+```
+atau
+```
+curl -LO https://github.com/neovim/neovim/releases/download/v0.10.0/nvim-linux64.tar.gz
+```
+extract nvim di folder saat ini
+```
+tar xzvf nvim-linux64.tar.gz
+```
+atau bisa extrak di folder opt
+```
+tar -C /opt -xzf nvim-linux64.tar.gz
+```
+jalankan nvim
+```
+./nvim-linux64/bin/nvim
+```
+biar bisa di jalankan secara global
+```
+export PATH="$PATH:/opt/nvim-linux64/bin"
+```
+
+
 ## Gerakan Kursor dalam Mode Normal
 1. ```G```  - Pergi ke baris terakhir file.
 2. ```gg``` - Pergi ke baris pertama file.
@@ -97,6 +125,14 @@ sudo update-alternatives --install /usr/bin/editor editor /usr/bin/nvim 100
 Menghapus path config 
 ```sh
 sudo update-alternatives --remove editor /usr/bin/nvim
+```
+
+My Favorit IDE neovim
+```
+https://github.com/lunarvim/lunarvim
+```
+```
+https://github.com/NvChad/NvChad
 ```
 
 ## Terima Kasih

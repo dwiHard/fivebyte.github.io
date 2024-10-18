@@ -54,12 +54,14 @@ outline: deep
 - <a href="https://jsonformatter.curiousconcept.com/">JSON Formatter</a>  - Untuk format Json
 - <a href="https://jsoneditoronline.org/">JSON Editor</a>  - Untuk Edit dan proses Json
 - <a href="https://jsonlint.com/">JSON Lint</a>  - Untuk validator dan reformat Json
+- <a href="https://jsoning.com/">JSONing</a>  - Kumpulan alat Json
 
 #### Regex
 - <a href="https://regex101.com/">Regex 101</a>  - Untuk Test Regex
 - <a href="https://regexr.com/">Regexr</a>  - Untuk Test Regex
 - <a href="https://regexper.com/">Regexper</a>  - Untuk Test Regex
 - <a href="https://www.regextester.com/">Regex Tester</a>  - Untuk Test Regex
+- <a href="https://extendsclass.com/regex-tester.html">Cyrilex</a>  - Untuk Test Regex
 
 ### DevOS 
 

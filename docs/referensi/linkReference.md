@@ -55,20 +55,14 @@ outline: deep
 - <a href="https://jsoneditoronline.org/">JSON Editor</a>  - Untuk Edit dan proses Json
 - <a href="https://jsonlint.com/">JSON Lint</a>  - Untuk validator dan reformat Json
 
-#### Regex
-- <a href="https://regex101.com/">Regex 101</a>  - Untuk Test Regex
-- <a href="https://regexr.com/">Regexr</a>  - Untuk Test Regex
-- <a href="https://regexper.com/">Regexper</a>  - Untuk Test Regex
-- <a href="https://www.regextester.com/">Regex Tester</a>  - Untuk Test Regex
-
 ### DevOS 
 
 - <a href="https://www.geeksforgeeks.org/python-programming-language/?ref=grb/">Geeks For Geeks</a>  - Python Testing
 - <a href="https://overapi.com/">Over API</a>  - Kumpulan link-link 
-- <a href="https://regex101.com/">Regex</a>  - Regex generator
 
 ### Dokumentasi
 - <a href="https://quickref.me/">Quickref</a> - Dokumentasi cheatsheet lengkap
+- <a href="https://speedsheet.io/">Speedsheet</a> - Dokumentasi cheatsheet
 - <a href="https://www.programiz.com/">Progamiz</a> Belajar Programming
 - <a href="https://www.stationx.net/category/cheat-sheets/">StationX</a> Cheat Sheet
 - <a href="https://intellipaat.com/blog/tutorials/">Intellipaat</a> Cheat Sheet
@@ -254,7 +248,6 @@ outline: deep
 ### Website kebutuhan sehari-hari 
 - <a href="https://www.followupthen.com/">Follow Up Then</a>  - Personal Assitent
 - <a href="https://www.getbiyo.io/">Get Biyo</a>  - Personalisasikan portofolio Anda
-- <a href="https://shortlyai.com/">Shortlyai</a>  - Writting AI
 - <a href="http://internet-map.net/">Internet Map</a>  - map internet
 - <a href="https://dictation.io/">Dictation</a>  - write email with voice
 - <a href="https://www.deseat.me/">Deseat</a>  - check your accounts
@@ -339,7 +332,7 @@ outline: deep
 - <a href="https://poe.com/">Poe</a> - Poe (chat bot)
 - <a href="https://app.chathub.gg/">Chat Hub</a> - Chat Hub (chat bot)
 - <a href="https://glbgpt.com">Glbgpt</a> - Glbgpt (chat bot)
-- <a href="https://v0.dev">V0</a> - V0 (chat bot)
+- <a href="https://v0.dev">V0</a> - V0 (chat bot) (coding)
 - <a href="https://appinventor.mit.edu">App Inventor</a> - Mit computer science and AI (tools)
 - <a href="https://socratic.org/">Socratic</a> - Socratic (chat bot ngerjain PR)
 - <a href="https://www.midjourney.com/">Midjourney</a> - Midjourney AI menggambar
@@ -353,10 +346,12 @@ outline: deep
 - <a href="https://you.com/">You</a> - Search engine AI
 - <a href="https://www.perplexity.ai/">Perplexity</a> - Search engine AI
 - <a href="https://gemini.google.com/>">Gemini</a> - Chat bot AI
-- <a href="https://claude.ai>">Claude</a> - Chat bot AI
+- <a href="https://claude.ai>">Claude</a> - Chat bot AI (coding)
 - <a href="https://www.mymemo.ai/">MyMemo</a> - Memo AI
 - <a href="https://otio.ai/">Otio</a> - Otio AI
 - <a href="https://codeium.com/">Codeium</a> - Codeium AI programming
+- <a href="https://shortlyai.com/">Shortlyai</a>  - Writting AI
+- <a href="https://bolt.new/">Bolt</a>  - Bolt AI (coding)
 
 ### Website kebutuhan Video dan audio
 - <a href="https://pixabay.com/sound-effects/">Pixabay</a>  - Sound Effects

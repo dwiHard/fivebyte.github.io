@@ -66,7 +66,14 @@ export default defineConfig({
           { text: 'Open Search', link: '/database/openSearch' },
           { text: 'Postgresql', link: '/database/postgresql' },
           { text: 'Apache HBase', link: '/database/apacheHBase' },
-          { text: 'Apache Kafka', link: '/database/apacheKafka' },
+          { text: 'Apache Kafka', 
+            base: '/database/kafka/', 
+            items: [
+                { text: 'Set up', link: '/basic' },
+                { text: 'Consumer', link: '/consumer' },
+                { text: 'Producer', link: '/producer' },
+              ]
+            },
           { text: 'Apache Hadoop', link: '/database/apacheHadoop' },
         ]
       },
@@ -98,6 +105,7 @@ export default defineConfig({
         collapsed: true,
         items: [
           { text: 'HTML', link: '/developer/html' },
+          { text: 'RegEx', link: '/developer/regex' },
           { text: 'Spring boot', link: '/developer/springBoot' },
           { text: 'Laravel', link: '/developer/laravel' },
           { text: 'Node Js', link: '/developer/nodejs' },
@@ -110,6 +118,7 @@ export default defineConfig({
               { text: 'Stream collect', link: '/streamCollect' },
               { text: 'ForEach', link: '/forEach'},
               { text: 'Stream Map', link: '/streamMap' },
+              { text: 'Hashing Java', link: '/hashing' },
               { text: 'Reference', link: '/referensi' },
             ]
           }

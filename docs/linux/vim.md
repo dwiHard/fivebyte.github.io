@@ -102,6 +102,12 @@ export PATH="$PATH:/opt/nvim-linux64/bin"
 ## Hapus semua enter di vim
 ```:%s/\n/```
 
+## Hapus semua space di vim
+```:%s/\s//g```
+
+## replace semua dari " ke \"
+```:%s/"/\\"/g```
+
 ## Copy file to clipboard
 ```cat file.txt | xclip -selection clipboard```
 atau

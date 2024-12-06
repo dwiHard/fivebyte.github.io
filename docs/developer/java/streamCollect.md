@@ -38,3 +38,9 @@ outline: deep
         .collect(Collectors.toCollection(ArrayList::new));
     System.out.println(data);
 ```
+## Straem collector
+```java
+List<String> itemsList = IntStream.range(0, itemsArray.length())
+    .mapToObj(i -> itemsArray.getString(i))
+    .collect(Collectors.toList());
+```

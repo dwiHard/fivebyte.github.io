@@ -51,3 +51,29 @@ menghitung jumlah kata
         .mapToInt(s -> s.length()) // [!code focus]
         .forEach(System.out::println); // [!code focus]
 ```
+
+### Ambil data foreach ke list
+::: code-group
+```java [case]
+List<String> itemsList = new ArrayList<>(); 
+for (int i = 0; i < itemsArray.length(); i++) { 
+    itemsList.add(itemsArray.getString(i)); 
+}
+```
+```java [basic]
+List<String> itemsList = new ArrayList<>();
+itemsArray.forEach(item -> itemsList.add(item.toString()));
+```
+```java [clean code]
+List<String> itemsList = new ArrayList<>();
+itemsArray.forEach(itemsList::add);
+```
+```java [condition]
+List<String> itemsList = new ArrayList<>();
+itemsArray.forEach(item -> {
+    if (item instanceof String) {
+        itemsList.add((String) item);
+    }
+});
+```
+:::

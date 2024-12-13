@@ -119,6 +119,7 @@ export default defineConfig({
               { text: 'ForEach', link: '/forEach'},
               { text: 'Stream Map', link: '/streamMap' },
               { text: 'Hashing Java', link: '/hashing' },
+              { text: "OkHttp", link: '/okhttp' },
               { text: 'Reference', link: '/referensi' },
             ]
           }

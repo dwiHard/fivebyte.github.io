@@ -114,6 +114,18 @@ atau
 
 ```cat file.txt | xclip -se c```
 
+## Hapus sekitar quote
+```da"```
+
+## Hapus di dalam bracket
+```di]```
+
+## Hapus sekitar paragraf
+```dap```
+
+## visual mode sekitar kata
+```vaw```
+
 ## Config default editor
 
 Mengubah default test editor

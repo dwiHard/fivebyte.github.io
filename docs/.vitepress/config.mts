@@ -66,6 +66,7 @@ export default defineConfig({
           { text: 'Open Search', link: '/database/openSearch' },
           { text: 'Postgresql', link: '/database/postgresql' },
           { text: 'Apache HBase', link: '/database/apacheHBase' },
+          { text: 'Apache Solr', link: '/database/solr' },
           { text: 'Apache Kafka', 
             base: '/database/kafka/', 
             items: [

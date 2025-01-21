@@ -11,3 +11,7 @@ outline: deep
 
 plugin maven
 - <a href="https://maven.apache.org/plugins/maven-shade-plugin/index.html">Maven shade plugin</a> - untuk package jar dengan dependency
+- <a href="https://central.sonatype.com/">Sonatype</a> - dependency
+
+docs java
+- <a href="https://javadoc.io/">Java docs</a> - untuk mencari arsip dokumentasi

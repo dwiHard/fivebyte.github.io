@@ -238,6 +238,8 @@ outline: deep
 - <a href="https://designer.microsoft.com/">Designer</a>  - Edit vektor (alternatif canve)
 - <a href="https://clipdrop.co/">Clipdrop</a>  - Edit vektor (alternatif canve)
 - <a href="https://www.autodraw.com/">Autodraw</a>  - Edit vektor (alternatif canve)
+- <a href="https://studio.polotno.com/">Polotno</a>  - Edit vektor (alternatif canve)
+- <a href="https://mixkit.co/">Mixkit</a> - Assets gratis
 
 ### Gradient
 - <a href="https://gradienta.io/">Gradienta</a>  
@@ -352,6 +354,8 @@ outline: deep
 - <a href="https://codeium.com/">Codeium</a> - Codeium AI programming
 - <a href="https://shortlyai.com/">Shortlyai</a>  - Writting AI
 - <a href="https://bolt.new/">Bolt</a>  - Bolt AI (coding)
+- <a href="https://kimi.ai/>">Kimi</a>  - Kimi AI
+- <a href="https://chat.deepseek.com/>">Deepseek</a>  - Deepseek AI
 
 ### Website kebutuhan Video dan audio
 - <a href="https://pixabay.com/sound-effects/">Pixabay</a>  - Sound Effects
@@ -370,6 +374,10 @@ outline: deep
 
 ## IT Solusi
 - <a href="https://www.zerotier.com/">Zerotier</a> - Zerotier
+
+## Ensiklopedia
+- <a href="https://neal.fun/deep-sea/">Neal</a> Ensiklopedia tentang ikan
+- <a href="https://scaleofuniverse.com/en">Scale of Universe</a> Ensiklopedia tentang astronomi
 
 ## Testing OS or Container
 - <a href="https://distrosea.com/">Distrosea</a> - Test drive linux

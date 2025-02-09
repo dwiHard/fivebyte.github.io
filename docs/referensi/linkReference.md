@@ -354,6 +354,8 @@ outline: deep
 - <a href="https://codeium.com/">Codeium</a> - Codeium AI programming
 - <a href="https://shortlyai.com/">Shortlyai</a>  - Writting AI
 - <a href="https://bolt.new/">Bolt</a>  - Bolt AI (coding)
+- <a href="https://lovable.dev/">Lovable</a>  - Lovable AI
+- <a href="https://getpanda.ai/">Panda</a>  - Panda AI
 - <a href="https://kimi.ai/>">Kimi</a>  - Kimi AI
 - <a href="https://chat.deepseek.com/>">Deepseek</a>  - Deepseek AI
 

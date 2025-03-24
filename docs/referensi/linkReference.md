@@ -25,6 +25,7 @@ outline: deep
 
 - <a href="https://moderncss.dev/">Kushagra</a>  - CSS Soution
 - <a href="https://tobiasahlin.com/">Tobiasahlin</a>  - Desain web
+- <a href="https://convertacolor.com/">Convertacolor</a>  - Konversi warna
 
 
 
@@ -285,6 +286,7 @@ outline: deep
 - <a href="https://curlconverter.com/java/">Curl converter</a> - Convert curl ke java
 - <a href="https://algorithm-visualizer.org/">algorithm-visualizer</a> - Untuk belajar algoritma
 - <a href="https://workik.com/">Workik</a>  - generator sql
+- <a href="https://id.javascript.info/">javascript</a> - untuk belajar javascript modern
 
 ### Websites untik bisnis
 - <a href="https://coggle.it/">Coggle</a>  - Mind Mapping
@@ -330,7 +332,7 @@ outline: deep
 - <a href="https://www.lopseg.com.br/osint">Lopseg</a> - pengumpulan data informasi osint
 
 ### Website AI
-- <a href="https://chat.openai.com/">Open AI</a> - Open AI (chat bot)
+- <a href="https://chatgpt.com/">Open AI</a> - Open AI (chat bot)
 - <a href="https://poe.com/">Poe</a> - Poe (chat bot)
 - <a href="https://app.chathub.gg/">Chat Hub</a> - Chat Hub (chat bot)
 - <a href="https://glbgpt.com">Glbgpt</a> - Glbgpt (chat bot)
@@ -358,6 +360,8 @@ outline: deep
 - <a href="https://getpanda.ai/">Panda</a>  - Panda AI
 - <a href="https://kimi.ai/>">Kimi</a>  - Kimi AI
 - <a href="https://chat.deepseek.com/>">Deepseek</a>  - Deepseek AI
+- <a href="https://a0.dev/">a0</a> - a0 membantu membuat aplikasi dengan AI
+- <a href="https://theresanaiforthat.com/">There's An AI For That</a> - untuk mencari daftar AI
 
 ### Website kebutuhan Video dan audio
 - <a href="https://pixabay.com/sound-effects/">Pixabay</a>  - Sound Effects

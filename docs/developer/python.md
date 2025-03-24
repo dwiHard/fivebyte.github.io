@@ -1,3 +1,25 @@
+## Jalankan multi versi python
+```
+sudo apt-get install liblzma-dev
+```
+
+```
+curl https://pyenv.run | bash
+```
+untuk fish shell edit file ~/.config/fish/config.fish
+```
+set -Ux PYENV_ROOT $HOME/.pyenv
+set -U fish_user_paths $PYENV_ROOT/bin $fish_user_paths
+```
+untuk install versi
+```
+pyenv install "3.11.9"
+```
+untuk jalankan versi globalnya
+```
+pyenv global "3.11.9"
+```
+
 ## Basic Python
 ## Print String
 

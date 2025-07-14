@@ -1,3 +1,6 @@
+## Apa itu vim
+Vim adalah sebuah editor teks yang sangat powerful, sangat dapat dikonfigurasi, dan efisien yang banyak digunakan oleh programmer, administrator sistem, dan siapa saja yang sering bekerja dengan file teks di lingkungan baris perintah (terminal). Nama "Vim" adalah singkatan dari Vi IMproved, menunjukkan bahwa ia merupakan penyempurnaan dari editor Vi yang lebih tua.
+
 ## Install neovim
 kunjungi https://github.com/neovim/neovim/releases
 download nvim

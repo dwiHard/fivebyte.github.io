@@ -1,3 +1,8 @@
+
+## Apa itu kubernetes?
+Kubernetes, sering disingkat K8s, adalah sebuah platform sumber terbuka (open-source) yang digunakan untuk mengotomatiskan deployment, penskalaan, dan manajemen aplikasi yang terkontainerisasi. Bayangkan Anda memiliki banyak aplikasi yang berjalan dalam kontainer (seperti Docker), dan Anda ingin memastikan aplikasi-aplikasi itu selalu berjalan, dapat diakses, dan dapat menangani banyak pengguna secara efisien. Nah, di sinilah Kubernetes berperan. 🚀
+
+
 ## Instalasi
 
 ## Check version

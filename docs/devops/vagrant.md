@@ -1,3 +1,6 @@
+## Apa itu Vagrant?
+Vagrant adalah sebuah perangkat lunak sumber terbuka (open-source) yang berfungsi untuk membangun dan mengelola lingkungan pengembangan virtual. Dengan Vagrant, developer dapat membuat lingkungan yang konsisten dan dapat direproduksi untuk proyek mereka, terlepas dari sistem operasi yang mereka gunakan.
+
 ## Install Boxes
 
 untuk melihat boxes bisa cek di link ini https://app.vagrantup.com/boxes/search

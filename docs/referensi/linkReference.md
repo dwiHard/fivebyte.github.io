@@ -275,6 +275,9 @@ outline: deep
 - <a href="https://hemingwayapp.com/">Hemingwayapp</a> - Website cek grammar lebih user friendly
 - <a href="https://prowritingaid.com/">Pro Writingid</a> - Extention untuk cek grammar
 - <a href="https://fakedetail.com/">Fake Detail</a> - fake screenshot
+- <a href="https://vert.sh/">vert</a> - website converter
+- <a href="https://cobalt.tools/">Cobalt</a> - tool downloader sosmed
+- <a href="https://getimg.ai/image-generator">Getimg</a> - tool ai generate image
 
 ### Website untuk developer
 - <a href="https://unbug.github.io/codelf/">Codelf</a>  - Search Programming project
@@ -331,6 +334,11 @@ outline: deep
 - <a href="https://hunter.how/">Hunter</a> - Search engine
 - <a href="https://www.lopseg.com.br/osint">Lopseg</a> - pengumpulan data informasi osint
 
+### Resource Secure Code Review(SCR)
+- <a href="https://rules.sonarsource.com/">Sonar Source</a>
+- <a href="https://owasp.org/www-project-code-review-guide/assets/OWASP_Code_Review_Guide_v2.pdf">OWASP</a>
+- <a href="https://securitycipher.com/docs/security/secure-code-explain/">Security Cipher</a>
+
 ### Website AI
 - <a href="https://chatgpt.com/">Open AI</a> - Open AI (chat bot)
 - <a href="https://poe.com/">Poe</a> - Poe (chat bot)
@@ -351,6 +359,8 @@ outline: deep
 - <a href="https://www.perplexity.ai/">Perplexity</a> - Search engine AI
 - <a href="https://gemini.google.com/>">Gemini</a> - Chat bot AI
 - <a href="https://claude.ai>">Claude</a> - Chat bot AI (coding)
+- <a href="https://chat.together.ai/">Together ai</a> - Chat bot AI
+- <a href="https://www.zola.chat/">Zola</a> - Chat bot AI
 - <a href="https://www.mymemo.ai/">MyMemo</a> - Memo AI
 - <a href="https://otio.ai/">Otio</a> - Otio AI
 - <a href="https://codeium.com/">Codeium</a> - Codeium AI programming
@@ -362,6 +372,8 @@ outline: deep
 - <a href="https://chat.deepseek.com/>">Deepseek</a>  - Deepseek AI
 - <a href="https://a0.dev/">a0</a> - a0 membantu membuat aplikasi dengan AI
 - <a href="https://theresanaiforthat.com/">There's An AI For That</a> - untuk mencari daftar AI
+- <a href="https://www.rocket.new/">Rocket</a> - untuk membangun website AI
+- <a href="https://app.emergent.sh/">Emergent</a> - untuk membangun website AI
 
 ### Website kebutuhan Video dan audio
 - <a href="https://pixabay.com/sound-effects/">Pixabay</a>  - Sound Effects

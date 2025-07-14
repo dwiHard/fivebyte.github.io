@@ -2,6 +2,9 @@
 outline: deep
 ---
 
+## Apa itu git?
+Git adalah sebuah sistem kontrol versi terdistribusi (Distributed Version Control System - DVCS) yang paling populer dan banyak digunakan saat ini. Sederhananya, Git adalah alat yang membantu Anda melacak perubahan pada file Anda, terutama saat Anda bekerja dalam tim.
+
 ## Setup
 ### Menambahkan identitas di github
 

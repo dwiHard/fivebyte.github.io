@@ -2,7 +2,11 @@
 outline: deep
 ---
 
+## Apa itu docker?
+Docker adalah sebuah platform sumber terbuka (open-source) yang digunakan untuk mengembangkan, mengirimkan, dan menjalankan aplikasi menggunakan kontainer. Kontainer memungkinkan developer untuk mengemas aplikasi beserta semua bagian yang dibutuhkan (perpustakaan, dependensi, dan pengaturan) menjadi satu unit terisolasi.
+
 ## Docker Cheat Sheet for Beginners and Advanced Users
+Lembar contekan ini menyediakan referensi cepat untuk perintah-perintah Docker yang umum, yang mencakup instalasi, operasi dasar, manajemen siklus hidup kontainer, konfigurasi, manajemen volume, jaringan, pencatatan log, debugging, dan manajemen image. Lembar ini mencakup perintah untuk pemula dan pengguna tingkat lanjut.
 
 ### Install Docker di ubuntu 18.04
 

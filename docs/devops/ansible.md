@@ -1,3 +1,6 @@
+## Apa itu ansible?
+Ansible adalah alat otomatisasi sumber terbuka (open-source) yang sangat populer untuk konfigurasi manajemen, deployment aplikasi, dan orkestrasi tugas IT lainnya. Intinya, Ansible membantu Anda mengotomatiskan tugas-tugas berulang di banyak server secara efisien dan konsisten.
+
 ## Instalasi
 Instalasi ansible di ubuntu
 

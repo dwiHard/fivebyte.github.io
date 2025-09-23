@@ -1,3 +1,6 @@
+---
+outline: deep
+---
 ## Install MySQL 
 
 ```sh
@@ -390,6 +393,75 @@ REFERENCES NamaTabelKunci(NamaField);
 ALTER TABLE NamaTabelSekarang
 ADD CONSTRAINT FK_NamaField
 FOREIGN KEY (NamaField) REFERENCES NamaTabelKunci(NamaField); 
+```
+
+## To many Connection
+### Batas & puncak pemakaian
+
+```sql
+SHOW PROCESSLIST;
+```
+-- Batas maksimum koneksi MySQL
+```sql
+SHOW VARIABLES LIKE 'max_connections';
+```
+-- Jumlah koneksi yang sedang terpakai
+```sql
+SHOW STATUS LIKE 'Threads_connected';
+```
+
+-- Puncak koneksi tertinggi sejak server start
+```sql
+SHOW STATUS LIKE 'Max_used_connections';
+```
+
+### Total & koneksi aktif
+
+-- Total koneksi saat ini
+```sql
+SELECT COUNT(*) AS total FROM information_schema.PROCESSLIST;
+```
+
+-- Hanya yang aktif (bukan status 'Sleep')
+```sql
+SELECT COUNT(*) AS aktif FROM information_schema.PROCESSLIST WHERE COMMAND <> 'Sleep';
+```
+
+-- Hanya yang 'Sleep' (menganggur)
+```sql
+SELECT COUNT(*) AS tidur FROM information_schema.PROCESSLIST WHERE COMMAND = 'Sleep';
+```
+
+### Hitung per user / host / database / state
+-- Jumlah koneksi per user
+```sql
+SELECT USER, COUNT(*) AS jumlah FROM information_schema.PROCESSLIST GROUP BY USER ORDER BY jumlah DESC;
+```
+
+### Koneksi dengan durasi terlama (Top N)
+-- Urutkan sesi yang paling lama aktif
+```sql
+SELECT ID, USER, HOST, DB, COMMAND, STATE, TIME, INFO FROM information_schema.PROCESSLIST ORDER BY TIME DESC LIMIT 10;
+```
+
+### Menghentikan koneksi tertentu (hati-hati!)
+```sql
+KILL <PID>;
+```
+
+-- Jumlah koneksi per host
+```sql
+SELECT HOST, COUNT(*) AS jumlah FROM information_schema.PROCESSLIST GROUP BY HOST ORDER BY jumlah DESC;
+```
+
+-- Jumlah koneksi per database
+```sql
+SELECT COALESCE(DB,'(null)') AS db, COUNT(*) AS jumlah FROM information_schema.PROCESSLIST GROUP BY DB ORDER BY jumlah DESC;
+```
+
+-- Jumlah koneksi per state (mis. Waiting, Sending data, dll.)
+```sql
+SELECT COALESCE(STATE,'(null)') AS state, COUNT(*) AS jumlah FROM information_schema.PROCESSLIST GROUP BY STATE ORDER BY jumlah DESC;
 ```
 
 ## Limit Data

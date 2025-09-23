@@ -374,6 +374,9 @@ outline: deep
 - <a href="https://theresanaiforthat.com/">There's An AI For That</a> - untuk mencari daftar AI
 - <a href="https://www.rocket.new/">Rocket</a> - untuk membangun website AI
 - <a href="https://app.emergent.sh/">Emergent</a> - untuk membangun website AI
+- <a href="https://www.lovart.ai/">Lovart</a> - untuk membuat desain menggunakan ai
+- <a href="https://www.mureka.ai/">Mureka</a> - untuk membuat musik menggunakan ai
+- <a href="https://jules.google.com/">Jules</a> -google labs AI
 
 ### Website kebutuhan Video dan audio
 - <a href="https://pixabay.com/sound-effects/">Pixabay</a>  - Sound Effects

@@ -80,6 +80,15 @@ mvn dependency:tree
 mvn versions:display-plugin-updates
 ```
 
+## ambil nama dan versi pakai maven
+```
+APP_NAME=$(mvn help:evaluate -Dexpression=project.artifactId -q -DforceStdout)
+```
+
+```
+VERSION=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)
+```
+
 ## Update dependency automatically
 
 jika mendefinisikan versi di dependency itu sendiri ikuti langkah berikut: 
